@@ -1,0 +1,38 @@
+services:
+  web:
+    build: .
+    container_name: sportsarb
+    command: flask run --host=0.0.0.0 --port=8000
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_APP=main
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/sportsarb
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:15
+    container_name: sports-arb-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sportsarb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: sports-arb-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  pgdata:
