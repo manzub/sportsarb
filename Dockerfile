@@ -1,15 +1,15 @@
 # Base Image
 FROM python:3.12-slim
 
-WORKDIR /app
+WORKDIR /usr/src/app
 ENV FLASK_APP=main
 ENV FLASK_ENV=development
 
 # install dependencies
-COPY app/requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ .
+COPY . .
 
 EXPOSE 8000
 
