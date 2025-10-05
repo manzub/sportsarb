@@ -1,0 +1,79 @@
+{%extends 'base.html' %}
+
+{% block content %}
+<div class="authentication-page-container">
+  <div class="authentication-page">
+    <h1 class="text-2xl my-2">
+      Sign in or create an account
+    </h1>
+
+    <div>
+      <form id="sign-in-form" class="with-required-fields-marks" novalidate="novalidate" method="post">
+        <!-- csrf token -->
+        {{form.hidden_tag()}}
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">{{form.email.label}}</legend>
+          {{form.email(maxlength="128", type="email", class='input w-1/2',
+          pattern="(?=(?:(\S+)@\S+\.[A-Za-z]+))(?:^(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22)))*\x40(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D)))*$)")}}
+          <p class="label">Email is invalid</p>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend">{{form.password.label}}</legend>
+          <label for="" class="input w-1/2">
+            {{form.password()}}
+            <ion-icon name="eye-off-outline"></ion-icon>
+          </label>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <label class="label">
+            {{form.remember_me(class='checkbox', type='checkbox', checked=form.remember_me.value)}}
+            {{form.remember_me.label}}
+          </label>
+        </fieldset>
+
+        <div class="grid grid-cols-2 items-center w-1/2">
+          <fieldset class="fieldset">
+            <label class="label">
+              {{form.create_account(class='toggle', type='checkbox', checked=form.create_account.value)}}
+              {{form.create_account.label}}
+            </label>
+          </fieldset>
+          {{form.submit(class="btn btn-primary mt-4")}}
+        </div>
+      </form>
+    </div>
+
+    <div class="mt-4 mb-7 flex gap-2 items-center">
+      <p>
+        or use one of these services:
+      </p>
+
+      <div class="flex gap-4">
+        <form class="oauth-connect-button-container" method="post" action="/users/auth/google_oauth2">
+          <button class="btn btn-site oauth-connect-button" id="google-oauth-connect-button" type="submit"><ion-icon
+              name="logo-google"></ion-icon></button>
+        </form>
+        <form class="oauth-connect-button-container" method="post" action="/users/auth/google_oauth2">
+          <button class="btn btn-site oauth-connect-button" id="google-oauth-connect-button" type="submit"><ion-icon
+              name="logo-microsoft"></ion-icon></button>
+        </form>
+      </div>
+    </div>
+    <hr>
+
+    <div class="text">
+      <small>
+        By using or creating an account, you confirm that you have read and agree to the <a href="/site/toc">Terms and
+          Conditions</a> and <a href="/site/privacy">Privacy Notice</a>
+      </small>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}
+
+{% block sidebar %}
+  {% include 'partials/auth_sidebar.html' %}
+{% endblock sidebar %}

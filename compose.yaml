@@ -15,6 +15,8 @@ services:
     depends_on:
       - db
       - redis
+    networks:
+      - appnet
 
   db:
     image: postgres:15
@@ -33,6 +35,21 @@ services:
     container_name: sports-arb-redis
     ports:
       - "6379:6379"
+    networks:
+      - appnet
+
+  worker:
+    build: .
+    container_name: odds-worker
+    command: python odds_worker.py
+    depends_on:
+      - redis
+    networks:
+      - appnet
 
 volumes:
   pgdata:
+
+networks:
+  appnet:
+    driver: bridge

@@ -1,0 +1,20 @@
+<aside class="flex flex-col h-screen px-4 py-8 overflow-y-auto">
+  <div class="flex flex-col justify-between">
+    <nav>
+      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'main.account' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md" href="{{url_for('main.account')}}">
+        <ion-icon class="w-5 h-5" name="person"></ion-icon>
+        <span class="mx-4 font-medium">Account</span>
+      </a>
+
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'main.plans_overview' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="#">
+        <ion-icon class="w-5 h-5" name="bookmark"></ion-icon>
+        <span class="mx-4 font-medium">Plan</span>
+      </a>
+
+      <a class="flex items-center px-4 py-2 mt-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300 transform rounded-md hover:text-gray-700" href="{{url_for('main.logout')}}">
+        <ion-icon class="w-5 h-5" name="log-out"></ion-icon>
+        <span class="mx-4 font-medium">Logout</span>
+      </a>
+    </nav>
+  </div>
+</aside>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{plan.plan_name}} plan - {{user_subscription.status}}</h1>
+<hr>
+<div class="pt-2">
+  <!-- TODO: format -->
+  <a href="{{url_for('main.plans_overview')}}" class="btn btn-primary">Change plan</a>
+  <p>Current period - 10 days remaining</p>
+  <p>Start Date:{{user_subscription.start_date}}</p>
+  <p>End Date:{{user_subscription.end_date}}</p>
+</div>
+{% endblock content %}
+
+{% block sidebar %}
+  {% include 'partials/account_sidebar.html' %}
+{% endblock sidebar %}

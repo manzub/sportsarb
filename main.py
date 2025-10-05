@@ -1,12 +1,8 @@
 import os
 from dotenv import load_dotenv
-from app import app
-from flask import render_template
-from app.models import User
+from app import create_app
 
-@app.route('/')
-def hello_world():
-    return render_template('homepage.html')
+app = create_app()
 
 if __name__ =='__main__':
     load_dotenv()

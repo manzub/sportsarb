@@ -1,0 +1,20 @@
+<aside class="flex flex-col h-screen px-4 py-8 overflow-y-auto">
+  <div class="flex flex-col justify-between">
+    <nav>
+      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'main.signin' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md" href="{{url_for('main.account')}}">
+        <ion-icon class="w-5 h-5" name="person"></ion-icon>
+        <span class="mx-4 font-medium">Sign In</span>
+      </a>
+
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'main.confirmation' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="#">
+        <ion-icon name="shield-checkmark" class="w-5 h-5"></ion-icon>
+        <span class="mx-4 font-medium">Confirmation</span>
+      </a>
+
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'main.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="#">
+        <ion-icon class="w-5 h-5" name="refresh-circle"></ion-icon>
+        <span class="mx-4 font-medium">Reset</span>
+      </a>
+    </nav>
+  </div>
+</aside>

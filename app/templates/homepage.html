@@ -1,13 +1,27 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{{ url_for('static', filename='src/output.css') }}" rel="stylesheet">
-</head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card bg-base-100 shadow-sm border-1 border-gray-300">
+  <div class="sm:flex justify-between p-2 bg-gray-200">
+    <div class="button-group mb-1">
+      <input type="text" placeholder="Search" class="input input-bordered sm:w-24 md:w-full" />
+    </div>
+    <div class="button-group md:mb-1">
+      <button class="btn text-2xl"><ion-icon name="calculator-outline"></ion-icon></button>
+      <button class="btn text-2xl"><ion-icon name="swap-horizontal-outline"></ion-icon></button>
+      <button class="btn text-2xl"><ion-icon name="bar-chart-outline"></ion-icon></button>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <!-- show if user not on basic/premium subscription -->
+    {% if not has_active_subscription %}
+    <div class="login-alert p-4 sm:p-6">
+      <p>Profit from bets for any match outcome</p>
+      <p>We have filters <strong>100</strong> surebets with 1% profit.</p>
+      <p>To see surebets with a profit of more than 1% and negative surebets, please choose a plan.</p>
+      <a href="{{ url_for('main.plans_overview') }}" class="btn btn-lg">Plans and Registration</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}
