@@ -5,3 +5,5 @@ class AppConfigs(object):
   pool_size = 32
   max_overflow = 64
   SITE_URL = "http://127.0.0.1:5000"
+  CELERY_BROKER_URL="redis://redis:6379/0"
+  CELERY_RESULT_BACKEND="redis://redis:6379/0"

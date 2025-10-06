@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Profit Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen">
+  <div class="bg-white rounded-xl shadow-md p-6 w-80">
+    <h2 class="text-xl font-semibold mb-4 text-center">Profit Calculator</h2>
+
+    <div id="calc-info" class="text-sm text-gray-600 mb-4 text-center"></div>
+
+    <form id="calc-form" class="space-y-3">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Stake (€)</label>
+        <input type="number" id="stake"
+          class="w-full border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500"
+          placeholder="Enter amount" step="0.01" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Odds</label>
+        <input type="number" id="odds" class="w-full border-gray-300 rounded-md px-3 py-2 bg-gray-50" readonly />
+      </div>
+
+      <div class="pt-3">
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+          Calculate Profit
+        </button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-4 text-center text-gray-800 font-semibold"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      const params = new URLSearchParams(window.location.search);
+      const odds = parseFloat(params.get("odds"));
+      const bookmaker = params.get("bookmaker") || "Unknown";
+
+      $("#odds").val(odds);
+      $("#calc-info").text(`Bookmaker: ${bookmaker}`);
+
+      $("#calc-form").on("submit", function (e) {
+        e.preventDefault();
+        const stake = parseFloat($("#stake").val());
+        if (isNaN(stake) || stake <= 0) {
+          $("#result").text("Enter a valid stake amount.");
+          return;
+        }
+
+        const profit = (stake * odds - stake).toFixed(2);
+        const total = (stake * odds).toFixed(2);
+
+        $("#result").html(`
+            <div>💰 Profit: <span class="text-green-600">€${profit}</span></div>
+            <div class="text-sm text-gray-600">Total Return: €${total}</div>
+          `);
+      });
+    });
+  </script>
+</body>
+</html>

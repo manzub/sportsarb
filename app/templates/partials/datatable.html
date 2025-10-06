@@ -1,0 +1,176 @@
+{% block datatable %}
+<div class="mx-4 flex items-center justify-between">
+  <div class="">
+    <p class="text-2xl font-bold">Found 5,588,199 surebets</p>
+    <p>Examples with profit of less than 1% ↓</p>
+  </div>
+
+  <div class="actions">
+    <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
+      ← Prev
+    </button>
+    <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
+      Next →
+    </button>
+  </div>
+</div>
+<div class="m-3 overflow-x-auto">
+  <table id="surebets-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
+    <thead class="bg-gray-100 text-gray-800">
+      <tr>
+        <th class="px-4 py-3 font-semibold">
+          <a href="?order=profit_asc" title="Sort by Profit descending"
+            class="flex items-center gap-1 hover:text-blue-600">
+            Profit
+          </a>
+        </th>
+        <th class="px-4 py-3 font-semibold">Bookmaker</th>
+        <th class="px-4 py-3 font-semibold">Event</th>
+        <th class="px-4 py-3 font-semibold">Market</th>
+        <th class="px-4 py-3 font-semibold text-right">Odds</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <!-- body here -->
+  </table>
+</div>
+
+<script>
+  // Simulated API URL
+  const API_URL = "/api/surebets"; // replace with your Flask route
+
+  let currentPage = 1;
+  const perPage = 5;
+
+  function fetchSurebets(page = 1) {
+    $.ajax({
+      url: API_URL,
+      data: { page: page, limit: perPage },
+      method: "GET",
+      success: function (response) {
+        renderSurebets(response.data);
+        updatePagination(response.page, response.total_pages);
+      },
+      error: function () {
+        $("#surebets-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+      },
+    });
+  }
+
+  function renderSurebets(items) {
+    const tbodyContainer = $("#surebets-body");
+    tbodyContainer.empty();
+
+    // Group by surebet_id
+    const grouped = {};
+    items.forEach((item) => {
+      if (!grouped[item.surebet_id]) grouped[item.surebet_id] = [];
+      grouped[item.surebet_id].push(item);
+    });
+
+    Object.keys(grouped).forEach((id) => {
+      const group = grouped[id];
+      const tbody = $("<tbody>")
+        .addClass("surebet_record border-t border-gray-200")
+        .attr("data-id", id);
+
+      group.forEach((item, idx) => {
+        tbody.append(`
+              <tr class="hover:bg-gray-50 transition">
+                <!-- Profit & Actions -->
+                ${idx == 0 ? `<td rowspan="3" class="px-4 py-2 align-top">
+                  <div class="flex flex-col items-start">
+                    <span class="font-semibold text-green-600 cursor-help" title="ROI 809%">+${item.profit}%</span>
+                    <span class="text-xs text-gray-500 mt-1 cursor-help" title="Surebet age: 31 minutes">31m</span>
+
+                    <!-- Action buttons -->
+                    <div class="flex items-center gap-2 mt-2">
+                      <button data-odds="${item.odds}" data-bookmarker="${item.bookmaker}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                        <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
+                      </button>
+                      <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
+                        <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </td>` : ''}
+
+                <!-- Row 1: bookmaker -->
+                <td class="px-4 py-2">
+                  <a href="#" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+                  <div class="text-xs text-gray-500">Tennis</div>
+                </td>
+
+                <td class="px-4 py-2">
+                  <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
+                  <div class="text-xs text-gray-500">${item.tournament}</div>
+                </td>
+
+                <td class="px-4 py-2 text-gray-600">${item.market}</td>
+
+                <td class="px-4 py-2 text-right">
+                  <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+                </td>
+
+                ${idx == 0 ? `<td rowspan="3" class="px-0 py-2 align-middle text-center">
+                  <button class="p-1 text-gray-600 hover:text-blue-600" title="Open all odds">
+                    <ion-icon class="text-2xl" name="chevron-forward"></ion-icon>
+                  </button>
+                </td>` : ''}
+              </tr>
+            `);
+      });
+
+      tbody.append(`
+            <tr class="bg-gray-50">
+              <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
+                <div class="w-full flex justify-end pr-6">+ ${group.length - 1} more surebets for this event</div>
+              </td>
+            </tr>
+          `);
+
+      tbodyContainer.append(tbody);
+    });
+
+    // attach event for calculator popout
+    $(".calc-btn").on("click", function () {
+      const odds = $(this).data("odds");
+      const bookmaker = $(this).data("bookmaker");
+      const popupUrl = `/calculator?odds=${encodeURIComponent(
+        odds
+      )}&bookmaker=${encodeURIComponent(bookmaker)}`;
+
+      window.open(
+        popupUrl,
+        "calcPopup",
+        "width=400,height=400,scrollbars=no,resizable=no"
+      );
+    });
+  }
+
+  function updatePagination(page, totalPages) {
+    $("#page-info").text(`Page ${page} of ${totalPages}`);
+    $("#prev-page").prop("disabled", page <= 1);
+    $("#next-page").prop("disabled", page >= totalPages);
+    currentPage = page;
+  }
+
+  $("#prev-page").on("click", function () {
+    if (currentPage > 1) fetchSurebets(currentPage - 1);
+  });
+
+  $("#next-page").on("click", function () {
+    fetchSurebets(currentPage + 1);
+  });
+
+  // initial load
+  fetchSurebets(currentPage);
+</script>
+{% endblock datatable %}

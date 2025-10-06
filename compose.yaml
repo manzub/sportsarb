@@ -41,7 +41,7 @@ services:
   worker:
     build: .
     container_name: odds-worker
-    command: python odds_worker.py
+    command: celery -A app.tasks.celery beat --loglevel=info
     depends_on:
       - redis
     networks:

@@ -8,6 +8,7 @@
   <meta name="site-url" content="{{config.SITE_URL}}">
   <link href="{{ url_for('static', filename='src/output.css') }}" rel="stylesheet">
   <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -36,13 +37,18 @@
           class="flex-2 justify-between absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-primary md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
           <span class="no"></span>
           <div class="flex flex-col md:flex-row md:mx-6">
-            <a class="my-2 {%if request.endpoint == 'main.index' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0" href="{{url_for('main.index')}}">Surebets</a>
-            <a class="my-2 {%if request.endpoint == 'main.middlebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0" {% if session['has_active_plan'] %} href="{{url_for('main.middles')}}" {%endif%}>Middlebets</a>
-            <a class="my-2 {%if request.endpoint == 'main.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0" {% if session['has_active_plan'] %} href="{{url_for('main.valuebets')}}" {%endif%}>Valuebets</a>
+            <a class="my-2 {%if request.endpoint == 'main.index' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="{{url_for('main.index')}}">Surebets</a>
+            <a class="my-2 {%if request.endpoint == 'main.middlebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              {% if session['has_active_plan'] %} href="{{url_for('main.middles')}}" {%endif%}>Middlebets</a>
+            <a class="my-2 {%if request.endpoint == 'main.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              {% if session['has_active_plan'] %} href="{{url_for('main.valuebets')}}" {%endif%}>Valuebets</a>
           </div>
           <div class="flex justify-center sm:block">
-            <a href="{{url_for('main.account')}}" class="btn btn-ghost"><ion-icon class="w-7 h-7 text-success" name="person-circle"></ion-icon></a>
-            <a href="{{url_for('main.signin')}}" class="btn btn-link hover:text-error text-primary-content">Sign In <ion-icon name="arrow-forward"></ion-icon></a>
+            <a href="{{url_for('main.account')}}" class="btn btn-ghost"><ion-icon class="w-7 h-7 text-success"
+                name="person-circle"></ion-icon></a>
+            <a href="{{url_for('main.signin')}}" class="btn btn-link hover:text-error text-primary-content">Sign In
+              <ion-icon name="arrow-forward"></ion-icon></a>
           </div>
         </div>
       </div>
@@ -102,6 +108,7 @@
   </div>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>

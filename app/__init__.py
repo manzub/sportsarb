@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from celery import Celery
 from flask import Flask
 from datetime import datetime
 from flask_login import LoginManager
@@ -14,6 +15,18 @@ db = SQLAlchemy()
 migrate = Migrate()
 login_manager = LoginManager()
 stripe.api_key = os.getenv('STRIPE_SECRET')
+
+def make_celery(app: Flask):
+  celery = Celery(app.import_name, backend=app.config['CELERY_RESULT_BACKEND'], broker=app.config['CELERY_BROKER_URL'])
+  celery.conf.update(app.config)
+  TaskBase = celery.Task
+  
+  class ContextTask(TaskBase):
+    def __call__(self, *args, **kwargs):
+      with app.app_context():
+        return TaskBase.__call__(self, *args, **kwargs)
+  celery.Task = ContextTask
+  return celery
 
 
 def create_app():
@@ -30,7 +43,8 @@ def create_app():
   from app import models
   from app.routes import bp as main_bp
   app.register_blueprint(main_bp)
-  csrf = CSRFProtect(app)
+  app.celery = make_celery(app)
+  CSRFProtect(app)
 
   return app
 

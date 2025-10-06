@@ -41,6 +41,51 @@ def days_filter(days):
   months = math.ceil(days / 30)
   return f"{months} Month{'s' if months > 1 else ''}"
 
+data = [
+  {
+      "surebet_id": "rwFdDK6lqlM",
+      "profit": 1.0,
+      "bookmaker": "Pinnacle",
+      "start_time": "06/10 08:00",
+      "event": "Antonia Ruzic – Magda Linette",
+      "tournament": "WTA Wuhan - R1",
+      "market": "AH1(-2.5)",
+      "odds": 2.02,
+      "roi": 809,
+  },
+  {
+      "surebet_id": "rwFdDK6lqlM",
+      "profit": 1.0,
+      "bookmaker": "BetBoom",
+      "start_time": "06/10 06:20",
+      "event": "Рузич А. – Линетт М.",
+      "tournament": "WTA Wuhan - R1",
+      "market": "AH2(+2.5)",
+      "odds": 2.02,
+      "roi": 809,
+  },
+  # Add more entries...
+]
+
+@bp.route('/api/surebets', methods=['GET'])
+def get_surebets():
+  page = int(request.args.get("page", 1))
+  limit = int(request.args.get("limit", 5))
+  start = (page - 1) * limit
+  end = start + limit
+  total_pages = (len(data) + limit - 1) // limit
+
+  return jsonify({
+    "data": data[start:end],
+    "page": page,
+    "total_pages": total_pages
+  })
+  
+@bp.route('/calculator', methods=['GET'])
+def bet_calculator():
+  return render_template('calculator.html')
+  
+
 @bp.route('/')
 def index():
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
