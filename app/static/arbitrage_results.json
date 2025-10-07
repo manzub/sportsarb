@@ -1,0 +1,87 @@
+{
+  "total_events": 26,
+  "total_arbitrage_opportunities": 5,
+  "arbitrage_opportunities": [
+    {
+      "sport_text": "Allsvenskan - Sweden - soccer_sweden_allsvenskan",
+      "event": "IF Elfsborg vs IFK V\u00e4rnamo",
+      "profit_margin": 0.40097799511003007,
+      "best_odds": {
+        "Over": 2.32,
+        "Under": 1.77
+      },
+      "bookmakers": {
+        "Over": "Casumo",
+        "Under": "Matchbook"
+      },
+      "commence_time": "2025-08-11T17:00:00Z",
+      "market": "totals",
+      "points": 3.5
+    },
+    {
+      "sport_text": "Primeira Liga - Portugal - soccer_portugal_primeira_liga",
+      "event": "FC Porto vs Vit\u00f3ria SC",
+      "profit_margin": 1.6750067884712339,
+      "best_odds": {
+        "FC Porto": 1.61,
+        "Vit\u00f3ria SC": 7.4,
+        "Draw": 4.4
+      },
+      "bookmakers": {
+        "FC Porto": "1xBet",
+        "Vit\u00f3ria SC": "Betfair",
+        "Draw": "Betfair"
+      },
+      "commence_time": "2025-08-11T19:45:00Z",
+      "market": "h2h"
+    },
+    {
+      "sport_text": "Allsvenskan - Sweden - soccer_sweden_allsvenskan",
+      "event": "GAIS vs IFK Goteborg",
+      "profit_margin": 0.16286644951140072,
+      "best_odds": {
+        "GAIS": 2.05,
+        "IFK Goteborg": 4.1,
+        "Draw": 3.75
+      },
+      "bookmakers": {
+        "GAIS": "BetOnline.ag",
+        "IFK Goteborg": "Betfair",
+        "Draw": "Betfair"
+      },
+      "commence_time": "2025-08-11T17:00:00Z",
+      "market": "h2h"
+    },
+    {
+      "sport_text": "WTA Cincinnati Open - tennis_wta_cincinnati_open",
+      "event": "Ekaterina Alexandrova vs Maya Joint",
+      "profit_margin": 2.5788235294117667,
+      "best_odds": {
+        "Ekaterina Alexandrova": 1.73,
+        "Maya Joint": 2.52
+      },
+      "bookmakers": {
+        "Ekaterina Alexandrova": "BoyleSports",
+        "Maya Joint": "Betfair"
+      },
+      "commence_time": "2025-08-11T15:00:00Z",
+      "market": "h2h"
+    },
+    {
+      "sport_text": "WTA Cincinnati Open - tennis_wta_cincinnati_open",
+      "event": "Sorana Cirstea vs Yue Yuan",
+      "profit_margin": 0.9234567901234669,
+      "best_odds": {
+        "Sorana Cirstea": 1.91,
+        "Yue Yuan": 2.14
+      },
+      "bookmakers": {
+        "Sorana Cirstea": "BoyleSports",
+        "Yue Yuan": "Betfair"
+      },
+      "commence_time": "2025-08-11T16:30:00Z",
+      "market": "h2h"
+    }
+  ],
+  "api_usage": null
+}

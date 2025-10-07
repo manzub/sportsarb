@@ -40,12 +40,20 @@ services:
 
   worker:
     build: .
-    container_name: odds-worker
-    command: celery -A app.tasks.celery beat --loglevel=info
+    command: celery -A app.tasks.celery worker --loglevel=info
     depends_on:
       - redis
     networks:
       - appnet
+    volumes:
+      - .:/app
+  beat:
+    build: .
+    command: celery -A app.tasks.celery worker --loglevel=info
+    depends_on:
+      - redis
+    volumes:
+      - .:/app
 
 volumes:
   pgdata:

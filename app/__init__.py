@@ -1,4 +1,5 @@
 import os
+from redis import Redis
 from dotenv import load_dotenv
 from celery import Celery
 from flask import Flask
@@ -12,19 +13,19 @@ import stripe
 load_dotenv()
 
 db = SQLAlchemy()
+redis = Redis(host="localhost", db=0, port=6379, decode_responses=True)
 migrate = Migrate()
 login_manager = LoginManager()
 stripe.api_key = os.getenv('STRIPE_SECRET')
 
-def make_celery(app: Flask):
-  celery = Celery(app.import_name, backend=app.config['CELERY_RESULT_BACKEND'], broker=app.config['CELERY_BROKER_URL'])
+def make_celery(app):
+  celery = Celery(app.import_name, backend=app.config['result_backend'], broker=app.config['broker_url'])
   celery.conf.update(app.config)
-  TaskBase = celery.Task
   
-  class ContextTask(TaskBase):
+  class ContextTask(celery.Task):
     def __call__(self, *args, **kwargs):
       with app.app_context():
-        return TaskBase.__call__(self, *args, **kwargs)
+        return self.run(*args, **kwargs)
   celery.Task = ContextTask
   return celery
 
@@ -32,6 +33,11 @@ def make_celery(app: Flask):
 def create_app():
   app = Flask(__name__)
   app.config.from_object('app.config.AppConfigs')
+  
+  app.config.update(
+    broker_url='redis://localhost:6379/0',
+    result_backend='redis://localhost:6379/0'
+  )
 
   db.init_app(app)
   login_manager.init_app(app)
@@ -40,7 +46,7 @@ def create_app():
   migrate.init_app(app, db)
 
   # import routes AFTER app + db are set up
-  from app import models
+  from app import models, tasks
   from app.routes import bp as main_bp
   app.register_blueprint(main_bp)
   app.celery = make_celery(app)

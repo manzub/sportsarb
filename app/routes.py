@@ -5,7 +5,7 @@ from flask import Blueprint, render_template, session, flash, request, url_for, 
 from app.models import User, Alerts, Subscriptions, AppSettings, UserSubscriptions
 from app.forms import LoginForm, SelectPlan
 
-from app import has_active_subscription, db, stripe
+from app import has_active_subscription, db, stripe, redis
 from flask_login import current_user, login_required, login_user, logout_user
 
 bp = Blueprint('main', __name__)
@@ -66,6 +66,12 @@ data = [
   },
   # Add more entries...
 ]
+
+@bp.route('/api/test', methods=['GET'])
+def test():
+  latest = max(redis.keys("surebets:*"))
+  data = redis.get(latest)
+  return jsonify({"arbitrage_opportunities": json.loads(data)})
 
 @bp.route('/api/surebets', methods=['GET'])
 def get_surebets():
