@@ -13,9 +13,6 @@ celery = app.celery
 redis = Redis(host="localhost", port=6379,db=0, decode_responses=True)
 
 def save_results(key_prefix, data, expire_hours=1):
-  """
-  Save a result dict to Redis as JSON, with a timestamp key
-  """
   timestamp = datetime.now().strftime("%Y%m%d%H%M")
   key = f"{key_prefix}:{timestamp}"
   json_data = json.dumps(data)
@@ -72,14 +69,21 @@ def find_arbitrage():
 # TODO: calculate middles, values, surebets
 def calculate_arbitrage(markets, odds):
   results = []
+  all_surebets = []
+  all_middles = []
+  all_valuebets = []
   for event in odds:
     # extend and save surbets
     surebets = find_surebets(markets, event)
     if surebets:
-      save_results("surebets", surebets)
-      results.extend(surebets)
+      all_surebets.extend(surebets)
     
     # TODO: middles more
+  save_results("surebets", all_surebets)
+  
+  results.extend(all_surebets)
+  results.extend(all_middles)
+  results.extend(all_valuebets)
   return results
 
 def setup_logging():

@@ -1,6 +1,7 @@
 import json
 from functools import wraps
 from datetime import datetime, timedelta
+from urllib.parse import unquote
 from flask import Blueprint, render_template, session, flash, request, url_for, redirect, jsonify, current_app
 from app.models import User, Alerts, Subscriptions, AppSettings, UserSubscriptions
 from app.forms import LoginForm, SelectPlan
@@ -32,6 +33,37 @@ def check_active_plan(fn):
     return response
   return wrapper
 
+def sort_surebet_data(data):
+  results = []
+  for arb in json.loads(data):
+    arb_item = []
+    surebet_id = str(arb['event']).replace(" ", "")[:11]
+    team_names = str(arb['event']).split(' vs ')
+    event = f"{team_names[0]} to Win"
+    bookmakers = list(arb['bookmakers'].keys())
+    for idx, item in enumerate(bookmakers):
+      if idx > 0 and len(bookmakers) == 2:
+        event = f"{team_names[1]} to Win"
+      elif len(bookmakers) == 3:
+        event = "Both teams to draw"
+      x_item = {
+        "surebet_id": arb['unique_id'],
+        "profit": round(arb['profit_margin'], 2),
+        "bookmaker": arb['bookmakers'][item],
+        "start_time": arb['commence_time'],
+        "event": event,
+        "tournament": arb['sport_title'],
+        "market": item,
+        "odds": arb['best_odds'][item]
+      }
+      arb_item.append(x_item)
+    results.extend(arb_item)
+  return results
+
+@bp.app_template_filter('format_date')
+def format_date(date_string):
+    date = datetime.fromisoformat(date_string.replace('Z', '+00:00'))
+    return date.strftime('%Y-%m-%d %I:%M %p %Z')
 
 @bp.app_template_filter("days_to_months")
 def days_filter(days):
@@ -41,55 +73,39 @@ def days_filter(days):
   months = math.ceil(days / 30)
   return f"{months} Month{'s' if months > 1 else ''}"
 
-data = [
-  {
-      "surebet_id": "rwFdDK6lqlM",
-      "profit": 1.0,
-      "bookmaker": "Pinnacle",
-      "start_time": "06/10 08:00",
-      "event": "Antonia Ruzic – Magda Linette",
-      "tournament": "WTA Wuhan - R1",
-      "market": "AH1(-2.5)",
-      "odds": 2.02,
-      "roi": 809,
-  },
-  {
-      "surebet_id": "rwFdDK6lqlM",
-      "profit": 1.0,
-      "bookmaker": "BetBoom",
-      "start_time": "06/10 06:20",
-      "event": "Рузич А. – Линетт М.",
-      "tournament": "WTA Wuhan - R1",
-      "market": "AH2(+2.5)",
-      "odds": 2.02,
-      "roi": 809,
-  },
-  # Add more entries...
-]
-
-@bp.route('/api/test', methods=['GET'])
-def test():
-  latest = max(redis.keys("surebets:*"))
-  data = redis.get(latest)
-  return jsonify({"arbitrage_opportunities": json.loads(data)})
 
 @bp.route('/api/surebets', methods=['GET'])
 def get_surebets():
+  data = []
+  keys = redis.keys('surebets:*')
+  if keys:
+    latest = max(keys)
+    __data = redis.get(latest)
+    data = sort_surebet_data(__data)
+  
   page = int(request.args.get("page", 1))
-  limit = int(request.args.get("limit", 5))
+  limit = int(request.args.get("limit", 10))
   start = (page - 1) * limit
   end = start + limit
   total_pages = (len(data) + limit - 1) // limit
 
-  return jsonify({
-    "data": data[start:end],
-    "page": page,
-    "total_pages": total_pages
-  })
+  return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages })
   
 @bp.route('/calculator', methods=['GET'])
 def bet_calculator():
-  return render_template('calculator.html')
+  redis_key = request.args.get('page')
+  arb_filter = unquote(request.args.get('arb_item'))
+  if arb_filter and redis_key:
+    # get redis arb items
+    latest = max(redis.keys(f"{redis_key}:*"))
+    data = redis.get(latest)
+    arb_item = [x for x in json.loads(data) if x['unique_id'] == arb_filter]
+    if arb_item:
+      total_implied_prob = sum(1/odd for odd in list(arb_item[0]['best_odds'].values()))
+      return render_template('calculator.html', total_implied_prob=total_implied_prob, arb_item=arb_item[0]) # continue logic
+    flash(f"Could not find {str(redis_key).capitalize()} Item", 'red')
+  flash("Page Not Found", 'red')
+  return render_template('404.html')
   
 
 @bp.route('/')

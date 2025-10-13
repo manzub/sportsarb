@@ -29,7 +29,6 @@ class OddsAPI:
       response = requests.get(url, params=params)
       response.raise_for_status()
       sports_data = response.json()
-      # TODO: save results to redis
       if self.offline_file:
         self.save_data({'sports': sports_data, 'odds': {}})
       return sports_data
@@ -50,6 +49,7 @@ class OddsAPI:
       # 'regions': self.config.region,
       # 'markets': self.config.market,  # Use the new market parameter
       'markets': self.markets,
+      'includeLinks': 'true',
       'oddsFormat': 'decimal',
       'dateFormat': 'iso',
     }
@@ -85,6 +85,7 @@ class OddsAPI:
     else:
       print(f"Error fetching data: {error}")
   
+  # TODO: test save data
   def save_data(self, data):
     with open(self.save_file, 'w') as f:
       json.dump(data, f)

@@ -1,5 +1,6 @@
 import logging
 from collections import defaultdict
+import uuid
 from difflib import get_close_matches
 from datetime import datetime, timedelta, timezone
 
@@ -8,7 +9,7 @@ def find_surebets(markets: str, event):
   # x -> market [h2h,totals,spreads]
   indv_market = markets.split(',')
   for x in indv_market:
-    best_odds, bookmakers, points, market = get_best_odds(x, event)
+    best_odds, bookmakers, bookmaker_links, points, market = get_best_odds(x, event)
     if best_odds:
       try:
         if x == 'h2h': # if h2h market
@@ -36,12 +37,15 @@ def find_surebets(markets: str, event):
           if profit_margin >= 0: #cutoff = minimum profit margin
             surebet_item = {
               'type': 'surebet',
-              'event': event['home_team'] + 'vs ' + event['away_team'],
+              'event': event['home_team'] + ' vs ' + event['away_team'],
               'profit_margin': profit_margin,
               'best_odds': best_odds,
               'bookmakers': bookmakers,
+              'links': bookmaker_links,
               'commence_time': event['commence_time'],
-              'market': market
+              'market': market,
+              'unique_id': f"{uuid.uuid4()}",
+              'sport_title': event['sport_title']
             }
             if points is not None:
               surebet_item['points'] = points
@@ -72,6 +76,7 @@ def get_best_odds(market, event):
 def get_best_odds_h2h(event):
   best_odds = {}
   bookmakers = {}
+  links = {}
   if 'bookmakers' in event and isinstance(event['bookmakers'], list):
     for bookmaker in event['bookmakers']:
       if 'markets' in bookmaker and isinstance(bookmaker['markets'], list):
@@ -81,10 +86,11 @@ def get_best_odds_h2h(event):
               if outcome['name'] not in best_odds or outcome['price'] > best_odds[outcome['name']]:
                 best_odds[outcome['name']] = outcome['price']
                 bookmakers[outcome['name']] = bookmaker['title']
-  return (best_odds, bookmakers, None, 'h2h') if len(best_odds) > 1 else (None, None, None, None)
+                links[bookmaker['title']] = bookmaker['link']
+  return (best_odds, bookmakers, links, None, 'h2h') if len(best_odds) > 1 else (None, None, None, None)
 
 def get_best_odds_totals(event):
-  return (None, None, None, None)
+  return (None, None, None, None, None)
 
 def get_best_odds_spreads(event):
-  return (None, None, None, None)
+  return (None, None, None, None, None)

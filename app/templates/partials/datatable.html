@@ -1,5 +1,5 @@
 {% block datatable %}
-<div class="mx-4 flex items-center justify-between">
+<div class="mx-4 mt-4 flex items-center justify-between">
   <div class="">
     <p class="text-2xl font-bold">Found 5,588,199 surebets</p>
     <p>Examples with profit of less than 1% ↓</p>
@@ -26,7 +26,7 @@
         </th>
         <th class="px-4 py-3 font-semibold">Bookmaker</th>
         <th class="px-4 py-3 font-semibold">Event</th>
-        <th class="px-4 py-3 font-semibold">Market</th>
+        <th class="px-4 py-3 font-semibold">Market/Stake</th>
         <th class="px-4 py-3 font-semibold text-right">Odds</th>
         <th></th>
       </tr>
@@ -66,7 +66,7 @@
 
   function renderSurebets(items) {
     const tbodyContainer = $("#surebets-body");
-    tbodyContainer.empty();
+    //tbodyContainer.empty();
 
     // Group by surebet_id
     const grouped = {};
@@ -92,7 +92,7 @@
 
                     <!-- Action buttons -->
                     <div class="flex items-center gap-2 mt-2">
-                      <button data-odds="${item.odds}" data-bookmarker="${item.bookmaker}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                      <button data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
                         <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
                       </button>
                       <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
@@ -141,11 +141,11 @@
 
     // attach event for calculator popout
     $(".calc-btn").on("click", function () {
-      const odds = $(this).data("odds");
-      const bookmaker = $(this).data("bookmaker");
-      const popupUrl = `/calculator?odds=${encodeURIComponent(
-        odds
-      )}&bookmaker=${encodeURIComponent(bookmaker)}`;
+      const page = $(this).data("page");
+      const arb_item = $(this).data("item");
+      const popupUrl = `/calculator?page=${encodeURIComponent(
+        page
+      )}&arb_item=${encodeURIComponent(arb_item)}`;
 
       window.open(
         popupUrl,
