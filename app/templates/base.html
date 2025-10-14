@@ -37,16 +37,26 @@
           class="flex-2 justify-between absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-primary md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
           <span class="no"></span>
           <div class="flex flex-col md:flex-row md:mx-6">
+            <form action="{{url_for('main.change_currency')}}" method="post">
+              <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+              <select onchange="this.form.submit()" class="select-ghost" name="currency">
+                <option {% if current_user.preferred_currency == 'USD' %} selected {% endif %} value="USD">USD</option>
+                <option {% if current_user.preferred_currency == 'GBP' %} selected {% endif %} value="GBP">GBP</option>
+                <option {% if current_user.preferred_currency == 'EUR' %} selected {% endif %} value="EUR">EUR</option>
+                <option {% if current_user.preferred_currency == 'NGN' %} selected {% endif %} value="NGN">NGN</option>
+              </select>
+            </form>
             <a class="my-2 {%if request.endpoint == 'main.index' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               href="{{url_for('main.index')}}">Surebets</a>
             <a class="my-2 {%if request.endpoint == 'main.middlebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               {% if session['has_active_plan'] %} href="{{url_for('main.index')}}" {%endif%}>Middlebets</a>
-            <a class="my-2 {%if request.endpoint == 'main.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+            <a class="my-2 {%if request.endpoint == 'plan.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               {% if session['has_active_plan'] %} href="{{url_for('main.index')}}" {%endif%}>Valuebets</a>
           </div>
           <div class="flex justify-center sm:block">
+
             {% if not current_user.is_authenticated %}
-            <a href="{{url_for('main.signin')}}" class="btn btn-link hover:text-error text-primary-content">Sign In
+            <a href="{{url_for('auth.login')}}" class="btn btn-link hover:text-error text-primary-content">Sign In
               <ion-icon name="arrow-forward"></ion-icon></a>
             {% else %}
             <a href="{{url_for('main.account')}}" class="btn btn-ghost"><ion-icon class="w-7 h-7 text-success"
@@ -71,7 +81,7 @@
                   <ion-icon name="alert-circle" class="w-6 h-6 fill-current"></ion-icon>
                   {% if message == 'pending' %}
                   <p>You have a pending subscription, <a class="underline"
-                      href="{{url_for('main.checkout', plan_id=pending_plan_id)}}">Click here to
+                      href="{{url_for('plan.checkout', plan_id=pending_plan_id)}}">Click here to
                       pay</a></p>
                   {% else%}
                   <p class="mx-3">{{message}}</p>

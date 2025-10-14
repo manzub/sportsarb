@@ -1,4 +1,4 @@
-from wtforms import SubmitField, PasswordField, StringField, ValidationError, BooleanField, HiddenField
+from wtforms import SubmitField, PasswordField, StringField, ValidationError, BooleanField, HiddenField, SelectField
 from wtforms.validators import DataRequired, Email
 from flask_wtf import FlaskForm
 from app.models import User
@@ -17,3 +17,10 @@ class LoginForm(FlaskForm):
 class SelectPlan(FlaskForm):
   plan_id = StringField('Plan Id')
   submit = SubmitField('Choose')
+  
+class CurrencyForm(FlaskForm):
+  currency = SelectField(
+    'Preferred Currency',
+    choices=[('USD', 'USD'), ('GBP', 'GBP'), ('EUR', 'EUR'), ('NGN', 'NGN')],
+  )
+  submit = SubmitField('Update')

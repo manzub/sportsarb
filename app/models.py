@@ -18,6 +18,7 @@ class User(db.Model, UserMixin):
   active = Column(Boolean, default=True)
   favorite_leagues = []
   favorite_teams = []
+  preferred_currency = Column(String(3), default="USD")
   current_plan = relationship('UserSubscriptions', back_populates='user', uselist=False, cascade="all, delete-orphan")
   alert_settings = relationship('Alerts', backref='users', uselist=False, cascade="all, delete-orphan")
   

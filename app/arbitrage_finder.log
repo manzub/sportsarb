@@ -1,3 +1,157 @@
 2025-10-07 11:47:26,537 - WARNING -  * Debugger is active!
 2025-10-07 11:47:26,575 - INFO -  * Debugger PIN: 135-200-680
 2025-10-07 11:48:00,116 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/__init__.py', reloading
+2025-10-14 00:56:53,682 - WARNING -  * Debugger is active!
+2025-10-14 00:56:53,711 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 00:58:54,079 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/arbitrage_tasks.py', reloading
+2025-10-14 00:58:56,155 - WARNING -  * Debugger is active!
+2025-10-14 00:58:56,190 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 00:59:14,413 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/arbitrage_tasks.py', reloading
+2025-10-14 00:59:16,670 - WARNING -  * Debugger is active!
+2025-10-14 00:59:16,700 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:03:17,458 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:03:19,463 - WARNING -  * Debugger is active!
+2025-10-14 01:03:19,491 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:07:21,037 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/celery_worker.py', reloading
+2025-10-14 01:07:23,319 - WARNING -  * Debugger is active!
+2025-10-14 01:07:23,352 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:07:59,830 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/arbitrage_tasks.py', reloading
+2025-10-14 01:08:02,265 - WARNING -  * Debugger is active!
+2025-10-14 01:08:02,296 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:10:38,963 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:10:40,922 - WARNING -  * Debugger is active!
+2025-10-14 01:10:40,951 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:12:29,053 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:12:44,079 - WARNING -  * Debugger is active!
+2025-10-14 01:12:44,114 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:13:00,350 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:14:16,214 - WARNING -  * Debugger is active!
+2025-10-14 01:14:16,243 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:17:11,316 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/arbitrage_tasks.py', reloading
+2025-10-14 01:17:13,516 - WARNING -  * Debugger is active!
+2025-10-14 01:17:13,543 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:17:29,708 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks/arbitrage_tasks.py', reloading
+2025-10-14 01:17:31,909 - WARNING -  * Debugger is active!
+2025-10-14 01:17:32,020 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:20:05,988 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:20:07,901 - WARNING -  * Debugger is active!
+2025-10-14 01:20:07,934 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:21:11,676 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:21:13,499 - WARNING -  * Debugger is active!
+2025-10-14 01:21:13,528 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:23:50,215 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-14 01:23:52,385 - WARNING -  * Debugger is active!
+2025-10-14 01:23:52,411 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:24:02,505 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-14 01:24:04,470 - WARNING -  * Debugger is active!
+2025-10-14 01:24:04,499 - INFO -  * Debugger PIN: 926-742-044
+2025-10-14 01:25:48,638 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-14 01:26:26,410 - WARNING -  * Debugger is active!
+2025-10-14 01:26:26,439 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:30:56,438 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 01:30:58,685 - WARNING -  * Debugger is active!
+2025-10-14 01:30:58,726 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 01:32:54,807 - INFO - 127.0.0.1 - - [14/Oct/2025 01:32:54] "GET / HTTP/1.1" 200 -
+2025-10-14 01:32:54,867 - INFO - 127.0.0.1 - - [14/Oct/2025 01:32:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-14 01:32:54,940 - INFO - 127.0.0.1 - - [14/Oct/2025 01:32:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-14 01:32:55,019 - INFO - 127.0.0.1 - - [14/Oct/2025 01:32:55] "GET /api/surebets?page=1&limit=5 HTTP/1.1" 200 -
+2025-10-14 08:12:35,359 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 08:12:37,988 - WARNING -  * Debugger is active!
+2025-10-14 08:12:38,025 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 08:13:49,844 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 08:13:52,045 - WARNING -  * Debugger is active!
+2025-10-14 08:13:52,073 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 08:14:07,312 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 08:14:09,346 - WARNING -  * Debugger is active!
+2025-10-14 08:14:09,377 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 09:28:58,001 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 09:29:00,684 - WARNING -  * Debugger is active!
+2025-10-14 09:29:00,722 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 09:29:35,040 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 09:29:37,326 - WARNING -  * Debugger is active!
+2025-10-14 09:29:37,352 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 09:31:43,916 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:43] "GET / HTTP/1.1" 200 -
+2025-10-14 09:31:43,987 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-14 09:31:44,070 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-14 09:31:44,197 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:44] "GET /api/surebets?page=1&limit=5 HTTP/1.1" 200 -
+2025-10-14 09:31:47,075 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:47] "GET / HTTP/1.1" 200 -
+2025-10-14 09:31:47,108 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-14 09:31:47,131 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-14 09:31:47,241 - INFO - 127.0.0.1 - - [14/Oct/2025 09:31:47] "GET /api/surebets?page=1&limit=5 HTTP/1.1" 200 -
+2025-10-14 11:02:18,013 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 11:02:20,696 - WARNING -  * Debugger is active!
+2025-10-14 11:02:20,740 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:02:34,862 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 11:02:37,169 - WARNING -  * Debugger is active!
+2025-10-14 11:02:37,202 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:02:50,537 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 11:02:52,440 - WARNING -  * Debugger is active!
+2025-10-14 11:02:52,469 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:08:08,252 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 11:08:10,655 - WARNING -  * Debugger is active!
+2025-10-14 11:08:10,691 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:10:21,122 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:10:23,120 - WARNING -  * Debugger is active!
+2025-10-14 11:10:23,154 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:10:36,333 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:10:38,367 - WARNING -  * Debugger is active!
+2025-10-14 11:10:38,394 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:13:29,344 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:13:31,314 - WARNING -  * Debugger is active!
+2025-10-14 11:13:31,343 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:14:04,844 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:14:06,924 - WARNING -  * Debugger is active!
+2025-10-14 11:14:06,956 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:14:15,033 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:14:16,955 - WARNING -  * Debugger is active!
+2025-10-14 11:14:16,986 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:15:27,695 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:15:30,010 - WARNING -  * Debugger is active!
+2025-10-14 11:15:30,038 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:16:09,563 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:16:11,579 - WARNING -  * Debugger is active!
+2025-10-14 11:16:11,609 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:16:29,788 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:16:31,806 - WARNING -  * Debugger is active!
+2025-10-14 11:16:31,832 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:17:19,300 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:17:21,510 - WARNING -  * Debugger is active!
+2025-10-14 11:17:21,538 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:18:07,055 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:18:09,354 - WARNING -  * Debugger is active!
+2025-10-14 11:18:09,382 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:18:13,426 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:18:15,349 - WARNING -  * Debugger is active!
+2025-10-14 11:18:15,375 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:18:46,800 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:18:48,950 - WARNING -  * Debugger is active!
+2025-10-14 11:18:48,988 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:19:10,192 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:19:12,037 - WARNING -  * Debugger is active!
+2025-10-14 11:19:12,065 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:19:30,250 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:19:32,074 - WARNING -  * Debugger is active!
+2025-10-14 11:19:32,104 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:20:11,575 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-14 11:20:13,385 - WARNING -  * Debugger is active!
+2025-10-14 11:20:13,413 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:21:21,417 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:21:23,479 - WARNING -  * Debugger is active!
+2025-10-14 11:21:23,510 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:22:39,412 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:22:41,774 - WARNING -  * Debugger is active!
+2025-10-14 11:22:41,805 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:23:38,556 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:23:41,260 - WARNING -  * Debugger is active!
+2025-10-14 11:23:41,295 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:23:44,351 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/arbitrage_service.py', reloading
+2025-10-14 11:23:46,370 - WARNING -  * Debugger is active!
+2025-10-14 11:23:46,397 - INFO -  * Debugger PIN: 135-200-680
+2025-10-14 11:23:54,818 - INFO - 127.0.0.1 - - [14/Oct/2025 11:23:54] "GET / HTTP/1.1" 200 -
+2025-10-14 11:23:54,885 - INFO - 127.0.0.1 - - [14/Oct/2025 11:23:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-14 11:23:54,976 - INFO - 127.0.0.1 - - [14/Oct/2025 11:23:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-14 11:23:55,086 - INFO - 127.0.0.1 - - [14/Oct/2025 11:23:55] "GET /api/surebets?page=1&limit=5 HTTP/1.1" 200 -
+2025-10-14 11:24:02,597 - INFO - 127.0.0.1 - - [14/Oct/2025 11:24:02] "GET / HTTP/1.1" 200 -
+2025-10-14 11:24:02,713 - INFO - 127.0.0.1 - - [14/Oct/2025 11:24:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-14 11:24:02,715 - INFO - 127.0.0.1 - - [14/Oct/2025 11:24:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-14 11:24:02,802 - INFO - 127.0.0.1 - - [14/Oct/2025 11:24:02] "GET /api/surebets?page=1&limit=5 HTTP/1.1" 200 -

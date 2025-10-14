@@ -49,7 +49,7 @@ services:
       - .:/app
   beat:
     build: .
-    command: celery -A app.tasks.celery worker --loglevel=info
+    command: celery -A app.tasks.celery beat --loglevel=info
     depends_on:
       - redis
     volumes:

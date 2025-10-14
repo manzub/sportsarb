@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from urllib.parse import unquote
 from flask import Blueprint, render_template, session, flash, request, url_for, redirect, jsonify, current_app
 from app.models import User, Alerts, Subscriptions, AppSettings, UserSubscriptions
-from app.forms import LoginForm, SelectPlan
+from app.forms import LoginForm, SelectPlan, CurrencyForm
 
 from app import has_active_subscription, db, stripe, redis
 from flask_login import current_user, login_required, login_user, logout_user
@@ -73,6 +73,17 @@ def days_filter(days):
   months = math.ceil(days / 30)
   return f"{months} Month{'s' if months > 1 else ''}"
 
+@bp.route('/change_currency', methods=['POST'])
+@login_required
+def change_currency():
+  form = CurrencyForm()
+  currency = request.form.get('currency')
+  if currency:
+    current_user.preferred_currency = currency
+    db.session.commit()
+    flash(f"Preferred currency changed to {currency}", 'emerald')
+  return redirect(url_for('main.index'))
+
 
 @bp.route('/api/surebets', methods=['GET'])
 def get_surebets():
@@ -138,7 +149,7 @@ def plans_overview():
         return redirect(url_for('main.account'))
     else:
       flash("Must be signed in to start a new plan", 'yellow')
-      return redirect(url_for('main.signin'))
+      return redirect(url_for('auth.login'))
 
   plans = Subscriptions.query.all()
   plans_with_benefits = []
