@@ -15,7 +15,7 @@
   <div class="bg-base-300">
     <!-- navbar -->
     <nav x-data="{ isOpen: false }" class="relative bg-primary shadow">
-      <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+      <div class="container px-6 py-1 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
           <a href="{{url_for('main.index')}}">
             <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
@@ -40,18 +40,18 @@
             <form action="{{url_for('main.change_currency')}}" method="post">
               <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
               <select onchange="this.form.submit()" class="select-ghost" name="currency">
-                <option {% if current_user.preferred_currency == 'USD' %} selected {% endif %} value="USD">USD</option>
-                <option {% if current_user.preferred_currency == 'GBP' %} selected {% endif %} value="GBP">GBP</option>
-                <option {% if current_user.preferred_currency == 'EUR' %} selected {% endif %} value="EUR">EUR</option>
-                <option {% if current_user.preferred_currency == 'NGN' %} selected {% endif %} value="NGN">NGN</option>
+                <option {% if current_user.preferred_currency=='USD' %} selected {% endif %} value="USD">USD</option>
+                <option {% if current_user.preferred_currency=='GBP' %} selected {% endif %} value="GBP">GBP</option>
+                <option {% if current_user.preferred_currency=='EUR' %} selected {% endif %} value="EUR">EUR</option>
+                <option {% if current_user.preferred_currency=='NGN' %} selected {% endif %} value="NGN">NGN</option>
               </select>
             </form>
             <a class="my-2 {%if request.endpoint == 'main.index' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
               href="{{url_for('main.index')}}">Surebets</a>
-            <a class="my-2 {%if request.endpoint == 'main.middlebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-              {% if session['has_active_plan'] %} href="{{url_for('main.index')}}" {%endif%}>Middlebets</a>
-            <a class="my-2 {%if request.endpoint == 'plan.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-              {% if session['has_active_plan'] %} href="{{url_for('main.index')}}" {%endif%}>Valuebets</a>
+            <a class="my-2 {%if request.endpoint == 'main.middles' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="{{url_for('main.middles')}}">Middlebets</a>
+            <a class="my-2 {%if request.endpoint == 'main.valuebets' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="{{url_for('main.valuebets')}}">Valuebets</a>
           </div>
           <div class="flex justify-center sm:block">
 
@@ -75,13 +75,13 @@
             {% with messages = get_flashed_messages(with_categories=true)%}
             {% if messages %}
             {% for category, message in messages %}
-            <div class="w-full text-white bg-{{category if category != 'message' else 'red'}}-400">
+            <div class="w-full mb-2 text-white bg-yellow-400">
               <div class="container flex items-center justify-between px-6 py-4 mx-auto">
                 <div class="flex">
                   <ion-icon name="alert-circle" class="w-6 h-6 fill-current"></ion-icon>
                   {% if message == 'pending' %}
                   <p>You have a pending subscription, <a class="underline"
-                      href="{{url_for('plan.checkout', plan_id=pending_plan_id)}}">Click here to
+                      href="{{url_for('plans.checkout', plan_id=pending_plan_id)}}">Click here to
                       pay</a></p>
                   {% else%}
                   <p class="mx-3">{{message}}</p>
@@ -89,7 +89,7 @@
                 </div>
 
                 {% if message == 'pending' %}
-                <a href="{{url_for('main.checkout', plan_id=pending_plan_id)}}"
+                <a href="{{url_for('plans.checkout', plan_id=pending_plan_id)}}"
                   class="btn dark:bg-gray-900 bg-yellow-100 btn-sm">
                   <ion-icon name="arrow-forward"></ion-icon>
                 </a>
@@ -189,6 +189,13 @@
       </div>
     </footer>
   </div>
+
+  <!-- calculator modal -->
+  {% block calculator %}
+  {% include 'partials/calculator.html' %}
+  {% endblock calculator %}
+  <!-- calculator end -->
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

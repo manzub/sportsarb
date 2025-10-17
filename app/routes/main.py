@@ -5,9 +5,19 @@ from flask import Blueprint, render_template, flash, request, redirect, url_for
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions
-from app.utils.helpers import has_active_subscription, check_active_plan
+from app.utils.helpers import has_active_subscription
 
 bp = Blueprint('main', __name__)
+
+@bp.context_processor
+def check_active_plan():
+  pending_plan_id = None
+  if current_user and current_user.is_authenticated:
+    user_plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
+    if user_plan and not user_plan.active and user_plan.status == 'pending':
+      flash('pending', 'yellow')
+      pending_plan_id = user_plan.id
+  return {'pending_plan_id': pending_plan_id}
 
 @bp.app_template_filter('format_date')
 def format_date(date_string):
@@ -24,8 +34,26 @@ def days_filter(days):
 
 @bp.route('/')
 def index():
+  total_surebet_items = 0
+  keys = redis.keys('surebets:*')
+  if keys:
+    latest_key = max(keys)
+    raw_data = redis.get(latest_key)
+    if raw_data:
+      data = json.loads(raw_data)
+      if isinstance(data, list):
+        total_surebet_items = len(data)
+  
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
-  return render_template('homepage.html', has_active_subscription=active_subscription)
+  return render_template('homepage.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
+
+@bp.route('/middles')
+def middles():
+  return render_template('middles.html')
+
+@bp.route('/valuebets')
+def valuebets():
+  return render_template('valuebets.html')
 
 @bp.route('/change_currency', methods=['POST'])
 @login_required
@@ -35,28 +63,72 @@ def change_currency():
     current_user.preferred_currency = currency
     db.session.commit()
     flash(f"Preferred currency changed to {currency}", 'emerald')
-  return redirect(url_for('main.index'))
+  
+  next = request.args.get('next')
+  if not next or not next[0] == '/':
+    next = url_for('main.index')
+  return redirect(next)
 
-@bp.route('/calculator')
+@bp.route('/surebet/calculator')
 def bet_calculator():
-  redis_key = request.args.get('page')
+  html_template = """{opportunity}"""
+  opportunities_html = ""
+  
   arb_filter = unquote(request.args.get('arb_item'))
-  if arb_filter and redis_key:
+  if arb_filter:
     # get redis arb items
-    latest = max(redis.keys(f"{redis_key}:*"))
+    latest = max(redis.keys("surebets:*"))
     data = redis.get(latest)
-    arb_item = [x for x in json.loads(data) if x['unique_id'] == arb_filter]
-    if arb_item:
-      total_implied_prob = sum(1/odd for odd in list(arb_item[0]['best_odds'].values()))
-      return render_template('calculator.html', total_implied_prob=total_implied_prob, arb_item=arb_item[0]) # continue logic
-    flash(f"Could not find {str(redis_key).capitalize()} Item", 'red')
-  flash("Page Not Found", 'red')
-  return render_template('404.html')
+    results = [x for x in json.loads(data) if x['unique_id'] == arb_filter]
+    if results:
+      arb = results[0]
+      total_implied_prob = sum(1/odd for odd in list(arb['best_odds'].values()))
+      
+      opportunities_html += f"""
+      <div id="opportunity" data-profit-margin="{arb['profit_margin']}" data-total-implied-prob="{total_implied_prob}">
+        <h1 class="font-bold m-0" style="font-size: 18px;">{arb['event']}</h1>
+        <h2 class="text-emerald-800 font-extrabold m-0">{arb['sport_title']}</h2>
+        <p>Profit Margin: <span class="font-extrabold">{arb['profit_margin']:.2f}%</span></p>
+        <p class="m-0">Time: {format_date(arb['commence_time'])}</p>
+        <p>Market: {arb.get('market', 'N/A').upper()}</p>
+      """
+      
+      if arb.get('market') == 'spreads':
+        opportunities_html += f"<p>Points Spread: {arb.get('points', 'N/A')}</p>"
+      elif arb.get('market') == 'totals':
+        opportunities_html += f"<p>Total Points: {arb.get('points', 'N/A')}</p>"
+        
+      opportunities_html += '<div class="odds grid grid-cols-2 gap-2">'
+      
+      for outcome, odd in arb['best_odds'].items():
+        if outcome != 'spread':  # Skip the spread key when displaying odds
+          bookmaker = arb['bookmakers'][outcome]
+          implied_prob = 1 / odd
+          
+          if arb.get('market') == 'spreads':
+            spread = f"+{arb['points']}" if outcome == 'Underdog' else f"-{arb['points']}"
+            label = f"{outcome} ({spread})"
+          else:
+            label = outcome
+            
+          opportunities_html += f"""
+            <div class="bg-blue-100 p-2">
+              <h3>{label}</h3>
+              <p>Odds: {odd:.2f}</p>
+              <p>Bookmaker: {bookmaker}</p>
+              <p>Bet Amount: $<span class="bet-amount" data-implied-prob="{implied_prob}">0.00</span></p>
+            </div>
+          """
+      
+      opportunities_html += '</div>'
+  return html_template.format(opportunity=opportunities_html)
 
 @bp.route('/account')
 @login_required
-@check_active_plan
+# @check_active_plan
 def account():
+  plan, user_subscription = None, None
   user_subscription = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
-  plan = Subscriptions.query.filter_by(id=user_subscription.plan_id).first()
-  return render_template('account.html', plan=plan, user_subscription=user_subscription)
+  if user_subscription:
+    plan = Subscriptions.query.filter_by(id=user_subscription.plan_id).first()
+  return render_template('account.html', plan=plan, subscription=user_subscription)

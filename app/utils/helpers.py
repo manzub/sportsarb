@@ -4,40 +4,29 @@ from datetime import datetime
 from functools import wraps
 from app.models import UserSubscriptions
 from flask_login import current_user
-from flask import flash, session
+from flask_mail import Message
+from flask import flash, session, redirect, url_for
+from app import mail
 
 def has_active_subscription(user):
   if not user.current_plan:
     return False
   
   sub = user.current_plan
-  return (sub.active and sub.start_date <= datetime.utcnow() and (sub.end_date is None or sub.end_date >= datetime.utcnow()))
+  return (sub.active and sub.start_date <= datetime.now() and (sub.end_date is None or sub.end_date >= datetime.now()))
 
 def validate_email_address(email:str):
   pattern = re.compile(r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?")
   return re.match(pattern, email)
 
-def check_active_plan(fn):
-  @wraps(fn)
-  def wrapper(*args, **kwargs):
-    pending_plan_id = None
-
-    if current_user.is_authenticated:
-      user_plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
-      if user_plan and not user_plan.active and user_plan.status == 'pending':
-        flash('pending', 'yellow')
-        pending_plan_id = user_plan.id
-      session['has_active_plan'] = user_plan.active
-
-    # Render the route function result
-    response = fn(*args, **kwargs)
-
-    # If response is a rendered template, inject the variable
-    if isinstance(response, dict):
-      response['pending_plan_id'] = pending_plan_id
-      return response
-    return response
-  return wrapper
+def verified_required(f):
+  @wraps(f)
+  def decorated_function(*args, **kwargs):
+    if not current_user.is_verified:
+      flash("Please verify your email before accessing this page.", "yellow")
+      return redirect(url_for('main.verify_email', user_id=current_user.id))
+    return f(*args, **kwargs)
+  return decorated_function
 
 def sort_surebet_data(data):
   results = []
@@ -59,8 +48,30 @@ def sort_surebet_data(data):
         "event": event,
         "tournament": arb['sport_title'],
         "market": item,
+        "market_type": arb['market'],
         "odds": arb['best_odds'][item]
       }
       arb_item.append(x_item)
     results.extend(arb_item)
   return results
+
+def get_bookmaker_links(event, selected_bookmakers, market_key):
+  links = {}
+  for bookmaker in event.get("bookmakers", []):
+    if bookmaker["title"] in selected_bookmakers:
+      # Find matching market
+      for market in bookmaker.get("markets", []):
+        if market["key"] == market_key:
+          links[bookmaker["title"]] = bookmaker.get("link", "")
+  return links
+
+def send_otp_mail(user):
+  msg = Message("Your Verification Code", sender="noreply@surebets.com", recipients=[user.email])
+  msg.body = f"Your OTP code is: {user.otp_code}. It expires in 10 minutes."
+  mail.send(msg)
+  
+def send_email(to:str, subject:str, body:str):
+  msg = Message(subject=subject, sender="noreply@surebets.com", recipients=[to])
+  msg.body = body
+  mail.send(msg)
+  

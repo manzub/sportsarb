@@ -1,0 +1,65 @@
+<input type="checkbox" id="calculator_modal" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Stake/Profit Calculator</h3>
+    <div id="calc-info" class="text-sm text-gray-600 mb-4 text-center"></div>
+
+    <form id="calc-form" class="space-y-3">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend">Stake ($)</legend>
+        <input type="number" id="stake" class="input w-full" value="100" step="0.01" placeholder="Enter amount" />
+        <p class="label">Enter how much you want to stake</p>
+      </fieldset>
+
+      <div data-item="" data-page="" id="calculator-arb-item"></div>
+
+      <div class="pt-3">
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+          Calculate Profit
+        </button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-4 text-center text-gray-800 font-semibold"></div>
+
+    <div class="modal-action">
+      <label for="calculator_modal" class="calc-close-btn btn">Close!</label>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#calc-form").on("submit", function (e) {
+      e.preventDefault();
+      const stake = parseFloat($("#stake").val());
+      if (isNaN(stake) || stake <= 0) {
+        $("#result").text("Enter a valid stake amount.");
+        return;
+      }
+
+      const opp = document.getElementById('opportunity')
+      const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
+
+      const profit = (parseFloat(stake) * profitMargin).toFixed(2);
+      const payout = stake + parseFloat(profit);
+
+      $("#result").html(`
+          <div>💰 Profit: <span class="text-green-600">$${profit}</span></div>
+          <div class="text-sm text-gray-600">Payout: $${payout}</div>
+        `);
+
+      const bets = opp.querySelectorAll('.bet-amount');
+      const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
+      bets.forEach(function (bet) {
+        const impliedProb = parseFloat(bet.getAttribute('data-implied-prob'));
+        const betAmount = (stake * impliedProb / totalImpliedProb).toFixed(2);
+        bet.textContent = betAmount;
+      });
+    });
+
+    $(".calc-close-btn").on("click", function() {
+      $("#result").html("")
+    })
+  });
+</script>

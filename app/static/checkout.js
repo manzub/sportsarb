@@ -9,7 +9,7 @@ async function initialize() {
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
     let plan_id = window.location.pathname.replace(/\/$/, "").split("/").pop();
-    const response = await fetch("/create-checkout-session", {
+    const response = await fetch("/plans/create-checkout-session", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',

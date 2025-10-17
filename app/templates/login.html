@@ -1,79 +1,80 @@
 {%extends 'base.html' %}
 
 {% block content %}
-<div class="authentication-page-container">
-  <div class="authentication-page">
-    <h1 class="text-2xl my-2">
-      Sign in or create an account
-    </h1>
+<section class="bg-white dark:bg-gray-900">
+  <div class="container flex items-center my-10 justify-center px-6 mx-auto">
+    <form id="sign-in-form" class="w-full max-w-md" novalidate="novalidate" method="post">
+      <h1 class="mt-3 text-2xl font-semibold text-gray-800 capitalize sm:text-3xl dark:text-white">sign In/create Account</h1>
 
-    <div>
-      <form id="sign-in-form" class="with-required-fields-marks" novalidate="novalidate" method="post">
-        <!-- csrf token -->
-        {{form.hidden_tag()}}
-        <fieldset class="fieldset">
-          <legend class="fieldset-legend">{{form.email.label}}</legend>
-          {{form.email(maxlength="128", type="email", class='input w-1/2',
-          pattern="(?=(?:(\S+)@\S+\.[A-Za-z]+))(?:^(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22)))*\x40(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D)))*$)")}}
-          <p class="label">Email is invalid</p>
-        </fieldset>
+      <!-- csrf token -->
+      {{form.hidden_tag()}}
 
-        <fieldset class="fieldset">
-          <legend class="fieldset-legend">{{form.password.label}}</legend>
-          <label for="" class="input w-1/2">
-            {{form.password()}}
-            <ion-icon name="eye-off-outline"></ion-icon>
-          </label>
-        </fieldset>
+      <div class="relative flex items-center mt-8">
+        <span class="absolute">
+          <ion-icon class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" name="mail-outline"></ion-icon>
+        </span>
 
-        <fieldset class="fieldset">
-          <label class="label">
-            {{form.remember_me(class='checkbox', type='checkbox', checked=form.remember_me.value)}}
-            {{form.remember_me.label}}
-          </label>
-        </fieldset>
+        {{form.email(maxlength="128", placeholder="Email address", type="email", class="block w-full py-3 text-gray-700
+        bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400
+        dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40",
+        pattern="(?=(?:(\S+)@\S+\.[A-Za-z]+))(?:^(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x22(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x22)))*\x40(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D))(?:\x2E(?:(?:[^\x00-\x20\x22\x28\x29\x2C\x2E\x3A-\x3C\x3E\x40\x5B-\x5D\x7F-\xFF]+)|(?:\x5B(?:(?:[^\x0D\x22\x5C\x80-\xFF])|(?:\x5C[\x00-\x7F]))*\x5D)))*$)")}}
+      </div>
 
-        <div class="grid grid-cols-2 items-center w-1/2">
+      <div class="relative flex items-center mt-4">
+        <span class="absolute">
+          <ion-icon class="w-6 h-6 mx-3 text-gray-300 dark:text-gray-500" name="lock-closed-outline"></ion-icon>
+        </span>
+
+        {{form.password(placeholder="Password", class="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg
+        dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300
+        focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40")}}
+      </div>
+
+      <fieldset class="mt-4 fieldset">
+        <label class="label">
+          {{form.remember_me(class='checkbox', type='checkbox', checked=form.remember_me.value)}}
+          {{form.remember_me.label}}
+        </label>
+      </fieldset>
+
+      <div class="mt-6">
+        <div class="grid grid-cols-2 items-center mt-4">
           <fieldset class="fieldset">
             <label class="label">
               {{form.create_account(class='toggle', type='checkbox', checked=form.create_account.value)}}
               {{form.create_account.label}}
             </label>
           </fieldset>
-          {{form.submit(class="btn btn-primary mt-4")}}
+          {{form.submit(class="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50")}}
         </div>
-      </form>
-    </div>
 
-    <div class="mt-4 mb-7 flex gap-2 items-center">
-      <p>
-        or use one of these services:
-      </p>
+        <p class="mt-4 text-center text-gray-600 dark:text-gray-400">or sign in with</p>
 
-      <div class="flex gap-4">
-        <form class="oauth-connect-button-container" method="post" action="/users/auth/google_oauth2">
-          <button class="btn btn-site oauth-connect-button" id="google-oauth-connect-button" type="submit"><ion-icon
-              name="logo-google"></ion-icon></button>
-        </form>
-        <form class="oauth-connect-button-container" method="post" action="/users/auth/google_oauth2">
-          <button class="btn btn-site oauth-connect-button" id="google-oauth-connect-button" type="submit"><ion-icon
-              name="logo-microsoft"></ion-icon></button>
-        </form>
+        <a href="#"
+          class="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <svg class="w-6 h-6 mx-2" viewBox="0 0 40 40">
+            <path
+              d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+              fill="#FFC107" />
+            <path
+              d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z"
+              fill="#FF3D00" />
+            <path
+              d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z"
+              fill="#4CAF50" />
+            <path
+              d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+              fill="#1976D2" />
+          </svg>
+
+          <span class="mx-2">Sign in with Google</span>
+        </a>
       </div>
-    </div>
-    <hr>
-
-    <div class="text">
-      <small>
-        By using or creating an account, you confirm that you have read and agree to the <a href="/site/toc">Terms and
-          Conditions</a> and <a href="/site/privacy">Privacy Notice</a>
-      </small>
-    </div>
-
+    </form>
   </div>
-</div>
+</section>
 {% endblock content %}
 
 {% block sidebar %}
-  {% include 'partials/auth_sidebar.html' %}
+{% include 'partials/auth_sidebar.html' %}
 {% endblock sidebar %}

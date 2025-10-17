@@ -1,14 +1,44 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{plan.plan_name}} plan - {{user_subscription.status}}</h1>
-<hr>
-<div class="pt-2">
-  <!-- TODO: format -->
-  <a href="{{url_for('plans.overview')}}" class="btn btn-primary">Change plan</a>
-  <p>Current period - 10 days remaining</p>
-  <p>Start Date:{{user_subscription.start_date}}</p>
-  <p>End Date:{{user_subscription.end_date}}</p>
+<div class="py-12 px-4">
+  <div class="max-w-lg w-full p-4">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">My Account</h1>
+
+    {% if subscription %}
+      <div class="bg-gray-50 mb-6">
+        <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">Current Plan</p>
+        <h2 class="text-lg font-semibold text-gray-800">{{ plan.plan_name }}</h2>
+
+        <div class="mt-4 text-sm text-gray-600">
+          <p><strong>Status:</strong> 
+            <span class="px-2 py-1 rounded text-white 
+              {% if subscription.active %}bg-green-600{% else %}bg-gray-500{% endif %}">
+              {{ 'Active' if subscription.active else 'Inactive' }}
+            </span>
+          </p>
+          <p class="mt-2"><strong>Start Date:</strong> {{ subscription.start_date.strftime('%b %d, %Y') if subscription.start_date else '—' }}</p>
+          <p><strong>End Date:</strong> {{ subscription.end_date.strftime('%b %d, %Y') if subscription.end_date else '—' }}</p>
+        </div>
+      </div>
+
+      <div class="flex justify-between items-center">
+        <a href="{{ url_for('plans.overview') }}"
+           class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition">
+          Change Plan
+        </a>
+      </div>
+
+    {% else %}
+      <div class="">
+        <p class="text-gray-600 mb-6">You don’t have an active plan yet.</p>
+        <a href="{{ url_for('plans.overview') }}"
+           class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md">
+          View Plans
+        </a>
+      </div>
+    {% endif %}
+  </div>
 </div>
 {% endblock content %}
 

@@ -1,7 +1,7 @@
 {% block datatable %}
 <div class="mx-4 mt-4 flex items-center justify-between">
   <div class="">
-    <p class="text-2xl font-bold">Found 5,588,199 surebets</p>
+    <p class="text-2xl font-bold">Found {{total_surebet_items}} surebets</p>
     <p>Examples with profit of less than 1% ↓</p>
   </div>
 
@@ -43,10 +43,10 @@
   let currentPage = 1;
   const perPage = 5;
 
-  function fetchSurebets(page = 1) {
+  function fetchSurebets(page = 1, sort = 'profit', market = 'h2h') {
     $.ajax({
       url: API_URL,
-      data: { page: page, limit: perPage },
+      data: { page: page, limit: perPage, sort: sort, market: market },
       method: "GET",
       success: function (response) {
         renderSurebets(response.data);
@@ -67,6 +67,7 @@
   function renderSurebets(items) {
     const tbodyContainer = $("#surebets-body");
     //tbodyContainer.empty();
+    removeElementsByClass('surebet_record')
 
     // Group by surebet_id
     const grouped = {};
@@ -92,9 +93,9 @@
 
                     <!-- Action buttons -->
                     <div class="flex items-center gap-2 mt-2">
-                      <button data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                      <label for="calculator_modal" data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
                         <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
-                      </button>
+                      </label>
                       <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
                         <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
                       </button>
@@ -143,16 +144,24 @@
     $(".calc-btn").on("click", function () {
       const page = $(this).data("page");
       const arb_item = $(this).data("item");
-      const popupUrl = `/calculator?page=${encodeURIComponent(
-        page
-      )}&arb_item=${encodeURIComponent(arb_item)}`;
 
-      window.open(
-        popupUrl,
-        "calcPopup",
-        "width=400,height=400,scrollbars=no,resizable=no"
-      );
+      const contentDiv = document.getElementById('calculator-arb-item')
+      contentDiv.setAttribute('data-page', page)
+      contentDiv.setAttribute('data-item', arb_item)
+
+      const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
+      fetch(url).then(x => x.text())
+        .then(function (html) {
+          contentDiv.innerHTML = html
+        });
     });
+  }
+
+  function removeElementsByClass(className) {
+    let elements = document.getElementsByClassName(className);
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
   }
 
   function updatePagination(page, totalPages) {

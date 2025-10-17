@@ -2,10 +2,25 @@
 
 {% block content %}
 <script src="{{ url_for('static', filename='return.js') }}" defer></script>
-<p>
-  We appreciate your business! A confirmation email will be sent to <span id="customer-email"></span>.
-
-  If you have any questions, please email <a href="mailto:orders@example.com">orders@example.com</a>.
-  <a href="{{url_for('main.index')}}" class="btn">Go Home</a>
-</p>
+<div class="flex flex-col items-center justify-center py-12 px-6">
+  <div class="max-w-md w-full bg-white shadow-md rounded-2xl p-8 text-center">
+    <div class="flex justify-center mb-4">
+      <ion-icon name="checkmark-circle" class="text-green-500 text-6xl"></ion-icon>
+    </div>
+    <h1 class="text-2xl font-semibold mb-2 text-gray-800">Payment Successful</h1>
+    <p class="text-gray-600 mb-4">
+      We appreciate your business! A confirmation email will be sent to
+      <span id="customer-email"></span>.
+    </p>
+    <p class="text-gray-600 mb-6">
+      If you have any questions, please email
+      <a href="mailto:orders@example.com" class="text-blue-600 underline">orders@example.com</a>.
+    </p>
+    <a href="{{ url_for('main.account') }}" class="btn btn-primary w-full">Go to My Account</a>
+  </div>
+</div>
 {% endblock content %}
+
+{% block sidebar %}
+  {% include 'partials/account_sidebar.html' %}
+{% endblock sidebar %}

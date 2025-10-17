@@ -6,12 +6,12 @@
         <span class="mx-4 font-medium">Sign In</span>
       </a>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.confirmation' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="#">
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.confirmation' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700">
         <ion-icon name="shield-checkmark" class="w-5 h-5"></ion-icon>
         <span class="mx-4 font-medium">Confirmation</span>
       </a>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="#">
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="{{url_for('auth.request_password_reset')}}">
         <ion-icon class="w-5 h-5" name="refresh-circle"></ion-icon>
         <span class="mx-4 font-medium">Reset</span>
       </a>

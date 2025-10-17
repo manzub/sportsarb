@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card bg-base-100 shadow-sm border-1 border-gray-300">
+  <div class="card-body p-0">
+    <!-- content here -->
+     {% block datatable %}
+      {% include 'partials/datatable.html' %}
+     {% endblock datatable %}
+  </div>
+</div>
+{% endblock content %}

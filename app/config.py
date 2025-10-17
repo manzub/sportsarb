@@ -7,3 +7,9 @@ class AppConfigs(object):
   SITE_URL = "http://127.0.0.1:5000"
   broker_url = "redis://redis:6379/0"
   result_backend = "redis://redis:6379/0"
+  MAIL_SERVER = 'smtp.gmail.com'
+  MAIL_PORT = 587
+  MAIL_USE_TLS = True
+  MAIL_USE_SSL = False
+  MAIL_USERNAME = 'hadipartiv21@gmail.com'
+  MAIL_PASSWORD = 'sbuhtolkbkggvobx'

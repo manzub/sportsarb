@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_wtf import CSRFProtect
 from celery import Celery
-from .extensions import db, login_manager, migrate
+from .extensions import db, login_manager, migrate, mail
 from .routes import main, auth, api, plans
 
 def make_celery(app):
@@ -29,6 +29,7 @@ def create_app():
   login_manager.login_view = 'auth.login'
 
   migrate.init_app(app, db)
+  mail.init_app(app)
 
   from app import models, tasks
   app.register_blueprint(main.bp)

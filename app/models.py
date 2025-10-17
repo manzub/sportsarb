@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from sqlalchemy.sql.sqltypes import DateTime
 from app import db, login_manager
 from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, UniqueConstraint, Boolean
@@ -16,6 +17,11 @@ class User(db.Model, UserMixin):
   email = Column(Text, unique=True)
   password = Column(Text)
   active = Column(Boolean, default=True)
+  is_verified = Column(Boolean, default=False)
+  otp_code = Column(String(6))
+  otp_expiry = Column(DateTime)
+  reset_otp = Column(String(10))
+  reset_otp_expiry = Column(db.DateTime)
   favorite_leagues = []
   favorite_teams = []
   preferred_currency = Column(String(3), default="USD")
@@ -32,6 +38,21 @@ class User(db.Model, UserMixin):
 
   def check_password(self, password):
     return check_password_hash(self.password, password)
+  
+  def set_otp(self):
+    import random
+    self.otp_code = str(random.randint(100000, 999999))
+    self.otp_expiry = datetime.utcnow() + timedelta(minutes=10)
+    db.session.commit()
+    
+  def verify_otp(self, code):
+    if self.otp_code == code and datetime.utcnow() < self.otp_expiry:
+      self.is_verified = True
+      self.otp_code = None
+      self.otp_expiry = None
+      db.session.commit()
+      return True
+    return False
 
 class Subscriptions(db.Model):
   __tablename__ = "plans"

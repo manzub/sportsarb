@@ -2,6 +2,7 @@ import uuid
 from datetime import datetime
 from collections import defaultdict
 from app.utils.redis_helper import save_json
+from app.utils.helpers import get_bookmaker_links
 from app.utils.logger import setup_logging
 
 logger = setup_logging()
@@ -19,7 +20,7 @@ def find_surebets(markets, event, team_cache):
   # For each outcome, find best odds
   for bookmaker in event['bookmakers']:
     for market in bookmaker.get('markets', []):
-      if market['key'] not in ['h2h']:
+      if market['key'] not in ['h2h', 'spreads', 'totals']:
         continue
 
       for outcome in market.get('outcomes', []):
@@ -44,6 +45,7 @@ def find_surebets(markets, event, team_cache):
         'profit_margin': profit_margin,
         'best_odds': best_odds,
         'bookmakers': bookmakers,
+        'links': get_bookmaker_links(event, bookmakers.values(), 'h2h'),
         'commence_time': event.get('commence_time'),
         'market': 'h2h',
         'unique_id': str(uuid.uuid4()),
@@ -98,6 +100,7 @@ def find_middles(markets, event):
             'type': 'middle',
             'event': f"{event['home_team']} vs {event['away_team']}",
             'bookmakers': { 'bookmaker1': b1, 'bookmaker2': b2 },
+            'links': get_bookmaker_links(event, [b1, b2], 'spreads'),
             'lines': { 'home_line': home1, 'away_line': away2 },
             'commence_time': event.get('commence_time'),
             'unique_id': str(uuid.uuid4()),
