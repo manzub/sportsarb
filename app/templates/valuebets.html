@@ -1,12 +1,180 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card bg-base-100 shadow-sm border-1 border-gray-300">
+<div class="card bg-base-100">
   <div class="card-body p-0">
     <!-- content here -->
-     {% block datatable %}
-      {% include 'partials/datatable.html' %}
-     {% endblock datatable %}
+    <div class="mx-4 mt-4 flex items-center justify-between">
+      <div class="">
+        <p class="text-2xl font-bold">Found {{total_value_items}} valuebets</p>
+      </div>
+
+      <div class="actions">
+        <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
+          ← Prev
+        </button>
+        <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
+          Next →
+        </button>
+      </div>
+    </div>
+
+    <!-- warning here -->
+    <div class="p-4">
+      <div role="alert" class="alert alert-error alert-soft">
+        <p class="text-red-600">Before you place any bets, we strongly recommend that you check the events, odds, and
+          bookmaker's rules. <br><br>We are constantly working to improve the quality of our service, but errors and
+          discrepancies can occur, unfortunately.</p>
+      </div>
+    </div>
+
+    <div class="m-3 overflow-x-auto">
+      <table id="values-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
+        <thead class="bg-gray-100 text-gray-800">
+          <tr>
+            <th></th>
+            <th class="px-4 py-3 font-semibold">Bookmaker</th>
+            <th class="px-4 py-3 font-semibold">Time</th>
+            <th class="px-4 py-3 font-semibold">Event</th>
+            <th class="px-4 py-3 font-semibold">Market</th>
+            <th class="px-4 py-3 font-semibold">Odds</th>
+            <th class="px-4 py-3 font-semibold">Probability</th>
+            <th class="px-4 py-3 font-semibold">Over Value</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <!-- body here -->
+      </table>
+    </div>
+    <!-- datatable end -->
   </div>
 </div>
+<script>
+  const API_URL = "/api/values";
+
+  let currentPage = 1;
+  const perPage = 20;
+
+  function fetchValues(page = 1, sort = 'profit') {
+    $.ajax({
+      url: API_URL,
+      data: { page: page, limit: perPage, sort: sort },
+      method: "GET",
+      success: function (response) {
+        if (response.data.length == 0) {
+          $("#values-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+        } else {
+          renderValues(response.data);
+          updatePagination(response.page, response.total_pages);
+        }
+      },
+      error: function () {
+        $("#values-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+      },
+    });
+  }
+
+  function renderValues(items) {
+    const tbodyContainer = $("#values-body");
+    //tbodyContainer.empty();
+    removeElementsByClass('value_record')
+
+    // Group by surebet_id
+    const grouped = {};
+    items.forEach((item) => {
+      if (!grouped[item.middle_id]) grouped[item.middle_id] = [];
+      grouped[item.middle_id].push(item);
+    });
+
+    Object.keys(grouped).forEach((id) => {
+      const group = grouped[id];
+      const tbody = $("<tbody>")
+        .addClass("value_record border-t border-gray-200")
+        .attr("data-id", id);
+
+      group.forEach((item, idx) => {
+        tbody.append(`
+          <tr class="hover:bg-gray-50 transition">
+            <!-- Actions -->
+            <td class="px-4 py-2 align-top">
+              <div class="flex flex-col items-start">
+                <!-- Action buttons -->
+                <div class="flex items-center gap-2 mt-2">
+                  <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
+                    <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </td>
+
+            <!-- Row: bookmaker -->
+            <td class="px-4 py-2">
+              <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+              <div class="text-xs text-gray-500">${item.sport || 'N/A'}</div>
+            </td>
+
+            <td class="px-4 py-2">
+              <a href="#" class="text-blue-600 hover:underline">${item.date}</a>
+              <div class="text-xs text-gray-500">${item.time}</div>
+            </td>
+
+            <td class="px-4 py-2">
+              <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
+              <div class="text-xs text-gray-500">${item.sport || ''}</div>
+            </td>
+
+            <td class="px-4 py-2 text-gray-600">${item.market}</td>
+
+            <td class="px-4 py-2 text-right">
+              <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+            </td>
+
+            <td class="px-4 py-2 text-right">${item.probability}</td>
+            <td class="px-4 py-2 text-right">${item.overvalue}</td>
+          </tr>
+        `);
+      });
+
+      tbodyContainer.append(tbody);
+    })
+  }
+
+  function removeElementsByClass(className) {
+    let elements = document.getElementsByClassName(className);
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
+
+  function updatePagination(page, totalPages) {
+    $("#page-info").text(`Page ${page} of ${totalPages}`);
+    $("#prev-page").prop("disabled", page <= 1);
+    $("#next-page").prop("disabled", page >= totalPages);
+    currentPage = page;
+  }
+
+  $("#prev-page").on("click", function () {
+    if (currentPage > 1) fetchValues(currentPage - 1);
+  });
+
+  $("#next-page").on("click", function () {
+    fetchValues(currentPage + 1);
+  });
+
+  // initial load
+  fetchValues(currentPage);
+</script>
 {% endblock content %}

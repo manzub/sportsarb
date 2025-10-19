@@ -68,10 +68,10 @@
     </nav>
     <!-- navbar end -->
 
-    <div class="sm:grid sm:grid-cols-4 gap-2 p-2">
+    <div class="sm:grid sm:grid-cols-4 gap-2">
       <div class="col-span-3">
-        <div class="card bg-base-100 shadow-sm border-1 border-gray-300">
-          <div class="p-4">
+        <div class="bg-base-100 shadow-sm">
+          <div class="app-contents">
             {% with messages = get_flashed_messages(with_categories=true)%}
             {% if messages %}
             {% for category, message in messages %}
@@ -119,8 +119,8 @@
       </div>
     </div>
 
-    <footer class="bg-white dark:bg-gray-900">
-      <div class="container px-6 py-8 mx-auto">
+    <footer class="">
+      <div class="container px-6 py-4 mx-auto">
         <div class="flex flex-col items-center text-center">
           <a href="#">
             <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
@@ -149,7 +149,7 @@
           </div>
         </div>
 
-        <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+        <hr class="my-6 border-gray-200 md:my-6 dark:border-gray-700" />
 
         <div class="flex flex-col items-center sm:flex-row sm:justify-between">
           <p class="text-sm text-gray-500 dark:text-gray-300">© Copyright 2021. All Rights Reserved.</p>

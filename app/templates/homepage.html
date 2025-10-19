@@ -2,37 +2,246 @@
 
 {% block content %}
 <div class="card bg-base-100 shadow-sm border-1 border-gray-300">
-  <!-- <div class="sm:flex justify-between p-2 bg-gray-200">
-    <div class="button-group mb-1">
-      <input type="text" placeholder="Search" class="input input-bordered sm:w-24 md:w-full" />
-    </div>
-    <div class="button-group md:mb-1">
-      <button class="btn text-2xl"><ion-icon name="calculator-outline"></ion-icon></button>
-      <button class="btn text-2xl"><ion-icon name="swap-horizontal-outline"></ion-icon></button>
-      <button class="btn text-2xl"><ion-icon name="bar-chart-outline"></ion-icon></button>
-    </div>
-  </div> -->
   <div class="card-body p-0">
-    <!-- show if user not on basic/premium subscription -->
-    {% if not has_active_subscription %}
-    <div class="m-4 rounded-md text-gray-600 bg-blue-200">
-      <div class="container flex items-center justify-between px-6 py-4 mx-auto">
-        <div class="block w-full">
-          <h1 class="font-bold text-2xl">Profit from bets for any match outcome</h1>
-          <hr>
-          <p class="mt-3 mb-1">We just found <span class="text-black font-bold">8,319,927</span> profitable surebets for your filter settings.</p>
-          <p class="mb-1">Of these, <span class="text-black font-bold">3,283,009</span> surebets will provide a profit of more than 1%.</p>
+    <div id="jumbotron" class="m-4 bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm">
+      <!-- Heading -->
+      <h1 class="text-xl font-semibold text-blue-800 mb-3">Profit from bets for any match outcome</h1>
+
+      <!-- Description -->
+      <p class="text-gray-700 mb-4 leading-relaxed">A bookmaker's surebet can occur when different bookmakers have
+        different odds for the same game.</p>
+
+      <hr class="border-gray-300 mb-5" />
+
+      <!-- Main content container -->
+      <div id="jumbotron-counters-actions-rating-container" class="flex flex-col md:flex-row justify-between gap-6">
+        <!-- Left: Counters + Action -->
+        <div class="flex-1">
+          <p class="mb-1">
+            We found
+            <strong class="text-gray-900">{{total_surebet_items}}</strong> profitable surebet for your filter
+            settings.
+          </p>
           <p>To see surebets with a profit of more than 1% and negative surebets, please choose a plan.</p>
-          <a href="{{ url_for('plans.overview') }}" class="btn btn-lg">Plans and Registration</a>
+
+          <div class="mt-4">
+            <a href="{{url_for('plans.overview')}}"
+              class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-lg shadow transition">
+              Plans and Registration
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Rating section -->
+        <div id="jumbotron-rating-container" class="flex flex-col items-center justify-center md:items-end">
+          <!-- Trustpilot Widget Embed -->
+          <div class="trustpilot-widget">
+          </div>
         </div>
       </div>
     </div>
-    {% endif %}
 
+    <div class="p-4">
+      <div role="alert" class="alert alert-error alert-soft">
+        <p class="text-red-600">Before you place any bets, we strongly recommend that you check the events, odds, and
+          bookmaker's rules. <br><br>We are constantly working to improve the quality of our service, but errors and
+          discrepancies can occur, unfortunately.</p>
+      </div>
+    </div>
     <!-- content here -->
-     {% block datatable %}
-      {% include 'partials/datatable.html' %}
-     {% endblock datatable %}
+    <div class="mx-4 mt-4 flex items-center justify-between">
+      <div class="">
+        <p class="text-2xl font-bold">Found {{total_surebet_items}} surebets</p>
+        <p>Examples with profit of less than 1% ↓</p>
+      </div>
+
+      <div class="actions">
+        <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
+          ← Prev
+        </button>
+        <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
+          Next →
+        </button>
+      </div>
+    </div>
+    <div class="m-3 overflow-x-auto">
+      <table id="surebets-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
+        <thead class="bg-gray-100 text-gray-800">
+          <tr>
+            <th class="px-4 py-3 font-semibold">
+              <a href="?order=profit_asc" title="Sort by Profit descending"
+                class="flex items-center gap-1 hover:text-blue-600">
+                Profit
+              </a>
+            </th>
+            <th class="px-4 py-3 font-semibold">Bookmaker</th>
+            <th class="px-4 py-3 font-semibold">Event</th>
+            <th class="px-4 py-3 font-semibold">Market</th>
+            <th class="px-4 py-3 font-semibold text-right">Odds</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <!-- body here -->
+      </table>
+    </div>
   </div>
 </div>
+
+<script>
+  const API_URL = "/api/surebets";
+
+  let currentPage = 1;
+  const perPage = 60;
+
+  function fetchSurebets(page = 1, sort = 'profit', market = 'h2h') {
+    $.ajax({
+      url: API_URL,
+      data: { page: page, limit: perPage, sort: sort, market: market },
+      method: "GET",
+      success: function (response) {
+        if (response.data.length == 0) {
+          $("#surebets-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+        } else {
+          renderSurebets(response.data);
+          updatePagination(response.page, response.total_pages);
+        }
+      },
+      error: function () {
+        $("#surebets-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+      },
+    });
+  }
+
+  function renderSurebets(items) {
+    const tbodyContainer = $("#surebets-body");
+    //tbodyContainer.empty();
+    removeElementsByClass('surebet_record')
+
+    // Group by surebet_id
+    const grouped = {};
+    items.forEach((item) => {
+      if (!grouped[item.surebet_id]) grouped[item.surebet_id] = [];
+      grouped[item.surebet_id].push(item);
+    });
+
+    Object.keys(grouped).forEach((id) => {
+      const group = grouped[id];
+      const tbody = $("<tbody>")
+        .addClass("surebet_record border-t border-gray-200")
+        .attr("data-id", id);
+
+      group.forEach((item, idx) => {
+        tbody.append(`
+              <tr class="hover:bg-gray-50 transition">
+                <!-- Profit & Actions -->
+                ${idx == 0 ? `<td rowspan="3" class="px-4 py-2 align-top">
+                  <div class="flex flex-col items-start">
+                    <span class="font-semibold text-green-600 cursor-help" title="ROI 809%">+${item.profit}%</span>
+                    <span class="text-xs text-gray-500 mt-1 cursor-help" title="Surebet age: 31 minutes">31m</span>
+
+                    <!-- Action buttons -->
+                    <div class="flex items-center gap-2 mt-2">
+                      <label for="calculator_modal" data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                        <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
+                      </label>
+                      <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
+                        <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </td>` : ''}
+
+                <!-- Row 1: bookmaker -->
+                <td class="px-4 py-2">
+                  <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+                  <div class="text-xs text-gray-500">Tennis</div>
+                </td>
+
+                <td class="px-4 py-2">
+                  <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
+                  <div class="text-xs text-gray-500">${item.event_name}</div>
+                  <div class="text-xs text-gray-500">${item.tournament}</div>
+                </td>
+
+                <td class="px-4 py-2 text-gray-600" style="text-transform:uppercase">${item.market_type}</td>
+
+                <td class="px-4 py-2 text-right">
+                  <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+                </td>
+
+                ${idx == 0 ? `<td rowspan="3" class="px-0 py-2 align-middle text-center">
+                  <button class="p-1 text-gray-600 hover:text-blue-600" title="Open all odds">
+                    <ion-icon class="text-2xl" name="chevron-forward"></ion-icon>
+                  </button>
+                </td>` : ''}
+              </tr>
+            `);
+      });
+
+      tbody.append(`
+            <tr class="bg-gray-50">
+              <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
+                <div class="w-full flex justify-end pr-6">+ ${group.length - 1} more surebets for this event</div>
+              </td>
+            </tr>
+          `);
+
+      tbodyContainer.append(tbody);
+    });
+
+    // attach event for calculator popout
+    $(".calc-btn").on("click", function () {
+      const page = $(this).data("page");
+      const arb_item = $(this).data("item");
+
+      const contentDiv = document.getElementById('calculator-arb-item')
+      contentDiv.setAttribute('data-page', page)
+      contentDiv.setAttribute('data-item', arb_item)
+
+      const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
+      fetch(url).then(x => x.text())
+        .then(function (html) {
+          contentDiv.innerHTML = html
+        });
+    });
+  }
+
+  function removeElementsByClass(className) {
+    let elements = document.getElementsByClassName(className);
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
+
+  function updatePagination(page, totalPages) {
+    $("#page-info").text(`Page ${page} of ${totalPages}`);
+    $("#prev-page").prop("disabled", page <= 1);
+    $("#next-page").prop("disabled", page >= totalPages);
+    currentPage = page;
+  }
+
+  $("#prev-page").on("click", function () {
+    if (currentPage > 1) fetchSurebets(currentPage - 1);
+  });
+
+  $("#next-page").on("click", function () {
+    fetchSurebets(currentPage + 1);
+  });
+
+  // initial load
+  fetchSurebets(currentPage);
+</script>
 {% endblock content %}

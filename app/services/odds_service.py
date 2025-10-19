@@ -9,11 +9,11 @@ class OddsService:
     load_dotenv()
     self.api_key = os.getenv('ODDS_API_KEY')
     self.base_url = 'https://api.the-odds-api.com/v4'
-    self.markets = 'h2h,spreads,totals'
+    self.markets = 'h2h,spreads'
     self.remaining_requests = None
     self.used_requests = None
     self.api_limit_reached = False
-    self.save_offline = True
+    self.save_offline = False
     self.use_offline = True
     self.file_path = OFFLINE_FILE
 
@@ -42,7 +42,7 @@ class OddsService:
     params = {
         'api_key': self.api_key,
         'markets': self.markets,
-        'regions': 'uk,eu,us',
+        'regions': 'uk,eu',
         'includeLinks': 'true',
         'oddsFormat': 'decimal',
         'dateFormat': 'iso',
@@ -56,7 +56,7 @@ class OddsService:
       self.used_requests = resp.headers.get('x-requests-used')
       
       odds_data = resp.json()
-      if self.config.save_file:
+      if self.save_offline:
         self.save_data_for_sport(sport_key, odds_data)
       return odds_data
     except Exception as e:
@@ -76,32 +76,32 @@ class OddsService:
     else:
       print(f"Error fetching data: {error}")
       
-    def save_data(self, data):
-      # Ensure parent directories exist
-      os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
+  def save_data(self, data):
+    # Ensure parent directories exist
+    os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
 
-      # Write data to file (formatted)
-      with open(self.file_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2)
-  
-    def save_data_for_sport(self, sport, odds_data):
-      # Load existing file if available
-      if os.path.exists(self.file_path):
-        with open(self.file_path, 'r', encoding='utf-8') as f:
-          data = json.load(f)
-      else:
-        data = {'sports': [], 'odds': {}}
+    # Write data to file (formatted)
+    with open(self.file_path, 'w', encoding='utf-8') as f:
+      json.dump(data, f, indent=2)
 
-      # Add or update data for the given sport
-      data['odds'][sport] = odds_data
+  def save_data_for_sport(self, sport, odds_data):
+    # Load existing file if available
+    if os.path.exists(self.file_path):
+      with open(self.file_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    else:
+      data = {'sports': [], 'odds': {}}
 
-      if sport not in data['sports']:
-        data['sports'].append(sport)
+    # Add or update data for the given sport
+    data['odds'][sport] = odds_data
 
-      self.save_data(data)
+    if sport not in data['sports']:
+      data['sports'].append(sport)
+
+    self.save_data(data)
       
   def load_offline_data(self):
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-    offline_file = os.path.join(BASE_DIR, '../static', 'response_data.json')
+    offline_file = os.path.join(BASE_DIR, '../static', 'arbitrage_results.json')
     with open(offline_file, 'r') as f:
       return json.load(f)

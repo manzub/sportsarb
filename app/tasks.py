@@ -21,14 +21,15 @@ def find_arbitrage():
   logger.info(f"Analyzing {len(sports)} sports...")
   
   for sport in sports:
-    odds = odds_api.get_odds(sport['key'])
-    if odds_api.api_limit_reached:
-      logger.warning("API limit reached, stopping.")
-      break
-    total_events += len(odds)
-    arbs = calculate_arbitrage(odds_api.markets, odds, team_name_cache)
-    total_arbs += len(arbs)
-    all_arbs.extend(arbs)
+    if isinstance(sport, dict) and 'key' in sport:
+      odds = odds_api.get_odds(sport['key'])
+      if odds_api.api_limit_reached:
+        logger.warning("API limit reached, stopping.")
+        break
+      total_events += len(odds)
+      arbs = calculate_arbitrage(odds_api.markets, odds, team_name_cache)
+      total_arbs += len(arbs)
+      all_arbs.extend(arbs)
   
   save_json('summary', {
     "total_events": total_events,
@@ -42,6 +43,6 @@ def find_arbitrage():
 celery.conf.beat_schedule = {
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=1),  # 5 minutes
+    'schedule': timedelta(minutes=5),  # 5 minutes
   },
 }

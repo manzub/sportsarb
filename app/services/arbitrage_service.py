@@ -80,9 +80,11 @@ def find_middles(markets, event):
 
         if outcome['name'] == event['home_team']:
           spreads[bookmaker['title']]['home'] = point
+          spreads[bookmaker['title']]['home_price'] = price
           spreads[bookmaker['title']]['bookmaker_home'] = bookmaker['title']
         elif outcome['name'] == event['away_team']:
           spreads[bookmaker['title']]['away'] = point
+          spreads[bookmaker['title']]['away_price'] = price
           spreads[bookmaker['title']]['bookmaker_away'] = bookmaker['title']
 
   # --- Compare spreads across bookmakers ---
@@ -90,22 +92,28 @@ def find_middles(markets, event):
   for i in range(len(bookmaker_names)):
     for j in range(i + 1, len(bookmaker_names)):
       b1, b2 = bookmaker_names[i], bookmaker_names[j]
-      home1, away1 = spreads[b1]['home'], spreads[b1]['away']
-      home2, away2 = spreads[b2]['home'], spreads[b2]['away']
+      s1, s2 = spreads[b1], spreads[b2]
 
-      if home1 is not None and away2 is not None:
-        # Middle exists if line overlap gives possible double win
-        if home1 < away2:
+      # Middle when one book's home line < another book's away line
+      if s1['home'] is not None and s2['away'] is not None:
+        if s1['home'] < s2['away']:
           middles.append({
             'type': 'middle',
             'event': f"{event['home_team']} vs {event['away_team']}",
-            'bookmakers': { 'bookmaker1': b1, 'bookmaker2': b2 },
+            'bookmakers': {'bookmaker1': b1, 'bookmaker2': b2},
             'links': get_bookmaker_links(event, [b1, b2], 'spreads'),
-            'lines': { 'home_line': home1, 'away_line': away2 },
+            'lines': {
+              'home_line': s1['home'],
+              'away_line': s2['away']
+            },
+            'odds': {
+              'home_price': s1['home_price'],
+              'away_price': s2['away_price']
+            },
             'commence_time': event.get('commence_time'),
             'unique_id': str(uuid.uuid4()),
             'sport_title': event.get('sport_title'),
-            'market': market['key'],
+            'market': 'spreads'
           })
 
   return middles
@@ -118,15 +126,14 @@ def find_valuebets(markets, event):
   valuebets = []
   if not event.get('bookmakers'):
     return valuebets
-  
-  bookmaker_links = {}
-  all_markets = ['h2h', 'spreads', 'totals']
-  
-  for market_type in all_markets:
-    # --- Collect all odds for each outcome ---
-    outcome_prices = defaultdict(list)  # e.g. {'Buffalo Sabres': [2.45, 2.40, 2.30]}
-    outcome_metadata = defaultdict(dict)
-    
+
+  all_market_types = ['h2h', 'spreads', 'totals']
+
+  for market_type in all_market_types:
+    # Collect odds across all bookmakers for this market type
+    outcome_prices = defaultdict(list)
+    outcome_meta = defaultdict(dict)
+
     for bookmaker in event['bookmakers']:
       for market in bookmaker.get('markets', []):
         if market.get('key') != market_type:
@@ -140,21 +147,17 @@ def find_valuebets(markets, event):
           if not name or not price:
             continue
 
-          outcome_key = name
-          if market_type in ['spreads', 'totals'] and point is not None:
-            outcome_key = f"{name}_{point}"  # distinguish Over_2.5, Under_3.5, etc.
-            outcome_metadata[outcome_key]['point'] = point
+          key = name if market_type == 'h2h' else f"{name}_{point}"
+          outcome_prices[key].append(price)
+          outcome_meta[key] = {'point': point}
 
-          outcome_prices[outcome_key].append(price)
-          bookmaker_links[bookmaker['title']] = bookmaker.get('link', 'N/A')
-          
-    # --- Compute average odds for each outcome ---
-    market_avg = {}
-    for outcome_key, prices in outcome_prices.items():
-      if prices:
-        market_avg[outcome_key] = sum(prices) / len(prices)
-        
-    # --- Detect value bets (odds > avg * (1 + threshold)) ---
+    # Average odds (market consensus)
+    avg_odds = {k: sum(v) / len(v) for k, v in outcome_prices.items() if v}
+
+    # Define threshold per market type (tolerance)
+    thresholds = {'h2h': 0.03, 'spreads': 0.05, 'totals': 0.04}
+
+    # Evaluate bookmakers vs average
     for bookmaker in event['bookmakers']:
       for market in bookmaker.get('markets', []):
         if market.get('key') != market_type:
@@ -165,48 +168,45 @@ def find_valuebets(markets, event):
           price = outcome.get('price')
           point = outcome.get('point')
 
-          outcome_key = name
-          if market_type in ['spreads', 'totals'] and point is not None:
-            outcome_key = f"{name}_{point}"
-
-          avg_price = market_avg.get(outcome_key)
+          key = name if market_type == 'h2h' else f"{name}_{point}"
+          avg_price = avg_odds.get(key)
           if not avg_price:
             continue
-          
-          # dynamic common thresholds
-          thresholds = {'h2h': 0.03, 'spreads': 0.05, 'totals': 0.04}
+
           threshold = thresholds.get(market_type, 0.03)
 
           if price > avg_price * (1 + threshold):
+            implied_prob = round(1 / price * 100, 2)
+            market_prob = round(1 / avg_price * 100, 2)
+            overvalue = round(((price / avg_price) - 1) * 100, 2)
+
             value_item = {
               'type': 'valuebet',
               'event': f"{event['home_team']} vs {event['away_team']}",
+              'sport_title': event.get('sport_title'),
+              'commence_time': event.get('commence_time'),
+              'bookmaker': bookmaker['title'],
               'market': market_type,
               'team_or_outcome': name,
-              'bookmaker': bookmaker['title'],
-              'odds': price,
+              'odds': round(price, 3),
               'avg_market_odds': round(avg_price, 3),
-              'advantage_percent': round((price / avg_price - 1) * 100, 2),
-              'expected_value': round(((price * (1 / avg_price)) - 1) * 100, 2),
-              'link': bookmaker.get('link', 'N/A'),
-              'commence_time': event.get('commence_time'),
-              'sport_title': event.get('sport_title'),
+              'implied_probability': implied_prob,
+              'market_probability': market_prob,
+              'overvalue_percent': overvalue,
+              'point': point if point is not None else None,
+              'bookmaker_link': bookmaker.get('link', ''),
               'unique_id': str(uuid.uuid4())
             }
-
+            
             # Add point if it's spreads or totals
             if point is not None:
               value_item['point'] = point
 
             valuebets.append(value_item)
             logger.info(f"[VALUEBET] {value_item['event']} | {name} @{price} ({market_type}) "
-                          f"avg={avg_price:.2f}, edge={value_item['advantage_percent']}%")
-            
+                          f"avg={avg_price:.2f}, edge={value_item['avg_market_odds']}%")
+
   return valuebets
-
-
-  
-  
 
 def calculate_arbitrage(markets, odds, team_cache):
   all_surebets, all_middles, all_valuebets = [], [], []

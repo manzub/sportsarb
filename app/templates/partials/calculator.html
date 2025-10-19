@@ -32,34 +32,63 @@
   $(document).ready(function () {
     $("#calc-form").on("submit", function (e) {
       e.preventDefault();
+
       const stake = parseFloat($("#stake").val());
       if (isNaN(stake) || stake <= 0) {
         $("#result").text("Enter a valid stake amount.");
         return;
       }
 
-      const opp = document.getElementById('opportunity')
-      const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
+      const opp = document.getElementById('opportunity');
+      const calcType = opp.getAttribute('data-type') || 'surebet';
 
-      const profit = (parseFloat(stake) * profitMargin).toFixed(2);
-      const payout = stake + parseFloat(profit);
+      if (calcType === 'surebet') {
+        const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
+        const profit = (stake * profitMargin).toFixed(2);
+        const payout = stake + parseFloat(profit);
 
-      $("#result").html(`
+        $("#result").html(`
           <div>💰 Profit: <span class="text-green-600">$${profit}</span></div>
           <div class="text-sm text-gray-600">Payout: $${payout}</div>
         `);
 
-      const bets = opp.querySelectorAll('.bet-amount');
-      const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
-      bets.forEach(function (bet) {
-        const impliedProb = parseFloat(bet.getAttribute('data-implied-prob'));
-        const betAmount = (stake * impliedProb / totalImpliedProb).toFixed(2);
-        bet.textContent = betAmount;
-      });
+        const bets = opp.querySelectorAll('.bet-amount');
+        const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
+        bets.forEach(bet => {
+          const impliedProb = parseFloat(bet.getAttribute('data-implied-prob'));
+          const betAmount = (stake * impliedProb / totalImpliedProb).toFixed(2);
+          bet.textContent = betAmount;
+        });
+
+      } else if (calcType === 'middle') {
+        const odd1 = parseFloat($("#odd1").val());
+        const odd2 = parseFloat($("#odd2").val());
+        if (isNaN(odd1) || isNaN(odd2) || odd1 <= 1 || odd2 <= 1) {
+          $("#result").text("Please enter valid odds for both bookmakers.");
+          return;
+        }
+
+        // Split stake evenly by default
+        const stake1 = stake / 2;
+        const stake2 = stake / 2;
+        const totalStake = stake;
+
+        // Profit scenarios
+        const profitMiddle = (stake1 * (odd1 - 1)) + (stake2 * (odd2 - 1)); // both win
+        const oneWins = (stake1 * (odd1 - 1)) - stake2;                     // one wins, one loses
+        const bothLose = -totalStake;                                       // both lose
+
+        $("#result").html(`
+          <div>🎯 <strong>Hit Middle:</strong> <span class="text-green-600">$${profitMiddle.toFixed(2)}</span></div>
+          <div>⚖️ <strong>One Wins:</strong> <span class="text-yellow-600">$${oneWins.toFixed(2)}</span></div>
+          <div>💀 <strong>Both Lose:</strong> <span class="text-red-600">$${bothLose.toFixed(2)}</span></div>
+          <div class="text-xs text-gray-500 mt-2">Assuming equal stakes ($${stake1.toFixed(2)} per side)</div>
+        `);
+      }
     });
 
-    $(".calc-close-btn").on("click", function() {
-      $("#result").html("")
-    })
+    $(".calc-close-btn").on("click", function () {
+      $("#result").html("");
+    });
   });
 </script>
