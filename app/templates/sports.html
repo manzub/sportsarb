@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="py-10 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Sports Data Overview</h1>
+
+    {% if sports %}
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200 shadow-sm rounded-lg">
+        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+          <tr>
+            <th class="py-3 px-4 text-left">Sport</th>
+            <th class="py-3 px-4 text-left">League</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          {% for item in sports %}
+          <tr class="border-t border-gray-200 hover:bg-gray-50 transition">
+            <td class="py-3 px-4 font-medium">{{ item.sport }}</td>
+            <td class="py-3 px-4">{{ item.league }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p class="text-gray-600 mt-6">No sports data available yet.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}

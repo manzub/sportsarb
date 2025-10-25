@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from sqlalchemy.sql.sqltypes import DateTime
 from app import db, login_manager
-from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, UniqueConstraint, Boolean
+from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, Boolean, JSON, ARRAY
 from sqlalchemy.orm import relationship, backref
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
@@ -14,7 +14,7 @@ def load_user(user_id):
 class User(db.Model, UserMixin):
   __tablename__ = "users"
   id = Column(Integer, primary_key=True)
-  email = Column(Text, unique=True)
+  email = Column(String(250), unique=True)
   password = Column(Text)
   active = Column(Boolean, default=True)
   is_verified = Column(Boolean, default=False)
@@ -22,8 +22,8 @@ class User(db.Model, UserMixin):
   otp_expiry = Column(DateTime)
   reset_otp = Column(String(10))
   reset_otp_expiry = Column(db.DateTime)
-  favorite_leagues = []
-  favorite_teams = []
+  favorite_leagues = Column(ARRAY(String))
+  favorite_sports = Column(ARRAY(String))
   preferred_currency = Column(String(3), default="USD")
   current_plan = relationship('UserSubscriptions', back_populates='user', uselist=False, cascade="all, delete-orphan")
   alert_settings = relationship('Alerts', backref='users', uselist=False, cascade="all, delete-orphan")
@@ -94,7 +94,7 @@ class UserSubscriptions(db.Model):
 class AppSettings(db.Model):
   __tablename__ = "app_settings"
   id = Column(Integer, primary_key=True)
-  setting_name = Column(Text, unique=True)
+  setting_name = Column(String(250), unique=True)
   value = Column(Text)
 
   def __init__(self, setting_name, value):
@@ -106,7 +106,8 @@ class Alerts(db.Model):
   user_id = Column(Integer, ForeignKey('users.id'))
   email_notify = Column(Boolean, default=False)
   favorite_leagues = Column(Boolean, default=False)
-  favorite_team = Column(Boolean, default=False)
+  favorite_sports = Column(Boolean, default=False)
+  webpush_info = Column(JSON)
 
   def __init__(self, user_id):
     self.user_id = user_id
@@ -114,10 +115,23 @@ class Alerts(db.Model):
 class Transactions(db.Model):
   id = Column(Integer, primary_key=True)
   user_id = Column(Integer, ForeignKey('users.id'))
-  transaction_type = Column(Text)
+  transaction_type = Column(String(250))
   details = Column(Text)
 
   def __init__(self, user_id, transaction_type, details):
     self.user_id = user_id
     self.transaction_type = transaction_type
     self.details = details
+    
+class Sports(db.Model):
+  id = Column(Integer, primary_key=True)
+  sport = Column(String(250))
+  league = Column(String(500))
+  surebets = Column(Integer, default=0)
+  middles = Column(Integer, default=0)
+  values = Column(Integer, default=0)
+  last_count = Column(JSON)
+  
+  def __init__(self, sport, league):
+    self.sport = sport
+    self.league = league

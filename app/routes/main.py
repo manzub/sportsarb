@@ -1,10 +1,11 @@
 import json
+import os
 from urllib.parse import unquote
 from datetime import datetime
-from flask import Blueprint, render_template, flash, request, redirect, url_for
+from flask import Blueprint, render_template, flash, request, redirect, url_for, jsonify
 from app.extensions import db, redis
 from flask_login import current_user, login_required
-from app.models import UserSubscriptions, Subscriptions
+from app.models import UserSubscriptions, Subscriptions, Alerts
 from app.utils.helpers import has_active_subscription, get_latest_data
 
 bp = Blueprint('main', __name__)
@@ -39,6 +40,13 @@ def index():
   
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('homepage.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
+
+@bp.route('/sports')
+def sports():
+  from app.models import Sports
+
+  all_sports = Sports.query.order_by(Sports.sport.asc(), Sports.league.asc()).all()
+  return render_template('sports.html', sports=all_sports)
 
 @bp.route('/bookmakers')
 def bookmakers():
@@ -188,4 +196,22 @@ def account():
   user_subscription = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
   if user_subscription:
     plan = Subscriptions.query.filter_by(id=user_subscription.plan_id).first()
-  return render_template('account.html', plan=plan, subscription=user_subscription)
+    
+  # Ensure alert settings exist
+  alerts = current_user.alert_settings
+  if not alerts:
+    alerts = Alerts(user_id=current_user.id)
+    db.session.add(alerts)
+    db.session.commit()
+    
+  return render_template('account.html', plan=plan, subscription=user_subscription, alerts=alerts, VAPID_PUBLIC_KEY=os.getenv('VAPID_PUBLIC_KEY'))
+
+@bp.route('/account/notifications/email', methods=['POST'])
+@login_required
+def update_email_notification():
+  data = request.get_json()
+  enabled = bool(data.get("enabled"))
+  alerts = current_user.alert_settings
+  alerts.email_notify = enabled
+  db.session.commit()
+  return jsonify({"status": "ok", "email_notify": enabled})

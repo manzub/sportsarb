@@ -1,10 +1,43 @@
 from flask import Blueprint, request, jsonify
+from flask_login import login_required, current_user
 from app.extensions import redis
 from app.utils.helpers import sort_surebet_data, sort_middle_data, sort_valuebets_data
 from app.services.odds_service import OddsService
+from app.extensions import db
 import json
+import os
 
 bp = Blueprint('api', __name__)
+
+@bp.route('/webpush/subscribe', methods=['POST'])
+@login_required
+def webpush_subscribe():
+  from app.models import Alerts
+  
+  try:
+    subscription_info = request.get_json()
+    if not subscription_info:
+      return jsonify({"error": "Missing subscription info"}), 400
+    if not current_user.alert_settings:
+      # Create new alert settings if not existing
+      alerts = Alerts(user_id=current_user.id)
+      alerts.webpush_info = subscription_info
+      db.session.add(alerts)
+    else:
+      current_user.alert_settings.webpush_info = subscription_info
+    db.session.commit()
+    return jsonify({"status": "subscribed"}), 200
+  except Exception as e:
+    db.session.rollback()
+    return jsonify({"error": str(e)}), 500
+  
+@bp.route('/webpush/unsubscribe', methods=['POST'])
+@login_required
+def webpush_unsubscribe():
+  if current_user.alert_settings.webpush_info:
+    current_user.alert_settings.webpush_info = None
+    db.session.commit()
+  return jsonify({'status': 'unsubscribed'}), 200
 
 @bp.route('/sports', methods=['GET'])
 def sports():

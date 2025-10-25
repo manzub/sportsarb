@@ -90,6 +90,7 @@ def create_checkout_session():
 def session_status():
   stripe_session = stripe.checkout.Session.retrieve(request.args.get('session_id'))
   if stripe_session.status == 'complete':
+    # TODO: record transaction save to db, run validation and other checks
     # update to database and start subscription
     plan_id = stripe_session.metadata['plan_id']
     subscription = UserSubscriptions.query.filter_by(id=plan_id).first();

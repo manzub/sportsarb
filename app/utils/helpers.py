@@ -5,7 +5,7 @@ from functools import wraps
 from flask_login import current_user
 from flask_mail import Message
 from flask import flash, redirect, url_for
-from app.extensions import redis
+from app.extensions import redis, db
 from app import mail
 
 def has_active_subscription(user):
@@ -18,6 +18,16 @@ def has_active_subscription(user):
 def validate_email_address(email:str):
   pattern = re.compile(r"\"?([-a-zA-Z0-9.`?{}]+@\w+\.\w+)\"?")
   return re.match(pattern, email)
+
+def check_valid_sports_leagues(user):
+  from app.models import Sports
+  
+  valid_sports = [row for row in db.session.query(Sports.sport).filter(Sports.sport.in_(user.favorite_sports)).all()]
+  valid_leagues = [row for row in db.session.query(Sports.league).filter(Sports.league.in_(user.favorite_leagues)).all()]
+  if valid_leagues and valid_sports:
+    result = list(set(valid_sports) & set(valid_leagues))
+    return result
+  return None
 
 def verified_required(f):
   @wraps(f)
