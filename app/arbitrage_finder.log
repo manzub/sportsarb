@@ -3930,3 +3930,5 @@
 2025-10-25 11:42:40,805 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:40] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
 2025-10-25 11:42:40,821 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:40] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
 2025-10-25 11:42:41,159 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:41] "GET /api/sports HTTP/1.1" 200 -
+2025-10-26 16:19:22,360 - WARNING -  * Debugger is active!
+2025-10-26 16:19:22,390 - INFO -  * Debugger PIN: 135-200-680
