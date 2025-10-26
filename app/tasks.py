@@ -4,6 +4,7 @@ from app import create_app
 from datetime import timedelta, datetime
 from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
+from app.services.middles_finder import MiddlesFinder
 from app.services.arbitrage_service import calculate_arbitrage
 from app.utils.redis_helper import save_json
 from app.utils.logger import setup_logging
@@ -12,45 +13,30 @@ app = create_app()
 celery = app.celery
 logger = setup_logging()
 
-@celery.task(name='app.tasks.find_surebets')
+def get_sports():
+  from app.utils.helpers import save_sport_to_db
+  
+  odds_api = OddsService()
+  sports = odds_api.get_sports()
+  for sport in sports:
+    if isinstance(sport, dict) and 'key' in sport:
+      try:
+        save_sport_to_db(sport) # save to database return sports
+      except Exception as e:
+        print(f"Error saving sport {sport.get('key')}: {e}")
+  return sports
+
+@celery.task(name='app.tasks.find_arbitrage')
 def find_surebets():
   sports = get_sports()
   logger.info(f"Analyzing {len(sports)} sports...")
   
-  config = { 'regions': 'uk', 'markets': 'h2h,spreads,totals' }
   surebet_finder = SurebetFinder()
-  surebet_finder.find_arbitrage(sports=sports, config=config)
+  surebet_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'h2h,spreads,totals'})
+  
+  middles_finder = MiddlesFinder()
+  middles_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'spreads,totals'})
   return "Done"
-
-@celery.task(name='app.tasks.find_arbitrage')
-def find_arbitrage():
-  odds_api = OddsService()
-  team_name_cache = {}
-  all_arbs = []
-  total_events, total_arbs = 0, 0
-  
-  sports = get_sports
-  logger.info(f"Analyzing {len(sports)} sports...")
-  
-  for sport in sports:
-    if isinstance(sport, dict) and 'key' in sport:
-      odds = odds_api.get_odds(sport['key'])
-      if odds_api.api_limit_reached:
-        logger.warning("API limit reached, stopping.")
-        break
-      total_events += len(odds)
-      arbs = calculate_arbitrage(odds_api.markets, odds, team_name_cache)
-      total_arbs += len(arbs)
-      all_arbs.extend(arbs)
-  
-  save_json('summary', {
-    "total_events": total_events,
-    "total_arbitrage_opportunities": total_arbs,
-    "api_usage": {
-      "remaining_requests": odds_api.remaining_requests,
-      "used_requests": odds_api.used_requests,
-    },
-  })
   
 @celery.task(name='app.tasks.notify_users')
 def notify_users():
@@ -65,32 +51,34 @@ def notify_users():
     return "No users found"
   
   for user in all_users:
-    alerts = user.alert_settings
+    alerts = getattr(user, "alert_settings", None)
     if not alerts:
-      continue
+        continue
 
     # Ensure proper attributes exist
-    fav_sports = user.favorite_sports or []
-    fav_leagues = user.favorite_leagues or []
-    if not fav_sports and not fav_leagues:
-        continue
+    if not (user.favorite_sports or user.favorite_leagues):
+      continue
 
     # Filter valid sports/leagues (you already have this function)
     valid_sports = check_valid_sports_leagues(user)
     if not valid_sports:
-        continue
+      continue
     
-    results = []
-    for sport in valid_sports:
-      updates = {
-        "sport": sport.sport,
-        "league": sport.league,
-        "surebets": sport.surebets if sport.surebets > int(sport.last_count["surebets"]) else 0,
-        "middles": sport.middles if sport.middles > int(sport.last_count["middles"]) else 0,
-        "values": sport.values if sport.values > int(sport.last_count["values"]) else 0
+    results = [
+      {
+        "sport": s.sport,
+        "league": s.league,
+        "surebets": s.surebets if s.surebets > int(s.last_count["surebets"]) else 0,
+        "middles": s.middles if s.middles > int(s.last_count["middles"]) else 0,
+        "values": s.values if s.values > int(s.last_count["values"]) else 0,
       }
-      if updates["surebets"] + updates["middles"] + updates["values"] > 0:
-        results.append(updates)
+      for s in valid_sports
+      if (
+        s.surebets > int(s.last_count["surebets"])
+        or s.middles > int(s.last_count["middles"])
+        or s.values > int(s.last_count["values"])
+      )
+    ]
     
     if not results:
       continue
@@ -102,11 +90,11 @@ def notify_users():
       for r in results
     ])
     
-    if alerts.email_notify:
+    if getattr(alerts, "email_notify", False):
       send_email(user.email, "Found Arbitrage Opportunities", msg)
       
     # === WEB PUSH NOTIFICATION ===
-    if alerts.webpush_info:
+    if getattr(alerts, "webpush_info", None):
       try:
         send_webpush(
           subscription_info=alerts.webpush_info,
@@ -116,24 +104,11 @@ def notify_users():
       except Exception as e:
         print(f"WebPush failed for {user.email}: {e}")
   return "Done"
-
-def get_sports():
-  from app.utils.helpers import save_sport_to_db
-  
-  odds_api = OddsService()
-  sports = odds_api.get_sports()
-  for sport in sports:
-    if isinstance(sport, dict) and 'key' in sport:
-      try:
-        save_sport_to_db(sport) # save to database return sports
-      except Exception as e:
-        print(f"Error saving sport {sport.get('key')}: {e}")
-  return sports
   
 celery.conf.beat_schedule = {
-  'fetch-surebets-every-5-minutes': {
-    'task': 'app.tasks.find_surebets', # task here
-    'schedule': timedelta(minutes=1),  # 5 minutes
+  'fetch-odds-every-5-minutes': {
+    'task': 'app.tasks.find_arbitrage', # task here
+    'schedule': timedelta(minutes=5),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',

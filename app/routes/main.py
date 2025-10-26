@@ -56,7 +56,7 @@ def bookmakers():
 def middles():
   middles = get_latest_data('middles')
   total_middle_items = len(middles)
-  total_items_with_positive_ev = sum( 1 for item in middles if item.get('expected_value', 0) > 0)
+  total_items_with_positive_ev = sum( 1 for item in middles if (item.get('expected_value') or 0) > 0)
     
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('middles.html', has_active_subscription=active_subscription, total_middle_items=total_middle_items, total_items_with_positive_ev=total_items_with_positive_ev)

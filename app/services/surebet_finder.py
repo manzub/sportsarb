@@ -21,6 +21,7 @@ class SurebetFinder:
     try:
       if not sports:
         logger.error("Failed to fetch sports data")
+        return
       logger.info(f"Analyzing {len(sports)} in-season sports...")
       
       all_arbs = []
