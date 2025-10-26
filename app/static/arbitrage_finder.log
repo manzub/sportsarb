@@ -450,3 +450,5 @@
 2025-10-26 16:14:18,122 - INFO - 127.0.0.1 - - [26/Oct/2025 16:14:18] "GET /api/surebets?page=2&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
 2025-10-26 16:14:23,786 - INFO - 127.0.0.1 - - [26/Oct/2025 16:14:23] "GET /surebet/calculator?page=surebets&arb_item=6fa34a8b-e196-4936-afe7-68f03b9e1d39 HTTP/1.1" 200 -
 2025-10-26 16:14:28,466 - INFO - 127.0.0.1 - - [26/Oct/2025 16:14:28] "GET /surebet/calculator?page=surebets&arb_item=b2ac9e3f-09e4-4fb4-a445-b99f8e801341 HTTP/1.1" 200 -
+2025-10-26 16:27:15,031 - WARNING -  * Debugger is active!
+2025-10-26 16:27:15,059 - INFO -  * Debugger PIN: 135-200-680
