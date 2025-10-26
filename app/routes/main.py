@@ -99,7 +99,7 @@ def bet_calculator():
       total_implied_prob = sum(1/odd for odd in list(arb['best_odds'].values()))
       
       opportunities_html += f"""
-      <div data-type="surebet id="opportunity" data-profit-margin="{arb['profit_margin']}" data-total-implied-prob="{total_implied_prob}">
+      <div data-type="surebet" id="opportunity" data-profit-margin="{arb['profit_margin']}" data-total-implied-prob="{total_implied_prob}">
         <h1 class="font-bold m-0" style="font-size: 18px;">{arb['event']}</h1>
         <h2 class="text-emerald-800 font-extrabold m-0">{arb['sport_title']}</h2>
         <p>Profit Margin: <span class="font-extrabold">{arb['profit_margin']:.2f}%</span></p>

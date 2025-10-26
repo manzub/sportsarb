@@ -3930,3 +3930,210 @@
 2025-10-25 11:42:40,805 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:40] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
 2025-10-25 11:42:40,821 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:40] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
 2025-10-25 11:42:41,159 - INFO - 127.0.0.1 - - [25/Oct/2025 11:42:41] "GET /api/sports HTTP/1.1" 200 -
+2025-10-26 12:59:39,256 - INFO - 127.0.0.1 - - [26/Oct/2025 12:59:39] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-26 13:46:12,476 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 13:46:13,248 - INFO -  * Restarting with stat
+2025-10-26 13:48:07,717 - INFO -  * Restarting with stat
+2025-10-26 13:49:08,302 - INFO -  * Restarting with stat
+2025-10-26 13:49:19,393 - INFO -  * Restarting with stat
+2025-10-26 13:49:24,535 - INFO -  * Restarting with stat
+2025-10-26 13:51:57,387 - INFO -  * Restarting with stat
+2025-10-26 13:52:02,509 - INFO -  * Restarting with stat
+2025-10-26 13:52:06,175 - INFO -  * Restarting with stat
+2025-10-26 13:54:12,444 - INFO -  * Restarting with stat
+2025-10-26 13:54:14,053 - WARNING -  * Debugger is active!
+2025-10-26 13:54:14,081 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 13:54:42,391 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 13:54:42,722 - INFO -  * Restarting with stat
+2025-10-26 13:54:44,180 - WARNING -  * Debugger is active!
+2025-10-26 13:54:44,215 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 13:55:48,865 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-26 13:55:49,209 - INFO -  * Restarting with stat
+2025-10-26 13:55:50,972 - WARNING -  * Debugger is active!
+2025-10-26 13:55:50,999 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 13:56:08,190 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 13:56:08,548 - INFO -  * Restarting with stat
+2025-10-26 13:56:09,935 - WARNING -  * Debugger is active!
+2025-10-26 13:56:09,962 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:10:20,360 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:10:20,879 - INFO -  * Restarting with stat
+2025-10-26 14:10:22,758 - WARNING -  * Debugger is active!
+2025-10-26 14:10:22,793 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:12:07,015 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:12:07,331 - INFO -  * Restarting with stat
+2025-10-26 14:12:08,899 - WARNING -  * Debugger is active!
+2025-10-26 14:12:08,931 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:13:42,998 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:13:43,346 - INFO -  * Restarting with stat
+2025-10-26 14:13:44,959 - WARNING -  * Debugger is active!
+2025-10-26 14:13:44,996 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:14:26,474 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:14:26,814 - INFO -  * Restarting with stat
+2025-10-26 14:14:28,657 - WARNING -  * Debugger is active!
+2025-10-26 14:14:28,688 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:17:10,872 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:17:11,222 - INFO -  * Restarting with stat
+2025-10-26 14:17:12,783 - WARNING -  * Debugger is active!
+2025-10-26 14:17:12,812 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:17:15,844 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:17:16,191 - INFO -  * Restarting with stat
+2025-10-26 14:17:17,562 - WARNING -  * Debugger is active!
+2025-10-26 14:17:17,590 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:17:26,683 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:17:27,012 - INFO -  * Restarting with stat
+2025-10-26 14:17:28,525 - WARNING -  * Debugger is active!
+2025-10-26 14:17:28,553 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:17:41,764 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:17:42,111 - INFO -  * Restarting with stat
+2025-10-26 14:17:43,674 - WARNING -  * Debugger is active!
+2025-10-26 14:17:43,704 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:18:48,350 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-26 14:18:48,684 - INFO -  * Restarting with stat
+2025-10-26 14:18:50,207 - WARNING -  * Debugger is active!
+2025-10-26 14:18:50,348 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:18:55,407 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-10-26 14:18:55,747 - INFO -  * Restarting with stat
+2025-10-26 14:18:57,191 - WARNING -  * Debugger is active!
+2025-10-26 14:18:57,218 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:21:48,301 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:21:48,816 - INFO -  * Restarting with stat
+2025-10-26 14:21:50,661 - WARNING -  * Debugger is active!
+2025-10-26 14:21:50,693 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:22:30,137 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:22:30,479 - INFO -  * Restarting with stat
+2025-10-26 14:22:32,005 - WARNING -  * Debugger is active!
+2025-10-26 14:22:32,035 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:24:16,119 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:24:16,463 - INFO -  * Restarting with stat
+2025-10-26 14:24:56,717 - INFO -  * Restarting with stat
+2025-10-26 14:24:58,248 - WARNING -  * Debugger is active!
+2025-10-26 14:24:58,274 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:26:22,232 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:26:22,728 - INFO -  * Restarting with stat
+2025-10-26 14:26:35,855 - INFO -  * Restarting with stat
+2025-10-26 14:28:22,273 - INFO -  * Restarting with stat
+2025-10-26 14:28:24,098 - WARNING -  * Debugger is active!
+2025-10-26 14:28:24,128 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:28:33,237 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:28:33,610 - INFO -  * Restarting with stat
+2025-10-26 14:28:35,174 - WARNING -  * Debugger is active!
+2025-10-26 14:28:35,208 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:29:03,549 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:29:03,911 - INFO -  * Restarting with stat
+2025-10-26 14:29:05,323 - WARNING -  * Debugger is active!
+2025-10-26 14:29:05,350 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:29:24,591 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:29:24,895 - INFO -  * Restarting with stat
+2025-10-26 14:29:26,341 - WARNING -  * Debugger is active!
+2025-10-26 14:29:26,369 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:29:31,434 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:29:31,736 - INFO -  * Restarting with stat
+2025-10-26 14:29:33,126 - WARNING -  * Debugger is active!
+2025-10-26 14:29:33,156 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:30:30,881 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:30:31,219 - INFO -  * Restarting with stat
+2025-10-26 14:30:32,758 - WARNING -  * Debugger is active!
+2025-10-26 14:30:32,794 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:30:41,913 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:30:42,321 - INFO -  * Restarting with stat
+2025-10-26 14:30:43,913 - WARNING -  * Debugger is active!
+2025-10-26 14:30:43,941 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:45:48,645 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-26 14:45:49,050 - INFO -  * Restarting with stat
+2025-10-26 14:45:50,892 - WARNING -  * Debugger is active!
+2025-10-26 14:45:50,937 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:47:29,094 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:47:29,471 - INFO -  * Restarting with stat
+2025-10-26 14:47:31,099 - WARNING -  * Debugger is active!
+2025-10-26 14:47:31,131 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:48:35,137 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:48:35,701 - INFO -  * Restarting with stat
+2025-10-26 14:50:47,475 - INFO -  * Restarting with stat
+2025-10-26 14:51:05,723 - INFO -  * Restarting with stat
+2025-10-26 14:52:46,831 - INFO -  * Restarting with stat
+2025-10-26 14:52:48,432 - WARNING -  * Debugger is active!
+2025-10-26 14:52:48,464 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:53:30,966 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-26 14:53:31,346 - INFO -  * Restarting with stat
+2025-10-26 14:53:32,895 - WARNING -  * Debugger is active!
+2025-10-26 14:53:32,924 - INFO -  * Debugger PIN: 135-200-680
+2025-10-26 14:55:20,067 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/logger.py', reloading
+2025-10-26 14:55:20,822 - INFO -  * Restarting with stat
+2025-10-26 14:56:09,448 - INFO -  * Restarting with stat
+2025-10-26 14:56:57,155 - INFO -  * Restarting with stat
+2025-10-26 14:57:25,636 - INFO -  * Restarting with stat
+2025-10-26 14:57:40,118 - INFO -  * Restarting with stat
+2025-10-26 14:58:01,313 - INFO -  * Restarting with stat
+2025-10-26 15:00:05,673 - INFO -  * Restarting with stat
+2025-10-26 15:00:41,040 - INFO -  * Restarting with stat
+2025-10-26 15:00:57,185 - INFO -  * Restarting with stat
+2025-10-26 15:07:11,212 - INFO -  * Restarting with stat
+2025-10-26 15:08:11,326 - INFO -  * Restarting with stat
+2025-10-26 15:08:16,222 - INFO -  * Restarting with stat
+2025-10-26 15:08:27,132 - INFO -  * Restarting with stat
+2025-10-26 15:09:21,119 - INFO -  * Restarting with stat
+2025-10-26 15:09:49,477 - INFO -  * Restarting with stat
+2025-10-26 15:11:07,392 - INFO -  * Restarting with stat
+2025-10-26 15:11:12,502 - INFO -  * Restarting with stat
+2025-10-26 15:11:26,294 - INFO -  * Restarting with stat
+2025-10-26 15:11:44,544 - INFO -  * Restarting with stat
+2025-10-26 15:12:54,344 - INFO -  * Restarting with stat
+2025-10-26 15:13:14,488 - INFO -  * Restarting with stat
+2025-10-26 15:13:56,050 - INFO -  * Restarting with stat
+2025-10-26 15:14:54,573 - INFO -  * Restarting with stat
+2025-10-26 15:14:58,595 - INFO -  * Restarting with stat
+2025-10-26 15:15:03,424 - INFO -  * Restarting with stat
+2025-10-26 15:15:27,304 - INFO -  * Restarting with stat
+2025-10-26 15:18:11,194 - INFO -  * Restarting with stat
+2025-10-26 15:19:41,465 - INFO -  * Restarting with stat
+2025-10-26 15:20:49,091 - INFO -  * Restarting with stat
+2025-10-26 15:21:28,834 - INFO -  * Restarting with stat
+2025-10-26 15:23:10,841 - INFO -  * Restarting with stat
+2025-10-26 15:24:33,463 - INFO -  * Restarting with stat
+2025-10-26 15:27:00,050 - INFO -  * Restarting with stat
+2025-10-26 15:27:23,427 - INFO -  * Restarting with stat
+2025-10-26 15:27:29,363 - INFO -  * Restarting with stat
+2025-10-26 15:27:50,480 - INFO -  * Restarting with stat
+2025-10-26 15:28:02,395 - INFO -  * Restarting with stat
+2025-10-26 15:29:23,017 - INFO -  * Restarting with stat
+2025-10-26 15:40:36,450 - INFO -  * Restarting with stat
+2025-10-26 15:41:56,460 - INFO -  * Restarting with stat
+2025-10-26 15:42:12,477 - INFO -  * Restarting with stat
+2025-10-26 15:42:44,822 - INFO -  * Restarting with stat
+2025-10-26 15:42:59,880 - INFO -  * Restarting with stat
+2025-10-26 15:44:38,008 - INFO -  * Restarting with stat
+2025-10-26 15:44:51,299 - INFO -  * Restarting with stat
+2025-10-26 15:45:11,646 - INFO -  * Restarting with stat
+2025-10-26 15:45:33,816 - INFO -  * Restarting with stat
+2025-10-26 15:45:39,772 - INFO -  * Restarting with stat
+2025-10-26 15:45:50,109 - INFO -  * Restarting with stat
+2025-10-26 15:47:29,525 - INFO -  * Restarting with stat
+2025-10-26 15:48:01,866 - INFO -  * Restarting with stat
+2025-10-26 15:48:43,588 - INFO -  * Restarting with stat
+2025-10-26 15:50:29,821 - INFO -  * Restarting with stat
+2025-10-26 15:52:54,970 - INFO -  * Restarting with stat
+2025-10-26 15:53:35,576 - INFO -  * Restarting with stat
+2025-10-26 15:53:43,939 - INFO -  * Restarting with stat
+2025-10-26 15:53:55,858 - INFO -  * Restarting with stat
+2025-10-26 15:54:20,760 - INFO -  * Restarting with stat
+2025-10-26 15:54:27,025 - INFO -  * Restarting with stat
+2025-10-26 15:55:13,528 - INFO -  * Restarting with stat
+2025-10-26 15:55:46,248 - INFO -  * Restarting with stat
+2025-10-26 15:55:59,684 - INFO -  * Restarting with stat
+2025-10-26 15:56:31,573 - INFO -  * Restarting with stat
+2025-10-26 15:57:34,431 - INFO -  * Restarting with stat
+2025-10-26 15:57:38,854 - INFO -  * Restarting with stat
+2025-10-26 15:58:15,026 - INFO -  * Restarting with stat
+2025-10-26 15:59:03,470 - INFO -  * Restarting with stat
+2025-10-26 15:59:06,420 - INFO -  * Restarting with stat
+2025-10-26 15:59:38,139 - INFO -  * Restarting with stat
+2025-10-26 15:59:45,109 - INFO -  * Restarting with stat
+2025-10-26 15:59:54,033 - INFO -  * Restarting with stat
+2025-10-26 16:00:01,385 - INFO -  * Restarting with stat
+2025-10-26 16:00:10,478 - INFO -  * Restarting with stat
+2025-10-26 16:00:15,642 - INFO -  * Restarting with stat
+2025-10-26 16:00:54,086 - INFO -  * Restarting with stat
+2025-10-26 16:01:28,406 - INFO -  * Restarting with stat
+2025-10-26 16:03:30,149 - INFO -  * Restarting with stat
+2025-10-26 16:04:09,109 - INFO -  * Restarting with stat
+2025-10-26 16:08:07,925 - INFO -  * Restarting with stat
