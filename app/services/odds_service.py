@@ -18,34 +18,28 @@ class OddsService:
     self.file_path = OFFLINE_FILE
 
   def get_sports(self):
-    if self.use_offline:
-      return self.load_offline_data()['sports']
-    
     url = f"{self.base_url}/sports"
     params = {'api_key': self.api_key, 'all': 'false'}
     try:
       resp = requests.get(url, params=params)
       resp.raise_for_status()
       sports_data = resp.json()
-      if self.save_offline:
-        self.save_data({'sports': sports_data, 'odds': {}})
       return sports_data
     except Exception as e:
       self.handle_api_error(e)
       return []
 
-  def get_odds(self, sport_key):
+  def get_odds(self, sport_key, config):
     if self.use_offline:
       return self.load_offline_data()['odds'].get(sport_key, [])
   
     url = f"{self.base_url}/sports/{sport_key}/odds"
     params = {
-        'api_key': self.api_key,
-        'markets': self.markets,
-        'regions': 'uk,eu',
-        'includeLinks': 'true',
-        'oddsFormat': 'decimal',
-        'dateFormat': 'iso',
+      'api_key': self.api_key,
+      'includeLinks': 'true',
+      'oddsFormat': 'decimal',
+      'dateFormat': 'iso',
+      **config
     }
     try:
       resp = requests.get(url, params=params)

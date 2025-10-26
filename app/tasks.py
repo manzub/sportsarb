@@ -3,6 +3,7 @@ from sqlalchemy import func
 from app import create_app
 from datetime import timedelta, datetime
 from app.services.odds_service import OddsService
+from app.services.surebet_finder import SurebetFinder
 from app.services.arbitrage_service import calculate_arbitrage
 from app.utils.redis_helper import save_json
 from app.utils.logger import setup_logging
@@ -11,6 +12,16 @@ app = create_app()
 celery = app.celery
 logger = setup_logging()
 
+@celery.task(name='app.tasks.find_surebets')
+def find_surebets():
+  sports = get_sports()
+  logger.info(f"Analyzing {len(sports)} sports...")
+  
+  config = { 'regions': 'uk', 'markets': 'h2h,spreads,totals' }
+  surebet_finder = SurebetFinder()
+  surebet_finder.find_arbitrage(sports=sports, config=config)
+  return "Done"
+
 @celery.task(name='app.tasks.find_arbitrage')
 def find_arbitrage():
   odds_api = OddsService()
@@ -18,7 +29,7 @@ def find_arbitrage():
   all_arbs = []
   total_events, total_arbs = 0, 0
   
-  sports = odds_api.get_sports()
+  sports = get_sports
   logger.info(f"Analyzing {len(sports)} sports...")
   
   for sport in sports:
@@ -105,11 +116,24 @@ def notify_users():
       except Exception as e:
         print(f"WebPush failed for {user.email}: {e}")
   return "Done"
+
+def get_sports():
+  from app.utils.helpers import save_sport_to_db
+  
+  odds_api = OddsService()
+  sports = odds_api.get_sports()
+  for sport in sports:
+    if isinstance(sport, dict) and 'key' in sport:
+      try:
+        save_sport_to_db(sport) # save to database return sports
+      except Exception as e:
+        print(f"Error saving sport {sport.get('key')}: {e}")
+  return sports
   
 celery.conf.beat_schedule = {
-  'fetch-odds-every-5-minutes': {
-    'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=5),  # 5 minutes
+  'fetch-surebets-every-5-minutes': {
+    'task': 'app.tasks.find_surebets', # task here
+    'schedule': timedelta(minutes=1),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',

@@ -45,7 +45,7 @@
       if (calcType === 'surebet') {
         const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
         const profit = (stake * profitMargin).toFixed(2);
-        const payout = stake + parseFloat(profit);
+        const payout = (stake + parseFloat(profit)).toFixed(2);
 
         $("#result").html(`
           <div>💰 Profit: <span class="text-green-600">$${profit}</span></div>

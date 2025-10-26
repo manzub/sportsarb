@@ -29,6 +29,17 @@ def check_valid_sports_leagues(user):
     return result
   return None
 
+def save_sport_to_db(sport):
+  from app.models import Sports
+  
+  existing = Sports.query.filter_by(league=sport['key']).first()
+  if not existing:
+    new_sport = Sports(sport=sport['group'], league=sport['key'])
+    db.session.add(new_sport)
+    db.session.commit()
+    
+  return sport
+
 def verified_required(f):
   @wraps(f)
   def decorated_function(*args, **kwargs):
@@ -83,6 +94,7 @@ def sort_surebet_data(data):
         "start_time": arb['commence_time'],
         "event": event_label,
         "tournament": arb['sport_title'],
+        "sport_name": arb['sport_name'],
         "event_name": arb['event'],
         "market_type": arb['market'],
         "odds": arb['best_odds'][bookmaker_key],

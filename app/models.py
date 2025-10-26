@@ -126,12 +126,13 @@ class Transactions(db.Model):
 class Sports(db.Model):
   id = Column(Integer, primary_key=True)
   sport = Column(String(250))
-  league = Column(String(500))
+  league = Column(String(500), unique=True)
   surebets = Column(Integer, default=0)
   middles = Column(Integer, default=0)
   values = Column(Integer, default=0)
   last_count = Column(JSON)
   
-  def __init__(self, sport, league):
+  def __init__(self, sport: str, league: str):
     self.sport = sport
     self.league = league
+    self.last_count = {}

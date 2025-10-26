@@ -92,7 +92,7 @@
   const API_URL = "/api/surebets";
 
   let currentPage = 1;
-  const perPage = 60;
+  const perPage = 51;
 
   function fetchSurebets(page = 1, sort = 'profit', market = 'h2h') {
     $.ajax({
@@ -167,7 +167,7 @@
                 <!-- Row 1: bookmaker -->
                 <td class="px-4 py-2">
                   <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
-                  <div class="text-xs text-gray-500">Tennis</div>
+                  <div class="text-xs text-gray-500">${item.sport_name}</div>
                 </td>
 
                 <td class="px-4 py-2">
@@ -194,7 +194,7 @@
       tbody.append(`
             <tr class="bg-gray-50">
               <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
-                <div class="w-full flex justify-end pr-6">+ ${group.length - 1} more surebets for this event</div>
+                <div class="w-full flex justify-end pr-6">+ 0 more best odds</div>
               </td>
             </tr>
           `);
