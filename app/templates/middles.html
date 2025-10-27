@@ -107,8 +107,10 @@
 
   let currentPage = 1;
   const perPage = 60;
+  let _market = '';
 
-  function fetchMiddles(page = 1, sort = 'profit', market = 'spreads') {
+  function fetchMiddles(page = 1, sort = 'profit', market = _market) {
+    _market = market;
     $.ajax({
       url: API_URL,
       data: { page: page, limit: perPage, sort: sort, market: market },
@@ -118,7 +120,7 @@
           $("#middles-body").html(`
               <tr>
                 <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data.
+                  Failed to load data/No results found.
                 </td>
               </tr>
             `);
@@ -253,11 +255,11 @@
   }
 
   $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchMiddles(currentPage - 1);
+    if (currentPage > 1) fetchMiddles(currentPage - 1, _market);
   });
 
   $("#next-page").on("click", function () {
-    fetchMiddles(currentPage + 1);
+    fetchMiddles(currentPage + 1, _market);
   });
 
   // initial load

@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from sqlalchemy.sql.sqltypes import DateTime
 from app import db, login_manager
 from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, Boolean, JSON, ARRAY
-from sqlalchemy.orm import relationship, backref
+from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -130,9 +130,8 @@ class Sports(db.Model):
   surebets = Column(Integer, default=0)
   middles = Column(Integer, default=0)
   values = Column(Integer, default=0)
-  last_count = Column(JSON)
+  last_count = Column(JSON, default=lambda: {'surebets': 0, 'middles': 0, 'values': 0})
   
   def __init__(self, sport: str, league: str):
     self.sport = sport
     self.league = league
-    self.last_count = {}

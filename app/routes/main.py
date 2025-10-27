@@ -2,7 +2,7 @@ import json
 import os
 from urllib.parse import unquote
 from datetime import datetime
-from flask import Blueprint, render_template, flash, request, redirect, url_for, jsonify
+from flask import Blueprint, render_template, flash, request, redirect, url_for, jsonify, send_from_directory
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions, Alerts
@@ -40,6 +40,10 @@ def index():
   
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('homepage.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
+
+@bp.route('/service-worker.js')
+def service_worker():
+  return send_from_directory('static', 'service-worker.js', mimetype="application/javascript")
 
 @bp.route('/sports')
 def sports():

@@ -2,7 +2,7 @@ import uuid
 from collections import defaultdict
 from difflib import get_close_matches
 from app.utils.redis_helper import save_json
-from app.utils.helpers import get_bookmaker_links
+from app.utils.helpers import get_bookmaker_links, update_sport_db_count
 from app.services.odds_service import OddsService
 from app.utils.logger import setup_logging
 
@@ -35,6 +35,7 @@ class SurebetFinder:
           if odds:
             arbs = self.calculate_arbitrage(odds, sport['group']) # calculate arbs
             all_arbs.extend(arbs)
+            update_sport_db_count(key=sport['key'], surebets=len(all_arbs)) #update db counts
         except Exception as e:
           logger.error(f"Error processing sport {sport['key']}: {str(e)}")
           continue

@@ -1,7 +1,7 @@
 import uuid
 from collections import defaultdict
 from app.utils.redis_helper import save_json
-from app.utils.helpers import get_bookmaker_links
+from app.utils.helpers import get_bookmaker_links, update_sport_db_count
 from app.services.odds_service import OddsService
 from app.utils.logger import setup_logging
 
@@ -39,6 +39,7 @@ class ValueBetsFinder:
           if odds:
             valuebets = self._calculate_valuebets(odds, sport['group'])
             all_valuebets.extend(valuebets)
+            update_sport_db_count(key=sport['key'], valuebets=len(all_valuebets)) #update db counts
         except Exception as e:
           logger.error(f"Error processing sport {sport['key']}: {str(e)}")
           continue

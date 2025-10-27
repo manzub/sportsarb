@@ -1,5 +1,6 @@
 import json
 import re
+from collections import defaultdict
 from datetime import datetime
 from functools import wraps
 from flask_login import current_user
@@ -39,6 +40,30 @@ def save_sport_to_db(sport):
     db.session.commit()
     
   return sport
+
+def update_sport_db_count(key: str, **counts):
+  from app.models import Sports
+  from app.utils.logger import setup_logging
+  
+  logger = setup_logging()
+
+  sport = Sports.query.filter_by(league=key).first()
+  if not sport:
+    logger.warning(f"No sport found with league '{key}'")
+    return False
+
+  sport.last_count = {
+    'surebets': sport.surebets,
+    'middles': sport.middles,
+    'values': sport.values
+  }
+
+  for field in ['surebets', 'middles', 'values']:
+    if field in counts and counts[field] is not None:
+      setattr(sport, field, counts[field])
+
+  db.session.commit()
+  return True
 
 def verified_required(f):
   @wraps(f)

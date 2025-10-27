@@ -142,7 +142,7 @@ def values():
   
   # Filter by market type
   if market:
-    data = [d for d in data if d.get('market_type', 'spread') == market]
+    data = [d for d in data if d.get('market', 'spreads') == market]
 
   # Sorting logic
   if sort == "profit":
@@ -156,3 +156,31 @@ def values():
   total_pages = (len(data) + limit - 1) // limit
   
   return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages })
+
+
+@bp.route('/webpush/test', methods=['GET'])
+@login_required
+def webpush_test():
+  from pywebpush import webpush, WebPushException
+  subscription_info = current_user.alert_settings.webpush_info
+  if not subscription_info:
+    return jsonify({"error": "User not subscribed"}), 400
+
+  vapid_private_key = os.getenv("VAPID_PRIVATE_KEY")
+
+  payload = json.dumps({
+    "title": "Test Notification",
+    "body": "This is a test push from your Flask backend!"
+  })
+
+  try:
+    webpush(
+      subscription_info=subscription_info,
+      data=payload,
+      vapid_private_key=vapid_private_key,
+      vapid_claims={"sub": "mailto:admin@yourapp.com"}
+    )
+    return jsonify({"status": "Notification sent!", "info": subscription_info}), 200
+  except WebPushException as ex:
+    print("WebPush error:", repr(ex))
+    return jsonify({"error": "Push failed", "details": str(ex)}), 500

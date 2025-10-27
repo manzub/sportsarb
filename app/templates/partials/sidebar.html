@@ -19,9 +19,10 @@
     <fieldset class="fieldset">
       <legend class="fieldset-legend">Markets</legend>
       <select id="market" class="select">
+        <option selected disabled>Select</option>
         <option value="h2h">H2H</option>
-        <option value="spread">SPREADS</option>
-        <option value="total">TOTALS</option>
+        <option value="spreads">SPREADS</option>
+        <option value="totals">TOTALS</option>
       </select>
     </fieldset>
 
@@ -53,7 +54,7 @@
     } else if (current_page == '/middles') {
       fetchMiddles(1, sort, market)
     } else if (current_page == '/valuebets') {
-      fetchValues(1, sort, market)
+      fetchValues(1, market)
     }
   }
 

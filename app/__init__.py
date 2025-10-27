@@ -1,4 +1,5 @@
-from flask import Flask
+import os
+from flask import Flask, send_from_directory, abort
 from flask_wtf import CSRFProtect
 from celery import Celery
 from .extensions import db, login_manager, migrate, mail
@@ -36,6 +37,13 @@ def create_app():
   app.register_blueprint(auth.bp, url_prefix='/auth')
   app.register_blueprint(api.bp, url_prefix='/api')
   app.register_blueprint(plans.bp, url_prefix='/plans')
+  
+  @app.route('/<path:filename>')
+  def serve_from_static(filename):
+    static_path = os.path.join(app.static_folder, filename)
+    if os.path.exists(static_path):
+      return send_from_directory(app.static_folder, filename)
+    abort(404)
   
   app.celery = make_celery(app)
   CSRFProtect(app)

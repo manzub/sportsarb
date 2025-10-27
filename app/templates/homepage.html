@@ -93,8 +93,10 @@
 
   let currentPage = 1;
   const perPage = 51;
+  let _market = ''
 
-  function fetchSurebets(page = 1, sort = 'profit', market = 'h2h') {
+  function fetchSurebets(page = 1, sort = 'profit', market = _market) {
+    _market = market;
     $.ajax({
       url: API_URL,
       data: { page: page, limit: perPage, sort: sort, market: market },
@@ -234,11 +236,11 @@
   }
 
   $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchSurebets(currentPage - 1);
+    if (currentPage > 1) fetchSurebets(currentPage - 1, _market);
   });
 
   $("#next-page").on("click", function () {
-    fetchSurebets(currentPage + 1);
+    fetchSurebets(currentPage + 1, _market);
   });
 
   // initial load

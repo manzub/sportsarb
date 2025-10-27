@@ -1,13 +1,10 @@
 # tasks to save to redis here and run in celery
-from sqlalchemy import func
 from app import create_app
-from datetime import timedelta, datetime
+from datetime import timedelta
 from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
 from app.services.values_finder import ValueBetsFinder
-from app.services.arbitrage_service import calculate_arbitrage
-from app.utils.redis_helper import save_json
 from app.utils.logger import setup_logging
 
 app = create_app()
@@ -57,7 +54,7 @@ def notify_users():
   for user in all_users:
     alerts = getattr(user, "alert_settings", None)
     if not alerts:
-        continue
+      continue
 
     # Ensure proper attributes exist
     if not (user.favorite_sports or user.favorite_leagues):
@@ -110,12 +107,12 @@ def notify_users():
   return "Done"
   
 celery.conf.beat_schedule = {
-  'fetch-odds-every-5-minutes': {
-    'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=5),  # 5 minutes
-  },
+  # 'fetch-odds-every-5-minutes': {
+  #   'task': 'app.tasks.find_arbitrage', # task here
+  #   'schedule': timedelta(minutes=5),  # 5 minutes
+  # },
   'notify_users': {
     'task': 'app.tasks.notify_users',
-    'schedule': timedelta(hours=1)
+    'schedule': timedelta(minutes=1)
   }
 }

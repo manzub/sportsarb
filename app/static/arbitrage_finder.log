@@ -826,3 +826,994 @@
 2025-10-27 18:13:07,673 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
 2025-10-27 18:13:08,250 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:08] "GET /api/sports HTTP/1.1" 200 -
 2025-10-27 18:13:08,335 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:08] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
+2025-10-27 18:18:47,640 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:47] "GET /sports HTTP/1.1" 200 -
+2025-10-27 18:18:47,837 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:18:47,845 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:18:48,457 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:48] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:18:59,813 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:18:59,871 - INFO - 127.0.0.1 - - [27/Oct/2025 18:18:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:19:09,070 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:09] "GET /api/values?page=1&limit=20&sort=profit_desc HTTP/1.1" 200 -
+2025-10-27 18:19:38,065 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:38] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:19:38,180 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:19:38,399 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:38] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:19:38,554 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:38] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:19:38,893 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:38] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:19:40,394 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:40] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spread HTTP/1.1" 200 -
+2025-10-27 18:19:42,896 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:42] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:19:43,636 - INFO - 127.0.0.1 - - [27/Oct/2025 18:19:43] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:07,781 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:07] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:20:07,846 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:20:07,870 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:20:07,962 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:07] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:20:08,408 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:08] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:20:09,120 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:09] "GET / HTTP/1.1" 200 -
+2025-10-27 18:20:09,147 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:20:09,171 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:09] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:20:09,280 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:09] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:09,529 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:09] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:20:11,660 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:11] "GET /api/surebets?page=1&limit=51&sort=profit_desc&market=spread HTTP/1.1" 200 -
+2025-10-27 18:20:13,937 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:13] "GET /api/surebets?page=1&limit=51&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:21,064 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:21] "GET /api/surebets?page=2&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:22,326 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:22] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:23,514 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:23] "GET /api/surebets?page=2&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:24,059 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:24] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:25,919 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:25] "GET / HTTP/1.1" 200 -
+2025-10-27 18:20:25,971 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:20:25,989 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:20:26,132 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:26] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:20:26,807 - INFO - 127.0.0.1 - - [27/Oct/2025 18:20:26] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:21:17,411 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:17] "GET / HTTP/1.1" 200 -
+2025-10-27 18:21:17,483 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:21:17,505 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:17] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:21:17,613 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:17] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:21:18,074 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:18] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:21:21,611 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:21] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:21:21,683 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:21:21,717 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:21] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:21:21,837 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:21] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:21:22,079 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:22] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:21:25,246 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:25] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spread HTTP/1.1" 200 -
+2025-10-27 18:21:27,796 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:27] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:21:28,708 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:28] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:21:28,732 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:21:28,758 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:21:28,841 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:28] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:21:29,034 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:29] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:21:55,499 - INFO - 127.0.0.1 - - [27/Oct/2025 18:21:55] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spread HTTP/1.1" 200 -
+2025-10-27 18:22:13,129 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:13] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:22:13,235 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:13] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:22:13,245 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:22:13,333 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:13] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:14,166 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:14] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:22:15,115 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:15] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:15,748 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:15] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:16,213 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:16] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:22:16,237 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:22:16,260 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:22:16,458 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:16] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:16,757 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:16] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:22:22,455 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:22] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:22:22,541 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:22:22,564 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:22] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:22:22,702 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:22] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:23,259 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:23] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:22:24,186 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:24] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=totals HTTP/1.1" 200 -
+2025-10-27 18:22:26,234 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:26] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:26,992 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:26] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:22:27,031 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:22:27,048 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:27] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:22:27,128 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:27] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:22:27,452 - INFO - 127.0.0.1 - - [27/Oct/2025 18:22:27] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:04,993 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:04] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:25:05,041 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:25:05,094 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:05] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:25:05,202 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:05] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:25:06,224 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:06] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:34,055 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:34] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:25:34,112 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:25:34,148 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:25:34,299 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:34] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:25:34,820 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:34] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:39,665 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:39] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:25:42,007 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:42] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:25:43,948 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:43] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:25:43,979 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:25:43,993 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:43] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:25:44,363 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:25:44,782 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:44,796 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "GET / HTTP/1.1" 200 -
+2025-10-27 18:25:44,829 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:25:44,850 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:25:44,913 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:44] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:25:45,227 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:45] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:45,637 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:45] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:25:45,692 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:25:45,744 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:45] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:25:46,161 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:46] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:25:46,267 - INFO - 127.0.0.1 - - [27/Oct/2025 18:25:46] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
+2025-10-27 18:27:06,129 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 18:27:08,196 - WARNING -  * Debugger is active!
+2025-10-27 18:27:08,230 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:27:09,248 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 18:27:11,061 - WARNING -  * Debugger is active!
+2025-10-27 18:27:11,090 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:27:28,272 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 18:27:30,284 - WARNING -  * Debugger is active!
+2025-10-27 18:27:30,377 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:27:31,569 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:31] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:27:31,656 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:27:31,676 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:27:32,596 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:32] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:27:32,950 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:32] "GET /api/values?page=1&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:27:37,488 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:37] "GET /api/values?page=1&limit=20&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:27:41,186 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:41] "GET /api/values?page=1&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:27:44,273 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:44] "GET /api/values?page=1&limit=20&market=totals HTTP/1.1" 200 -
+2025-10-27 18:27:46,869 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:46] "GET /api/values?page=1&limit=20&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:27:53,723 - INFO - 127.0.0.1 - - [27/Oct/2025 18:27:53] "GET /api/values?page=2&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:28:00,762 - INFO - 127.0.0.1 - - [27/Oct/2025 18:28:00] "GET /api/values?page=1&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:28:04,206 - INFO - 127.0.0.1 - - [27/Oct/2025 18:28:04] "GET /api/values?page=2&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:29:49,719 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:49] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:29:49,828 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:29:49,835 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:49] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:29:50,497 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:50] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:29:50,644 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:50] "GET /api/values?page=1&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:29:53,216 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:53] "GET /api/values?page=1&limit=20&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:29:57,196 - INFO - 127.0.0.1 - - [27/Oct/2025 18:29:57] "GET /api/values?page=2&limit=20&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:30:03,479 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:03] "GET /api/values?page=1&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:30:04,915 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:04] "GET /api/values?page=2&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:30:06,817 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:06] "GET /api/values?page=3&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:30:10,048 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:10] "GET /api/values?page=4&limit=20&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:30:12,206 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:12] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:30:12,285 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:30:12,292 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:30:12,753 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:12] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:30:12,884 - INFO - 127.0.0.1 - - [27/Oct/2025 18:30:12] "GET /api/values?page=1&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:31:10,916 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:10] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:31:11,017 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:31:11,029 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:11] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:31:12,221 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:31:12,377 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:31:12,387 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "GET /api/values?page=1&limit=20&market= HTTP/1.1" 200 -
+2025-10-27 18:31:12,535 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:31:12,558 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:31:12,701 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:31:12,895 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:12] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:31:18,869 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:18] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:31:20,731 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:20] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:31:22,415 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:22] "GET /api/middles?page=1&limit=60&sort=profit_desc&market=totals HTTP/1.1" 200 -
+2025-10-27 18:31:23,527 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:23] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:31:23,599 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:31:23,621 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:23] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:31:23,731 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:23] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:31:24,150 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:24] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:31:25,098 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:25] "GET / HTTP/1.1" 200 -
+2025-10-27 18:31:25,155 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:31:25,181 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:31:25,228 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:25] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:31:25,541 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:25] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:31:57,790 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:57] "GET / HTTP/1.1" 200 -
+2025-10-27 18:31:57,848 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:31:57,865 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:57] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:31:57,995 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:57] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:31:58,956 - INFO - 127.0.0.1 - - [27/Oct/2025 18:31:58] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:32:03,107 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:03] "GET /api/surebets?page=1&limit=51&sort=profit_desc&market=spreads HTTP/1.1" 200 -
+2025-10-27 18:32:07,876 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:07] "GET /api/surebets?page=1&limit=51&sort=profit_desc&market=totals HTTP/1.1" 200 -
+2025-10-27 18:32:08,872 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:08] "GET / HTTP/1.1" 200 -
+2025-10-27 18:32:08,911 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:32:08,925 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:32:09,032 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:09] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 18:32:09,251 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:09] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:32:16,315 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:16] "GET / HTTP/1.1" 200 -
+2025-10-27 18:32:16,403 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:32:16,441 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:32:16,527 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:16] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 18:32:17,121 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:17] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:32:26,605 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:26] "GET / HTTP/1.1" 200 -
+2025-10-27 18:32:26,704 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:32:26,709 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:32:26,811 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:26] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 18:32:27,330 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:27] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:32:28,085 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:28] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:32:28,122 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:32:28,160 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:32:28,339 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:28] "GET /api/middles?page=1&limit=60&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 18:32:28,901 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:28] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:32:29,014 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:29] "GET /middles HTTP/1.1" 200 -
+2025-10-27 18:32:29,050 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:32:29,057 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:29] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:32:29,229 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:29] "GET /api/middles?page=1&limit=60&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 18:32:29,408 - INFO - 127.0.0.1 - - [27/Oct/2025 18:32:29] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 19:22:30,434 - INFO - 127.0.0.1 - - [27/Oct/2025 19:22:30] "GET /middles HTTP/1.1" 200 -
+2025-10-27 19:22:30,546 - INFO - 127.0.0.1 - - [27/Oct/2025 19:22:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 19:22:30,569 - INFO - 127.0.0.1 - - [27/Oct/2025 19:22:30] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 19:22:30,640 - INFO - 127.0.0.1 - - [27/Oct/2025 19:22:30] "GET /api/middles?page=1&limit=60&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 19:22:31,287 - INFO - 127.0.0.1 - - [27/Oct/2025 19:22:31] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 19:25:42,238 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/plans.py', reloading
+2025-10-27 19:25:44,684 - WARNING -  * Debugger is active!
+2025-10-27 19:25:44,719 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:26:54,494 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/plans.py', reloading
+2025-10-27 19:26:56,749 - WARNING -  * Debugger is active!
+2025-10-27 19:26:56,781 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:26:59,839 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/plans.py', reloading
+2025-10-27 19:27:01,741 - WARNING -  * Debugger is active!
+2025-10-27 19:27:01,778 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:28:32,057 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-27 19:28:34,234 - WARNING -  * Debugger is active!
+2025-10-27 19:28:34,267 - INFO -  * Debugger PIN: 926-742-044
+2025-10-27 19:30:11,454 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-27 19:30:13,233 - WARNING -  * Debugger is active!
+2025-10-27 19:30:13,263 - INFO -  * Debugger PIN: 926-742-044
+2025-10-27 19:32:01,639 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 19:32:03,938 - WARNING -  * Debugger is active!
+2025-10-27 19:32:03,967 - INFO -  * Debugger PIN: 926-742-044
+2025-10-27 19:32:53,584 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 19:32:55,553 - WARNING -  * Debugger is active!
+2025-10-27 19:32:55,583 - INFO -  * Debugger PIN: 926-742-044
+2025-10-27 19:33:26,950 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 19:33:28,768 - WARNING -  * Debugger is active!
+2025-10-27 19:33:28,799 - INFO -  * Debugger PIN: 926-742-044
+2025-10-27 19:33:46,961 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 19:33:48,876 - WARNING -  * Debugger is active!
+2025-10-27 19:33:48,902 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:34:26,363 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-27 19:35:09,347 - WARNING -  * Debugger is active!
+2025-10-27 19:35:09,377 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:35:41,763 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:35:43,596 - WARNING -  * Debugger is active!
+2025-10-27 19:35:43,627 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:38:47,783 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:38:49,856 - WARNING -  * Debugger is active!
+2025-10-27 19:38:49,887 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:39:25,348 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:39:27,343 - WARNING -  * Debugger is active!
+2025-10-27 19:39:27,370 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:39:47,536 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:39:49,317 - WARNING -  * Debugger is active!
+2025-10-27 19:39:49,344 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:41:21,348 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:41:23,126 - WARNING -  * Debugger is active!
+2025-10-27 19:41:23,151 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:41:37,388 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:41:39,188 - WARNING -  * Debugger is active!
+2025-10-27 19:41:39,234 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:41:51,412 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-27 19:41:53,582 - WARNING -  * Debugger is active!
+2025-10-27 19:41:53,619 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:43:19,811 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:43:22,520 - WARNING -  * Debugger is active!
+2025-10-27 19:43:22,552 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:43:42,762 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:43:44,715 - WARNING -  * Debugger is active!
+2025-10-27 19:43:44,745 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:44:12,011 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:44:13,864 - WARNING -  * Debugger is active!
+2025-10-27 19:44:13,899 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:44:18,952 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:44:21,354 - WARNING -  * Debugger is active!
+2025-10-27 19:44:21,391 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:46:26,751 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:46:28,714 - WARNING -  * Debugger is active!
+2025-10-27 19:46:28,747 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:46:33,897 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 19:46:36,323 - WARNING -  * Debugger is active!
+2025-10-27 19:46:36,354 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:47:12,744 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-10-27 19:47:14,981 - WARNING -  * Debugger is active!
+2025-10-27 19:47:15,009 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:47:56,515 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 19:47:58,410 - WARNING -  * Debugger is active!
+2025-10-27 19:47:58,441 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:48:44,000 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 19:48:45,875 - WARNING -  * Debugger is active!
+2025-10-27 19:48:45,906 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:49:32,467 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 19:49:34,417 - WARNING -  * Debugger is active!
+2025-10-27 19:49:34,444 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:49:42,508 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 19:49:44,673 - WARNING -  * Debugger is active!
+2025-10-27 19:49:44,724 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 19:49:57,860 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 19:49:59,727 - WARNING -  * Debugger is active!
+2025-10-27 19:49:59,755 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:06:34,637 - INFO - 127.0.0.1 - - [27/Oct/2025 20:06:34] "GET /middles HTTP/1.1" 200 -
+2025-10-27 20:06:34,759 - INFO - 127.0.0.1 - - [27/Oct/2025 20:06:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:06:34,794 - INFO - 127.0.0.1 - - [27/Oct/2025 20:06:34] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 20:06:34,869 - INFO - 127.0.0.1 - - [27/Oct/2025 20:06:34] "GET /api/middles?page=1&limit=60&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 20:06:35,216 - INFO - 127.0.0.1 - - [27/Oct/2025 20:06:35] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 20:07:46,135 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 20:07:48,279 - WARNING -  * Debugger is active!
+2025-10-27 20:07:48,345 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:20:13,826 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:13] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:20:13,934 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:20:13,959 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:13] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:20:26,956 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:26] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-27 20:20:26,982 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:26] "GET / HTTP/1.1" 200 -
+2025-10-27 20:20:27,126 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:20:27,210 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:27] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:20:27,428 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:27] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 20:20:28,688 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:28] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 20:20:28,706 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:28] "GET /auth/login HTTP/1.1" 200 -
+2025-10-27 20:20:28,849 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:20:28,859 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:20:33,918 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:33] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-27 20:20:33,945 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:33] "GET / HTTP/1.1" 200 -
+2025-10-27 20:20:34,167 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:20:34,227 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:20:34,256 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:34] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 20:20:34,900 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:34] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 20:20:35,546 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:35] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:20:35,606 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:20:35,802 - INFO - 127.0.0.1 - - [27/Oct/2025 20:20:35] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:21:40,660 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 20:21:42,877 - WARNING -  * Debugger is active!
+2025-10-27 20:21:43,051 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:22:15,384 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 20:22:17,667 - WARNING -  * Debugger is active!
+2025-10-27 20:22:17,777 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:24:34,242 - INFO - 127.0.0.1 - - [27/Oct/2025 20:24:34] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:24:35,732 - INFO - 127.0.0.1 - - [27/Oct/2025 20:24:35] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:24:36,810 - INFO - 127.0.0.1 - - [27/Oct/2025 20:24:36] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:24:36,898 - INFO - 127.0.0.1 - - [27/Oct/2025 20:24:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:24:36,930 - INFO - 127.0.0.1 - - [27/Oct/2025 20:24:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:26:55,545 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:26:57,713 - WARNING -  * Debugger is active!
+2025-10-27 20:26:57,743 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:27:16,962 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:27:18,953 - WARNING -  * Debugger is active!
+2025-10-27 20:27:18,994 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:27:27,096 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:27:29,069 - WARNING -  * Debugger is active!
+2025-10-27 20:27:29,100 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:28:07,666 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:28:09,824 - WARNING -  * Debugger is active!
+2025-10-27 20:28:09,860 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:28:34,138 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:28:36,416 - WARNING -  * Debugger is active!
+2025-10-27 20:28:36,442 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:29:17,945 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:29:19,910 - WARNING -  * Debugger is active!
+2025-10-27 20:29:19,957 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:29:26,699 - INFO - 127.0.0.1 - - [27/Oct/2025 20:29:26] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:29:26,809 - INFO - 127.0.0.1 - - [27/Oct/2025 20:29:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:29:26,954 - INFO - 127.0.0.1 - - [27/Oct/2025 20:29:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:29:50,100 - INFO - 127.0.0.1 - - [27/Oct/2025 20:29:50] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:29:50,116 - INFO - 127.0.0.1 - - [27/Oct/2025 20:29:50] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:30:57,784 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:31:00,758 - WARNING -  * Debugger is active!
+2025-10-27 20:31:00,802 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:31:00,938 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:00] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:31:01,032 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:31:01,054 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:31:04,451 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:04] "[35m[1mGET /api/webpush/test HTTP/1.1[0m" 500 -
+2025-10-27 20:31:08,455 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:08] "[35m[1mGET /api/webpush/test HTTP/1.1[0m" 500 -
+2025-10-27 20:31:08,951 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:08] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-27 20:31:08,952 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:08] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-27 20:31:09,060 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:09] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png&s=dMOuqnDRmOThXJJFQy9g HTTP/1.1" 200 -
+2025-10-27 20:31:09,060 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:09] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-27 20:31:09,086 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:09] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 20:31:31,172 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:31:33,559 - WARNING -  * Debugger is active!
+2025-10-27 20:31:33,587 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:31:33,877 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:33] "[35m[1mGET /api/webpush/test HTTP/1.1[0m" 500 -
+2025-10-27 20:31:33,934 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:33] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 20:31:33,955 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:33] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 20:31:34,030 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:34] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png&s=9WJzLQzQ7U4y9iHIrqZG HTTP/1.1" 200 -
+2025-10-27 20:31:34,031 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:34] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 20:31:34,056 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:34] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 20:31:45,730 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:31:47,958 - WARNING -  * Debugger is active!
+2025-10-27 20:31:47,985 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:31:48,396 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:48] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:31:48,453 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:48] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:31:52,867 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:52] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:31:52,981 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:31:53,044 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:53] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:31:56,050 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:56] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:31:56,059 - INFO - 127.0.0.1 - - [27/Oct/2025 20:31:56] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:33:43,396 - INFO - 127.0.0.1 - - [27/Oct/2025 20:33:43] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:33:43,477 - INFO - 127.0.0.1 - - [27/Oct/2025 20:33:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:33:43,489 - INFO - 127.0.0.1 - - [27/Oct/2025 20:33:43] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:34:03,919 - INFO - 127.0.0.1 - - [27/Oct/2025 20:34:03] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:34:03,994 - INFO - 127.0.0.1 - - [27/Oct/2025 20:34:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:34:04,021 - INFO - 127.0.0.1 - - [27/Oct/2025 20:34:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:34:48,404 - INFO - 127.0.0.1 - - [27/Oct/2025 20:34:48] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:36:10,977 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 20:36:13,177 - WARNING -  * Debugger is active!
+2025-10-27 20:36:13,208 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:36:48,769 - INFO - 127.0.0.1 - - [27/Oct/2025 20:36:48] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:36:48,876 - INFO - 127.0.0.1 - - [27/Oct/2025 20:36:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:36:48,914 - INFO - 127.0.0.1 - - [27/Oct/2025 20:36:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:36:55,700 - INFO - 127.0.0.1 - - [27/Oct/2025 20:36:55] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:36:55,753 - INFO - 127.0.0.1 - - [27/Oct/2025 20:36:55] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:37:06,411 - INFO - 127.0.0.1 - - [27/Oct/2025 20:37:06] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:37:15,416 - INFO - 127.0.0.1 - - [27/Oct/2025 20:37:15] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:37:15,908 - INFO - 127.0.0.1 - - [27/Oct/2025 20:37:15] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:46:53,895 - INFO - 127.0.0.1 - - [27/Oct/2025 20:46:53] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:46:54,009 - INFO - 127.0.0.1 - - [27/Oct/2025 20:46:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:46:54,073 - INFO - 127.0.0.1 - - [27/Oct/2025 20:46:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:02,746 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:02] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:47:04,404 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:04] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:04,474 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:04,509 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:07,381 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:07] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:07,485 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:07,502 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:12,829 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:12] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:12,903 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:12,940 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:15,741 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:15] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:47:22,229 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:22] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:22,286 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:22,343 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:22] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:24,609 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:24] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:47:24,642 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:24] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:47:26,389 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:26] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:26,426 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:26,450 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:27,605 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:27] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:27,732 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:27,744 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:27] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:47:32,333 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:32] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:47:38,276 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:38] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:47:38,372 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:47:38,382 - INFO - 127.0.0.1 - - [27/Oct/2025 20:47:38] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:48:35,101 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:35] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:48:35,191 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:48:35,326 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:35] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:48:57,981 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:57] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:48:58,062 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:48:58,106 - INFO - 127.0.0.1 - - [27/Oct/2025 20:48:58] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:49:01,018 - INFO - 127.0.0.1 - - [27/Oct/2025 20:49:01] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:49:01,070 - INFO - 127.0.0.1 - - [27/Oct/2025 20:49:01] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:49:13,244 - INFO - 127.0.0.1 - - [27/Oct/2025 20:49:13] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 20:49:13,635 - INFO - 127.0.0.1 - - [27/Oct/2025 20:49:13] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:53:03,922 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:03] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:53:04,007 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:53:04,043 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:53:05,005 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:05] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:53:05,035 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:53:05,041 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:05] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:53:07,152 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:07] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:53:07,188 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:07] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:53:22,676 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:22] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:53:22,749 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:53:22,777 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:22] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:53:47,799 - INFO - 127.0.0.1 - - [27/Oct/2025 20:53:47] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:54:38,769 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:38] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:54:41,067 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:41] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:54:42,058 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:42] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:54:42,441 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:42] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:54:42,632 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:42] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:54:49,120 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:49] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:54:49,201 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:54:49,208 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:49] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:54:56,187 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:56] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:54:57,475 - INFO - 127.0.0.1 - - [27/Oct/2025 20:54:57] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 20:56:54,970 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 20:56:57,517 - WARNING -  * Debugger is active!
+2025-10-27 20:56:57,562 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 20:57:15,495 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:15] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:15,571 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:15,598 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:17,169 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:17] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:17,221 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:17,258 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:17] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:19,965 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:19] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:21,652 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:21] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:23,919 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:23] "GET /service-worker.js HTTP/1.1" 200 -
+2025-10-27 20:57:28,584 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:28] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:28,625 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:28,649 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:30,940 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:30] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:30,994 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:31,008 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:31,845 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:31] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:33,213 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:33] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:33,249 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:33,287 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:33] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:34,996 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:34] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:40,463 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:40] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:42,145 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:42] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:42,717 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:42] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:42,765 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:42,768 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:44,452 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:44] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:44,574 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:44] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:57:45,705 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:45] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:45,748 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:45,792 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:45] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:47,053 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:47] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 20:57:47,431 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:47] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:48,612 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:48] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:48,691 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:48,753 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:57:50,417 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:50] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:57:52,947 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:52] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:57:52,995 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:57:53,019 - INFO - 127.0.0.1 - - [27/Oct/2025 20:57:53] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:58:06,831 - INFO - 127.0.0.1 - - [27/Oct/2025 20:58:06] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:59:17,250 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:17] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:17,411 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:17,424 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:17] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 20:59:17,616 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 20:59:40,086 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:40] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:40,167 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:40] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 20:59:40,186 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:40,368 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 20:59:41,277 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:41] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:41,334 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:41,341 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:41] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:59:43,026 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:43] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:59:50,089 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:50] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:50,153 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:50,183 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:50] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:59:51,128 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:51] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:51,151 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:51,165 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:51] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:59:52,253 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:52] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:52,280 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:52,303 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:52] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 20:59:53,428 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:53,450 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:53,466 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 20:59:53,703 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 20:59:53,894 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "GET /account HTTP/1.1" 200 -
+2025-10-27 20:59:53,915 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 20:59:53,934 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:53] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 20:59:54,114 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 20:59:55,155 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:55] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 20:59:56,129 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:56] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 20:59:59,720 - INFO - 127.0.0.1 - - [27/Oct/2025 20:59:59] "[33mGET /static/icons/icon.png HTTP/1.1[0m" 404 -
+2025-10-27 21:00:28,827 - INFO - 127.0.0.1 - - [27/Oct/2025 21:00:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 21:00:30,534 - INFO - 127.0.0.1 - - [27/Oct/2025 21:00:30] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:00:42,650 - INFO - 127.0.0.1 - - [27/Oct/2025 21:00:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 21:00:43,406 - INFO - 127.0.0.1 - - [27/Oct/2025 21:00:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 21:00:44,956 - INFO - 127.0.0.1 - - [27/Oct/2025 21:00:44] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:01:47,256 - INFO - 127.0.0.1 - - [27/Oct/2025 21:01:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 21:01:48,111 - INFO - 127.0.0.1 - - [27/Oct/2025 21:01:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-27 21:01:49,672 - INFO - 127.0.0.1 - - [27/Oct/2025 21:01:49] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:04:23,633 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-27 21:04:26,086 - WARNING -  * Debugger is active!
+2025-10-27 21:04:26,131 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:04:30,179 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-27 21:04:32,735 - WARNING -  * Debugger is active!
+2025-10-27 21:04:32,765 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:04:32,781 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:32] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:04:34,302 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:34] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:04:36,347 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:36] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:04:36,414 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:04:36,425 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:04:37,482 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:37] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:04:37,502 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:04:37,515 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:37] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:04:38,193 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:38] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:04:39,393 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:39] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:04:41,635 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:41] "GET /static/icons/icon.png HTTP/1.1" 200 -
+2025-10-27 21:04:46,243 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:46] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:04:46,277 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:04:46,296 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:04:48,147 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:48] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:04:59,743 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:59] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 21:04:59,747 - INFO - 127.0.0.1 - - [27/Oct/2025 21:04:59] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:05:20,530 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:20] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 21:05:20,538 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:20] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:05:30,840 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:30] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:05:30,913 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:05:30,922 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:30] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:05:32,859 - INFO - 127.0.0.1 - - [27/Oct/2025 21:05:32] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:07:44,351 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 21:07:46,921 - WARNING -  * Debugger is active!
+2025-10-27 21:07:46,948 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:07:47,609 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:47] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 21:07:47,643 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:47] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:07:49,384 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:49] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:07:55,168 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:55] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:07:55,219 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:07:55,228 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:55] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:07:56,208 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:56] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 21:07:56,903 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:56] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:07:57,112 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:57] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:07:57,131 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:07:57,135 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:57] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:07:58,024 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:58] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:07:58,055 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:58] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:07:58,065 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:58] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:07:58,821 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:58] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:07:58,895 - INFO - 127.0.0.1 - - [27/Oct/2025 21:07:58] "[31m[1mGET /api/webpush/test HTTP/1.1[0m" 400 -
+2025-10-27 21:08:00,553 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:00] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:08:02,282 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:02] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:08:02,331 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:08:02,334 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:08:03,700 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:03] "[31m[1mGET /api/webpush/test HTTP/1.1[0m" 400 -
+2025-10-27 21:08:03,996 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:08:04,704 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:04] "[31m[1mGET /api/webpush/test HTTP/1.1[0m" 400 -
+2025-10-27 21:08:06,313 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:06] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:08:07,998 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:07] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:08:08,034 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:08:08,047 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:08:09,472 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:09] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 21:08:09,687 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:09] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:08:10,389 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:10] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:08:10,436 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:08:10,454 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:10] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:08:12,070 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:12] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:08:12,578 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:12] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 21:08:12,602 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:12] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:08:14,205 - INFO - 127.0.0.1 - - [27/Oct/2025 21:08:14] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:09:00,581 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:00] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:09:00,637 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:09:00,650 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:00] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:09:02,600 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:02] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:09:03,615 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:03] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:09:25,068 - INFO - 127.0.0.1 - - [27/Oct/2025 21:09:25] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:11:42,222 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:42] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:11:44,075 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:44] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:11:44,162 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:11:44,162 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:11:45,999 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:45] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:11:46,091 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:46] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:11:57,120 - INFO - 127.0.0.1 - - [27/Oct/2025 21:11:57] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 21:13:11,239 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-27 21:13:11,240 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:13:23,510 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-27 21:13:23,510 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:13:23,511 - INFO -  * Restarting with stat
+2025-10-27 21:13:24,704 - WARNING -  * Debugger is active!
+2025-10-27 21:13:24,742 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:14:42,128 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-10-27 21:14:42,499 - INFO -  * Restarting with stat
+2025-10-27 21:14:44,179 - WARNING -  * Debugger is active!
+2025-10-27 21:14:44,217 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:15:57,967 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-27 21:15:57,967 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:15:57,968 - INFO -  * Restarting with stat
+2025-10-27 21:15:59,175 - WARNING -  * Debugger is active!
+2025-10-27 21:15:59,209 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:16:12,632 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:12] "GET / HTTP/1.1" 200 -
+2025-10-27 21:16:12,709 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:16:12,718 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:16:12,823 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:12] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:16:13,202 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:13] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:16:14,679 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:14] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:16:29,597 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:16:29,613 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:29] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:16:29,634 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:16:29,649 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:29] "GET / HTTP/1.1" 200 -
+2025-10-27 21:16:31,113 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:31] "GET / HTTP/1.1" 200 -
+2025-10-27 21:16:31,143 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:16:31,155 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:16:31,254 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:31] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:16:31,815 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:31] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:16:33,001 - INFO - 127.0.0.1 - - [27/Oct/2025 21:16:33] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:18:14,795 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on https://127.0.0.1:5000
+2025-10-27 21:18:14,795 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:18:14,796 - INFO -  * Restarting with stat
+2025-10-27 21:18:16,020 - WARNING -  * Debugger is active!
+2025-10-27 21:18:16,046 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:18:31,941 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:31] "GET / HTTP/1.1" 200 -
+2025-10-27 21:18:32,032 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:32] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:18:32,041 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:32,126 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:32] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:18:32,683 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:32] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:18:32,685 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:32] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:18:33,679 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:33] "GET / HTTP/1.1" 200 -
+2025-10-27 21:18:33,810 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:33] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:18:33,821 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:34,001 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:34] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:18:34,207 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:34] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:18:34,256 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:34] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:18:35,404 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:35] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:18:35,505 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:35] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:18:35,618 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:35,635 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:35] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:18:44,519 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:44] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:18:44,599 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:18:44,626 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:44,756 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:44] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:18:46,904 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:46] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:18:46,928 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:18:46,960 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:47,034 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:47] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:18:53,934 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:53] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:18:54,032 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:18:54,106 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:18:54,148 - INFO - 127.0.0.1 - - [27/Oct/2025 21:18:54] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:04,359 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:04,373 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:04,392 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:04,902 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:04] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:04,953 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:05,002 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:05,101 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:05] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:06,052 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:06,104 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:06,151 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:06,229 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:06,490 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:06,686 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:06,698 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:06,836 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:06,906 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:06,919 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:07,107 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:07] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:07,758 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:07] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:07,824 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:07] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:19:07,836 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:07,957 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:07] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:08,745 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:08] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:08,797 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:08,809 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:08,954 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:08] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:10,300 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:10] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:10,391 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:10] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:10,414 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:10,460 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:10] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:10,949 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:10] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:11,008 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:11] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:11,035 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:11,147 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:11] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:18,480 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:18] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:18,562 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:18,575 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:18,660 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:18] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:20,326 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:20] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:20,406 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:20] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:19:20,431 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:20,497 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:20] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:21,380 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:21] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:19:21,443 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:21] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:19:21,455 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:19:21,577 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:21] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:19:54,403 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-27 21:19:54,404 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:19:54,405 - INFO -  * Restarting with stat
+2025-10-27 21:19:55,652 - WARNING -  * Debugger is active!
+2025-10-27 21:19:55,686 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:19:56,989 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:56] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07\x82JJ\x00\x00\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04ÀJTR$\x89±,Ê\x99\x0eá&¸¡\x86\x0e\x99jÏãY¨ô}²C=:\x04^\x12·uÔ¨')
+2025-10-27 21:19:56,989 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:56] "[31m[1m\x16\x03\x01\x07ï\x01\x00\x07ë\x03\x03çN¾w\x84\x96i\x13\x02WY4û\x87J¶\x16Ï{P÷ï¢ô\x7f5µë\x8a\x99\x86\x89 Yèhîb\x10\x03\x07éß\x85\x0e\x16áb\x91¦üô%ì}ñy\x0bó98¼K¬t\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07\x82JJ\x00\x00\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04ÀJTR$\x89±,Ê\x99\x0eá&¸¡\x86\x0e\x99jÏãY¨ô}²C=:\x04^\x12·uÔ¨[0m" 400 -
+2025-10-27 21:19:56,991 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:56] code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Uµ\x17L\x13W')
+2025-10-27 21:19:56,992 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:56] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Uµ\x17L\x13W[0m" 400 -
+2025-10-27 21:19:56,993 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:56] code 400, message Bad request version ('¹\x16ÒZ¾Õ\x116&\x19£¡¬\x9efbÍ\x04\x01\x0eKU<ºå¶OÁ³²JÀ')
+2025-10-27 21:19:56,993 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:56] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x8c\x82ubÍ?õóÎÜ[xiç±ñ%\x0e\x19W+A±õM\x8a\x9a|ó\x12\x0e« Eó²;[È4¸Ù®Ô9¨Äq[Àtìó\x04ÚJ\x8a\x91æw\x03µ\x1bH(\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÊÊ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00Ú\x00\x00\x01\x00\x01³\x00 \x81*\x8eüÿ8Ì\x8et6ýe\\¡\x80LUÀÃÔ*Ð\x96¬2²$D?c06\x00°qT¤ºÂV?xu\x81\x8e²öÛÔnL\x89N³Ú\x8e\x00®K)©7f3\x10º\x83zW¹Ù´\x91?gÏ\x81ÕN5¦!Åü>\x98ÉMIÐ\x85ð\x8c~]Í¬oÕ\x1cýL\x0cÅØ1þ4Sr\x03B]"ûòääü2ô\x18\x9d2¿Ó¢U\x06\x01\x95¶À\x81î(EÀJBQ>k\x10\x83\x9cÑ\x02ä\x0cÔ\x1d\x9d¸.\x17à_ MÎÑî×*\x15[<\x9ai>\x94ðË&çjÿÀE\x96\x96Z¬Ø\x08Æ¼W\x06\x1eV¹V¤[¹\x95ÎsãB\x04/e?\x96\x14\x88É\x00\x12\x00\x00\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x9e°bf³QýPÃûÁ\x93îã¤jÒ\x8f3+À*\x1b¤Áv²W\x09ox¦yå\x1aR\x0bqxü÷]8ô\x8b\x86C¢\x97úÃ\x86@\x84À¶\x81Õ°\x83HëÇ\x02<¬ \x9bN\x85ú\x98º\x86<\x1eÀ%e\x8a`P\x87Á\x8a `N¢HÞTzvå0¾`®ÉôÄCá³³irF6»\x0fb¦ÁYaHáM:¡Æµ\x06\x1d~µ\x92®Ù\x80b©\x98=a\x8a¹tÁ3ü\x84\x99¡3\x04ÉR\x97ä}?%J¹\x05±ä\x9a-?×\x1ff(\x9c¯Æ_:Ò\x80\x07iÃ@æ\x02kÀ.«æ:\x17!Á\x8e²\x02¼åjØ¸wl%<%'ZõÑ\x1f\x13Õ©\x91S\x9daõYuJ+-4\x9aL\x9b0ð$\x80\x0ehI\x99\x91\x1dÐt\x1b\x8bà\x13WÓ\x99D\x95\x11IÊ\x84ð$\x1bv£³/*oÓ\x93\x10ö*\x0eÔEaí\x02oS\x96G\x1f»6dèB<xy:\x17vQÄ½\x8bP\x1ev\x17\x93]\x0c¬=\x8bÎò¡Zá\x9b*`¦sq\x80\x11*SË)3\x09ß\x19\x85\x91\x86¨Õ¡Ãã±\x1dQy¬\x1dR\x1cÈe\x83öC.I\x86d~¼}U\x10ÂU¬D8é\x89Ï\x03ÌÁ\x0c~¸q\x0e- \x8d\\ OkUÃPb|JW\x9f}Ä² q1³¦~w¡\x1c\x89øB¥\x91\x92Å[\x9f]\x80\x88\x13\x12\x8c¤\x11k ¹\x16ÒZ¾Õ\x116&\x19£¡¬\x9efbÍ\x04\x01\x0eKU<ºå¶OÁ³²JÀ\x1e [0m" 400 -
+2025-10-27 21:19:56,994 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:56] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+2025-10-27 21:19:56,994 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:56] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03+Kä²aáJÈâ\x08\x83í_¢ Ì³\\`_ç\x9e\x00\x86´æÏ\\8\x99®M \x03\x0baÖ\x886µ[­Ï\x85¤\x0f4W\x0d\x8bg~+düø¡5\x14Á\x0c[9Nù\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06SÊÊ\x00\x00\x00+\x00\x07\x06ÚÚ\x03\x04\x03\x03\x00\x0b\x00\x02\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1ÿ\x01\x00\x01\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00[0m" 400 -
+2025-10-27 21:19:59,812 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('\x18\x00ðÍæM¹\x07üfín©¦¤WÌ\\ÔçÐç\\%Äwi\x7ff»cE\x18ðêql=næOñúq\x93yUÔ\x080ÅP£')
+2025-10-27 21:19:59,813 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03`.Áü¸\x05\x98\x07\x9cÂ\x9bA\x02Õ¨¢ c;\x99\x8bgÖÜ;HMãîEâ\x9c ðkc\x03,:³zÖ6\x02Í\x8dôÄóá×\x98Ñ3\x08~ÁÂ\x03Æ·Üþµ\x8c\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ºº\x00\x00\x00\x0b\x00\x02\x01\x00þ\x0d\x01\x1a\x00\x00\x01\x00\x01§\x00 ±ogzÚfí´þ­\x95\x93~Õ\x9f¡1IBz¢÷%\x05K\x1d\x01Øk»\x0c\x18\x00ðÍæM¹\x07üfín©¦¤WÌ\\ÔçÐç\\%Äwi\x7ff»cE\x18ðêql=næOñúq\x93yUÔ\x080ÅP£[0m" 400 -
+2025-10-27 21:19:59,815 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x003\x04ï\x04í')
+2025-10-27 21:19:59,815 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03¹ßk±`ªëvy¨\x9f\x89r0¤Suªwõp8¸\x86><\x1eQÏìcù pÌÎ³ß½<\x02\x96Ó\x01ü¾üp\x159\x9b\x93`\x9dâ\x03\x94!Ð\x95\x7fèÚlt\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sÊÊ\x00\x00\x00\x0b\x00\x02\x01\x00\x00-\x00\x02\x01\x01\x003\x04ï\x04í[0m" 400 -
+2025-10-27 21:19:59,827 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sºº\x00\x00\x00')
+2025-10-27 21:19:59,828 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03ÕJ7\x1f\x94¢:¿¯ÿò[\x0cÜÝ Ì2Ò)\x9eø\x81\x9b?ÒJ\x1dN\x86ýB )\x87¶-fN¸\x1aufÐ4d\x84U·mÂâ10Ì\x0dÀâvæ\x9c >1m\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sºº\x00\x00\x00[0m" 400 -
+2025-10-27 21:19:59,829 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x1a\x1a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x00')
+2025-10-27 21:19:59,829 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ýÏ\x8cïú\x91x\x10vØå\x95½ó®Ð_óQÈ\x06P\\\x18Ïsx¢¨òlÑ ï\x9cÀOã\x13Y\x86ZnÀD\x9fu\x9dyCÖeãvÿà&§ßlWw\x83³á\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063\x1a\x1a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x00[0m" 400 -
+2025-10-27 21:19:59,867 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request syntax ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03,tq\x18Ãèn\x9d¢\x02\x84<ÛÒÈ°Á')
+2025-10-27 21:19:59,867 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03,tq\x18Ãèn\x9d¢\x02\x84<ÛÒÈ°Á[0m" 400 -
+2025-10-27 21:19:59,867 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('^Öè\x91\x17¼hþT\x84¯\x12X¿è\x95~')
+2025-10-27 21:19:59,868 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03$¶ê\x03ÃØéúx=Ûí½_\x18\x7f2\x8f\x07NL\x8aXª¨j\x1cd\x90ÏÍV 7ò\\sÎÏ« ­\x97î w9Ñ\x88>\x82Ùù,\x82\x9b=±w2\x97k¾À,\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93JJ\x00\x00\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À\x9a:\x88.²\x99\\ç Æ\x01­Ý;OIHÇäç¨z\x02nçx\x8bð\x02©\x98J\x97\x09\x8c­¬SvôR@.å<\x81Ëa°¸\x13<ë±\x94C)¸u\x0ckuX«÷FÓ\x94´\x8c\x95Lú\x14½qÙg;ç\x84£ËJÞPTL\x1bªæÊ" i\x81\x89\x8b\x14»\x1a*¯\x10\x10½ãÅ\x820\x06¤u1 p<\x8e\x80S\x19°lä\x85\x0e\x966³¼pT!;uß«(æA\x19ßÅx\x87\x14R~ç¶\x9ad\x0c\x151\x1cÅ|¡{%¿WI¤?\x02,+¶\x06ÅÊ\x89\x99º\x86xl\x97ù\x02\x89Ý\x99\x18 \x94/¥A£\x1b\\-\x8fcsv\x92®ÝÚi\x01s²×1Q¿¤9q÷Î\x80¶ÄÙ»Ä÷fDSWLw¥fÜ\x82\x15³|\x02l(C\x80¬\x1dÜj£¢j<þ¹\x01ø\x8bÏ\x1c\x958\x0d°W\x99\x18\x0b;\\g4\x85\x14\x8cÀ« ·xò(YfQ&(±Í}ÃB\x1e\x00\x19É\x8c»rÄ\x94}HÂ¼Ê(LQt\x11\x18\x0ec,\x04uÛ\x15ìg\x8c\x88°(âr+f¨\x17h\x81e\x19eÃ\\Ü\x11eEp\x047\x13\x13¢\x9abd%6\x86]tÊ\x08NÆ|\x81 &ì¤Ê|+\x8a\x82 ^Öè\x91\x17¼hþT\x84¯\x12X¿è\x95~[0m" 400 -
+2025-10-27 21:19:59,868 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('\x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00#\x00\x00\x00\x17\x00\x00\x00+\x00\x07\x06')
+2025-10-27 21:19:59,868 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03rf\x85ä\x0dG\x8e\x81\x19\x0fz\x14ã{Â]\x9f¤\x02)\x184ü?sâ\x9f\x09.¯ï8 ýB;\x03ZI\x1dKð4#QÕyò»\x89ë\x01\x06ãÆ\x0e¦Di\x80\x95/:[V\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00#\x00\x00\x00\x17\x00\x00\x00+\x00\x07\x06[0m" 400 -
+2025-10-27 21:19:59,868 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:19:59] code 400, message Bad request version ('ë;t\x99DtÓkI\x11S9R')
+2025-10-27 21:19:59,869 - INFO - 127.0.0.1 - - [27/Oct/2025 21:19:59] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¤§mI\x83è\x02\x8c>X±\x9c\x1e =YØöQºñÈàjå\x04\x80þ\x91Ðo+ +\x9c\x95ß\x12¥ø¹\x8a\x83Û\x1bÈ;eC«¨í\x82õ¾øCÇJ\x05\x93#\x12IÓ\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x9a\x9a\x00\x00\x00#\x00\x00\x003\x04ï\x04íZZ\x00\x01\x00\x11ì\x04À|ê5^¢{²\x16c\x84Bo¶è\x8bó¨Âó\x81\\øù±£\x19\x8c\x13w5Mõ\x1e\x89°.3E\x8dÐÑg\x0dù¬¤ç}?c\x1aÐ÷b\x89JÀÔ\x09)ñ6¨ÐÜWË\x94\x9b\x88U\x02}Ô&¯L#\x86\x84@ñék\x01\x83§\x1e#Yv\x8c¬²Q+sV_Of\x01<êÏ¢ì\x19Y\x9asÅxºs¤F \x07\x81\x07\x16x\x98\x80\x0bçû\x91»pGeÓ\x09ë;t\x99DtÓkI\x11S9R[0m" 400 -
+2025-10-27 21:20:01,626 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:20:01] code 400, message Bad request version ('ÛwÆ)\x12\x0fg¢\x15Cc\x82·R¾þa\x86BÇÃñ%\x03®¸!4Ö')
+2025-10-27 21:20:01,631 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:01] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x94\x82\x06&\x89Ñ¥\x91µ²ZY;\x93ðá\x95F½\x81{a\x0b5U\x9aÙî\x11uw§ îÉ\x03'¹ \x8dÍ¤L!Ó?Xo\x01×\x15äF­Z\x80\x83\x8c\x99\x17A5º5H\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÊÊ\x00\x00ÿ\x01\x00\x01\x00\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04íÊÊ\x00\x01\x00\x11ì\x04À\x11¡"4'\x97½úQ\x0f\x90\x03]yf\x1c¶\x1e\x09ðÄ\x93õÃmØ\x04>\x05#ÓÄNüb\x85\x05É\x0e\x95Ób¨Ä¼\x88ëyqÂS\x86z\x11§«Ëÿ\x19aìD§¬s\x9e<bo {ËÂ\x15\x90\x1fÒFµ´aÏ¤D¾ãsÜ\x8aÍ\x00;k\x91QÈ,\x93\x1b¦1\x12wUg½R2á\x9c£»\x83\x05­Y\x97Ç6:\x85\x08\x09\x1djJÜ\x1bK'»¯ÿ+,\x8e'Sìd¼}:\x10¦ó\x0dX5\\\x867;,ª\x8d^Â\x87¢Ø¡8+½\x08\x90\x16Ç(\x99O\x92¿:!Â´ó\x98(\x00iÞâ³\x9cg!\x1bJmíä°#\x91*Â\x84,<J\x1fKáH\x12¶\x02ú\x8cxçcY\x90ñoy\x91V¼,\x0e?\x12\x10\x04©©@²\x80ÍÕk{Rª\x9cÅÉ·3\x1aL°¿.e]'é±íÕ\x11\x97Ãi`VÄ\x0d\x1a\x03\x89³\x8b¿\x967ÝÕz\x15e'EG\x1dTi\x15éæ;Ò5xL\x9c\x09\x11!¶b`\x12©øW@Ð\x1awá\x99\x0f|\x14\x13ø\x01\x1eç³)«(¯9\x91º\x1aR\x81\x9b\x82¥ªdæq\x9f!3¸)Ô]T+\x92§×­@Ú\x7f±á\x1cÛwÆ)\x12\x0fg¢\x15Cc\x82·R¾þa\x86BÇÃñ%\x03®¸!4Ö[0m" 400 -
+2025-10-27 21:20:01,634 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:20:01] code 400, message Bad request syntax ('\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03g\x94\x87\x95wÁ¦\x0f\x87')
+2025-10-27 21:20:01,634 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:01] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03g\x94\x87\x95wÁ¦\x0f\x87[0m" 400 -
+2025-10-27 21:20:01,749 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:01,954 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:02,718 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:02] "GET / HTTP/1.1" 200 -
+2025-10-27 21:20:02,753 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:02,755 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:02,844 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:02] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:20:03,174 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:20:03,175 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:03,314 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "GET / HTTP/1.1" 200 -
+2025-10-27 21:20:03,345 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:03,410 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:03,485 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:20:03,504 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 21:20:03,589 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:03,790 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 21:20:03,945 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:03] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:04,001 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:04,027 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:04,158 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:05,514 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:05] "POST /api/webpush/unsubscribe HTTP/1.1" 200 -
+2025-10-27 21:20:05,707 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:05] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:20:05,999 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:05] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:06,028 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:06,034 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:06,149 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:06,829 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:06,863 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:06,880 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:06,961 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:07,675 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:20:08,610 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:08] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:08,629 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:08,650 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:08,744 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:09,354 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:09] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:09,386 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:09] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:09,389 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:09,511 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:10,627 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:10] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:10,667 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:10,681 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:10] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:10,964 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:10] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:20:11,382 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:11,402 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:11,418 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:11,522 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:11,539 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:11,552 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:11,673 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:11,696 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:11,701 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:11,898 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:11] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:20:15,012 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:15] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:15,035 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:15,042 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:15,154 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:17,501 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:17] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 21:20:17,806 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:17] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:17,836 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:17,858 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:17] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:17,983 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:19,713 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:19] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:20:20,935 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:20] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:20,956 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:20,968 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:20] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:21,073 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:22,791 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:22] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 21:20:24,839 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:24] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:24,865 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:24,866 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:24] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:24,978 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:27,629 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:27] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:27,662 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:27,668 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:27] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:20:27,768 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:27] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:20:39,095 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on https://127.0.0.1:5000
+2025-10-27 21:20:39,096 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:20:39,097 - INFO -  * Restarting with stat
+2025-10-27 21:20:40,510 - WARNING -  * Debugger is active!
+2025-10-27 21:20:40,541 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:20:52,058 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:52] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:52,183 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:52,261 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:52] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:52,409 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:52] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:20:53,422 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:53] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:20:53,500 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:53] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:20:53,513 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:53] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:20:53,632 - INFO - 127.0.0.1 - - [27/Oct/2025 21:20:53] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:21:05,531 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:05] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:21:05,631 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:05] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:21:05,642 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:21:05,715 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:05] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:21:06,338 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:21:06,409 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:21:06,429 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:21:06,541 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:21:06,927 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:21:06,979 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:21:06,989 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:21:07,082 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:07] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:21:09,135 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:09] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:21:09,173 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:09] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:21:09,193 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:21:09,348 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:09] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:21:48,147 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:48] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:21:48,238 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:21:48,288 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:21:48,360 - INFO - 127.0.0.1 - - [27/Oct/2025 21:21:48] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:22:04,272 - INFO - 127.0.0.1 - - [27/Oct/2025 21:22:04] "GET /service-worker.js HTTP/1.1" 200 -
+2025-10-27 21:22:04,422 - INFO - 127.0.0.1 - - [27/Oct/2025 21:22:04] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:23:29,549 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:29] "GET /service-worker.js HTTP/1.1" 200 -
+2025-10-27 21:23:29,730 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:29] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:23:42,734 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:42] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:23:42,849 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:23:42,870 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:23:42,972 - INFO - 127.0.0.1 - - [27/Oct/2025 21:23:42] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:24:58,641 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 21:24:59,119 - INFO -  * Restarting with stat
+2025-10-27 21:25:01,222 - WARNING -  * Debugger is active!
+2025-10-27 21:25:01,259 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:25:01,446 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:25:01,516 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:25:01,566 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:25:01,690 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:25:01,752 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:25:01,764 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:25:01,905 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:01] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:25:02,618 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:02] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:25:02,675 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:25:02,688 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:25:02,847 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:02] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:25:04,064 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:25:04,194 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:25:04,204 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:25:04,274 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:25:04,663 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:25:04,711 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:25:04,722 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:25:04,811 - INFO - 127.0.0.1 - - [27/Oct/2025 21:25:04] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:27:05,463 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:05] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:27:05,497 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:05] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:27:06,154 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:06] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:27:57,958 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:57] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:27:57,992 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:57] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:27:58,102 - INFO - 127.0.0.1 - - [27/Oct/2025 21:27:58] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:28:00,039 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:00] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:28:00,059 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:00] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:28:00,137 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:00] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:28:02,290 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:28:02,303 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:28:07,096 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:07] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:28:07,131 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:28:07,145 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:28:07,239 - INFO - 127.0.0.1 - - [27/Oct/2025 21:28:07] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:29:40,231 - INFO - 127.0.0.1 - - [27/Oct/2025 21:29:40] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:29:40,315 - INFO - 127.0.0.1 - - [27/Oct/2025 21:29:40] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:29:40,582 - INFO - 127.0.0.1 - - [27/Oct/2025 21:29:40] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:33:10,642 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:10] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:33:10,662 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:10] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:33:10,845 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:10] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:33:11,768 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:33:11,791 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:11] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:33:11,877 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:11] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:33:14,282 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:33:14,294 - INFO - 127.0.0.1 - - [27/Oct/2025 21:33:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 21:34:11,779 - INFO - 127.0.0.1 - - [27/Oct/2025 21:34:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:34:11,800 - INFO - 127.0.0.1 - - [27/Oct/2025 21:34:11] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 21:34:12,059 - INFO - 127.0.0.1 - - [27/Oct/2025 21:34:12] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 21:36:24,684 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-27 21:36:24,684 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 21:36:24,686 - INFO -  * Restarting with stat
+2025-10-27 21:36:25,933 - WARNING -  * Debugger is active!
+2025-10-27 21:36:25,966 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:36:45,838 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:36:45] code 400, message Bad request version ('\x9a]zc\x12\x1bjÐü<Ðb¶\x04¥8ÚDm')
+2025-10-27 21:36:45,840 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:45] "[31m[1m\x16\x03\x01\x07ï\x01\x00\x07ë\x03\x03\x1f.\x95ûßùÚÒ©æû´\x15Ó®God?ÍoN\x7f\x1fz¨Å\x86NPæ\x87 ?Ó?ÚÖcá\x0dï2]\x8c@áåN)>\x8a×Yô\x12ø¬+ì\x86\x82O»\x96\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07\x82ºº\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1DÍ\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00\x0b\x00\x02\x01\x00\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04À\x0cF·ß\x86¥Ef\x1cÜ\x1c\x81è¥<ò%q\x09\x09:­»3ð°\x1f\x82ìTÑE\x92úµvßê\x8eÁº\x13\x97D\x0fë\x93\x17\x0f\x91\x04\x02\x14\x01vØ±\x1c\x94\x13ë\x83}\x0f\x0c²\x8aòhzl\x0d-X(n\x06&Ò¶SYùl\x0eÔ\x0f#eË\x19$\x7fÄQ"\x06\x9b\x18ó»\x9cwj¶\x8ar4kt~\x00\x99k¨¢2Õyn£x ¥U¡¾\x92\x10´\x92w\x82\x99µÄj~xZµÒP[\x0f*1Q6\x98[\x13E\x01\x99¦ ÒFöð*í£[OÃ\x9f*'\x1c\x8e\x89¦LÃ"J\x96U\x07ÔLÃ2¦},ºmTÅ\x14×\x00É\x90i¾»;ç\x89[\x12\x0b\x11âùJ,×\x1b\x9fD¬\x01ûR\x02'Çò8\x7fQ\x81¾jó\x00Û(AÃ\x8c\x01Ì\x1c8Æ#q¥\x08º\x8fcÆ\x8d0Ê!ä\x8eò4(\x9e\x86¦\x7fÑPu!Ëy×^ \x18®\x82Ò³¬ÖeÕ2GøVo\x01\x92yD\x9b\x15\x82¹P\x02">Æ\x95»KD \x96²7\x0fs\x91S\x963ÌKK¤WC\x03\x833öµ\x18·P[\x11\x82ª·ä»\x08t\x95JW\x85u\x1aA#\x19%ä\x1a\x88K¨r,Ä\x83!s»Y«¡Ê\x99\x099ÇÀÏ$\x12(±W÷ª\x0c\x09t\x83\x0d\x91\x14Ak%æ±\x1br×8/Ö¼ë\x13\x819$\x17\x93CÄã& \x14h\x14ãgÀ\x8cL\x95r9\x04\x8b:\x0d\x0e"\x99¬Ua¹,ªÙæ\x962ô\x873Ã\x09Ä,LgèAç\x0cÁ\x99\x1c\x9a]zc\x12\x1bjÐü<Ðb¶\x04¥8ÚDm[0m" 400 -
+2025-10-27 21:36:45,840 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:36:45] code 400, message Bad request version ('÷ÃÇ8a×BZ\x10|zCt\x7fuÈ»B\\\x9a\x81\x93\x9eQÕ\x0e')
+2025-10-27 21:36:45,841 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:45] "[31m[1m\x16\x03\x01\x07Ï\x01\x00\x07Ë\x03\x03,\x9eB\x09D6s\x8cé\x82% ÙÄn\x88=©¹Ö\x0fZÊ±\x8e\x8eEHlIdP ü\x95\x0b\x18b\x94+x\x9fì?#~r\x9f\x1f\x8d\x06n\x08,;Bp?2×?\x0cl\x05x\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07b\x9a\x9a\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00\x17\x00\x00þ\x0d\x00Ú\x00\x00\x01\x00\x01\x12\x00 VFwOý\x1c)ZK»Q½\x91>_þ»ÄYøgý¶#ò,áPªw²B\x00°ç|\x9aE°ç­Z\x92\x91.Ó\x93¶úÊñBù4\x18º]\x9d\x07è\x9c­RïÂ\x0c§&\x8fË\x06Pi°Q9\x9e\x83d\x90\x92zÑ\x8703HÓ\x8e\x083°ªø2äÒ$Ë\x81óÓí\\EGQ\x09Öä\x18\x02\x19ª½ò\x83Áøþr\x1cD»Y0¦\x1d^Áà#\x97~õP\x1a¢\x92gê£9£ÃÖh·É\x80\x1eÿ-\x8ad³SqZ\x84Ã=&VÝI3\x94sªñFvoOn½¯[³o±\x91(0l\x9cU)Ú\x19}\x14À'VÁ\x84ì\x89øú@¹%0\x16©pÁ\x00\x0b\x00\x02\x01\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00\x00#\x00\x00\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x10:päÒ8p\x94¹b\x08?\x86Ò=]¦~¨\x05ÈðºMS9<$÷\x08\x125¹5\x08Ì\x1dV3\x0f&\x9eé\x023SÐ@Ö\x98°\x824s£\x90*\x1e÷ÃÇ8a×BZ\x10|zCt\x7fuÈ»B\\\x9a\x81\x93\x9eQÕ\x0e[0m" 400 -
+2025-10-27 21:36:45,841 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:36:45] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00')
+2025-10-27 21:36:45,841 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:45] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x8a\x93\x0cDû'>\x12û4h\x15ì7²Ñ\x94\x80TÌÖÏÑt;\x89H5Þh*t \x96\x00×´é\x96©\x81\x84ÞE£ÈjÆÂó\x0d£Pdºbç¢d\x86u\x9c\x87ú\x0e\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sjj\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00[0m" 400 -
+2025-10-27 21:36:45,842 - ERROR - 127.0.0.1 - - [27/Oct/2025 21:36:45] code 400, message Bad request version ('\x00\x02\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+2025-10-27 21:36:45,842 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:45] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03¥H\x94àz\x917Þ\x11\x97·\x95+N\x1db\x13'\x0d\x06M\x19¸Öl7¤ß\x7f\x82\\D ·÷õ»êBµ<ÈËîÌfÌ\x89äT\x15\x92¥ I\x8e\x0cñ¸>\x11«\x11_¦\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ÊÊ\x00\x00\x00\x0b\x00\x02\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00[0m" 400 -
+2025-10-27 21:36:48,775 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:36:49,514 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:49] "GET /account HTTP/1.1" 200 -
+2025-10-27 21:36:49,530 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:49] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 21:36:49,645 - INFO - 127.0.0.1 - - [27/Oct/2025 21:36:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 21:39:47,529 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-10-27 21:39:47,898 - INFO -  * Restarting with stat
+2025-10-27 21:39:49,640 - WARNING -  * Debugger is active!
+2025-10-27 21:39:49,670 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:41:37,785 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-27 21:41:38,162 - INFO -  * Restarting with stat
+2025-10-27 21:41:39,840 - WARNING -  * Debugger is active!
+2025-10-27 21:41:39,868 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:44:46,140 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/__init__.py', reloading
+2025-10-27 21:44:46,455 - INFO -  * Restarting with stat
+2025-10-27 21:44:47,994 - WARNING -  * Debugger is active!
+2025-10-27 21:44:48,025 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:44:59,126 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-10-27 21:44:59,447 - INFO -  * Restarting with stat
+2025-10-27 21:45:01,134 - WARNING -  * Debugger is active!
+2025-10-27 21:45:01,166 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:46:25,225 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-10-27 21:46:25,587 - INFO -  * Restarting with stat
+2025-10-27 21:46:27,413 - WARNING -  * Debugger is active!
+2025-10-27 21:46:27,446 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 21:46:36,854 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:36] "[35m[1mGET /account HTTP/1.1[0m" 500 -
+2025-10-27 21:46:36,890 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:36] "GET /account?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-27 21:46:36,891 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:36] "GET /account?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-27 21:46:37,012 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:37] "GET /account?__debugger__=yes&cmd=resource&f=console.png&s=ye1yBH9SyGsYZMXd1h8v HTTP/1.1" 200 -
+2025-10-27 21:46:37,015 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:37] "GET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-27 21:46:37,029 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:37] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:19:49,234 - WARNING -  * Debugger is active!
+2025-10-27 22:19:49,262 - INFO -  * Debugger PIN: 135-200-680

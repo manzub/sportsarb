@@ -55,11 +55,13 @@
 
   let currentPage = 1;
   const perPage = 20;
+  let _market = '';
 
-  function fetchValues(page = 1, sort = 'profit') {
+  function fetchValues(page = 1, market = '') {
+    _market = market
     $.ajax({
       url: API_URL,
-      data: { page: page, limit: perPage, sort: sort },
+      data: { page: page, limit: perPage, market: _market },
       method: "GET",
       success: function (response) {
         if (response.data.length == 0) {
@@ -168,11 +170,11 @@
   }
 
   $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchValues(currentPage - 1);
+    if (currentPage > 1) fetchValues(currentPage - 1, _market);
   });
 
   $("#next-page").on("click", function () {
-    fetchValues(currentPage + 1);
+    fetchValues(currentPage + 1, _market);
   });
 
   // initial load
