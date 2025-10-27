@@ -664,3 +664,165 @@
 2025-10-26 21:11:02,043 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
 2025-10-26 21:11:04,558 - WARNING -  * Debugger is active!
 2025-10-26 21:11:04,595 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 13:04:53,014 - INFO - 127.0.0.1 - - [27/Oct/2025 13:04:53] "[36mGET /static/service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 16:54:30,257 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 16:54:32,938 - WARNING -  * Debugger is active!
+2025-10-27 16:54:32,979 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 16:55:56,129 - INFO - 127.0.0.1 - - [27/Oct/2025 16:55:56] "GET /middles HTTP/1.1" 200 -
+2025-10-27 16:55:56,285 - INFO - 127.0.0.1 - - [27/Oct/2025 16:55:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 16:55:56,294 - INFO - 127.0.0.1 - - [27/Oct/2025 16:55:56] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 16:55:56,451 - INFO - 127.0.0.1 - - [27/Oct/2025 16:55:56] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 16:55:56,907 - INFO - 127.0.0.1 - - [27/Oct/2025 16:55:56] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 16:57:43,194 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 16:57:45,181 - WARNING -  * Debugger is active!
+2025-10-27 16:57:45,209 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 16:58:16,739 - INFO - 127.0.0.1 - - [27/Oct/2025 16:58:16] "GET /middles HTTP/1.1" 200 -
+2025-10-27 16:58:16,836 - INFO - 127.0.0.1 - - [27/Oct/2025 16:58:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 16:58:16,869 - INFO - 127.0.0.1 - - [27/Oct/2025 16:58:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 16:58:16,983 - INFO - 127.0.0.1 - - [27/Oct/2025 16:58:16] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 16:58:17,832 - INFO - 127.0.0.1 - - [27/Oct/2025 16:58:17] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 16:59:28,809 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 16:59:31,208 - WARNING -  * Debugger is active!
+2025-10-27 16:59:31,252 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 16:59:31,380 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:31] "GET /middles HTTP/1.1" 200 -
+2025-10-27 16:59:31,504 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 16:59:31,559 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 16:59:31,629 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:31] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 16:59:32,184 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:32] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 16:59:42,916 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:42] "GET /middles HTTP/1.1" 200 -
+2025-10-27 16:59:42,985 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 16:59:42,992 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 16:59:43,182 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:43] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 16:59:43,608 - INFO - 127.0.0.1 - - [27/Oct/2025 16:59:43] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:03:16,960 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 17:03:19,415 - WARNING -  * Debugger is active!
+2025-10-27 17:03:19,446 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:03:54,295 - INFO - 127.0.0.1 - - [27/Oct/2025 17:03:54] "GET /middles HTTP/1.1" 200 -
+2025-10-27 17:03:54,380 - INFO - 127.0.0.1 - - [27/Oct/2025 17:03:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:03:54,402 - INFO - 127.0.0.1 - - [27/Oct/2025 17:03:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:03:54,468 - INFO - 127.0.0.1 - - [27/Oct/2025 17:03:54] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 17:03:54,819 - INFO - 127.0.0.1 - - [27/Oct/2025 17:03:54] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:04:40,229 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:40] "GET /middles HTTP/1.1" 200 -
+2025-10-27 17:04:40,301 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:40] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:04:40,331 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:40] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:04:40,467 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:40] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 17:04:41,250 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:41] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:04:46,727 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:46] "GET / HTTP/1.1" 200 -
+2025-10-27 17:04:46,795 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:04:46,804 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:04:46,909 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:46] "GET /api/surebets?page=1&limit=51&sort=profit&market=h2h HTTP/1.1" 200 -
+2025-10-27 17:04:47,376 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:47] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:04:50,257 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:50] "GET /middles HTTP/1.1" 200 -
+2025-10-27 17:04:50,304 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:04:50,363 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:50] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:04:50,442 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:50] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 17:04:51,037 - INFO - 127.0.0.1 - - [27/Oct/2025 17:04:51] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:05:09,163 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:09] "GET /middles HTTP/1.1" 200 -
+2025-10-27 17:05:09,229 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:05:09,253 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:09] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:05:09,389 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:09] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 17:05:09,802 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:09] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:05:36,714 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:36] "GET /middles HTTP/1.1" 200 -
+2025-10-27 17:05:36,793 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:05:36,823 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:05:36,926 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:36] "GET /api/middles?page=1&limit=60&sort=profit&market=spreads HTTP/1.1" 200 -
+2025-10-27 17:05:37,565 - INFO - 127.0.0.1 - - [27/Oct/2025 17:05:37] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:20:25,450 - INFO - 127.0.0.1 - - [27/Oct/2025 17:20:25] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 17:20:25,598 - INFO - 127.0.0.1 - - [27/Oct/2025 17:20:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 17:20:25,628 - INFO - 127.0.0.1 - - [27/Oct/2025 17:20:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 17:20:25,646 - INFO - 127.0.0.1 - - [27/Oct/2025 17:20:25] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
+2025-10-27 17:20:26,878 - INFO - 127.0.0.1 - - [27/Oct/2025 17:20:26] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 17:26:59,550 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:27:02,181 - WARNING -  * Debugger is active!
+2025-10-27 17:27:02,216 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:45:45,648 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:45:47,976 - WARNING -  * Debugger is active!
+2025-10-27 17:45:48,012 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:46:29,500 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:46:31,302 - WARNING -  * Debugger is active!
+2025-10-27 17:46:31,331 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:47:18,919 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:47:20,870 - WARNING -  * Debugger is active!
+2025-10-27 17:47:20,897 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:52:14,624 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:52:16,652 - WARNING -  * Debugger is active!
+2025-10-27 17:52:16,685 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:52:52,164 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:52:54,106 - WARNING -  * Debugger is active!
+2025-10-27 17:52:54,140 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:52:57,171 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:52:58,747 - WARNING -  * Debugger is active!
+2025-10-27 17:52:58,774 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:53:35,188 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:53:37,306 - WARNING -  * Debugger is active!
+2025-10-27 17:53:37,333 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:55:10,301 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-10-27 17:55:12,611 - WARNING -  * Debugger is active!
+2025-10-27 17:55:12,645 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:55:16,698 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:55:18,563 - WARNING -  * Debugger is active!
+2025-10-27 17:55:18,591 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:55:43,886 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:55:46,269 - WARNING -  * Debugger is active!
+2025-10-27 17:55:46,301 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:56:36,071 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:56:38,057 - WARNING -  * Debugger is active!
+2025-10-27 17:56:38,087 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:57:15,468 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:57:17,504 - WARNING -  * Debugger is active!
+2025-10-27 17:57:17,532 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:57:23,597 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-10-27 17:57:25,787 - WARNING -  * Debugger is active!
+2025-10-27 17:57:25,817 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:57:58,167 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 17:58:00,449 - WARNING -  * Debugger is active!
+2025-10-27 17:58:00,480 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 17:58:44,062 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 17:58:45,978 - WARNING -  * Debugger is active!
+2025-10-27 17:58:46,007 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:00:04,486 - INFO - 127.0.0.1 - - [27/Oct/2025 18:00:04] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:00:04,664 - INFO - 127.0.0.1 - - [27/Oct/2025 18:00:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:00:04,671 - INFO - 127.0.0.1 - - [27/Oct/2025 18:00:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:00:04,986 - INFO - 127.0.0.1 - - [27/Oct/2025 18:00:04] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:00:05,847 - INFO - 127.0.0.1 - - [27/Oct/2025 18:00:05] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
+2025-10-27 18:01:59,486 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:02:01,741 - WARNING -  * Debugger is active!
+2025-10-27 18:02:01,771 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:03:12,664 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:03:14,695 - WARNING -  * Debugger is active!
+2025-10-27 18:03:14,725 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:03:52,693 - INFO - 127.0.0.1 - - [27/Oct/2025 18:03:52] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:03:52,793 - INFO - 127.0.0.1 - - [27/Oct/2025 18:03:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:03:52,864 - INFO - 127.0.0.1 - - [27/Oct/2025 18:03:52] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:03:53,776 - INFO - 127.0.0.1 - - [27/Oct/2025 18:03:53] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:03:53,810 - INFO - 127.0.0.1 - - [27/Oct/2025 18:03:53] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -
+2025-10-27 18:08:51,437 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:08:53,593 - WARNING -  * Debugger is active!
+2025-10-27 18:08:53,640 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:09:09,798 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:09:11,822 - WARNING -  * Debugger is active!
+2025-10-27 18:09:11,849 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:11:15,105 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:11:17,538 - WARNING -  * Debugger is active!
+2025-10-27 18:11:17,567 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:11:17,972 - INFO - 127.0.0.1 - - [27/Oct/2025 18:11:17] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:11:18,069 - INFO - 127.0.0.1 - - [27/Oct/2025 18:11:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:11:18,091 - INFO - 127.0.0.1 - - [27/Oct/2025 18:11:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:11:18,702 - INFO - 127.0.0.1 - - [27/Oct/2025 18:11:18] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:11:18,706 - INFO - 127.0.0.1 - - [27/Oct/2025 18:11:18] "[35m[1mGET /api/values?page=1&limit=20&sort=profit HTTP/1.1[0m" 500 -
+2025-10-27 18:12:09,339 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:12:11,812 - WARNING -  * Debugger is active!
+2025-10-27 18:12:11,841 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:12:12,065 - INFO - 127.0.0.1 - - [27/Oct/2025 18:12:12] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:12:12,127 - INFO - 127.0.0.1 - - [27/Oct/2025 18:12:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:12:12,146 - INFO - 127.0.0.1 - - [27/Oct/2025 18:12:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:12:13,381 - INFO - 127.0.0.1 - - [27/Oct/2025 18:12:13] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:12:13,398 - INFO - 127.0.0.1 - - [27/Oct/2025 18:12:13] "[35m[1mGET /api/values?page=1&limit=20&sort=profit HTTP/1.1[0m" 500 -
+2025-10-27 18:13:05,069 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 18:13:07,332 - WARNING -  * Debugger is active!
+2025-10-27 18:13:07,366 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 18:13:07,605 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:07] "GET /valuebets HTTP/1.1" 200 -
+2025-10-27 18:13:07,655 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 18:13:07,673 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 18:13:08,250 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:08] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 18:13:08,335 - INFO - 127.0.0.1 - - [27/Oct/2025 18:13:08] "GET /api/values?page=1&limit=20&sort=profit HTTP/1.1" 200 -

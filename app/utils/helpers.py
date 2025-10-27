@@ -140,6 +140,8 @@ def sort_middle_data(data):
         "event": event_label,
         "date": date_str,
         "time": time_str,
+        "sport_name": middle.get('sport_group', ''),
+        "confidence": float(middle.get('confidence', 0.0)) * 100,
         "event_name": middle['event'],
         "tournament": middle.get('sport_title', ''),
         "market_type": middle.get('market', ''),
@@ -155,38 +157,55 @@ def sort_middle_data(data):
   return results
 
 def sort_valuebets_data(data):
-  """Transforms valuebets JSON from Redis into frontend-ready list"""
+  """Transforms raw valuebets JSON into frontend-friendly display list."""
   results = []
-  for item in json.loads(data):
-    # Format date/time
-    event_time = item.get('commence_time')
+  
+  for vb in json.loads(data):
+    # --- Parse event time ---
+    event_time = vb.get('commence_time')
     if event_time:
       try:
-        event_time = datetime.fromisoformat(event_time.replace('Z', '+00:00'))
-        date_str = event_time.strftime("%d/%m")
-        time_str = event_time.strftime("%H:%M")
+        dt = datetime.fromisoformat(event_time.replace('Z', '+00:00'))
+        date_str, time_str = dt.strftime("%d/%m"), dt.strftime("%H:%M")
       except Exception:
         date_str, time_str = "N/A", "N/A"
     else:
       date_str, time_str = "N/A", "N/A"
+    
+    # --- bet info ---
+    bookmaker = vb.get('bookmaker')
+    bookmaker_link = vb.get('bookmaker_link', '')
+    team_or_outcome = vb.get('team_or_outcome')
+    odds = vb.get('odds')
+    ev = round(vb.get('expected_value', 0), 2)
+    point = vb.get('point')
 
+    # --- label ---
+    event = vb.get('event', '')
+    sport = vb.get('sport_title', '')
+    market = vb.get('market', '')
+
+    bet_label = f"{team_or_outcome} @ {odds}" if team_or_outcome else f"{market} @ {odds}"
+    recommendation = f"Bet on {bet_label} with {bookmaker}"
+
+    # --- Format record for frontend ---
     results.append({
-      "valuebet_id": item.get('unique_id'),
-      "bookmaker": item.get('bookmaker'),
-      "bookmaker_link": item.get('bookmaker_link'),
-      "event": item.get('event'),
-      "sport": item.get('sport_title'),
+      "valuebet_id": vb.get('unique_id'),
+      "event": event,
+      "sport": sport,
+      "market": market,
+      "bookmaker": bookmaker,
+      "bookmaker_link": bookmaker_link,
       "date": date_str,
       "time": time_str,
-      "market": item.get('market'),
-      "team_or_outcome": item.get('team_or_outcome'),
-      "odds": item.get('odds'),
-      "probability": f"{item.get('implied_probability', 0)}%",
-      "overvalue": f"+{item.get('overvalue_percent', 0)}%",
-      "expected_value": item.get('overvalue_percent'),
-      "point": item.get('point'),
+      "odds": odds,
+      "bet_recommendation": recommendation,
+      "expected_value": ev,
+      "confidence": vb.get('confidence', ''),
+      "point": point,
       "type": "valuebet"
     })
+  
   return results
 
 def get_bookmaker_links(event, selected_bookmakers, market_key):
