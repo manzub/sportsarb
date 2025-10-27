@@ -12,6 +12,7 @@
           <tr>
             <th class="py-3 px-4 text-left">Sport</th>
             <th class="py-3 px-4 text-left">League</th>
+            <th class="py-3 px-4 text-left">Favorite</th>
           </tr>
         </thead>
         <tbody class="text-gray-700">
@@ -19,6 +20,10 @@
           <tr class="border-t border-gray-200 hover:bg-gray-50 transition">
             <td class="py-3 px-4 font-medium">{{ item.sport }}</td>
             <td class="py-3 px-4">{{ item.league }}</td>
+            <td class="py-3 px-4 text-center">
+              <input type="checkbox" class="favorite-checkbox" data-league="{{ item.league }}"
+                data-sport="{{ item.sport }}" {% if item.is_favorite %}checked{% endif %}>
+            </td>
           </tr>
           {% endfor %}
         </tbody>
@@ -29,4 +34,30 @@
     {% endif %}
   </div>
 </div>
+
+<script>
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+  document.querySelectorAll('.favorite-checkbox').forEach(chk => {
+    chk.addEventListener('change', async (e) => {
+      const league = e.target.dataset.league;
+      const isFavorite = e.target.checked;
+
+      try {
+        const res = await fetch('/api/sports/toggle-favorite', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken },
+          body: JSON.stringify({ league, favorite: isFavorite })
+        });
+        const data = await res.json();
+        if (!data.success) {
+          e.target.checked = !isFavorite;
+          alert('Failed to update favorite status.');
+        }
+      } catch (err) {
+        console.error(err);
+        e.target.checked = !isFavorite;
+      }
+    });
+  });
+</script>
 {% endblock content %}

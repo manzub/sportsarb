@@ -1817,3 +1817,786 @@
 2025-10-27 21:46:37,029 - INFO - 127.0.0.1 - - [27/Oct/2025 21:46:37] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 2025-10-27 22:19:49,234 - WARNING -  * Debugger is active!
 2025-10-27 22:19:49,262 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:21:48,584 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/plans.py', reloading
+2025-10-27 22:21:50,529 - WARNING -  * Debugger is active!
+2025-10-27 22:21:50,561 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:23:00,429 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/config.py', reloading
+2025-10-27 22:23:02,288 - WARNING -  * Debugger is active!
+2025-10-27 22:23:02,318 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:24:24,381 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/config.py', reloading
+2025-10-27 22:24:26,229 - WARNING -  * Debugger is active!
+2025-10-27 22:24:26,259 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:24:56,597 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/migrations/env.py', reloading
+2025-10-27 22:24:58,298 - WARNING -  * Debugger is active!
+2025-10-27 22:24:58,326 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:26:57,493 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:57] "[32mGET /account HTTP/1.1[0m" 302 -
+2025-10-27 22:26:57,530 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:57] "GET /auth/login?next=/account HTTP/1.1" 200 -
+2025-10-27 22:26:57,644 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:57] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 22:26:57,772 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:57] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 22:26:59,686 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:59] "GET / HTTP/1.1" 200 -
+2025-10-27 22:26:59,722 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:26:59,736 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:59] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:26:59,791 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:26:59,973 - INFO - 127.0.0.1 - - [27/Oct/2025 22:26:59] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:27:00,464 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:00] "GET / HTTP/1.1" 200 -
+2025-10-27 22:27:00,476 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:00] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:27:00,501 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:00] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:27:00,546 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:00] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:27:00,703 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:00] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:27:01,284 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:01] "GET / HTTP/1.1" 200 -
+2025-10-27 22:27:01,300 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:27:01,326 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:01] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:27:01,396 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:27:01,548 - INFO - 127.0.0.1 - - [27/Oct/2025 22:27:01] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:28:08,329 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:08] "GET /auth/login HTTP/1.1" 200 -
+2025-10-27 22:28:08,383 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:28:08,508 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:28:16,260 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "[35m[1mPOST /auth/login HTTP/1.1[0m" 500 -
+2025-10-27 22:28:16,280 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-27 22:28:16,284 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-27 22:28:16,342 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=AIJRoJPDfTymmmkT6jpa HTTP/1.1" 200 -
+2025-10-27 22:28:16,345 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:28:16,357 - INFO - 127.0.0.1 - - [27/Oct/2025 22:28:16] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:29:25,521 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-27 22:29:25,541 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "GET / HTTP/1.1" 200 -
+2025-10-27 22:29:25,573 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:25,668 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:29:25,732 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:25,912 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:25] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:29:26,385 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:26] "GET / HTTP/1.1" 200 -
+2025-10-27 22:29:26,407 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:26,433 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:26] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:29:26,488 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:26,653 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:26] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:29:27,273 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:27] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:29:27,323 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:27] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:27,386 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:27] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:28,348 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-27 22:29:28,354 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "GET / HTTP/1.1" 200 -
+2025-10-27 22:29:28,379 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:28,451 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:29:28,502 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:28,659 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:28] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:29:29,155 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:29] "GET / HTTP/1.1" 200 -
+2025-10-27 22:29:29,172 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:29] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:29,188 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:29] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:29:29,240 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:29,390 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:29] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:29:30,322 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:30] "GET /auth/login HTTP/1.1" 200 -
+2025-10-27 22:29:30,362 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:30] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:30,489 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:30] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:29:34,534 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-27 22:29:34,542 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "GET / HTTP/1.1" 200 -
+2025-10-27 22:29:34,568 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:29:34,582 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:29:34,830 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:29:34,832 - INFO - 127.0.0.1 - - [27/Oct/2025 22:29:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:00,151 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/auth.py', reloading
+2025-10-27 22:30:02,110 - WARNING -  * Debugger is active!
+2025-10-27 22:30:02,140 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:30:08,214 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:08] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:30:08,289 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:08,353 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:14,718 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:14] "GET /plans/overview HTTP/1.1" 200 -
+2025-10-27 22:30:14,740 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:14,823 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:20,803 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:20] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:30:20,853 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:20] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:20,904 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:24,141 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-10-27 22:30:24,157 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "GET / HTTP/1.1" 200 -
+2025-10-27 22:30:24,218 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:24,294 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:30:24,305 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:24,491 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:24] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:30:25,312 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:25] "GET /auth/login HTTP/1.1" 200 -
+2025-10-27 22:30:25,361 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:25,622 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:47,519 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:47] "GET /auth/confirmation/1 HTTP/1.1" 200 -
+2025-10-27 22:30:47,562 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:47,627 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:57,733 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:57] "[32mPOST /auth/confirmation/1 HTTP/1.1[0m" 302 -
+2025-10-27 22:30:57,748 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:57] "GET / HTTP/1.1" 200 -
+2025-10-27 22:30:57,853 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:57] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:30:57,875 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:57] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:30:57,901 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:30:58,071 - INFO - 127.0.0.1 - - [27/Oct/2025 22:30:58] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:31:02,226 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:02] "GET / HTTP/1.1" 200 -
+2025-10-27 22:31:02,249 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:31:02,271 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:02] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:31:02,319 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:31:02,471 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:02] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:31:04,280 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:04] "GET / HTTP/1.1" 200 -
+2025-10-27 22:31:04,304 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:31:04,326 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:04] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:31:04,377 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:31:04,531 - INFO - 127.0.0.1 - - [27/Oct/2025 22:31:04] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:33:55,175 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 22:33:57,251 - WARNING -  * Debugger is active!
+2025-10-27 22:33:57,279 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:34:06,363 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 22:34:08,328 - WARNING -  * Debugger is active!
+2025-10-27 22:34:08,357 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:34:18,461 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 22:34:20,457 - WARNING -  * Debugger is active!
+2025-10-27 22:34:20,491 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:34:20,621 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:20] "GET / HTTP/1.1" 200 -
+2025-10-27 22:34:20,645 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:20] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 22:34:20,670 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:20] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:34:20,761 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:34:20,924 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:20] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:34:22,506 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:22] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:34:22,529 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:22] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:34:22,611 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:34:26,125 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:26] "GET /plans/overview HTTP/1.1" 200 -
+2025-10-27 22:34:26,177 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:34:26,235 - INFO - 127.0.0.1 - - [27/Oct/2025 22:34:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:38:12,145 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:12] "GET /plans/overview HTTP/1.1" 200 -
+2025-10-27 22:38:12,190 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:38:12,366 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:38:13,181 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:13] "GET /plans/overview HTTP/1.1" 200 -
+2025-10-27 22:38:13,202 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:13] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:38:13,268 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:38:14,438 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:14] "[32mPOST /plans/overview HTTP/1.1[0m" 302 -
+2025-10-27 22:38:14,504 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:14] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:38:14,538 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:38:14,582 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:38:19,404 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:19] "GET /plans/checkout/1 HTTP/1.1" 200 -
+2025-10-27 22:38:19,457 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:19] "[33mGET /plans/checkout/style.css HTTP/1.1[0m" 404 -
+2025-10-27 22:38:19,503 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:19] "GET /static/checkout.js HTTP/1.1" 200 -
+2025-10-27 22:38:19,945 - INFO - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-10-27 22:38:20,425 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:38:20,618 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-10-27 22:38:20,628 - INFO - 127.0.0.1 - - [27/Oct/2025 22:38:20] "POST /plans/create-checkout-session HTTP/1.1" 200 -
+2025-10-27 22:41:58,948 - INFO - 127.0.0.1 - - [27/Oct/2025 22:41:58] "GET /plans/return?session_id=cs_test_a1Sjur0cBdvHuthbT4mxT2uNJhqiUCJsxOKyPPyIraFJyFlE7hAIc4tkEi HTTP/1.1" 200 -
+2025-10-27 22:41:59,007 - INFO - 127.0.0.1 - - [27/Oct/2025 22:41:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:41:59,060 - INFO - 127.0.0.1 - - [27/Oct/2025 22:41:59] "GET /static/return.js HTTP/1.1" 200 -
+2025-10-27 22:41:59,198 - INFO - message='Request to Stripe api' method=get url=https://api.stripe.com/v1/checkout/sessions/cs_test_a1Sjur0cBdvHuthbT4mxT2uNJhqiUCJsxOKyPPyIraFJyFlE7hAIc4tkEi
+2025-10-27 22:41:59,215 - INFO - 127.0.0.1 - - [27/Oct/2025 22:41:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:41:59,537 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1Sjur0cBdvHuthbT4mxT2uNJhqiUCJsxOKyPPyIraFJyFlE7hAIc4tkEi response_code=200
+2025-10-27 22:41:59,586 - INFO - 127.0.0.1 - - [27/Oct/2025 22:41:59] "GET /plans/session-status?session_id=cs_test_a1Sjur0cBdvHuthbT4mxT2uNJhqiUCJsxOKyPPyIraFJyFlE7hAIc4tkEi HTTP/1.1" 200 -
+2025-10-27 22:42:02,144 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:02] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:42:02,199 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:02] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:02,259 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:03,970 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:03] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:42:03,995 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:03] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:04,059 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:04,828 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:04] "GET / HTTP/1.1" 200 -
+2025-10-27 22:42:04,856 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:04] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:04,873 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:04] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:42:04,937 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:05,107 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:05] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:42:06,282 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:06] "GET /middles HTTP/1.1" 200 -
+2025-10-27 22:42:06,330 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:06,356 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:06] "GET /api/middles?page=1&limit=60&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:42:06,543 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:06] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:42:06,544 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:07,019 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:07] "GET / HTTP/1.1" 200 -
+2025-10-27 22:42:07,036 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:07,063 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:07] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:42:07,128 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:07,287 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:07] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:42:12,640 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:12] "GET /account HTTP/1.1" 200 -
+2025-10-27 22:42:12,680 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:12,735 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:42:15,909 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:42:15,912 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:42:23,027 - INFO - 127.0.0.1 - - [27/Oct/2025 22:42:23] "POST /account/notifications/email HTTP/1.1" 200 -
+2025-10-27 22:43:03,004 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-27 22:43:05,147 - WARNING -  * Debugger is active!
+2025-10-27 22:43:05,182 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:45:20,157 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "GET / HTTP/1.1" 200 -
+2025-10-27 22:45:20,334 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:45:20,348 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:45:20,380 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 22:45:20,656 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:45:20,657 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:45:22,639 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:22] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:45:22,672 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:22] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:45:22,688 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:22] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:45:22,945 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:22] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:45:22,947 - INFO - 127.0.0.1 - - [27/Oct/2025 22:45:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:49:34,923 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:34] "[35m[1mGET /sports HTTP/1.1[0m" 500 -
+2025-10-27 22:49:34,981 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:49:34,987 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:34] "GET /sports?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-27 22:49:34,988 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:34] "GET /sports?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-27 22:49:35,105 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:35] "GET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-27 22:49:35,107 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:35] "GET /sports?__debugger__=yes&cmd=resource&f=console.png&s=JCqG6rAFeCHDNHJqYUMn HTTP/1.1" 200 -
+2025-10-27 22:49:35,130 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:35] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:49:48,083 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[35m[1mGET /sports HTTP/1.1[0m" 500 -
+2025-10-27 22:49:48,102 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:49:48,110 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 22:49:48,111 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 22:49:48,242 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png&s=JCqG6rAFeCHDNHJqYUMn HTTP/1.1[0m" 304 -
+2025-10-27 22:49:48,243 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:49:48,262 - INFO - 127.0.0.1 - - [27/Oct/2025 22:49:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:50:11,050 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[35m[1mGET /sports HTTP/1.1[0m" 500 -
+2025-10-27 22:50:11,070 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:50:11,078 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[36mGET /sports?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 22:50:11,081 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[36mGET /sports?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 22:50:11,210 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png&s=JCqG6rAFeCHDNHJqYUMn HTTP/1.1[0m" 304 -
+2025-10-27 22:50:11,212 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:50:11,227 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:11] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:50:48,419 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[35m[1mGET /sports HTTP/1.1[0m" 500 -
+2025-10-27 22:50:48,457 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:50:48,460 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 22:50:48,460 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 22:50:48,590 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png&s=JCqG6rAFeCHDNHJqYUMn HTTP/1.1[0m" 304 -
+2025-10-27 22:50:48,592 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:50:48,609 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:48] "[36mGET /sports?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 22:50:59,389 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:59] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:50:59,421 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:50:59,459 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:50:59,802 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:59] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:50:59,802 - INFO - 127.0.0.1 - - [27/Oct/2025 22:50:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:51:37,654 - INFO - 127.0.0.1 - - [27/Oct/2025 22:51:37] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:51:37,694 - INFO - 127.0.0.1 - - [27/Oct/2025 22:51:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:51:37,697 - INFO - 127.0.0.1 - - [27/Oct/2025 22:51:37] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:51:37,847 - INFO - 127.0.0.1 - - [27/Oct/2025 22:51:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:51:38,049 - INFO - 127.0.0.1 - - [27/Oct/2025 22:51:38] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:54:25,553 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 22:54:27,998 - WARNING -  * Debugger is active!
+2025-10-27 22:54:28,034 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:54:28,164 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:28] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:54:28,195 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:54:28,214 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:54:28,412 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:54:28,585 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:28] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:54:30,993 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:30] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:54:31,014 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:54:31,018 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:54:31,288 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:31] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:54:31,288 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:54:32,040 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:32] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:54:32,056 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:54:32,061 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:32] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:54:32,372 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:32] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:54:32,372 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:32] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:54:40,181 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 22:54:42,193 - WARNING -  * Debugger is active!
+2025-10-27 22:54:42,219 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:54:42,342 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:42] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:54:42,368 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:54:42,376 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:54:42,754 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:54:42,754 - INFO - 127.0.0.1 - - [27/Oct/2025 22:54:42] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:56:55,703 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:55] "GET /sports HTTP/1.1" 200 -
+2025-10-27 22:56:55,734 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 22:56:55,744 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:55] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 22:56:56,288 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:56] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 22:56:56,288 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:56] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 22:56:56,721 - INFO - 127.0.0.1 - - [27/Oct/2025 22:56:56] "[31m[1mPOST /api/sports/toggle-favorite HTTP/1.1[0m" 405 -
+2025-10-27 22:57:46,508 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 22:58:25,125 - WARNING -  * Debugger is active!
+2025-10-27 22:58:25,155 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:59:29,784 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 22:59:32,158 - WARNING -  * Debugger is active!
+2025-10-27 22:59:32,187 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 22:59:44,328 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 22:59:46,175 - WARNING -  * Debugger is active!
+2025-10-27 22:59:46,233 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:00:09,524 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:00:11,449 - WARNING -  * Debugger is active!
+2025-10-27 23:00:11,476 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:01:21,337 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 23:01:23,208 - WARNING -  * Debugger is active!
+2025-10-27 23:01:23,235 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:02:03,046 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:03] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:02:03,099 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:02:03,135 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:03] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:02:03,328 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:02:03,476 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:03] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:02:04,634 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:04] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:02:06,209 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:06] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:02:06,230 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:02:06,232 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:02:06,546 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:06] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:02:06,548 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:02:07,632 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:07] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:02:07,648 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:02:07,652 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:02:07,916 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:07] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:02:07,916 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:02:10,796 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:10] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:02:10,813 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:10] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:02:10,814 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:02:11,086 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:02:11,086 - INFO - 127.0.0.1 - - [27/Oct/2025 23:02:11] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:04:36,974 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:04:38,986 - WARNING -  * Debugger is active!
+2025-10-27 23:04:39,018 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:05:05,319 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-10-27 23:05:07,345 - WARNING -  * Debugger is active!
+2025-10-27 23:05:07,373 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:05:10,193 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:10] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:10,233 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:10,246 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:10] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:10,579 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:10,580 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:10] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:13,612 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:13] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:05:14,452 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:14] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:14,473 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:14,476 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:14,823 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:14] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:14,824 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:15,336 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:15] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:15,350 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:15,353 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:15,687 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:15] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:15,688 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:16,067 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:05:16,431 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:16,450 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:16,459 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:16,770 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:16,790 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:16] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:17,566 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:17] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:17,578 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:17,586 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:17] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:17,931 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:17] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:17,934 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:19,885 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:19] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:05:21,237 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:21] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:21,252 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:21,260 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:21] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:21,586 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:21] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:21,588 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:22,836 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:22] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:05:23,289 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:23] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:23,305 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:23,309 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:23] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:23,623 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:23] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:23,625 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:24,022 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:24,038 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:24,041 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:24,306 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:24,308 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:24,900 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:24] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:05:25,187 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:25] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:25,206 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:25,209 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:25,456 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:05:25,605 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:25] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:26,123 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:26] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:05:26,141 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:05:26,145 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:26] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:05:26,470 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:26] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:05:26,471 - INFO - 127.0.0.1 - - [27/Oct/2025 23:05:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:06:16,324 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:16] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:06:16,353 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:06:16,364 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:06:16,608 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:06:16,861 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:16] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:06:18,048 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:18] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:06:18,700 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:18] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:06:18,716 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:06:18,721 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:06:19,062 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:06:19,064 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:06:19,414 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:06:19,433 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:06:19,440 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:06:19,767 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:06:19,769 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:06:20,224 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:20] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:06:20,698 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:20] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:06:20,717 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:20] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:06:20,718 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:20] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:06:21,045 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:21] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:06:21,046 - INFO - 127.0.0.1 - - [27/Oct/2025 23:06:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:08:14,921 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:14] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:08:14,947 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:08:14,951 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:08:15,166 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:08:15,348 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:15] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:08:16,130 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:08:16,629 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:08:16,657 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:08:16,658 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:08:16,931 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:08:16,931 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:08:18,061 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:08:18,476 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:08:18,498 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:08:18,502 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:08:18,785 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:08:18,786 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:08:19,161 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:19] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:08:19,179 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:08:19,183 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:19] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:08:19,454 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:19] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:08:19,455 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:08:20,860 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:20] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:08:21,183 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:21] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:08:21,194 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:08:21,202 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:21] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:08:21,471 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:21] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:08:21,472 - INFO - 127.0.0.1 - - [27/Oct/2025 23:08:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:09:30,071 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 23:09:32,191 - WARNING -  * Debugger is active!
+2025-10-27 23:09:32,219 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:10:00,511 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:10:02,608 - WARNING -  * Debugger is active!
+2025-10-27 23:10:02,651 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:10:42,422 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:42] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:10:42,445 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:10:42,459 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:10:42,842 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:42] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:10:42,843 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:10:43,781 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:43] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:10:44,472 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:44] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:10:44,488 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:10:44,492 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:10:44,777 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:44] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:10:44,778 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:10:58,981 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:58] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:10:59,563 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:59] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:10:59,594 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:10:59,606 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:10:59,739 - INFO - 127.0.0.1 - - [27/Oct/2025 23:10:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:11:00,030 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:11:00,310 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:11:00,325 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:11:00,328 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:11:00,461 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:11:00,617 - INFO - 127.0.0.1 - - [27/Oct/2025 23:11:00] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:12:23,352 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:12:25,493 - WARNING -  * Debugger is active!
+2025-10-27 23:12:25,525 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:12:26,497 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "[35m[1mGET /api/webpush/test HTTP/1.1[0m" 500 -
+2025-10-27 23:12:26,554 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:12:26,556 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:12:26,676 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "GET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png&s=n0zLuys3mXqt5I2D2MHA HTTP/1.1" 200 -
+2025-10-27 23:12:26,677 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:12:26,708 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:26] "[36mGET /api/webpush/test?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:12:44,735 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:12:46,845 - WARNING -  * Debugger is active!
+2025-10-27 23:12:46,883 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:12:46,992 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:46] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:12:47,119 - INFO - 127.0.0.1 - - [27/Oct/2025 23:12:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:13:08,708 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:08] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:13:08,739 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:08] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:13:08,745 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:08] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:13:09,137 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:13:09,137 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:09] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:13:09,682 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:09] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:13:10,813 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:10] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:13:10,832 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:13:10,837 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:10] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:13:11,132 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:11] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:13:11,133 - INFO - 127.0.0.1 - - [27/Oct/2025 23:13:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:15:16,565 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 23:15:18,625 - WARNING -  * Debugger is active!
+2025-10-27 23:15:18,652 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:15:46,204 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:46] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:15:46,317 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:15:48,447 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:48] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:15:48,497 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:15:48,500 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:15:48,825 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:15:48,846 - INFO - 127.0.0.1 - - [27/Oct/2025 23:15:48] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:16:15,937 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:15] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:16:15,967 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:16:15,975 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:16:16,352 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:16] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:16:16,352 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:16:17,338 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:17] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:16:18,533 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:18] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:16:18,564 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:16:18,569 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:16:18,835 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:18] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:16:18,836 - INFO - 127.0.0.1 - - [27/Oct/2025 23:16:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:16:56,906 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 23:17:11,495 - WARNING -  * Debugger is active!
+2025-10-27 23:17:11,524 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:21:18,391 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:18] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:21:18,498 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:21:23,543 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:23] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:21:23,571 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:21:23,582 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:23] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:21:23,810 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:21:23,989 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:23] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:21:24,866 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:24] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:21:25,483 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:25] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:21:25,499 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:21:25,506 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:21:25,812 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:21:25,812 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:25] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:21:33,793 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:33] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:21:34,235 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:21:34,256 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:21:34,260 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:21:34,532 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:21:34,533 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:21:34,967 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:21:34,985 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:21:34,989 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:21:35,296 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:35] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:21:35,297 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:21:35,843 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:35] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:21:36,240 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:36] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:21:36,259 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:21:36,263 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:21:36,590 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:36] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:21:36,592 - INFO - 127.0.0.1 - - [27/Oct/2025 23:21:36] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:22:54,053 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/models.py', reloading
+2025-10-27 23:22:56,215 - WARNING -  * Debugger is active!
+2025-10-27 23:22:56,247 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:23:14,474 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:23:16,326 - WARNING -  * Debugger is active!
+2025-10-27 23:23:16,355 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:24:12,859 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:24:14,795 - WARNING -  * Debugger is active!
+2025-10-27 23:24:14,823 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:24:25,400 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:25] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:25,436 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:25,451 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:25] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:25,772 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:24:25,772 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:25] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:27,430 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:27] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:24:29,536 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:29] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:29,554 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:29,559 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:29] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:29,866 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:29] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:29,866 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:24:30,623 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:30] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:30,644 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:30,649 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:30] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:30,895 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:30] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:24:30,917 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:30] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:31,449 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:31] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:31,466 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:31,473 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:31,741 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:31] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:31,743 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:24:33,479 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:33] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:24:35,863 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:35] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:35,879 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:35,884 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:35] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:36,146 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:36] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:24:36,166 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:36] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:36,684 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:36] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:24:36,702 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:24:36,710 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:24:37,037 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:37] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:24:37,037 - INFO - 127.0.0.1 - - [27/Oct/2025 23:24:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:25:35,874 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:25:38,014 - WARNING -  * Debugger is active!
+2025-10-27 23:25:38,039 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:25:41,073 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:25:42,764 - WARNING -  * Debugger is active!
+2025-10-27 23:25:42,791 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:25:44,011 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:44] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:25:44,031 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:44] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:25:44,061 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:44] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:25:44,434 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:44] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:25:44,435 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:25:45,177 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:45] "POST /api/sports/toggle-favorite HTTP/1.1" 200 -
+2025-10-27 23:25:46,145 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:46] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:25:46,178 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:25:46,196 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:25:46,455 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:46] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:25:46,456 - INFO - 127.0.0.1 - - [27/Oct/2025 23:25:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:28:45,171 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:28:46,985 - WARNING -  * Debugger is active!
+2025-10-27 23:28:47,019 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:29:11,214 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:29:13,255 - WARNING -  * Debugger is active!
+2025-10-27 23:29:13,294 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:29:13,931 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:13] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:29:13,969 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:13] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:13,981 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:13] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:14,305 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:14] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:29:14,306 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:29:14,911 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:14] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:29:14,924 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:14,935 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:15,238 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:15] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:29:15,239 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:29:34,911 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:34] "GET /sports HTTP/1.1" 200 -
+2025-10-27 23:29:34,931 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:34,940 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:35,281 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:35] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:29:35,282 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:29:36,115 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "GET / HTTP/1.1" 200 -
+2025-10-27 23:29:36,137 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:36,150 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:36,292 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 23:29:36,305 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:29:36,489 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:36] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:29:37,376 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "GET / HTTP/1.1" 200 -
+2025-10-27 23:29:37,396 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:37,401 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:37,492 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 23:29:37,704 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:29:37,706 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:29:39,875 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:39] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:29:39,912 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:29:39,930 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:39] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:29:40,025 - INFO - 127.0.0.1 - - [27/Oct/2025 23:29:40] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:30:09,078 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:30:11,230 - WARNING -  * Debugger is active!
+2025-10-27 23:30:11,257 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:30:41,240 - INFO - 127.0.0.1 - - [27/Oct/2025 23:30:41] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:30:41,262 - INFO - 127.0.0.1 - - [27/Oct/2025 23:30:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:30:41,274 - INFO - 127.0.0.1 - - [27/Oct/2025 23:30:41] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:30:41,421 - INFO - 127.0.0.1 - - [27/Oct/2025 23:30:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:31:33,156 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-10-27 23:31:33,156 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 23:31:33,157 - INFO -  * Restarting with stat
+2025-10-27 23:31:34,315 - WARNING -  * Debugger is active!
+2025-10-27 23:31:34,344 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:31:46,492 - INFO - 127.0.0.1 - - [27/Oct/2025 23:31:46] "[31m[1mGET /api/webpush/test HTTP/1.1[0m" 400 -
+2025-10-27 23:31:46,600 - INFO - 127.0.0.1 - - [27/Oct/2025 23:31:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:33:08,870 - INFO - 127.0.0.1 - - [27/Oct/2025 23:33:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:34:06,082 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-10-27 23:34:06,471 - INFO -  * Restarting with stat
+2025-10-27 23:34:08,188 - WARNING -  * Debugger is active!
+2025-10-27 23:34:08,233 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:34:09,252 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-10-27 23:34:10,049 - INFO -  * Restarting with stat
+2025-10-27 23:34:11,783 - WARNING -  * Debugger is active!
+2025-10-27 23:34:11,811 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:38:35,318 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.244:5001
+2025-10-27 23:38:35,318 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-27 23:38:35,319 - INFO -  * Restarting with stat
+2025-10-27 23:38:36,535 - WARNING -  * Debugger is active!
+2025-10-27 23:38:36,566 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:38:43,086 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:43] "[32mGET /account HTTP/1.1[0m" 302 -
+2025-10-27 23:38:43,126 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:43] "GET /auth/login?next=/account HTTP/1.1" 200 -
+2025-10-27 23:38:43,227 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:38:43,278 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:43] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-10-27 23:38:43,423 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:43] "GET /favicon.ico HTTP/1.1" 200 -
+2025-10-27 23:38:47,189 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:47] "GET /auth/login?next=/account HTTP/1.1" 200 -
+2025-10-27 23:38:47,207 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:38:47,212 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:38:47,337 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:38:52,473 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:38:52,491 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:38:52,502 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-27 23:38:52,509 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-27 23:38:52,576 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=6Mh4Qsge8yqWX9cuOm2F HTTP/1.1" 200 -
+2025-10-27 23:38:52,577 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-27 23:38:52,603 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:52] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:38:55,771 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:38:55,809 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:38:55,820 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:38:55,824 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:38:55,881 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:38:55,883 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=6Mh4Qsge8yqWX9cuOm2F HTTP/1.1[0m" 304 -
+2025-10-27 23:38:55,892 - INFO - 127.0.0.1 - - [27/Oct/2025 23:38:55] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:02,647 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:39:02,661 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:39:02,667 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:39:02,668 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:39:02,743 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=6Mh4Qsge8yqWX9cuOm2F HTTP/1.1[0m" 304 -
+2025-10-27 23:39:02,747 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:02,759 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:02] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:23,043 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:39:24,023 - INFO -  * Restarting with stat
+2025-10-27 23:39:25,636 - WARNING -  * Debugger is active!
+2025-10-27 23:39:25,663 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:39:25,683 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:39:25,684 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:39:25,733 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:39:25,750 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:39:25,751 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:39:25,819 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:25,819 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Y2V4HfRdEc6BHrIkOgVb HTTP/1.1" 200 -
+2025-10-27 23:39:25,843 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:25] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:40,854 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:39:41,275 - INFO -  * Restarting with stat
+2025-10-27 23:39:42,825 - WARNING -  * Debugger is active!
+2025-10-27 23:39:42,854 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:39:42,872 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:39:42,922 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:39:42,934 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:39:42,937 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:39:42,989 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:39:42,990 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:42] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=bb45pGteL65iHcnlXiDq HTTP/1.1" 200 -
+2025-10-27 23:39:43,006 - INFO - 127.0.0.1 - - [27/Oct/2025 23:39:43] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:40:46,717 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:40:47,054 - INFO -  * Restarting with stat
+2025-10-27 23:40:48,703 - WARNING -  * Debugger is active!
+2025-10-27 23:40:48,807 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:40:49,521 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-27 23:40:49,551 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:40:49,574 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-27 23:40:49,575 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-27 23:40:49,653 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=mQx0DAvMMgiTDNVj2qrD HTTP/1.1" 200 -
+2025-10-27 23:40:49,654 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:40:49,665 - INFO - 127.0.0.1 - - [27/Oct/2025 23:40:49] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-27 23:42:48,403 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/helpers.py', reloading
+2025-10-27 23:42:48,769 - INFO -  * Restarting with stat
+2025-10-27 23:42:50,383 - WARNING -  * Debugger is active!
+2025-10-27 23:42:50,410 - INFO -  * Debugger PIN: 135-200-680
+2025-10-27 23:42:50,447 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "GET / HTTP/1.1" 200 -
+2025-10-27 23:42:50,478 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:42:50,486 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:42:50,572 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 23:42:50,856 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:42:50,858 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:42:54,569 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:54] "GET /auth/login HTTP/1.1" 200 -
+2025-10-27 23:42:54,609 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:54] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:42:54,627 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:54] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:42:54,740 - INFO - 127.0.0.1 - - [27/Oct/2025 23:42:54] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:43:09,188 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-10-27 23:43:09,202 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "GET / HTTP/1.1" 200 -
+2025-10-27 23:43:09,237 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:43:09,239 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:43:09,334 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "GET /api/surebets?page=1&limit=51&sort=profit&market= HTTP/1.1" 200 -
+2025-10-27 23:43:09,565 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "GET /api/sports HTTP/1.1" 200 -
+2025-10-27 23:43:09,566 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:43:11,996 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:11] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:43:12,028 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:12] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:43:12,046 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:12] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:43:12,151 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:43:14,397 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:14] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:43:14,421 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:43:14,427 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:43:14,550 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:43:16,842 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:16] "GET /service-worker.js HTTP/1.1" 200 -
+2025-10-27 23:43:19,831 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:19] "POST /api/webpush/subscribe HTTP/1.1" 200 -
+2025-10-27 23:43:26,570 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:26] "GET /static/icons/icon.png HTTP/1.1" 200 -
+2025-10-27 23:43:45,689 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:45] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:43:45,702 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:45] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:43:45,801 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:45] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:43:47,473 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:47] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 23:43:56,694 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:56] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:43:56,702 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:56] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:43:59,515 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:59] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:43:59,530 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:43:59,550 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:43:59,700 - INFO - 127.0.0.1 - - [27/Oct/2025 23:43:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:44:01,229 - INFO - 127.0.0.1 - - [27/Oct/2025 23:44:01] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 23:44:01,621 - INFO - 127.0.0.1 - - [27/Oct/2025 23:44:01] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:44:01,627 - INFO - 127.0.0.1 - - [27/Oct/2025 23:44:01] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:45:09,696 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:09] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:45:14,720 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:14] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:45:14,742 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:45:14,749 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:14] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:45:14,887 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:45:16,461 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:16] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 23:45:53,066 - INFO - 127.0.0.1 - - [27/Oct/2025 23:45:53] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:46:55,573 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:55] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:46:57,058 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:57] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:46:57,094 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:46:57,102 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:57] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:46:57,290 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:46:59,073 - INFO - 127.0.0.1 - - [27/Oct/2025 23:46:59] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 23:47:05,691 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:05] "GET /api/webpush/test HTTP/1.1" 200 -
+2025-10-27 23:47:05,701 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:05] "[36mGET /static/icons/icon.png HTTP/1.1[0m" 304 -
+2025-10-27 23:47:07,613 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:07] "GET /account HTTP/1.1" 200 -
+2025-10-27 23:47:07,629 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:07] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-10-27 23:47:07,636 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:07] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-10-27 23:47:07,781 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-10-27 23:47:09,628 - INFO - 127.0.0.1 - - [27/Oct/2025 23:47:09] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-10-27 23:47:28,905 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-10-27 23:47:29,319 - INFO -  * Restarting with stat
+2025-10-27 23:47:31,167 - WARNING -  * Debugger is active!
+2025-10-27 23:47:31,201 - INFO -  * Debugger PIN: 135-200-680

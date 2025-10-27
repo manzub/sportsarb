@@ -42,7 +42,7 @@ def login():
             new_user.set_otp()
             send_otp_mail(new_user)
             
-            session['user_email'] = user.email
+            session['user_email'] = new_user.email
             flash("We sent you a verification code. Please check your email.", "yellow")
             return redirect(url_for('auth.confirmation', user_id=new_user.id))
           else:

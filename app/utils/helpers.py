@@ -23,6 +23,11 @@ def validate_email_address(email:str):
 def check_valid_sports_leagues(user):
   from app.models import Sports
   
+  fav_sports = user.favorite_sports or []
+  fav_leagues = user.favorite_leagues or []
+  if not fav_sports or not fav_leagues:
+    return []
+  
   valid_sports = [row for row in db.session.query(Sports.sport).filter(Sports.sport.in_(user.favorite_sports)).all()]
   valid_leagues = [row for row in db.session.query(Sports.league).filter(Sports.league.in_(user.favorite_leagues)).all()]
   if valid_leagues and valid_sports:
@@ -68,9 +73,9 @@ def update_sport_db_count(key: str, **counts):
 def verified_required(f):
   @wraps(f)
   def decorated_function(*args, **kwargs):
-    if not current_user.is_verified:
+    if current_user.is_authenticated and not getattr(current_user, "is_verified", False):
       flash("Please verify your email before accessing this page.", "yellow")
-      return redirect(url_for('main.verify_email', user_id=current_user.id))
+      return redirect(url_for("main.verify_email", user_id=current_user.id))
     return f(*args, **kwargs)
   return decorated_function
 

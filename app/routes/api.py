@@ -157,7 +157,6 @@ def values():
   
   return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages })
 
-
 @bp.route('/webpush/test', methods=['GET'])
 @login_required
 def webpush_test():
@@ -184,3 +183,29 @@ def webpush_test():
   except WebPushException as ex:
     print("WebPush error:", repr(ex))
     return jsonify({"error": "Push failed", "details": str(ex)}), 500
+  
+@bp.route('/sports/toggle-favorite', methods=['POST'])
+@login_required
+def toggle_favorite():
+  data = request.get_json()
+  league = data.get('league')
+  favorite = data.get('favorite')
+  user = current_user
+  
+  if not league:
+    return jsonify({'error': 'Missing league'}), 400
+  
+  # ensure list exists
+  if user.favorite_leagues is None:
+    user.favorite_leagues = []
+
+  # toggle logic
+  if league in user.favorite_leagues:
+    user.favorite_leagues.remove(league)
+    action = 'removed'
+  else:
+    user.favorite_leagues.append(league)
+    action = 'added'
+
+  db.session.commit()
+  return jsonify({'success': True, 'action': action, 'favorites': user.favorite_leagues})

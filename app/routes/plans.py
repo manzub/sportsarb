@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from flask import Blueprint, request, flash, redirect, url_for, render_template, jsonify, session, current_app
 from flask_login import current_user, login_required
 from app.forms import SelectPlan
-from app.models import Subscriptions, UserSubscriptions, AppSettings
+from app.models import Subscriptions, UserSubscriptions, AppSettings, Transactions
 from app.extensions import db, stripe
 
 bp = Blueprint('plans', __name__)

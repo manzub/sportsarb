@@ -4,3 +4,6 @@
 .env
 cert.pem
 key.pem
+celerybeat-schedule
+selerybeat-schedule-shm
+selerybeat-schedule-wal

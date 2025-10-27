@@ -107,10 +107,10 @@ def notify_users():
   return "Done"
   
 celery.conf.beat_schedule = {
-  # 'fetch-odds-every-5-minutes': {
-  #   'task': 'app.tasks.find_arbitrage', # task here
-  #   'schedule': timedelta(minutes=5),  # 5 minutes
-  # },
+  'fetch-odds-every-5-minutes': {
+    'task': 'app.tasks.find_arbitrage', # task here
+    'schedule': timedelta(minutes=5),  # 5 minutes
+  },
   'notify_users': {
     'task': 'app.tasks.notify_users',
     'schedule': timedelta(minutes=1)

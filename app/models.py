@@ -1,7 +1,9 @@
 from datetime import datetime, timedelta
 from sqlalchemy.sql.sqltypes import DateTime
 from app import db, login_manager
-from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, Boolean, JSON, ARRAY
+from sqlalchemy import Column, String, Text, Integer, Float, ForeignKey, Boolean, JSON
+from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.ext.mutable import MutableList
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
@@ -22,8 +24,8 @@ class User(db.Model, UserMixin):
   otp_expiry = Column(DateTime)
   reset_otp = Column(String(10))
   reset_otp_expiry = Column(db.DateTime)
-  favorite_leagues = Column(ARRAY(String))
-  favorite_sports = Column(ARRAY(String))
+  favorite_leagues = Column(MutableList.as_mutable(JSONB), default=list)
+  favorite_sports = Column(MutableList.as_mutable(JSONB), default=list)
   preferred_currency = Column(String(3), default="USD")
   current_plan = relationship('UserSubscriptions', back_populates='user', uselist=False, cascade="all, delete-orphan")
   alert_settings = relationship('Alerts', backref='users', uselist=False, cascade="all, delete-orphan")

@@ -6,7 +6,7 @@ from flask import Blueprint, render_template, flash, request, redirect, url_for,
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions, Alerts
-from app.utils.helpers import has_active_subscription, get_latest_data
+from app.utils.helpers import has_active_subscription, get_latest_data, verified_required
 
 bp = Blueprint('main', __name__)
 
@@ -34,6 +34,7 @@ def days_filter(days):
   return f"{months} Month{'s' if months > 1 else ''}"
 
 @bp.route('/')
+@verified_required
 def index():
   surebets = get_latest_data('surebets')
   total_surebet_items = len(surebets)
@@ -48,9 +49,13 @@ def service_worker():
 @bp.route('/sports')
 def sports():
   from app.models import Sports
+  
+  sports = Sports.query.order_by(Sports.sport.asc(), Sports.league.asc()).all()
+  fav_leagues = set(current_user.favorite_leagues or [])
 
-  all_sports = Sports.query.order_by(Sports.sport.asc(), Sports.league.asc()).all()
-  return render_template('sports.html', sports=all_sports)
+  for s in sports:
+    s.is_favorite = s.league in fav_leagues
+  return render_template('sports.html', sports=sports)
 
 @bp.route('/bookmakers')
 def bookmakers():
@@ -194,7 +199,7 @@ def middle_calculator():
 
 @bp.route('/account')
 @login_required
-# @check_active_plan
+@verified_required
 def account():
   plan, user_subscription = None, None
   user_subscription = UserSubscriptions.query.filter_by(user_id=current_user.id).first()

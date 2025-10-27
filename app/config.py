@@ -1,6 +1,6 @@
 class AppConfigs(object):
   SECRET_KEY = 'sports-arb-finder'
-  SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost:5432/sportsarb"
+  SQLALCHEMY_DATABASE_URI = "postgresql://postgres:postgres@localhost:5437/sportsarb"
   SQLALCHEMY_TRACK_MODIFICATIONS = False
   pool_size = 32
   max_overflow = 64
