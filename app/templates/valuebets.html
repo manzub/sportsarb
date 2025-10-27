@@ -38,8 +38,8 @@
             <th class="px-4 py-3 font-semibold">Event</th>
             <th class="px-4 py-3 font-semibold">Market</th>
             <th class="px-4 py-3 font-semibold">Odds</th>
-            <th class="px-4 py-3 font-semibold">Probability</th>
-            <th class="px-4 py-3 font-semibold">Over Value</th>
+            <th class="px-4 py-3 font-semibold">Confidence</th>
+            <th class="px-4 py-3 font-semibold">Expected Value</th>
             <th></th>
           </tr>
         </thead>
@@ -132,7 +132,8 @@
             </td>
 
             <td class="px-4 py-2">
-              <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
+              <a href="#" class="text-blue-600 hover:underline">${item.bet_recommendation}</a>
+              <a href="#" class="text-xs text-gray-500">${item.event}</a>
               <div class="text-xs text-gray-500">${item.sport || ''}</div>
             </td>
 
@@ -142,8 +143,8 @@
               <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
             </td>
 
-            <td class="px-4 py-2 text-right">${item.probability}</td>
-            <td class="px-4 py-2 text-right">${item.overvalue}</td>
+            <td class="px-4 py-2 text-right">${item.confidence}</td>
+            <td class="px-4 py-2 text-right">${item.expected_value}</td>
           </tr>
         `);
       });

@@ -89,6 +89,7 @@
             <th class="px-4 py-3 font-semibold">Time</th>
             <th class="px-4 py-3 font-semibold">Event</th>
             <th class="px-4 py-3 font-semibold">Market</th>
+            <th class="px-4 py-3 font-semibold">Confidence</th>
             <th class="px-4 py-3 font-semibold text-right">Odds</th>
             <th></th>
           </tr>
@@ -178,7 +179,7 @@
             <!-- Row: bookmaker -->
             <td class="px-4 py-2">
               <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
-              <div class="text-xs text-gray-500">${item.sport || 'Football'}</div>
+              <div class="text-xs text-gray-500">${item.sport_name || 'N?A'}</div>
             </td>
 
             ${idx == 0 ? `<td rowspan="${group.length}" class="px-4 py-2 align-top">
@@ -193,6 +194,7 @@
             </td>
 
             <td class="px-4 py-2 text-gray-600">${item.market_type}</td>
+            <td class="px-4 py-2 text-gray-600">${item.confidence}%</td>
 
             <td class="px-4 py-2 text-right">
               <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
@@ -210,8 +212,8 @@
       // "View more middles" row
       tbody.append(`
         <tr class="bg-gray-50">
-          <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
-            <div class="w-full flex justify-end pr-6">+ ${group.length - 1} more middles for this event</div>
+          <td colspan="8" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
+            <div class="w-full flex justify-end pr-6">+ 0 more middles for this event</div>
           </td>
         </tr>F
       `);

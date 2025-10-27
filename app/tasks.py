@@ -5,6 +5,7 @@ from datetime import timedelta, datetime
 from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
+from app.services.values_finder import ValueBetsFinder
 from app.services.arbitrage_service import calculate_arbitrage
 from app.utils.redis_helper import save_json
 from app.utils.logger import setup_logging
@@ -36,6 +37,9 @@ def find_surebets():
   
   middles_finder = MiddlesFinder()
   middles_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'spreads,totals'})
+  
+  values_finder = ValueBetsFinder()
+  values_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'h2h,spreads,totals'})
   return "Done"
   
 @celery.task(name='app.tasks.notify_users')
