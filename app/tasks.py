@@ -1,6 +1,7 @@
 # tasks to save to redis here and run in celery
 from app import create_app
 from datetime import timedelta
+from concurrent.futures import ThreadPoolExecutor
 from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
@@ -25,18 +26,21 @@ def get_sports():
   return sports
 
 @celery.task(name='app.tasks.find_arbitrage')
-def find_surebets():
+def find_arbitrage():
   sports = get_sports()
   logger.info(f"Analyzing {len(sports)} sports...")
   
-  surebet_finder = SurebetFinder()
-  surebet_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'h2h,spreads,totals'})
+  jobs = [
+    (SurebetFinder(), {'regions': 'uk', 'markets': 'h2h,spreads,totals'}),
+    (MiddlesFinder(), {'regions': 'uk', 'markets': 'spreads,totals'}),
+    (ValueBetsFinder(), {'regions': 'uk', 'markets': 'h2h,spreads,totals'}),
+  ]
   
-  middles_finder = MiddlesFinder()
-  middles_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'spreads,totals'})
+  with ThreadPoolExecutor(max_workers=3) as executor:
+    futures = [executor.submit(finder.find_arbitrage, sports, cfg) for finder, cfg in jobs]
+    [f.result() for f in futures] 
   
-  values_finder = ValueBetsFinder()
-  values_finder.find_arbitrage(sports=sports, config={'regions': 'uk', 'markets': 'h2h,spreads,totals'})
+  logger.info("All finders completed successfully.")
   return "Done"
   
 @celery.task(name='app.tasks.notify_users')

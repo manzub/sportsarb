@@ -2600,3 +2600,19 @@
 2025-10-27 23:47:29,319 - INFO -  * Restarting with stat
 2025-10-27 23:47:31,167 - WARNING -  * Debugger is active!
 2025-10-27 23:47:31,201 - INFO -  * Debugger PIN: 135-200-680
+2025-10-28 16:57:54,823 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-28 16:57:55,258 - INFO -  * Restarting with stat
+2025-10-28 16:57:57,137 - WARNING -  * Debugger is active!
+2025-10-28 16:57:57,176 - INFO -  * Debugger PIN: 135-200-680
+2025-10-28 16:58:41,643 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-28 16:58:41,958 - INFO -  * Restarting with stat
+2025-10-28 16:58:43,726 - WARNING -  * Debugger is active!
+2025-10-28 16:58:43,758 - INFO -  * Debugger PIN: 135-200-680
+2025-10-28 16:59:19,173 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-28 16:59:19,521 - INFO -  * Restarting with stat
+2025-10-28 16:59:20,951 - WARNING -  * Debugger is active!
+2025-10-28 16:59:20,977 - INFO -  * Debugger PIN: 135-200-680
+2025-10-28 16:59:27,033 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-10-28 16:59:27,414 - INFO -  * Restarting with stat
+2025-10-28 16:59:28,887 - WARNING -  * Debugger is active!
+2025-10-28 16:59:28,917 - INFO -  * Debugger PIN: 135-200-680
