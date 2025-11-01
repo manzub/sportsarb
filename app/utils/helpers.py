@@ -263,6 +263,10 @@ def get_bookmaker_links(event, selected_bookmakers, market_key):
           links[bookmaker["title"]] = bookmaker.get("link", "")
   return links
 
+def count_bookmakers_by_surebet_id(data, surebet_id):
+  """Count how many bookmakers belong to a specific surebet_id."""
+  from collections import Counter
+  return sum(1 for d in data if d.get("surebet_id") == surebet_id)
 
 def parse_datetime(date_str):
   """

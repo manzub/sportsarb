@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.extensions import redis
-from app.utils.helpers import sort_surebet_data, sort_middle_data, sort_valuebets_data, parse_datetime
+from app.utils.helpers import sort_surebet_data, sort_middle_data, sort_valuebets_data, parse_datetime, count_bookmakers_by_surebet_id
 from app.services.odds_service import OddsService
 from app.extensions import db
 import json
@@ -77,6 +77,8 @@ def get_surebets():
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
   commence_time_filter = request.args.get("commence_time")
+  outcome_types = request.args.get("outcome_type", "")  # e.g., "2way,3way"
+  outcome_types = [x.strip() for x in outcome_types.split(",") if x.strip()]
   
   if commence_time_filter:
     now = datetime.now(timezone.utc)
@@ -103,6 +105,16 @@ def get_surebets():
     data.sort(key=lambda x: x.get("profit", 0), reverse=True)
   elif sort == "time":
     data.sort(key=lambda x: x.get("commence_time", ""), reverse=False)
+    
+    
+  # Outcome filter
+  if outcome_types:
+    filtered = []
+    for surebet_id in {d['surebet_id'] for d in data}:
+      count = count_bookmakers_by_surebet_id(data, surebet_id)
+      if ("2way" in outcome_types and count == 2) or ("3way" in outcome_types and count == 3):
+        filtered.extend([d for d in data if d['surebet_id'] == surebet_id])
+    data = filtered
   
   start = (page - 1) * limit
   end = start + limit

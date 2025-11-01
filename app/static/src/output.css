@@ -2465,6 +2465,9 @@
   .w-40 {
     width: calc(var(--spacing) * 40);
   }
+  .w-64 {
+    width: calc(var(--spacing) * 64);
+  }
   .w-auto {
     width: auto;
   }
@@ -2930,6 +2933,10 @@
   }
   .text-wrap {
     text-wrap: wrap;
+  }
+  .checkbox-primary {
+    color: var(--color-primary-content);
+    --input-color: var(--color-primary);
   }
   .text-black {
     color: var(--color-black);

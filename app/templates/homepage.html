@@ -96,15 +96,17 @@
   const perPage = 51;
   let _market = '';
   let _sort = 'profit';
-  let _time = ''
+  let _time = '';
+  let _outcome_type = '';
 
-  function fetchSurebets(page = 1, sort = _sort, market = _market, commence_time = _time) {
+  function fetchSurebets(page = 1, sort = _sort, market = _market, commence_time = _time, outcome_type = _outcome_type) {
     _market = market;
     _sort = sort
     _time = commence_time
+    _outcome_type = outcome_type
     $.ajax({
       url: API_URL,
-      data: { page: page, limit: perPage, sort: _sort, market: _market, commence_time: _time },
+      data: { page: page, limit: perPage, sort: _sort, market: _market, commence_time: _time, outcome_type: _outcome_type },
       method: "GET",
       success: function (response) {
         if (response.data.length == 0) {
