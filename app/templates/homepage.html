@@ -226,9 +226,18 @@
       contentDiv.setAttribute('data-item', arb_item)
 
       const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
-      fetch(url).then(x => x.text())
-        .then(function (html) {
-          contentDiv.innerHTML = html
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error("Item not found or expired");
+          return response.text();
+        })
+        .then(html => {
+          contentDiv.innerHTML = html;
+        })
+        .catch(err => {
+          console.warn(err.message);
+          alert("This opportunity is no longer available. Refreshing list...");
+          window.location.reload();
         });
     });
   }

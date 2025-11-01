@@ -3495,3 +3495,31 @@
 2025-11-01 22:41:46,098 - INFO -  * Restarting with stat
 2025-11-01 22:41:47,687 - WARNING -  * Debugger is active!
 2025-11-01 22:41:47,719 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:52:07,315 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-11-01 22:52:07,644 - INFO -  * Restarting with stat
+2025-11-01 22:52:09,534 - WARNING -  * Debugger is active!
+2025-11-01 22:52:09,563 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:53:05,074 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-11-01 22:53:05,750 - INFO -  * Restarting with stat
+2025-11-01 22:53:07,350 - WARNING -  * Debugger is active!
+2025-11-01 22:53:07,378 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:55:38,785 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-11-01 22:55:39,263 - INFO -  * Restarting with stat
+2025-11-01 22:55:41,029 - WARNING -  * Debugger is active!
+2025-11-01 22:55:41,056 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:56:13,365 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-11-01 22:56:13,777 - INFO -  * Restarting with stat
+2025-11-01 22:56:15,460 - WARNING -  * Debugger is active!
+2025-11-01 22:56:15,490 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:57:01,914 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-11-01 22:57:02,252 - INFO -  * Restarting with stat
+2025-11-01 22:57:03,808 - WARNING -  * Debugger is active!
+2025-11-01 22:57:03,835 - INFO -  * Debugger PIN: 135-200-680
+2025-11-01 22:57:05,819 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:05] "GET / HTTP/1.1" 200 -
+2025-11-01 22:57:05,867 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-01 22:57:05,892 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:05] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-01 22:57:05,954 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:05] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-01 22:57:06,254 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-01 22:57:06,255 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:06] "GET /api/sports HTTP/1.1" 200 -
+2025-11-01 22:57:07,141 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:07] "GET /surebet/calculator?page=surebets&arb_item=24ff78f4-3e78-4c99-a981-934beb4ce2af HTTP/1.1" 200 -
+2025-11-01 22:57:07,639 - INFO - 127.0.0.1 - - [01/Nov/2025 22:57:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
