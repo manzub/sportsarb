@@ -101,6 +101,18 @@ def get_latest_data(key_prefix):
 def sort_surebet_data(data):
   results = []
   for arb in json.loads(data):
+    # Format date/time
+    event_time = arb.get('commence_time')
+    if event_time:
+      try:
+        event_time = datetime.fromisoformat(event_time.replace('Z', '+00:00'))
+        date_str = event_time.strftime("%d/%m")
+        time_str = event_time.strftime("%H:%M")
+      except Exception:
+        date_str, time_str = "N/A", "N/A"
+    else:
+      date_str, time_str = "N/A", "N/A"
+      
     arb_item = []
     team_names = str(arb['event']).split(' vs ')
     bookmakers = list(arb['bookmakers'].keys())
@@ -121,7 +133,9 @@ def sort_surebet_data(data):
         "profit": round(arb['profit_margin'], 2),
         "bookmaker": bookmaker_name,
         "bookmaker_link": bookmaker_link,
-        "start_time": arb['commence_time'],
+        "date": date_str,
+        "time": time_str,
+        "commence_time": arb['commence_time'],
         "event": event_label,
         "tournament": arb['sport_title'],
         "sport_name": arb['sport_name'],
@@ -228,6 +242,7 @@ def sort_valuebets_data(data):
       "bookmaker_link": bookmaker_link,
       "date": date_str,
       "time": time_str,
+      "start_time": vb.get('commence_time', ''),
       "odds": odds,
       "bet_recommendation": recommendation,
       "expected_value": ev,
@@ -247,6 +262,19 @@ def get_bookmaker_links(event, selected_bookmakers, market_key):
         if market["key"] == market_key:
           links[bookmaker["title"]] = bookmaker.get("link", "")
   return links
+
+
+def parse_datetime(date_str):
+  """
+  Converts ISO, timestamp, or common datetime formats safely to a datetime object.
+  """
+  try:
+    return datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+  except Exception:
+    try:
+      return datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
+    except Exception:
+      return datetime.utcnow()  # fallback
 
 def send_otp_mail(user):
   msg = Message("Your Verification Code", sender="noreply@surebets.com", recipients=[user.email])

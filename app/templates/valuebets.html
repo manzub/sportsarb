@@ -56,12 +56,14 @@
   let currentPage = 1;
   const perPage = 20;
   let _market = '';
+  let _time = ''
 
-  function fetchValues(page = 1, market = '') {
-    _market = market
+  function fetchValues(page = 1, market = '', commence_time = _time) {
+    _market = market;
+    _time = commence_time
     $.ajax({
       url: API_URL,
-      data: { page: page, limit: perPage, market: _market },
+      data: { page: page, limit: perPage, market: _market, commence_time: _time },
       method: "GET",
       success: function (response) {
         if (response.data.length == 0) {

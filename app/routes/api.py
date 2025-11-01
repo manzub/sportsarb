@@ -1,11 +1,12 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.extensions import redis
-from app.utils.helpers import sort_surebet_data, sort_middle_data, sort_valuebets_data
+from app.utils.helpers import sort_surebet_data, sort_middle_data, sort_valuebets_data, parse_datetime
 from app.services.odds_service import OddsService
 from app.extensions import db
 import json
 import os
+from datetime import datetime, timedelta, timezone
 
 bp = Blueprint('api', __name__)
 
@@ -72,9 +73,28 @@ def get_surebets():
   
   # Get filters
   sort = request.args.get("sort")
-  market = request.args.get("market")
+  market = request.args.get("market", 'h2h')
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
+  commence_time_filter = request.args.get("commence_time")
+  
+  if commence_time_filter:
+    now = datetime.now(timezone.utc)
+    
+    time_map = {
+      "4h": timedelta(hours=4),
+      "8h": timedelta(hours=8),
+      "12h": timedelta(hours=12),
+      "2d": timedelta(days=2),
+      "1w": timedelta(weeks=1)
+    }
+    
+    if commence_time_filter in time_map:
+      max_time = now + time_map[commence_time_filter]
+      if commence_time_filter == '1w':
+        data = [d for d in data if d.get('commence_time') and parse_datetime(d["commence_time"]) > max_time]
+      else:
+        data = [d for d in data if d.get('commence_time') and parse_datetime(d["commence_time"]) <= max_time]
   
   if market:
     data = [d for d in data if d.get('market_type', 'h2h') == market]
@@ -82,7 +102,7 @@ def get_surebets():
   if sort == "profit":
     data.sort(key=lambda x: x.get("profit", 0), reverse=True)
   elif sort == "time":
-    data.sort(key=lambda x: x.get("start_time", ""), reverse=False)
+    data.sort(key=lambda x: x.get("commence_time", ""), reverse=False)
   
   start = (page - 1) * limit
   end = start + limit
@@ -104,6 +124,26 @@ def middles():
   market = request.args.get("market")
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
+  commence_time_filter = request.args.get("commence_time")
+  
+  if commence_time_filter:
+    now = datetime.now(timezone.utc)
+    
+    time_map = {
+      "4h": timedelta(hours=4),
+      "8h": timedelta(hours=8),
+      "12h": timedelta(hours=12),
+      "2d": timedelta(days=2),
+      "1w": timedelta(weeks=1)
+    }
+    
+    if commence_time_filter in time_map:
+      max_time = now + time_map[commence_time_filter]
+      if commence_time_filter == '1w':
+        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) > max_time]
+      else:
+        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) <= max_time]
+  
   
   # Filter by market type
   if market:
@@ -139,6 +179,25 @@ def values():
   market = request.args.get("market")
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
+  commence_time_filter = request.args.get("commence_time")
+  
+  if commence_time_filter:
+    now = datetime.now(timezone.utc)
+    
+    time_map = {
+      "4h": timedelta(hours=4),
+      "8h": timedelta(hours=8),
+      "12h": timedelta(hours=12),
+      "2d": timedelta(days=2),
+      "1w": timedelta(weeks=1)
+    }
+    
+    if commence_time_filter in time_map:
+      max_time = now + time_map[commence_time_filter]
+      if commence_time_filter == '1w':
+        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) > max_time]
+      else:
+        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) <= max_time]
   
   # Filter by market type
   if market:
