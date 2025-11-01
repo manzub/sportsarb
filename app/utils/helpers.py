@@ -1,6 +1,6 @@
 import json
 import re
-from collections import defaultdict
+from collections import defaultdict, Counter
 from datetime import datetime
 from functools import wraps
 from flask_login import current_user
@@ -265,8 +265,20 @@ def get_bookmaker_links(event, selected_bookmakers, market_key):
 
 def count_bookmakers_by_surebet_id(data, surebet_id):
   """Count how many bookmakers belong to a specific surebet_id."""
-  from collections import Counter
   return sum(1 for d in data if d.get("surebet_id") == surebet_id)
+
+def get_exchange_rates():
+  from app.models import AppSettings
+  currency_settings = AppSettings.query.filter_by(setting_name='exchange_rates').first()
+  if currency_settings:
+    exchange_rates = json.loads(currency_settings.value)
+    return exchange_rates
+  return {}
+
+def convert_amount(amount_usd, target_currency):
+  exchange_rates = get_exchange_rates()
+  rate = exchange_rates.get(target_currency, 1)
+  return round(amount_usd * rate, 2)
 
 def parse_datetime(date_str):
   """

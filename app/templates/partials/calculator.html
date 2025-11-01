@@ -48,9 +48,9 @@
         const payout = (stake + parseFloat(profit)).toFixed(2);
 
         $("#result").html(`
-          <div>💰 Profit: <span class="text-green-600">$${profit}</span></div>
-          <div class="text-sm text-gray-600">Payout: $${payout}</div>
-        `);
+      <div>💰 Profit: <span class="price text-green-600" data-usd="${profit}">$${profit}</span></div>
+      <div class="text-sm text-gray-600">Payout: <span class="price" data-usd="${payout}">$${payout}</span></div>
+    `);
 
         const bets = opp.querySelectorAll('.bet-amount');
         const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
@@ -79,11 +79,16 @@
         const bothLose = -totalStake;                                       // both lose
 
         $("#result").html(`
-          <div>🎯 <strong>Hit Middle:</strong> <span class="text-green-600">$${profitMiddle.toFixed(2)}</span></div>
-          <div>⚖️ <strong>One Wins:</strong> <span class="text-yellow-600">$${oneWins.toFixed(2)}</span></div>
-          <div>💀 <strong>Both Lose:</strong> <span class="text-red-600">$${bothLose.toFixed(2)}</span></div>
-          <div class="text-xs text-gray-500 mt-2">Assuming equal stakes ($${stake1.toFixed(2)} per side)</div>
-        `);
+      <div>🎯 <strong>Hit Middle:</strong> <span class="price text-green-600" data-usd="${profitMiddle.toFixed(2)}">$${profitMiddle.toFixed(2)}</span></div>
+      <div>⚖️ <strong>One Wins:</strong> <span class="price text-yellow-600" data-usd="${oneWins.toFixed(2)}">$${oneWins.toFixed(2)}</span></div>
+      <div>💀 <strong>Both Lose:</strong> <span class="price text-red-600" data-usd="${bothLose.toFixed(2)}">$${bothLose.toFixed(2)}</span></div>
+      <div class="text-xs text-gray-500 mt-2">Assuming equal stakes (<span class="price" data-usd="${stake1.toFixed(2)}">$${stake1.toFixed(2)}</span> per side)</div>
+    `);
+      }
+
+      // ✅ Convert to selected currency immediately
+      if (typeof window.updatePrices === "function") {
+        window.updatePrices();
       }
     });
 

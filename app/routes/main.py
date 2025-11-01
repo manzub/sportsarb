@@ -2,11 +2,11 @@ import json
 import os
 from urllib.parse import unquote
 from datetime import datetime
-from flask import Blueprint, render_template, flash, request, redirect, url_for, jsonify, send_from_directory
+from flask import Blueprint, render_template, flash, request, redirect, url_for, jsonify, send_from_directory, session
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions, Alerts
-from app.utils.helpers import has_active_subscription, get_latest_data, verified_required
+from app.utils.helpers import has_active_subscription, get_latest_data, verified_required, get_exchange_rates
 
 bp = Blueprint('main', __name__)
 
@@ -19,6 +19,14 @@ def check_active_plan():
       flash('pending', 'yellow')
       pending_plan_id = user_plan.id
   return {'pending_plan_id': pending_plan_id}
+
+@bp.context_processor
+def inject_currency_data():
+  exchange_rates = get_exchange_rates()
+  return dict(
+    exchange_rates=exchange_rates,
+    preferred_currency=(current_user.preferred_currency if current_user.is_authenticated else session.get('preferred_currency', 'USD'))
+  )
 
 @bp.app_template_filter('format_date')
 def format_date(date_string):
@@ -79,18 +87,15 @@ def valuebets():
   return render_template('valuebets.html', has_active_subscription=active_subscription, total_value_items=total_value_items)
 
 @bp.route('/change_currency', methods=['POST'])
-@login_required
 def change_currency():
   currency = request.form.get('currency')
   if currency:
-    current_user.preferred_currency = currency
-    db.session.commit()
-    flash(f"Preferred currency changed to {currency}", 'emerald')
-  
-  next = request.args.get('next')
-  if not next or not next[0] == '/':
-    next = url_for('main.index')
-  return redirect(next)
+    if current_user and current_user.is_authenticated:
+      current_user.preferred_currency = currency
+      db.session.commit()
+      flash(f"Preferred currency changed to {currency}", 'emerald')
+    session['preferred_currency'] = currency
+    return redirect(request.referrer or url_for('main.index'))
 
 @bp.route('/surebet/calculator')
 def bet_calculator():

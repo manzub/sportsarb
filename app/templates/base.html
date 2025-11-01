@@ -40,10 +40,10 @@
             <form action="{{url_for('main.change_currency')}}" method="post">
               <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
               <select onchange="this.form.submit()" class="select-ghost" name="currency">
-                <option {% if current_user.preferred_currency=='USD' %} selected {% endif %} value="USD">USD</option>
-                <option {% if current_user.preferred_currency=='GBP' %} selected {% endif %} value="GBP">GBP</option>
-                <option {% if current_user.preferred_currency=='EUR' %} selected {% endif %} value="EUR">EUR</option>
-                <option {% if current_user.preferred_currency=='NGN' %} selected {% endif %} value="NGN">NGN</option>
+                <option value="USD" {{ 'selected' if session.get('preferred_currency', 'USD' )=='USD' }}>USD</option>
+                <option value="GBP" {{ 'selected' if session.get('preferred_currency', 'USD' )=='GBP' }}>GBP</option>
+                <option value="EUR" {{ 'selected' if session.get('preferred_currency', 'USD' )=='EUR' }}>EUR</option>
+                <option value="NGN" {{ 'selected' if session.get('preferred_currency', 'USD' )=='NGN' }}>NGN</option>
               </select>
             </form>
             <a class="my-2 {%if request.endpoint == 'main.index' %} text-primary-content font-bold uppercase {%else%} text-gray-400 {%endif%} transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
@@ -198,7 +198,31 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    const exchangeRates = {{ exchange_rates| tojson }};
+    let selectedCurrency = "{{ preferred_currency }}";
 
+    $(document).ready(function () {
+      const prices = document.querySelectorAll(".price");
+      const currencySymbols = { USD: "$", GBP: "£", EUR: "€", NGN: "₦" };
+
+      function updatePrices() {
+        const prices = document.querySelectorAll(".price");
+        const symbol = currencySymbols[selectedCurrency] || "";
+        prices.forEach(el => {
+          const usdValue = parseFloat(el.dataset.usd);
+          if (!isNaN(usdValue)) {
+            const rate = exchangeRates[selectedCurrency] || 1;
+            const converted = (usdValue * rate).toFixed(2);
+            el.textContent = `${symbol}${converted}`;
+          }
+        });
+      }
+
+      window.updatePrices = updatePrices;
+      updatePrices(); // run initially
+    })
+  </script>
 </body>
 
 </html>
