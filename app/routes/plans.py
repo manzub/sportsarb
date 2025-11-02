@@ -42,11 +42,11 @@ def overview():
       settings_key = f"{x.plan_name.lower()}_plan_benefit"
       benefits = AppSettings.query.filter_by(setting_name=settings_key).first()
       data = x.to_dict()
-      data['benefits'] = json.loads(benefits.value)
+      data['benefits'] = json.loads(benefits.value) if benefits and benefits.value else []
       plans_with_benefits.append(data)
   else:
-    redirect(url_for('main.index'))
-        
+    return redirect(url_for('main.index'))
+    
   return render_template('plans.html', plans=plans_with_benefits, form=form)
 
 @bp.route('/checkout/<int:plan_id>', methods=['GET'])

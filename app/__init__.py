@@ -1,5 +1,7 @@
 import os
-from flask import Flask, send_from_directory, abort
+from datetime import datetime
+from flask import Flask, send_from_directory, abort, session, flash
+from flask_login import current_user
 from flask_wtf import CSRFProtect
 from celery import Celery
 from .extensions import db, login_manager, migrate, mail
@@ -33,10 +35,52 @@ def create_app():
   mail.init_app(app)
 
   from app import models, tasks
+  from app.models import UserSubscriptions
+  from app.utils.helpers import get_exchange_rates
   app.register_blueprint(main.bp)
   app.register_blueprint(auth.bp, url_prefix='/auth')
   app.register_blueprint(api.bp, url_prefix='/api')
   app.register_blueprint(plans.bp, url_prefix='/plans')
+  
+  @app.context_processor
+  def check_active_plan():
+    pending_plan_id = None
+    if current_user and current_user.is_authenticated:
+      user_plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
+      if user_plan and not user_plan.active and user_plan.status == 'pending':
+        flash('pending', 'yellow')
+        pending_plan_id = user_plan.id
+    return {'pending_plan_id': pending_plan_id}
+
+  @app.context_processor
+  def inject_currency_data():
+    exchange_rates = get_exchange_rates() or {}
+    if not isinstance(exchange_rates, dict):
+      exchange_rates = {}
+    else:
+      exchange_rates = {k: float(v) for k, v in exchange_rates.items() if isinstance(v, (int, float))}
+
+    return dict(
+      exchange_rates=exchange_rates,
+      preferred_currency=(
+        current_user.preferred_currency if current_user.is_authenticated
+        else session.get('preferred_currency', 'USD')
+      )
+    )
+
+  @app.template_filter('format_date')
+  def format_date(date_string):
+    date = datetime.fromisoformat(date_string.replace('Z', '+00:00'))
+    return date.strftime('%Y-%m-%d %I:%M %p %Z')
+
+  @app.template_filter("days_to_months")
+  def days_filter(days):
+    import math
+    if days == 30:
+      return "Month"
+    months = math.ceil(days / 30)
+    return f"{months} Month{'s' if months > 1 else ''}"
+
   
   @app.route('/<path:filename>')
   def serve_from_static(filename):

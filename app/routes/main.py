@@ -11,37 +11,6 @@ from app.utils.arb_helper import get_latest_data
 
 bp = Blueprint('main', __name__)
 
-@bp.context_processor
-def check_active_plan():
-  pending_plan_id = None
-  if current_user and current_user.is_authenticated:
-    user_plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
-    if user_plan and not user_plan.active and user_plan.status == 'pending':
-      flash('pending', 'yellow')
-      pending_plan_id = user_plan.id
-  return {'pending_plan_id': pending_plan_id}
-
-@bp.context_processor
-def inject_currency_data():
-  exchange_rates = get_exchange_rates()
-  return dict(
-    exchange_rates=exchange_rates,
-    preferred_currency=(current_user.preferred_currency if current_user.is_authenticated else session.get('preferred_currency', 'USD'))
-  )
-
-@bp.app_template_filter('format_date')
-def format_date(date_string):
-  date = datetime.fromisoformat(date_string.replace('Z', '+00:00'))
-  return date.strftime('%Y-%m-%d %I:%M %p %Z')
-
-@bp.app_template_filter("days_to_months")
-def days_filter(days):
-  import math
-  if days == 30:
-    return "Month"
-  months = math.ceil(days / 30)
-  return f"{months} Month{'s' if months > 1 else ''}"
-
 @bp.route('/')
 @verified_required
 def index():

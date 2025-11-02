@@ -193,8 +193,11 @@ def count_bookmakers_by_surebet_id(data, surebet_id):
 
 def get_exchange_rates():
   from app.models import AppSettings
-  currency_settings = AppSettings.query.filter_by(setting_name='exchange_rates').first()
-  if currency_settings:
-    exchange_rates = json.loads(currency_settings.value)
-    return exchange_rates
-  return {}
+  try:
+    currency_settings = AppSettings.query.filter_by(setting_name='exchange_rates').first()
+    if currency_settings:
+      exchange_rates = json.loads(currency_settings.value)
+      return exchange_rates
+  except Exception as e:
+    print("Error fetching exchange rates:", e)
+    return {} 

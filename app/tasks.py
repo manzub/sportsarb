@@ -6,6 +6,7 @@ from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
 from app.services.values_finder import ValueBetsFinder
+from app.utils.helpers import db_get_bookmaker_regions, save_sport_to_db
 from app.utils.logger import setup_logging
 
 app = create_app()
@@ -13,8 +14,6 @@ celery = app.celery
 logger = setup_logging()
 
 def get_sports():
-  from app.utils.helpers import save_sport_to_db
-  
   odds_api = OddsService()
   sports = odds_api.get_sports()
   for sport in sports:
@@ -28,12 +27,13 @@ def get_sports():
 @celery.task(name='app.tasks.find_arbitrage')
 def find_arbitrage():
   sports = get_sports()
+  bookmaker_regions = db_get_bookmaker_regions()
   logger.info(f"Analyzing {len(sports)} sports...")
   
   jobs = [
-    (SurebetFinder(), {'regions': 'uk', 'markets': 'h2h,spreads,totals'}),
-    (MiddlesFinder(), {'regions': 'uk', 'markets': 'spreads,totals'}),
-    (ValueBetsFinder(), {'regions': 'uk', 'markets': 'h2h,spreads,totals'}),
+    (SurebetFinder(), {'regions': bookmaker_regions, 'markets': 'h2h,spreads,totals'}),
+    (MiddlesFinder(), {'regions': bookmaker_regions, 'markets': 'spreads,totals'}),
+    (ValueBetsFinder(), {'regions': bookmaker_regions, 'markets': 'h2h,spreads,totals'}),
   ]
   
   with ThreadPoolExecutor(max_workers=3) as executor:

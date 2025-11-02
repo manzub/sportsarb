@@ -17,8 +17,8 @@
     <nav x-data="{ isOpen: false }" class="relative bg-primary shadow">
       <div class="container px-6 py-1 mx-auto md:flex md:justify-between md:items-center">
         <div class="flex items-center justify-between">
-          <a href="{{url_for('main.index')}}">
-            <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
+          <a href="{{url_for('main.index')}}" class="flex items-center text-primary-content">
+            <ion-icon class="h-6 w-6" name="aperture-outline"></ion-icon>SBFinder
           </a>
 
           <!-- Mobile menu button -->
@@ -119,11 +119,11 @@
       </div>
     </div>
 
-    <footer class="">
+    <footer class="mt-2">
       <div class="container px-6 py-4 mx-auto">
         <div class="flex flex-col items-center text-center">
-          <a href="#">
-            <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
+          <a href="{{url_for('main.index')}}" class="flex items-center">
+            <ion-icon class="h-6 w-6" name="aperture-outline"></ion-icon>SBFinder
           </a>
 
           <div class="flex flex-wrap justify-center mt-6 -mx-4">
@@ -145,7 +145,7 @@
 
             <a href="#"
               class="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
-              aria-label="Reddit"> Cookies </a>
+              aria-label="Reddit"> FAQ </a>
           </div>
         </div>
 
@@ -199,7 +199,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
-    const exchangeRates = {{ exchange_rates| tojson }};
+    const exchangeRates = {{ exchange_rates | tojson }};
     let selectedCurrency = "{{ preferred_currency }}";
 
     $(document).ready(function () {
