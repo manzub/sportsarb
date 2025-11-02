@@ -6,7 +6,8 @@ from flask import Blueprint, render_template, flash, request, redirect, url_for,
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions, Alerts
-from app.utils.helpers import has_active_subscription, get_latest_data, verified_required, get_exchange_rates
+from app.utils.helpers import has_active_subscription, verified_required, get_exchange_rates
+from app.utils.arb_helper import get_latest_data
 
 bp = Blueprint('main', __name__)
 

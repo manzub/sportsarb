@@ -5,7 +5,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from flask_login import login_user, logout_user, login_required, current_user
 from app.forms import LoginForm
 from app.models import User, Alerts
-from app.utils.helpers import validate_email_address, send_otp_mail, send_email
+from app.utils.email_helpers import validate_email_address, send_otp_mail, send_email
 from werkzeug.security import generate_password_hash
 from app.extensions import db
 

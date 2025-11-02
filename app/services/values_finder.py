@@ -1,7 +1,8 @@
 import uuid
 from collections import defaultdict
 from app.utils.redis_helper import save_json
-from app.utils.helpers import get_bookmaker_links, update_sport_db_count
+from app.utils.helpers import update_sport_db_count
+from app.utils.arb_helper import get_bookmaker_links
 from app.services.odds_service import OddsService
 from app.utils.logger import setup_logging
 

@@ -47,7 +47,8 @@ def find_arbitrage():
 def notify_users():
   """Checks all users and sends notifications when their favorite sports/leagues get updated."""
   from app.models import User, Sports  # import inside to avoid circulars
-  from app.utils.helpers import check_valid_sports_leagues, send_email
+  from app.utils.helpers import check_valid_sports_leagues
+  from app.utils.email_helpers import send_email
   from app.utils.webpush_helper import send_webpush
   
   
