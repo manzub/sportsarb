@@ -2,6 +2,10 @@ import os
 from datetime import datetime
 from flask import Flask, send_from_directory, abort, session, flash
 from flask_login import current_user
+from flask_admin import Admin
+from flask_admin.theme import Bootstrap4Theme
+from flask_admin.menu import MenuLink
+from flask_admin.contrib.sqla import ModelView
 from flask_wtf import CSRFProtect
 from celery import Celery
 from .extensions import db, login_manager, migrate, mail
@@ -35,8 +39,10 @@ def create_app():
   mail.init_app(app)
 
   from app import models, tasks
-  from app.models import UserSubscriptions
+  from app.models import UserSubscriptions, User, AppSettings, Sports
   from app.utils.helpers import get_exchange_rates
+  from app.admin import AdminView, SecureAdminIndexView, SportView
+  
   app.register_blueprint(main.bp)
   app.register_blueprint(auth.bp, url_prefix='/auth')
   app.register_blueprint(api.bp, url_prefix='/api')
@@ -67,6 +73,13 @@ def create_app():
         else session.get('preferred_currency', 'USD')
       )
     )
+  
+  with app.app_context():
+    admin = Admin(app=app, name='Surebet Admin', index_view=SecureAdminIndexView(url='/admin', endpoint='admin'), theme=Bootstrap4Theme(swatch='flatly'))
+    admin.add_view(AdminView(User, db.session, name='Users'))
+    admin.add_view(AdminView(AppSettings, db.session, category='Settings', name='App Settings'))
+    admin.add_view(SportView(Sports, db.session, category='Settings', name='Sports'))
+    admin.add_link(MenuLink(name="Logout", category="Account", url="/auth/logout"))
   
   @app.route('/<path:filename>')
   def serve_from_static(filename):

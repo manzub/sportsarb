@@ -20,6 +20,7 @@ class User(db.Model, UserMixin):
   password = Column(Text)
   active = Column(Boolean, default=True)
   is_verified = Column(Boolean, default=False)
+  is_admin = Column(Boolean, default=False)
   otp_code = Column(String(6))
   otp_expiry = Column(DateTime)
   reset_otp = Column(String(10))

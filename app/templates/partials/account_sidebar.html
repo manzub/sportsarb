@@ -1,22 +1,33 @@
 <aside class="flex flex-col h-screen px-4 py-8 overflow-y-auto">
   <div class="flex flex-col justify-between">
     <nav>
-      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'main.account' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md" href="{{url_for('main.account')}}">
+      {% if current_user and current_user.is_admin %}
+      <a class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md" href="/admin">
+        <ion-icon class="w-5 h-5" name="pie-chart-outline"></ion-icon>
+        <span class="mx-4 font-medium">Admin</span>
+      </a>
+      {% endif %}
+
+      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'main.account' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md"
+        href="{{url_for('main.account')}}">
         <ion-icon class="w-5 h-5" name="person"></ion-icon>
         <span class="mx-4 font-medium">Account</span>
       </a>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'plans.overview' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="{{url_for('plans.overview')}}">
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'plans.overview' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700"
+        href="{{url_for('plans.overview')}}">
         <ion-icon class="w-5 h-5" name="bookmark"></ion-icon>
         <span class="mx-4 font-medium">Plans</span>
       </a>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="{{url_for('auth.request_password_reset')}}">
+      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700"
+        href="{{url_for('auth.request_password_reset')}}">
         <ion-icon class="w-5 h-5" name="refresh-circle"></ion-icon>
         <span class="mx-4 font-medium">Reset Password</span>
       </a>
 
-      <a class="flex items-center px-4 py-2 mt-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300 transform rounded-md hover:text-gray-700" href="{{url_for('auth.logout')}}">
+      <a class="flex items-center px-4 py-2 mt-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300 transform rounded-md hover:text-gray-700"
+        href="{{url_for('auth.logout')}}">
         <ion-icon class="w-5 h-5" name="log-out"></ion-icon>
         <span class="mx-4 font-medium">Logout</span>
       </a>

@@ -1,0 +1,59 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<div class="container-fluid mt-4">
+  <h2 class="text-xl font-bold mb-3">📊 Arbitrage Dashboard</h2>
+
+  <div class="row mb-4">
+    <div class="col-md-3">
+      <div class="card border-left-primary shadow-sm p-3">
+        <h5>Total Users</h5>
+        <h3 class="text-primary">{{ total_users }}</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-left-success shadow-sm p-3">
+        <h5>Sports Tracked</h5>
+        <h3 class="text-success">{{ total_sports }}</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card border-left-info shadow-sm p-3">
+        <h5>Redis Status</h5>
+        <h6>{{ redis_status }}</h6>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="mt-4 mb-3">⚽ Sports Breakdown</h4>
+  <table class="table table-striped table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Sport</th>
+        <th>Surebets</th>
+        <th>Middles</th>
+        <th>Value Bets</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in sport_stats %}
+      <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.surebets }}</td>
+        <td>{{ s.middles }}</td>
+        <td>{{ s.values_count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <h4 class="mt-4 mb-2">🖥️ System Status</h4>
+  <ul class="list-group mb-5">
+    <li class="list-group-item">CPU Usage: <strong>{{ sys_info.cpu_usage }}%</strong></li>
+    <li class="list-group-item">Memory Usage: <strong>{{ sys_info.mem_usage }}%</strong></li>
+    <li class="list-group-item">Python Version: <strong>{{ sys_info.python_version }}</strong></li>
+    <li class="list-group-item">Hostname: <strong>{{ sys_info.hostname }}</strong></li>
+    <li class="list-group-item">Uptime: <strong>{{ sys_info.uptime }}</strong></li>
+  </ul>
+</div>
+{% endblock %}
