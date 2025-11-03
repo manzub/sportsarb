@@ -63,27 +63,45 @@
       } else if (calcType === 'middle') {
         const odd1 = parseFloat($("#odd1").val());
         const odd2 = parseFloat($("#odd2").val());
+        const totalStake = stake
         if (isNaN(odd1) || isNaN(odd2) || odd1 <= 1 || odd2 <= 1) {
           $("#result").text("Please enter valid odds for both bookmakers.");
           return;
         }
 
-        // Split stake evenly by default
-        const stake1 = stake / 2;
-        const stake2 = stake / 2;
-        const totalStake = stake;
+        const stake1 = (totalStake * odd2) / (odd1 + odd2);
+        const stake2 = totalStake - stake1;
 
         // Profit scenarios
         const profitMiddle = (stake1 * (odd1 - 1)) + (stake2 * (odd2 - 1)); // both win
         const oneWins = (stake1 * (odd1 - 1)) - stake2;                     // one wins, one loses
         const bothLose = -totalStake;                                       // both lose
 
+        const payoutMiddle = totalStake + profitMiddle;
+        const payoutOneWins = totalStake + oneWins;
+        const payoutBothLose = totalStake + bothLose;
+
         $("#result").html(`
-      <div>🎯 <strong>Hit Middle:</strong> <span class="price text-green-600" data-usd="${profitMiddle.toFixed(2)}">$${profitMiddle.toFixed(2)}</span></div>
-      <div>⚖️ <strong>One Wins:</strong> <span class="price text-yellow-600" data-usd="${oneWins.toFixed(2)}">$${oneWins.toFixed(2)}</span></div>
-      <div>💀 <strong>Both Lose:</strong> <span class="price text-red-600" data-usd="${bothLose.toFixed(2)}">$${bothLose.toFixed(2)}</span></div>
-      <div class="text-xs text-gray-500 mt-2">Assuming equal stakes (<span class="price" data-usd="${stake1.toFixed(2)}">$${stake1.toFixed(2)}</span> per side)</div>
-    `);
+          <div>🎯 <strong>Hit Middle:</strong> 
+            <span class="price text-green-600" data-usd="${profitMiddle.toFixed(2)}">$${profitMiddle.toFixed(2)}</span> 
+            <small class="text-gray-500">(Payout: $${payoutMiddle.toFixed(2)})</small>
+          </div>
+
+          <div>⚖️ <strong>One Wins:</strong> 
+            <span class="price text-yellow-600" data-usd="${oneWins.toFixed(2)}">$${oneWins.toFixed(2)}</span> 
+            <small class="text-gray-500">(Payout: $${payoutOneWins.toFixed(2)})</small>
+          </div>
+
+          <div>💀 <strong>Both Lose:</strong> 
+            <span class="price text-red-600" data-usd="${bothLose.toFixed(2)}">$${bothLose.toFixed(2)}</span> 
+            <small class="text-gray-500">(Payout: $${payoutBothLose.toFixed(2)})</small>
+          </div>
+
+          <div class="text-xs text-gray-500 mt-2">
+            Balanced stakes — Bet 1: <span class="price" data-usd="${stake1.toFixed(2)}">$${stake1.toFixed(2)}</span>,
+            Bet 2: <span class="price" data-usd="${stake2.toFixed(2)}">$${stake2.toFixed(2)}</span>
+          </div>
+        `);
       }
 
       // ✅ Convert to selected currency immediately

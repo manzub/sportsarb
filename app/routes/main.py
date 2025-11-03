@@ -34,6 +34,10 @@ def index():
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('homepage.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
 
+@bp.route('/faq')
+def frequently_asked():
+  return render_template('faq.html')
+
 @bp.route('/service-worker.js')
 def service_worker():
   return send_from_directory('static', 'service-worker.js', mimetype="application/javascript")

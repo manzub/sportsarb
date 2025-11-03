@@ -22,12 +22,14 @@ dnspython==2.8.0
 email-validator==2.3.0
 fastapi==0.117.1
 Flask==3.1.2
+Flask-Admin==2.0.1
 Flask-Login==0.6.3
 Flask-Mail==0.10.0
 Flask-Migrate==4.1.0
 Flask-SQLAlchemy==3.1.1
 Flask-WTF==1.2.2
 frozenlist==1.8.0
+git-filter-repo==2.47.0
 greenlet==3.2.4
 h11==0.16.0
 http_ece==1.2.1
