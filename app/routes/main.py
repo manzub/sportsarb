@@ -6,10 +6,24 @@ from flask import Blueprint, render_template, flash, request, redirect, url_for,
 from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.models import UserSubscriptions, Subscriptions, Alerts
-from app.utils.helpers import has_active_subscription, verified_required, get_exchange_rates
+from app.utils.helpers import has_active_subscription, verified_required
 from app.utils.arb_helper import get_latest_data
 
 bp = Blueprint('main', __name__)
+
+@bp.app_template_filter('format_date')
+def format_date(date_string):
+  date = datetime.fromisoformat(date_string.replace('Z', '+00:00'))
+  return date.strftime('%Y-%m-%d %I:%M %p %Z')
+
+@bp.app_template_filter("days_to_months")
+def days_filter(days):
+  import math
+  if days == 30:
+    return "Month"
+  months = math.ceil(days / 30)
+  return f"{months} Month{'s' if months > 1 else ''}"
+
 
 @bp.route('/')
 @verified_required

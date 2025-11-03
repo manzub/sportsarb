@@ -42,7 +42,7 @@ class ValueBetsFinder:
             all_valuebets.extend(valuebets)
             update_sport_db_count(key=sport['key'], valuebets=len(all_valuebets)) #update db counts
         except Exception as e:
-          logger.error(f"Error processing sport {sport['key']}: {str(e)}")
+          logger.error(f"ValueBet - Error processing sport {sport['key']}: {str(e)}")
           continue
 
       save_json('valuebets', all_valuebets)

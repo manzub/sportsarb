@@ -1,9 +1,8 @@
 from datetime import datetime
 from functools import wraps
 from flask_login import current_user
-from flask import flash, redirect, url_for
+from flask import flash, redirect, url_for, has_app_context, current_app
 from app.extensions import db
-from app.utils.arb_helper import get_exchange_rates
 
 def has_active_subscription(user):
   if not user.current_plan:
@@ -43,24 +42,32 @@ def update_sport_db_count(key: str, **counts):
   from app.utils.logger import setup_logging
   
   logger = setup_logging()
+  
+  def _update():
+    sport = Sports.query.filter_by(league=key).first()
+    if not sport:
+      logger.warning(f"No sport found with league '{key}'")
+      return False
 
-  sport = Sports.query.filter_by(league=key).first()
-  if not sport:
-    logger.warning(f"No sport found with league '{key}'")
-    return False
+    sport.last_count = {
+      'surebets': sport.surebets,
+      'middles': sport.middles,
+      'values': sport.values
+    }
 
-  sport.last_count = {
-    'surebets': sport.surebets,
-    'middles': sport.middles,
-    'values': sport.values
-  }
+    for field in ['surebets', 'middles', 'values']:
+      if field in counts and counts[field] is not None:
+        setattr(sport, field, counts[field])
 
-  for field in ['surebets', 'middles', 'values']:
-    if field in counts and counts[field] is not None:
-      setattr(sport, field, counts[field])
+    db.session.commit()
+    return True
 
-  db.session.commit()
-  return True
+  if has_app_context():
+    return _update()
+  else:
+    app = current_app._get_current_object()
+    with app.app_context():
+      return _update()
 
 def verified_required(f):
   @wraps(f)
@@ -80,9 +87,21 @@ def db_get_bookmaker_regions():
   from app.models import AppSettings
   app_settings = AppSettings.query.filter_by(setting_name='bookmaker_regions').first()
   if app_settings:
-    bookmaker_regions = app_settings.get('value', 'uk')
+    bookmaker_regions = app_settings.value or 'uk'
     return bookmaker_regions
   return 'uk'
+
+def get_exchange_rates():
+  from app.models import AppSettings
+  import json
+  try:
+    currency_settings = AppSettings.query.filter_by(setting_name='exchange_rates').first()
+    if currency_settings:
+      exchange_rates = json.loads(currency_settings.value)
+      return exchange_rates
+  except Exception as e:
+    print("Error fetching exchange rates:", e)
+    return {} 
 
 def parse_datetime(date_str):
   """

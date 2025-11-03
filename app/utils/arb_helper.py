@@ -190,14 +190,3 @@ def get_bookmaker_links(event, selected_bookmakers, market_key):
 def count_bookmakers_by_surebet_id(data, surebet_id):
   """Count how many bookmakers belong to a specific surebet_id."""
   return sum(1 for d in data if d.get("surebet_id") == surebet_id)
-
-def get_exchange_rates():
-  from app.models import AppSettings
-  try:
-    currency_settings = AppSettings.query.filter_by(setting_name='exchange_rates').first()
-    if currency_settings:
-      exchange_rates = json.loads(currency_settings.value)
-      return exchange_rates
-  except Exception as e:
-    print("Error fetching exchange rates:", e)
-    return {} 

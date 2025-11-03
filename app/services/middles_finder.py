@@ -35,7 +35,7 @@ class MiddlesFinder:
             all_middles.extend(middles)
             update_sport_db_count(key=sport['key'], middles=len(all_middles)) #update db counts
         except Exception as e:
-          logger.error(f"Error processing sport {sport['key']}: {str(e)}")
+          logger.error(f"Middles - Error processing sport {sport['key']}: {str(e)}")
           continue
 
       save_json('middles', all_middles)

@@ -38,7 +38,7 @@ class SurebetFinder:
             all_arbs.extend(arbs)
             update_sport_db_count(key=sport['key'], surebets=len(all_arbs)) #update db counts
         except Exception as e:
-          logger.error(f"Error processing sport {sport['key']}: {str(e)}")
+          logger.error(f"Surebet - Error processing sport {sport['key']}: {str(e)}")
           continue
       save_json('surebets', all_arbs) # save to redis here
     except Exception as e:

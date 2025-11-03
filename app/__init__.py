@@ -67,20 +67,6 @@ def create_app():
         else session.get('preferred_currency', 'USD')
       )
     )
-
-  @app.template_filter('format_date')
-  def format_date(date_string):
-    date = datetime.fromisoformat(date_string.replace('Z', '+00:00'))
-    return date.strftime('%Y-%m-%d %I:%M %p %Z')
-
-  @app.template_filter("days_to_months")
-  def days_filter(days):
-    import math
-    if days == 30:
-      return "Month"
-    months = math.ceil(days / 30)
-    return f"{months} Month{'s' if months > 1 else ''}"
-
   
   @app.route('/<path:filename>')
   def serve_from_static(filename):

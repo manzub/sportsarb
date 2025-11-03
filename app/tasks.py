@@ -6,7 +6,7 @@ from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
 from app.services.values_finder import ValueBetsFinder
-from app.utils.helpers import db_get_bookmaker_regions, save_sport_to_db
+from app.utils.helpers import save_sport_to_db
 from app.utils.logger import setup_logging
 
 app = create_app()
@@ -27,7 +27,8 @@ def get_sports():
 @celery.task(name='app.tasks.find_arbitrage')
 def find_arbitrage():
   sports = get_sports()
-  bookmaker_regions = db_get_bookmaker_regions()
+  # bookmaker_regions = db_get_bookmaker_regions()
+  bookmaker_regions = 'uk,eu'
   logger.info(f"Analyzing {len(sports)} sports...")
   
   jobs = [
@@ -36,8 +37,15 @@ def find_arbitrage():
     (ValueBetsFinder(), {'regions': bookmaker_regions, 'markets': 'h2h,spreads,totals'}),
   ]
   
+  def run_with_context(finder, cfg):
+    with app.app_context():
+      finder.find_arbitrage(
+        sports=sports,
+        config=cfg
+      )
+  
   with ThreadPoolExecutor(max_workers=3) as executor:
-    futures = [executor.submit(finder.find_arbitrage, sports, cfg) for finder, cfg in jobs]
+    futures = [executor.submit(run_with_context, finder, cfg) for finder, cfg in jobs]
     [f.result() for f in futures] 
   
   logger.info("All finders completed successfully.")
@@ -114,7 +122,7 @@ def notify_users():
 celery.conf.beat_schedule = {
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=5),  # 5 minutes
+    'schedule': timedelta(minutes=1),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',
