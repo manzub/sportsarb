@@ -1,6 +1,6 @@
 import string
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
 from app.forms import LoginForm
@@ -86,7 +86,7 @@ def request_password_reset():
 
   otp = generate_otp()
   user.reset_otp = otp
-  user.reset_otp_expiry = datetime.now() + timedelta(minutes=10)
+  user.reset_otp_expiry = datetime.now(timezone.utc) + timedelta(minutes=10)
   db.session.commit()
 
   send_email(
@@ -111,7 +111,7 @@ def reset_password():
       flash('Invalid OTP or email', 'red')
       return redirect(url_for('auth.reset_password'))
 
-    if user.reset_otp_expiry < datetime.now():
+    if user.reset_otp_expiry < datetime.now(timezone.utc):
       flash('OTP expired, please request again.', 'warning')
       return redirect(url_for('auth.reset_password'))
 

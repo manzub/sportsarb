@@ -2,7 +2,7 @@ from flask_admin.contrib.sqla import ModelView
 from flask_admin import AdminIndexView, expose
 from flask_login import current_user
 from flask import redirect, url_for, request
-from datetime import datetime
+from datetime import datetime, timezone
 from app.extensions import redis
 from app.models import Sports, User
 import platform, psutil
@@ -32,7 +32,7 @@ class SecureAdminIndexView(AdminIndexView):
 
     # --- System info (server stats) ---
     sys_info = {
-      "uptime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+      "uptime": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
       "cpu_usage": psutil.cpu_percent(interval=0.5),
       "mem_usage": psutil.virtual_memory().percent,
       "python_version": platform.python_version(),

@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from flask import Blueprint, request, flash, redirect, url_for, render_template, jsonify, session, current_app
 from flask_login import current_user, login_required
 from app.forms import SelectPlan
@@ -26,7 +26,7 @@ def overview():
             db.session.delete(plan)
             db.session.commit()
           # create new plan
-          end_date = datetime.now() + timedelta(days=30)
+          end_date = datetime.now(timezone.utc) + timedelta(days=30)
           new_plan = UserSubscriptions(user_id=current_user.id, active=False, plan_id=form.plan_id.data, start_date=datetime.utcnow(), end_date=end_date)
           db.session.add(new_plan)
           db.session.commit()
@@ -110,8 +110,8 @@ def session_status():
       if subscription and not subscription.active:
           subscription.status = 'active'
           subscription.active = True
-          subscription.start_date = datetime.now()
-          subscription.end_date = datetime.now() + timedelta(days=30)
+          subscription.start_date = datetime.now(timezone.utc)
+          subscription.end_date = datetime.now(timezone.utc) + timedelta(days=30)
           db.session.add(subscription)
 
       # Log to Transactions table

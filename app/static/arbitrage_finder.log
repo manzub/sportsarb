@@ -5381,3 +5381,129 @@
 2025-11-03 23:36:02,631 - INFO - 127.0.0.1 - - [03/Nov/2025 23:36:02] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js.map HTTP/1.1[0m" 304 -
 2025-11-03 23:36:02,634 - INFO - 127.0.0.1 - - [03/Nov/2025 23:36:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2025-11-03 23:36:04,063 - INFO - 127.0.0.1 - - [03/Nov/2025 23:36:04] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 12:42:37,459 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-11-05 12:42:37,882 - INFO -  * Restarting with stat
+2025-11-05 13:17:37,648 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.16.11.241:5001
+2025-11-05 13:17:37,649 - INFO - [33mPress CTRL+C to quit[0m
+2025-11-05 13:17:37,650 - INFO -  * Restarting with stat
+2025-11-05 13:17:38,926 - WARNING -  * Debugger is active!
+2025-11-05 13:17:38,956 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:18:00,652 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "GET /admin/ HTTP/1.1" 200 -
+2025-11-05 13:18:00,672 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:18:00,695 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,698 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,702 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,703 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,704 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,713 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,714 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,717 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,717 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,720 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,721 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,722 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,831 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[33mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js.map HTTP/1.1[0m" 404 -
+2025-11-05 13:18:00,833 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js.map HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,843 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/bootstrap4/util.js.map HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,844 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js.map HTTP/1.1[0m" 304 -
+2025-11-05 13:18:00,856 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:00] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:18:02,390 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:02] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:18:04,245 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-11-05 13:18:04,281 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "GET / HTTP/1.1" 200 -
+2025-11-05 13:18:04,336 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:18:04,387 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "GET /static/src/output.css HTTP/1.1" 200 -
+2025-11-05 13:18:04,410 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 13:18:04,730 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:18:04,730 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:04] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:18:05,874 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:05] "GET / HTTP/1.1" 200 -
+2025-11-05 13:18:05,891 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:18:05,899 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:05] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:18:06,028 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:06] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 13:18:06,061 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:06] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:18:06,061 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:18:06,217 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:06] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:18:07,648 - INFO - 127.0.0.1 - - [05/Nov/2025 13:18:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:18:20,430 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 13:18:20,809 - INFO -  * Restarting with stat
+2025-11-05 13:18:22,472 - WARNING -  * Debugger is active!
+2025-11-05 13:18:22,507 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:18:29,579 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-11-05 13:18:29,944 - INFO -  * Restarting with stat
+2025-11-05 13:18:31,484 - WARNING -  * Debugger is active!
+2025-11-05 13:18:31,515 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:19:53,401 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-11-05 13:19:53,733 - INFO -  * Restarting with stat
+2025-11-05 13:19:55,289 - WARNING -  * Debugger is active!
+2025-11-05 13:19:55,317 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:20:29,677 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 13:20:30,120 - INFO -  * Restarting with stat
+2025-11-05 13:20:31,689 - WARNING -  * Debugger is active!
+2025-11-05 13:20:31,720 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:21:39,376 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-05 13:21:39,739 - INFO -  * Restarting with stat
+2025-11-05 13:21:41,362 - WARNING -  * Debugger is active!
+2025-11-05 13:21:41,395 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:22:45,954 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:45] "GET / HTTP/1.1" 200 -
+2025-11-05 13:22:45,999 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:22:46,011 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:22:46,094 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:46] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 13:22:46,443 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:46] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:22:46,443 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:22:47,744 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:47] "GET /middles HTTP/1.1" 200 -
+2025-11-05 13:22:47,778 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:22:47,799 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:22:47,801 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:47] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:22:47,860 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:47] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 13:22:48,045 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:48] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:22:48,048 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:22:48,963 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:48] "GET /valuebets HTTP/1.1" 200 -
+2025-11-05 13:22:48,988 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:22:48,996 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:22:49,164 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:49] "GET /api/values?page=1&limit=20&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 13:22:49,168 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:22:49,386 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:49] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:22:49,509 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:49] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:22:50,713 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:50] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:22:51,638 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "GET / HTTP/1.1" 200 -
+2025-11-05 13:22:51,670 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:22:51,690 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:22:51,748 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 13:22:51,971 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:22:51,972 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:22:53,390 - INFO - 127.0.0.1 - - [05/Nov/2025 13:22:53] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 13:23:27,445 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-11-05 13:23:27,806 - INFO -  * Restarting with stat
+2025-11-05 13:23:29,494 - WARNING -  * Debugger is active!
+2025-11-05 13:23:29,526 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:23:41,654 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-05 13:23:42,014 - INFO -  * Restarting with stat
+2025-11-05 13:23:43,500 - WARNING -  * Debugger is active!
+2025-11-05 13:23:43,529 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:24:18,816 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 13:24:19,177 - INFO -  * Restarting with stat
+2025-11-05 13:24:20,892 - WARNING -  * Debugger is active!
+2025-11-05 13:24:20,919 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:26:13,145 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-05 13:26:13,492 - INFO -  * Restarting with stat
+2025-11-05 13:26:15,175 - WARNING -  * Debugger is active!
+2025-11-05 13:26:15,221 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:26:38,457 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 13:26:38,803 - INFO -  * Restarting with stat
+2025-11-05 13:26:40,310 - WARNING -  * Debugger is active!
+2025-11-05 13:26:40,338 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 13:28:23,799 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:23] "GET /valuebets HTTP/1.1" 200 -
+2025-11-05 13:28:23,830 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:28:23,851 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:23] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:28:24,084 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:28:24,415 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:28:24,462 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "GET /api/values?page=1&limit=20&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 13:28:24,787 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "GET /valuebets HTTP/1.1" 200 -
+2025-11-05 13:28:24,800 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 13:28:24,805 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 13:28:24,996 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 13:28:25,199 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:25] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 13:28:25,296 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:25] "GET /api/values?page=1&limit=20&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 13:28:26,563 - INFO - 127.0.0.1 - - [05/Nov/2025 13:28:26] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -

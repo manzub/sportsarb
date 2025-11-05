@@ -1,20 +1,21 @@
 # tasks to save to redis here and run in celery
 from app import create_app
-from datetime import timedelta
+from datetime import timedelta, datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
 from app.services.values_finder import ValueBetsFinder
 from app.utils.helpers import save_sport_to_db
+from app.utils.redis_helper import save_odds_data
 from app.utils.logger import setup_logging
 
 app = create_app()
 celery = app.celery
 logger = setup_logging()
+odds_api = OddsService()
 
 def get_sports():
-  odds_api = OddsService()
   sports = odds_api.get_sports()
   for sport in sports:
     if isinstance(sport, dict) and 'key' in sport:
@@ -24,28 +25,42 @@ def get_sports():
         print(f"Error saving sport {sport.get('key')}: {e}")
   return sports
 
+@celery.task(name='app.tasks.fetch_and_cache_odds')
+def fetch_and_cache_odds():
+  sports = get_sports()
+  bookmaker_regions = 'uk,eu'
+  
+  all_odds = {}
+  for sport in sports:
+    all_odds[sport['key']] = odds_api.get_odds(sport['key'], regions=bookmaker_regions)
+    if odds_api.api_limit_reached:
+      logger.warning("API limit reached. Stopping analysis.")
+      break
+
+    
+  save_odds_data(all_odds)
+  print(f"[{datetime.now(timezone.utc)}] Cached odds for {len(all_odds)} sports.")
+
 @celery.task(name='app.tasks.find_arbitrage')
 def find_arbitrage():
   sports = get_sports()
-  # bookmaker_regions = db_get_bookmaker_regions()
-  bookmaker_regions = 'uk,eu'
   logger.info(f"Analyzing {len(sports)} sports...")
   
   jobs = [
-    (SurebetFinder(), {'regions': bookmaker_regions, 'markets': 'h2h,spreads,totals'}),
-    (MiddlesFinder(), {'regions': bookmaker_regions, 'markets': 'spreads,totals'}),
-    (ValueBetsFinder(), {'regions': bookmaker_regions, 'markets': 'h2h,spreads,totals'}),
+    (SurebetFinder()),
+    (MiddlesFinder()),
+    (ValueBetsFinder()),
   ]
   
-  def run_with_context(finder, cfg):
+  def run_with_context(finder):
     with app.app_context():
       finder.find_arbitrage(
         sports=sports,
-        config=cfg
+        markets=odds_api.markets
       )
   
   with ThreadPoolExecutor(max_workers=3) as executor:
-    futures = [executor.submit(run_with_context, finder, cfg) for finder, cfg in jobs]
+    futures = [executor.submit(run_with_context, finder) for finder in jobs]
     [f.result() for f in futures] 
   
   logger.info("All finders completed successfully.")
@@ -120,12 +135,16 @@ def notify_users():
   return "Done"
   
 celery.conf.beat_schedule = {
+  'fetch-and-cache-odds': {
+    'task': 'app.tasks.fetch_and_cache_odds',
+    'schedule': timedelta(minutes=1),
+  },
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=1),  # 5 minutes
+    'schedule': timedelta(minutes=2),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',
-    'schedule': timedelta(minutes=1)
+    'schedule': timedelta(minutes=15)
   }
 }

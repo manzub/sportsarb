@@ -9,7 +9,7 @@ class OddsService:
     load_dotenv()
     self.api_key = os.getenv('ODDS_API_KEY')
     self.base_url = 'https://api.the-odds-api.com/v4'
-    self.markets = 'h2h,spreads'
+    self.markets = 'h2h,spreads,totals'
     self.remaining_requests = None
     self.used_requests = None
     self.api_limit_reached = False
@@ -29,18 +29,19 @@ class OddsService:
       self.handle_api_error(e)
       return []
 
-  def get_odds(self, sport_key, config):
+  def get_odds(self, sport, regions):
     if self.use_offline:
-      return self.load_offline_data()['odds'].get(sport_key, [])
+      return self.load_offline_data()['odds'].get(sport, [])
   
-    url = f"{self.base_url}/sports/{sport_key}/odds"
+    url = f"{self.base_url}/sports/{sport}/odds"
     params = {
       'api_key': self.api_key,
       'includeLinks': 'true',
       'oddsFormat': 'decimal',
       'dateFormat': 'iso',
-      **config
-    }
+      'regions': regions,
+      'markets': self.markets
+      }
     try:
       resp = requests.get(url, params=params)
       if resp.status_code == 422:
@@ -51,7 +52,7 @@ class OddsService:
       
       odds_data = resp.json()
       if self.save_offline:
-        self.save_data_for_sport(sport_key, odds_data)
+        self.save_data_for_sport(sport, odds_data)
       return odds_data
     except Exception as e:
       self.handle_api_error(e)

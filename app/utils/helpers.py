@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from functools import wraps
 from flask_login import current_user
 from flask import flash, redirect, url_for, has_app_context, current_app
@@ -9,7 +9,7 @@ def has_active_subscription(user):
     return False
   
   sub = user.current_plan
-  return (sub.active and sub.start_date <= datetime.now() and (sub.end_date is None or sub.end_date >= datetime.now()))
+  return (sub.active and sub.start_date <= datetime.now(timezone.utc) and (sub.end_date is None or sub.end_date >= datetime.now(timezone.utc)))
 
 def check_valid_sports_leagues(user):
   from app.models import Sports

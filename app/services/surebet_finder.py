@@ -1,10 +1,9 @@
 import uuid
 from collections import defaultdict
 from difflib import get_close_matches
-from app.utils.redis_helper import save_json
+from app.utils.redis_helper import save_json, get_cached_odds
 from app.utils.arb_helper import get_bookmaker_links
 from app.utils.helpers import update_sport_db_count
-from app.services.odds_service import OddsService
 from app.utils.logger import setup_logging
 
 logger = setup_logging()
@@ -13,12 +12,11 @@ logger = setup_logging()
 # find best_odds
 class SurebetFinder:
   def __init__(self):
-    self.odds_api = OddsService()
     self.cutoff = 1
     self.team_name_cache = {}
     self.markets = None
     
-  def find_arbitrage(self, sports, config):
+  def find_arbitrage(self, sports, markets):
     try:
       if not sports:
         logger.error("Failed to fetch sports data")
@@ -26,13 +24,10 @@ class SurebetFinder:
       logger.info(f"Analyzing {len(sports)} in-season sports...")
       
       all_arbs = []
-      self.markets = config['markets'].split(',') if 'markets' in config else ['h2h']
+      self.markets = markets.split(',') if markets else ['h2h']
       for sport in sports:
         try:
-          odds = self.odds_api.get_odds(sport_key=sport['key'], config=config)
-          if self.odds_api.api_limit_reached:
-            logger.warning("API limit reached. Stopping analysis.")
-            break
+          odds = get_cached_odds(sport['key'])
           if odds:
             arbs = self.calculate_arbitrage(odds, sport['group']) # calculate arbs
             all_arbs.extend(arbs)

@@ -1,35 +1,29 @@
 import uuid
 from collections import defaultdict
-from app.utils.redis_helper import save_json
+from app.utils.redis_helper import save_json, get_cached_odds
 from app.utils.helpers import update_sport_db_count
 from app.utils.arb_helper import get_bookmaker_links
-from app.services.odds_service import OddsService
 from app.utils.logger import setup_logging
 
 logger = setup_logging()
 
 class MiddlesFinder:
   def __init__(self):
-    self.odds_api = OddsService()
     self.markets = ['spreads', 'totals']
     self.seen_middles = set()
 
-  def find_arbitrage(self, sports, config):
+  def find_arbitrage(self, sports, markets):
     try:
       if not sports:
         logger.error("Failed to fetch sports data")
         return
 
       all_middles = []
-      self.markets = config.get('markets', 'spreads,totals').split(',')
+      self.markets = markets.split(',') if markets else ['spreads', 'totals']
 
       for sport in sports:
         try:
-          odds = self.odds_api.get_odds(sport_key=sport['key'], config=config)
-          if self.odds_api.api_limit_reached:
-            logger.warning("API limit reached. Stopping analysis.")
-            break
-
+          odds = get_cached_odds(sport=sport['key'])
           if odds:
             middles = self.calculate_arbitrage(odds, sport['group'])
             all_middles.extend(middles)
