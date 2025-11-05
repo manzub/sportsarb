@@ -17,7 +17,7 @@ class User(db.Model, UserMixin):
   __tablename__ = "users"
   id = Column(Integer, primary_key=True)
   email = Column(String(250), unique=True)
-  password = Column(Text)
+  password = Column(Text, nullable=True)
   active = Column(Boolean, default=True)
   is_verified = Column(Boolean, default=False)
   is_admin = Column(Boolean, default=False)
@@ -28,12 +28,13 @@ class User(db.Model, UserMixin):
   favorite_leagues = Column(MutableList.as_mutable(JSONB), default=list)
   favorite_sports = Column(MutableList.as_mutable(JSONB), default=list)
   preferred_currency = Column(String(3), default="USD")
+  auth_provider = Column(String(50), default="local")
   current_plan = relationship('UserSubscriptions', back_populates='user', uselist=False, cascade="all, delete-orphan")
   alert_settings = relationship('Alerts', backref='users', uselist=False, cascade="all, delete-orphan")
   
   def __init__(self, email, password):
     self.email = email
-    self.password = generate_password_hash(password)
+    self.password = generate_password_hash(password) if password else None
 
   @property
   def is_active(self):

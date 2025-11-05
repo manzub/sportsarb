@@ -1,8 +1,13 @@
 import string
 import random
+import requests
+import os
 from datetime import datetime, timedelta, timezone
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
+from google.oauth2 import id_token
+from google.auth.transport import requests as grequests
+from google_auth_oauthlib.flow import Flow
 from app.forms import LoginForm
 from app.models import User, Alerts
 from app.utils.email_helpers import validate_email_address, send_otp_mail, send_email
@@ -10,9 +15,76 @@ from werkzeug.security import generate_password_hash
 from app.extensions import db
 
 bp = Blueprint('auth', __name__)
+os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"  # for local dev only
+GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')
+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID')
+
+flow = Flow.from_client_config(
+  {
+    "web": {
+        "client_id": GOOGLE_CLIENT_ID,
+        "client_secret": GOOGLE_CLIENT_SECRET,
+        "redirect_uris": ["http://localhost:5001/auth/google"],
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token"
+    }
+  },
+  scopes=["https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "openid"]
+)
 
 def generate_otp():
   return ''.join(random.choices(string.digits, k=6))
+
+@bp.route("google/login")
+def google_login():
+  flow.redirect_uri = url_for("auth.google_auth", _external=True)
+  authorization_url, state = flow.authorization_url(
+      access_type="offline",
+      include_granted_scopes="true"
+  )
+  session["state"] = state
+  return redirect(authorization_url)
+
+@bp.route('/google')
+def google_auth():
+  flow.redirect_uri = url_for("auth.google_auth", _external=True)
+  
+  flow.fetch_token(authorization_response=request.url)
+  if not session.get("state") == request.args.get("state"):
+    return "Invalid state parameter", 400
+  
+  try:
+    credentials = flow.credentials
+    request_session = requests.Session()
+    token_request = grequests.Request(session=request_session)
+
+    response = request_session.get(
+      "https://www.googleapis.com/oauth2/v2/userinfo",
+      headers={"Authorization": f"Bearer {credentials.token}"}
+    )
+    user_info = response.json()
+    email = user_info["email"]
+
+    user = User.query.filter_by(email=email).first()
+    if not user:
+      # Create new user (no password needed)
+      user = User(email=email, password=None)
+      user.is_verified = True
+      db.session.add(user)
+      
+      alerts_conf = Alerts(user.id)
+      db.session.add(alerts_conf)
+      db.session.commit()
+
+    session['user_email'] = user.email
+    login_user(user, remember=True)
+    
+    flash("Login successfull", "yellow")
+    return redirect(url_for('main.index'))
+
+  except ValueError:
+    flash("Invalid Google token", "red")
+    return redirect(url_for('auth.login'))
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -52,7 +124,7 @@ def login():
       else:
         flash('Password is incorrect', 'red')
           
-  return render_template('login.html', form=form)
+  return render_template('login.html', form=form, google_client_id=GOOGLE_CLIENT_ID)
 
 @bp.route('/confirmation/<int:user_id>', methods=['GET', 'POST'])
 def confirmation(user_id):

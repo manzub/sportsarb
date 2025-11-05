@@ -9,7 +9,11 @@ def has_active_subscription(user):
     return False
   
   sub = user.current_plan
-  return (sub.active and sub.start_date <= datetime.now(timezone.utc) and (sub.end_date is None or sub.end_date >= datetime.now(timezone.utc)))
+  
+  start_date = sub.start_date.replace(tzinfo=timezone.utc) if sub.start_date.tzinfo is None else sub.start_date
+  end_date = sub.end_date.replace(tzinfo=timezone.utc) if sub.end_date and sub.end_date.tzinfo is None else sub.end_date
+  now = datetime.now(timezone.utc)
+  return sub.active and start_date <= now and (end_date is None or end_date >= now)
 
 def check_valid_sports_leagues(user):
   from app.models import Sports
