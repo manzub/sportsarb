@@ -44,22 +44,40 @@
 
       if (calcType === 'surebet') {
         const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
-        const profit = (stake * profitMargin).toFixed(2);
-        const payout = (stake + parseFloat(profit)).toFixed(2);
-
-        $("#result").html(`
-      <div>💰 Profit: <span class="price text-green-600" data-usd="${profit}">$${profit}</span></div>
-      <div class="text-sm text-gray-600">Payout: <span class="price" data-usd="${payout}">$${payout}</span></div>
-    `);
-
-        const bets = opp.querySelectorAll('.bet-amount');
         const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
-        bets.forEach(bet => {
-          const impliedProb = parseFloat(bet.getAttribute('data-implied-prob'));
-          const betAmount = (stake * impliedProb / totalImpliedProb).toFixed(2);
-          bet.textContent = betAmount;
-        });
 
+        // Extract odds from DOM
+        const odds = Array.from(opp.querySelectorAll('.bet-amount')).map(bet =>
+          1 / parseFloat(bet.getAttribute('data-implied-prob'))
+        );
+
+        if (odds.length < 2) {
+          $("#result").text("Not enough outcomes to calculate.");
+          return;
+        }
+
+        const [oddA, oddB] = odds;
+
+        // Calculate proportional stakes for equal payout
+        const stakeA = stake / (1 + (oddA / oddB));
+        const stakeB = stake - stakeA;
+
+        const payoutA = stakeA * oddA;
+        const payoutB = stakeB * oddB;
+
+        const profit = Math.min(payoutA, payoutB) - stake;
+        const payout = Math.min(payoutA, payoutB);
+
+        // Update result display
+        $("#result").html(`
+          <div>💰 Profit: <span class="price text-green-600" data-usd="${profit.toFixed(2)}">$${profit.toFixed(2)}</span></div>
+          <div class="text-sm text-gray-600">Payout: <span class="price" data-usd="${payout.toFixed(2)}">$${payout.toFixed(2)}</span></div>
+        `);
+
+        // Update bet allocations in DOM
+        const bets = opp.querySelectorAll('.bet-amount');
+        bets[0].textContent = stakeA.toFixed(2);
+        bets[1].textContent = stakeB.toFixed(2);
       } else if (calcType === 'middle') {
         const odd1 = parseFloat($("#odd1").val());
         const odd2 = parseFloat($("#odd2").val());

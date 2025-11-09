@@ -187,8 +187,8 @@ class SurebetFinder:
   def get_best_odds_spreads(self, event):
     event_teams = [event['home_team'], event['away_team']]
     odds_by_points = defaultdict(lambda: {
-      'Home': {'odds': 0, 'team': None, 'bookmaker': None},
-      'Away': {'odds': 0, 'team': None, 'bookmaker': None}
+      'Home': {'odds': 0, 'team': None, 'bookmaker': None, 'point': None},
+      'Away': {'odds': 0, 'team': None, 'bookmaker': None, 'point': None}
     })
     
     if 'bookmakers' in event and isinstance(event['bookmakers'], list):
@@ -199,6 +199,11 @@ class SurebetFinder:
               for outcome in market['outcomes']:
                 point = outcome.get('point')
                 if point is not None:
+                  try:
+                    point = float(point)
+                  except (ValueError, TypeError):
+                    continue
+
                   # Standardize team name
                   team_name = self.standardize_team_name(outcome['name'], event_teams)
                   if not team_name:
@@ -206,13 +211,14 @@ class SurebetFinder:
 
                   # Determine if team is home or away
                   side = 'Home' if team_name == event['home_team'] else 'Away'
-                  
+
                   # Store odds if better than existing
                   if outcome['price'] > odds_by_points[point][side]['odds']:
                     odds_by_points[point][side] = {
                       'odds': outcome['price'],
                       'team': team_name,
-                      'bookmaker': bookmaker['title']
+                      'bookmaker': bookmaker['title'],
+                      'point': point
                     }
 
     # Find the best arbitrage opportunity across all point spreads
@@ -222,39 +228,45 @@ class SurebetFinder:
     best_implied_prob = float('inf')
 
     for point, sides in odds_by_points.items():
-      # Verify we have odds for both sides and different bookmakers
+      # Verify both sides exist and are from different bookmakers
       if (sides['Home']['odds'] > 0 and sides['Away']['odds'] > 0 and
-        sides['Home']['bookmaker'] != sides['Away']['bookmaker']):
-        
-        # Calculate implied probability for this spread
-        home_prob = 1/sides['Home']['odds']
-        away_prob = 1/sides['Away']['odds']
-        implied_prob = home_prob + away_prob
-        
-        logger.info(f"Checking spread {point}:")
-        logger.info(f"  Home: {sides['Home']['team']} @ {sides['Home']['odds']} ({sides['Home']['bookmaker']}) - Implied prob: {home_prob:.4f}")
-        logger.info(f"  Away: {sides['Away']['team']} @ {sides['Away']['odds']} ({sides['Away']['bookmaker']}) - Implied prob: {away_prob:.4f}")
-        logger.info(f"  Total implied prob: {implied_prob:.4f}")
-        
-        if implied_prob < 1:  # Changed from best_implied_prob to 1
-          best_implied_prob = implied_prob
-          best_odds = {
+          sides['Home']['bookmaker'] != sides['Away']['bookmaker']):
+
+          home_point = sides['Home']['point']
+          away_point = sides['Away']['point']
+
+          # ✅ Ensure one side is negative and the other positive (opposite spreads)
+          # or allow small ±0.5 tolerance for discrepancies like -6.0 vs +6.5
+          if (home_point * away_point >= 0) and abs(home_point + away_point) > 0.5:
+            continue
+
+          home_prob = 1 / sides['Home']['odds']
+          away_prob = 1 / sides['Away']['odds']
+          implied_prob = home_prob + away_prob
+
+          logger.info(f"Checking spread {point}:")
+          logger.info(f"  Home: {sides['Home']['team']} ({home_point}) @ {sides['Home']['odds']} ({sides['Home']['bookmaker']}) - Implied prob: {home_prob:.4f}")
+          logger.info(f"  Away: {sides['Away']['team']} ({away_point}) @ {sides['Away']['odds']} ({sides['Away']['bookmaker']}) - Implied prob: {away_prob:.4f}")
+          logger.info(f"  Total implied prob: {implied_prob:.4f}")
+
+          if implied_prob < 1:
+            best_implied_prob = implied_prob
+            best_odds = {
               sides['Home']['team']: sides['Home']['odds'],
               sides['Away']['team']: sides['Away']['odds']
-          }
-          best_bookmakers = {
+            }
+            best_bookmakers = {
               sides['Home']['team']: sides['Home']['bookmaker'],
               sides['Away']['team']: sides['Away']['bookmaker']
-          }
-          best_points = point
-          
-          logger.info(f"Found arbitrage opportunity at {point} points:")
-          logger.info(f"  Home: {sides['Home']['team']} @ {sides['Home']['odds']} ({sides['Home']['bookmaker']})")
-          logger.info(f"  Away: {sides['Away']['team']} @ {sides['Away']['odds']} ({sides['Away']['bookmaker']})")
-          logger.info(f"  Implied Probability: {implied_prob}")
+            }
+            best_points = (home_point, away_point)
+
+            logger.info(f"Found valid arbitrage opportunity:")
+            logger.info(f"  Home: {sides['Home']['team']} {home_point} @ {sides['Home']['odds']} ({sides['Home']['bookmaker']})")
+            logger.info(f"  Away: {sides['Away']['team']} {away_point} @ {sides['Away']['odds']} ({sides['Away']['bookmaker']})")
+            logger.info(f"  Implied Probability: {implied_prob:.4f}")
 
     if best_odds:
-      # Add spread information to best_odds
       best_odds['spread'] = best_points
       return best_odds, best_bookmakers, best_points
     else:

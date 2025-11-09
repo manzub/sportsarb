@@ -1,5 +1,6 @@
 import requests, os, json
 from dotenv import load_dotenv
+from datetime import datetime, timedelta, timezone
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 OFFLINE_FILE = os.path.join(BASE_DIR, '../static', 'arbitrage_results.json')
@@ -32,6 +33,16 @@ class OddsService:
   def get_odds(self, sport, regions):
     if self.use_offline:
       return self.load_offline_data()['odds'].get(sport, [])
+    
+    if self.api_limit_reached:
+      return []
+    
+    now = datetime.now(timezone.utc)
+    from_date = now + timedelta(days=2)
+    to_date = now + timedelta(days=7)
+
+    commence_time_from = from_date.strftime('%Y-%m-%dT%H:%M:%SZ')
+    commence_time_to = to_date.strftime('%Y-%m-%dT%H:%M:%SZ')
   
     url = f"{self.base_url}/sports/{sport}/odds"
     params = {
@@ -40,7 +51,9 @@ class OddsService:
       'oddsFormat': 'decimal',
       'dateFormat': 'iso',
       'regions': regions,
-      'markets': self.markets
+      'markets': self.markets,
+      'commenceTimeFrom': commence_time_from,
+      'commenceTimeTo': commence_time_to
       }
     try:
       resp = requests.get(url, params=params)

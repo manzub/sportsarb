@@ -28,7 +28,7 @@ def get_sports():
 @celery.task(name='app.tasks.fetch_and_cache_odds')
 def fetch_and_cache_odds():
   sports = get_sports()
-  bookmaker_regions = 'uk,eu'
+  bookmaker_regions = 'uk'
   
   all_odds = {}
   for sport in sports:

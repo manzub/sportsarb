@@ -48,7 +48,7 @@ class MiddlesFinder:
     return all_middles
 
   def _find_middles(self, event, market_type, sport_group):
-    """Finds middles (spreads/totals) for one event."""
+    """Find true middles (spreads/totals) for one event."""
     bookmakers = event.get('bookmakers', [])
     if not bookmakers:
       return []
@@ -57,7 +57,6 @@ class MiddlesFinder:
     middles = []
     bookmaker_names = list(market_data.keys())
 
-    # Pairwise comparison of all bookmakers
     for i in range(len(bookmaker_names)):
       for j in range(i + 1, len(bookmaker_names)):
         b1, b2 = bookmaker_names[i], bookmaker_names[j]
@@ -78,24 +77,24 @@ class MiddlesFinder:
           if line1 is None or line2 is None:
             continue
 
-          # ✅ skip symmetrical or opposite lines (e.g. -9.5 / +9.5)
-          if abs(line1) == abs(line2):
-            continue
+          # skip lines on the same side (both positive or both negative)
+          if (line1 > 0 and line2 > 0) or (line1 < 0 and line2 < 0):
+              continue
 
-          # ✅ ensure a valid middle window
-          window = round(line2 - line1, 2)
+          # calculate middle window (range between the two lines)
+          window = round(abs(line2 - line1), 2)
           if not (0 < window <= self._max_window_for_sport(sport_group)):
             continue
 
-          # ✅ confidence score (narrower window → higher confidence)
+          # Confidence score: smaller window = higher confidence
           confidence = max(0, 1 - (window / self._max_window_for_sport(sport_group)))
 
-          # ✅ EV estimation
+          # Estimate EV
           ev = self._estimate_ev(price1, price2)
           if ev is None or ev < 0:
             continue
 
-          # ✅ filter low-confidence middles
+          # Filter out low-confidence middles
           if confidence < 0.5:
             continue
 

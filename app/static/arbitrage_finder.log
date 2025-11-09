@@ -6103,3 +6103,284 @@
 2025-11-05 17:38:42,204 - INFO - 127.0.0.1 - - [05/Nov/2025 17:38:42] "GET /api/sports HTTP/1.1" 200 -
 2025-11-05 17:38:42,205 - INFO - 127.0.0.1 - - [05/Nov/2025 17:38:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2025-11-05 17:38:43,578 - INFO - 127.0.0.1 - - [05/Nov/2025 17:38:43] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 17:39:01,728 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:01] "GET /account HTTP/1.1" 200 -
+2025-11-05 17:39:01,830 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 17:39:01,888 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 17:39:01,933 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 17:39:03,494 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "GET / HTTP/1.1" 200 -
+2025-11-05 17:39:03,520 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 17:39:03,529 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 17:39:03,531 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 17:39:03,630 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 17:39:03,654 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 17:39:03,861 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:03] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 17:39:05,238 - INFO - 127.0.0.1 - - [05/Nov/2025 17:39:05] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:00:37,261 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-11-05 23:00:37,789 - INFO -  * Restarting with stat
+2025-11-05 23:00:39,774 - WARNING -  * Debugger is active!
+2025-11-05 23:00:39,816 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:01:04,080 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-11-05 23:01:04,486 - INFO -  * Restarting with stat
+2025-11-05 23:01:06,071 - WARNING -  * Debugger is active!
+2025-11-05 23:01:06,098 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:07:47,299 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "GET / HTTP/1.1" 200 -
+2025-11-05 23:07:47,359 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:07:47,367 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:07:47,453 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-05 23:07:47,693 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:07:47,695 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:07:48,539 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:07:48,559 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:07:48,561 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:07:48,705 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:07:48,707 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:07:48,888 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:48] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:07:49,088 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:49] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:07:50,329 - INFO - 127.0.0.1 - - [05/Nov/2025 23:07:50] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:11:48,487 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 23:11:48,898 - INFO -  * Restarting with stat
+2025-11-05 23:11:51,199 - WARNING -  * Debugger is active!
+2025-11-05 23:11:51,241 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:12:07,363 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 23:12:07,726 - INFO -  * Restarting with stat
+2025-11-05 23:12:09,390 - WARNING -  * Debugger is active!
+2025-11-05 23:12:09,421 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:12:15,492 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 23:12:15,836 - INFO -  * Restarting with stat
+2025-11-05 23:12:17,289 - WARNING -  * Debugger is active!
+2025-11-05 23:12:17,317 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:12:54,708 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-11-05 23:12:55,056 - INFO -  * Restarting with stat
+2025-11-05 23:12:56,599 - WARNING -  * Debugger is active!
+2025-11-05 23:12:56,625 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:15:33,021 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:33] "[33mGET /middle/calculator?page=middles&middle_item=6117987d-2847-4396-a8a5-aaa7d6e8c8c6 HTTP/1.1[0m" 404 -
+2025-11-05 23:15:34,670 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:34] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:15:34,687 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:34] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:15:34,697 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:34] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:15:34,800 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:34] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:15:35,014 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:35] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:15:35,016 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:15:36,524 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:36] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:15:39,500 - INFO - 127.0.0.1 - - [05/Nov/2025 23:15:39] "GET /middle/calculator?page=middles&middle_item=2479a2d5-0a03-4dbc-bdec-f91b36d31f65 HTTP/1.1" 200 -
+2025-11-05 23:19:17,196 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-11-05 23:19:17,565 - INFO -  * Restarting with stat
+2025-11-05 23:19:19,194 - WARNING -  * Debugger is active!
+2025-11-05 23:19:19,223 - INFO -  * Debugger PIN: 135-200-680
+2025-11-05 23:20:15,104 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:20:15,136 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:20:15,137 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:20:15,229 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:20:15,308 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "[35m[1mGET /api/sports HTTP/1.1[0m" 500 -
+2025-11-05 23:20:15,334 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:20:17,045 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:17] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:20:19,587 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:20:19,601 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:20:19,605 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:20:19,717 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:20:19,809 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:20:19,814 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:19] "[35m[1mGET /api/sports HTTP/1.1[0m" 500 -
+2025-11-05 23:20:21,300 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:21] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:20:25,371 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:25] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:20:25,468 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:20:27,143 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:27] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:20:45,588 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:45] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:20:45,592 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:45] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:20:45,595 - INFO - 127.0.0.1 - - [05/Nov/2025 23:20:45] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:28:25,580 - INFO - 127.0.0.1 - - [05/Nov/2025 23:28:25] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-05 23:29:56,841 - INFO - 127.0.0.1 - - [05/Nov/2025 23:29:56] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-05 23:30:35,143 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "[32mPOST /change_currency HTTP/1.1[0m" 302 -
+2025-11-05 23:30:35,159 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:30:35,241 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:30:35,299 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:30:35,353 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:30:35,375 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:30:35,447 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:35] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:30:36,969 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:36] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:30:37,565 - INFO - 127.0.0.1 - - [05/Nov/2025 23:30:37] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-05 23:32:11,067 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "[32mPOST /change_currency HTTP/1.1[0m" 302 -
+2025-11-05 23:32:11,080 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "GET /middles HTTP/1.1" 200 -
+2025-11-05 23:32:11,153 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-05 23:32:11,209 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-05 23:32:11,251 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-05 23:32:11,354 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "GET /api/sports HTTP/1.1" 200 -
+2025-11-05 23:32:11,356 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-05 23:32:12,718 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:12] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-05 23:32:12,886 - INFO - 127.0.0.1 - - [05/Nov/2025 23:32:12] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-05 23:38:02,578 - INFO - 127.0.0.1 - - [05/Nov/2025 23:38:02] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-05 23:39:32,714 - INFO - 127.0.0.1 - - [05/Nov/2025 23:39:32] "GET /middle/calculator?page=middles&middle_item=c08a3528-f6a4-4139-b974-b8aa5241f9ff HTTP/1.1" 200 -
+2025-11-06 00:10:01,571 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "GET / HTTP/1.1" 200 -
+2025-11-06 00:10:01,621 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 00:10:01,634 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 00:10:01,746 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 00:10:01,887 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 00:10:01,887 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:01] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 00:10:03,358 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 00:10:07,384 - INFO - 127.0.0.1 - - [06/Nov/2025 00:10:07] "GET /surebet/calculator?page=surebets&arb_item=e6b29bc8-8e06-4e4b-8a94-cb60e38e3716 HTTP/1.1" 200 -
+2025-11-06 00:11:21,833 - INFO - 127.0.0.1 - - [06/Nov/2025 00:11:21] "GET /surebet/calculator?page=surebets&arb_item=e6b29bc8-8e06-4e4b-8a94-cb60e38e3716 HTTP/1.1" 200 -
+2025-11-06 00:12:34,005 - INFO - 127.0.0.1 - - [06/Nov/2025 00:12:34] "GET /surebet/calculator?page=surebets&arb_item=e6b29bc8-8e06-4e4b-8a94-cb60e38e3716 HTTP/1.1" 200 -
+2025-11-06 00:15:43,644 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:43] "[32mPOST /change_currency HTTP/1.1[0m" 302 -
+2025-11-06 00:15:43,668 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:43] "GET / HTTP/1.1" 200 -
+2025-11-06 00:15:43,727 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 00:15:43,844 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:43] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 00:15:43,868 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:43] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 00:15:44,042 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:44] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 00:15:44,045 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 00:15:45,582 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:45] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 00:15:46,749 - INFO - 127.0.0.1 - - [06/Nov/2025 00:15:46] "GET /surebet/calculator?page=surebets&arb_item=e6b29bc8-8e06-4e4b-8a94-cb60e38e3716 HTTP/1.1" 200 -
+2025-11-06 00:17:05,393 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "[32mPOST /change_currency HTTP/1.1[0m" 302 -
+2025-11-06 00:17:05,404 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "GET / HTTP/1.1" 200 -
+2025-11-06 00:17:05,440 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 00:17:05,497 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 00:17:05,532 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 00:17:05,570 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 00:17:05,645 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:05] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 00:17:06,582 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:06] "GET /surebet/calculator?page=surebets&arb_item=e6b29bc8-8e06-4e4b-8a94-cb60e38e3716 HTTP/1.1" 200 -
+2025-11-06 00:17:07,123 - INFO - 127.0.0.1 - - [06/Nov/2025 00:17:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 07:56:06,215 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "GET / HTTP/1.1" 200 -
+2025-11-06 07:56:06,267 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 07:56:06,280 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 07:56:06,409 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 07:56:06,548 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 07:56:06,548 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 07:56:07,988 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 07:56:21,021 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/odds_service.py', reloading
+2025-11-06 07:56:21,448 - INFO -  * Restarting with stat
+2025-11-06 07:56:24,405 - WARNING -  * Debugger is active!
+2025-11-06 07:56:24,440 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 07:56:42,382 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "GET / HTTP/1.1" 200 -
+2025-11-06 07:56:42,420 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 07:56:42,431 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 07:56:42,511 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 07:56:42,614 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 07:56:42,615 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 07:56:44,095 - INFO - 127.0.0.1 - - [06/Nov/2025 07:56:44] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 07:59:31,395 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "GET / HTTP/1.1" 200 -
+2025-11-06 07:59:31,428 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 07:59:31,437 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 07:59:31,577 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 07:59:31,694 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 07:59:31,696 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 07:59:33,170 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:33] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 07:59:33,314 - INFO - 127.0.0.1 - - [06/Nov/2025 07:59:33] "GET /surebet/calculator?page=surebets&arb_item=a530aa9b-a7ea-41c3-8521-63f66c47f388 HTTP/1.1" 200 -
+2025-11-06 08:09:46,888 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:46] "GET / HTTP/1.1" 200 -
+2025-11-06 08:09:46,922 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:46] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:09:46,933 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:46] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:09:47,076 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:47] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 08:09:47,201 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:47] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:09:47,202 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:09:48,582 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:48] "GET /surebet/calculator?page=surebets&arb_item=0a8ad101-3004-42e4-a028-eabf1d161e57 HTTP/1.1" 200 -
+2025-11-06 08:09:48,695 - INFO - 127.0.0.1 - - [06/Nov/2025 08:09:48] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:10:49,377 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:10:49,405 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:10:49,417 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:10:49,534 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:10:49,633 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:10:49,641 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:49] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:10:51,199 - INFO - 127.0.0.1 - - [06/Nov/2025 08:10:51] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:11:23,561 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-11-06 08:11:24,022 - INFO -  * Restarting with stat
+2025-11-06 08:11:26,105 - WARNING -  * Debugger is active!
+2025-11-06 08:11:26,144 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 08:19:23,212 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-11-06 08:19:23,639 - INFO -  * Restarting with stat
+2025-11-06 08:19:25,609 - WARNING -  * Debugger is active!
+2025-11-06 08:19:25,636 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 08:19:59,430 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:19:59,463 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:19:59,481 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:19:59,577 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:19:59,723 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:19:59,724 - INFO - 127.0.0.1 - - [06/Nov/2025 08:19:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:20:01,068 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:20:01,082 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:20:01,089 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:20:01,187 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:20:01,295 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:20:01,298 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:20:01,299 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:20:02,808 - INFO - 127.0.0.1 - - [06/Nov/2025 08:20:02] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:21:18,313 - INFO - 127.0.0.1 - - [06/Nov/2025 08:21:18] "GET /middle/calculator?page=middles&middle_item=13973b40-f8f7-4952-9172-7c07541ea4f8 HTTP/1.1" 200 -
+2025-11-06 08:22:17,244 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:17] "[33mGET /middle/calculator?page=middles&middle_item=ac39ff09-fc0b-4fbc-8993-a7255d0a6b50 HTTP/1.1[0m" 404 -
+2025-11-06 08:22:18,769 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:18] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:22:18,790 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:22:18,803 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:22:18,883 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:18] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:22:19,050 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:22:19,059 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:19] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:22:20,545 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:20] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:22:21,434 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:21] "GET /middle/calculator?page=middles&middle_item=e9b31ec7-bf77-4c79-b8c4-f81888c78905 HTTP/1.1" 200 -
+2025-11-06 08:22:29,234 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:29] "GET /middle/calculator?page=middles&middle_item=a69b2290-8242-43f2-ae75-ca7a31ce853e HTTP/1.1" 200 -
+2025-11-06 08:22:37,350 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "GET / HTTP/1.1" 200 -
+2025-11-06 08:22:37,370 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:22:37,384 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:22:37,462 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 08:22:37,565 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:22:37,567 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:22:39,026 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "GET /valuebets HTTP/1.1" 200 -
+2025-11-06 08:22:39,049 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:22:39,087 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:22:39,088 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:22:39,243 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "GET /api/values?page=1&limit=20&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:22:39,243 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:22:39,308 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:39] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:22:40,829 - INFO - 127.0.0.1 - - [06/Nov/2025 08:22:40] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:27:16,444 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-06 08:27:16,873 - INFO -  * Restarting with stat
+2025-11-06 08:27:18,960 - WARNING -  * Debugger is active!
+2025-11-06 08:27:18,992 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 08:27:37,215 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-06 08:27:37,572 - INFO -  * Restarting with stat
+2025-11-06 08:27:39,365 - WARNING -  * Debugger is active!
+2025-11-06 08:27:39,394 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 08:28:42,993 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-11-06 08:28:43,468 - INFO -  * Restarting with stat
+2025-11-06 08:28:45,115 - WARNING -  * Debugger is active!
+2025-11-06 08:28:45,146 - INFO -  * Debugger PIN: 135-200-680
+2025-11-06 08:29:43,634 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "GET / HTTP/1.1" 200 -
+2025-11-06 08:29:43,666 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:29:43,693 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:29:43,775 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-06 08:29:43,897 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:29:43,898 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:29:45,377 - INFO - 127.0.0.1 - - [06/Nov/2025 08:29:45] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:30:11,627 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:30:11,663 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:30:11,684 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:30:11,756 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:30:11,921 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:30:11,923 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:30:13,394 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:13] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:30:24,522 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "GET /valuebets HTTP/1.1" 200 -
+2025-11-06 08:30:24,558 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:30:24,562 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:30:24,693 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "GET /api/values?page=1&limit=20&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:30:24,695 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:30:24,768 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:24] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:30:26,339 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:26] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:30:28,103 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "GET /middles HTTP/1.1" 200 -
+2025-11-06 08:30:28,135 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-06 08:30:28,151 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-06 08:30:28,226 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "GET /api/middles?page=1&limit=60&sort=profit&market=&commence_time= HTTP/1.1" 200 -
+2025-11-06 08:30:28,314 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "GET /api/sports HTTP/1.1" 200 -
+2025-11-06 08:30:28,315 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-06 08:30:29,828 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:29] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-06 08:30:36,607 - INFO - 127.0.0.1 - - [06/Nov/2025 08:30:36] "GET /middle/calculator?page=middles&middle_item=5a449c94-3ca3-44e4-a6a0-c540dc04b735 HTTP/1.1" 200 -
+2025-11-09 21:45:17,242 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "GET / HTTP/1.1" 200 -
+2025-11-09 21:45:17,300 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-09 21:45:17,304 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-09 21:45:17,389 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-09 21:45:17,466 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-09 21:45:17,555 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:17] "GET /api/sports HTTP/1.1" 200 -
+2025-11-09 21:45:19,003 - INFO - 127.0.0.1 - - [09/Nov/2025 21:45:19] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-09 22:00:46,340 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-11-09 22:00:46,898 - INFO -  * Restarting with stat
+2025-11-09 22:00:48,827 - WARNING -  * Debugger is active!
+2025-11-09 22:00:48,867 - INFO -  * Debugger PIN: 135-200-680
+2025-11-09 22:03:18,925 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:18] "GET / HTTP/1.1" 200 -
+2025-11-09 22:03:18,967 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:18] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-09 22:03:18,992 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:18] "[36mGET /static/src/output.css HTTP/1.1[0m" 304 -
+2025-11-09 22:03:19,103 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:19] "GET /api/surebets?page=1&limit=51&sort=profit&market=&commence_time=&outcome_type= HTTP/1.1" 200 -
+2025-11-09 22:03:19,229 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:19] "GET /api/sports HTTP/1.1" 200 -
+2025-11-09 22:03:19,230 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-09 22:03:20,708 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:20] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-09 22:03:24,106 - INFO - 127.0.0.1 - - [09/Nov/2025 22:03:24] "GET /surebet/calculator?page=surebets&arb_item=405bdf61-7d5e-4a83-a575-91d2753e59fd HTTP/1.1" 200 -
