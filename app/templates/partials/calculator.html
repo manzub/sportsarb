@@ -46,7 +46,6 @@
         const profitMargin = parseFloat(opp.getAttribute('data-profit-margin')) / 100;
         const totalImpliedProb = parseFloat(opp.getAttribute('data-total-implied-prob'));
 
-        // Extract odds from DOM
         const odds = Array.from(opp.querySelectorAll('.bet-amount')).map(bet =>
           1 / parseFloat(bet.getAttribute('data-implied-prob'))
         );
@@ -56,28 +55,57 @@
           return;
         }
 
-        const [oddA, oddB] = odds;
+        const stake = parseFloat($("#stake").val());
+        const bets = opp.querySelectorAll('.bet-amount');
 
-        // Calculate proportional stakes for equal payout
-        const stakeA = stake / (1 + (oddA / oddB));
-        const stakeB = stake - stakeA;
+        let stakes = [];
+        let payouts = [];
+        let profit = 0;
+        let payout = 0;
 
-        const payoutA = stakeA * oddA;
-        const payoutB = stakeB * oddB;
+        // ---------- 2-WAY MARKET ----------
+        if (odds.length === 2) {
+          const [oddA, oddB] = odds;
+          const stakeA = stake / (1 + (oddA / oddB));
+          const stakeB = stake - stakeA;
 
-        const profit = Math.min(payoutA, payoutB) - stake;
-        const payout = Math.min(payoutA, payoutB);
+          const payoutA = stakeA * oddA;
+          const payoutB = stakeB * oddB;
 
-        // Update result display
+          stakes = [stakeA, stakeB];
+          payouts = [payoutA, payoutB];
+          profit = Math.min(...payouts) - stake;
+          payout = Math.min(...payouts);
+
+          // ---------- 3-WAY MARKET ----------
+        } else if (odds.length === 3) {
+          const [oddA, oddB, oddC] = odds;
+          const invSum = (1 / oddA) + (1 / oddB) + (1 / oddC);
+
+          const stakeA = ((1 / oddA) / invSum) * stake;
+          const stakeB = ((1 / oddB) / invSum) * stake;
+          const stakeC = ((1 / oddC) / invSum) * stake;
+
+          const payoutA = stakeA * oddA;
+          const payoutB = stakeB * oddB;
+          const payoutC = stakeC * oddC;
+
+          stakes = [stakeA, stakeB, stakeC];
+          payouts = [payoutA, payoutB, payoutC];
+          profit = Math.min(...payouts) - stake;
+          payout = Math.min(...payouts);
+        }
+
+        // Update results visually
         $("#result").html(`
           <div>💰 Profit: <span class="price text-green-600" data-usd="${profit.toFixed(2)}">$${profit.toFixed(2)}</span></div>
           <div class="text-sm text-gray-600">Payout: <span class="price" data-usd="${payout.toFixed(2)}">$${payout.toFixed(2)}</span></div>
         `);
 
-        // Update bet allocations in DOM
-        const bets = opp.querySelectorAll('.bet-amount');
-        bets[0].textContent = stakeA.toFixed(2);
-        bets[1].textContent = stakeB.toFixed(2);
+        // Update each outcome's stake on the DOM
+        bets.forEach((bet, i) => {
+          if (stakes[i] !== undefined) bet.textContent = stakes[i].toFixed(2);
+        });
       } else if (calcType === 'middle') {
         const odd1 = parseFloat($("#odd1").val());
         const odd2 = parseFloat($("#odd2").val());

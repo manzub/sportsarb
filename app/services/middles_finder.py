@@ -83,6 +83,8 @@ class MiddlesFinder:
 
           # calculate middle window (range between the two lines)
           window = round(abs(line2 - line1), 2)
+          if window < 1.0:
+            continue
           if not (0 < window <= self._max_window_for_sport(sport_group)):
             continue
 

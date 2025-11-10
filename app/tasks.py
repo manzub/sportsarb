@@ -25,25 +25,25 @@ def get_sports():
         print(f"Error saving sport {sport.get('key')}: {e}")
   return sports
 
-@celery.task(name='app.tasks.fetch_and_cache_odds')
-def fetch_and_cache_odds():
-  sports = get_sports()
-  bookmaker_regions = 'uk'
-  
-  all_odds = {}
-  for sport in sports:
-    all_odds[sport['key']] = odds_api.get_odds(sport['key'], regions=bookmaker_regions)
-    if odds_api.api_limit_reached:
-      logger.warning("API limit reached. Stopping analysis.")
-      break
-
-    
-  save_odds_data(all_odds)
-  print(f"[{datetime.now(timezone.utc)}] Cached odds for {len(all_odds)} sports.")
-
 @celery.task(name='app.tasks.find_arbitrage')
 def find_arbitrage():
   sports = get_sports()
+  bookmaker_regions = 'uk'
+  all_odds = {}
+  
+  for sport in sports:
+    try:
+      all_odds[sport['key']] = odds_api.get_odds(sport['key'], regions=bookmaker_regions)
+      if odds_api.api_limit_reached:
+        logger.warning("API limit reached. Stopping analysis.")
+        break
+    except Exception as e:
+      logger.error(f"Error fetching odds for {sport['key']}: {e}")
+      continue
+    
+  save_odds_data(all_odds)
+  print(f"[{datetime.now(timezone.utc)}] Cached odds for {len(all_odds)} sports.")
+  
   logger.info(f"Analyzing {len(sports)} sports...")
   
   jobs = [
@@ -54,10 +54,7 @@ def find_arbitrage():
   
   def run_with_context(finder):
     with app.app_context():
-      finder.find_arbitrage(
-        sports=sports,
-        markets=odds_api.markets
-      )
+      finder.find_arbitrage(sports=sports, markets=odds_api.markets)
   
   with ThreadPoolExecutor(max_workers=3) as executor:
     futures = [executor.submit(run_with_context, finder) for finder in jobs]
@@ -135,13 +132,9 @@ def notify_users():
   return "Done"
   
 celery.conf.beat_schedule = {
-  'fetch-and-cache-odds': {
-    'task': 'app.tasks.fetch_and_cache_odds',
-    'schedule': timedelta(minutes=1),
-  },
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=2),  # 5 minutes
+    'schedule': timedelta(minutes=1),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',
