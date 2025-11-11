@@ -126,7 +126,7 @@
 
             <!-- Row: bookmaker -->
             <td class="px-4 py-2">
-              <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+              <a href="${Object.values(item.bookmaker_link)[0]}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
               <div class="text-xs text-gray-500">${item.sport || 'N/A'}</div>
             </td>
 

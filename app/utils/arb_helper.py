@@ -169,7 +169,7 @@ def sort_valuebets_data(data):
       "start_time": vb.get('commence_time', ''),
       "odds": odds,
       "bet_recommendation": recommendation,
-      "expected_value": ev,
+      "expected_value": f"{ev}%",
       "confidence": vb.get('confidence', ''),
       "point": point,
       "type": "valuebet"

@@ -207,6 +207,10 @@ def middle_calculator():
     return html_template.format(opportunity=opportunities_html)
   return "Invalid Request", 400
 
+@bp.route('/values/calculator')
+def valuebet_calculator():
+  return "Invalid Request", 400
+  
 
 @bp.route('/account')
 @login_required
