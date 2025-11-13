@@ -106,6 +106,31 @@ def get_exchange_rates():
   except Exception as e:
     print("Error fetching exchange rates:", e)
     return {} 
+  
+def get_odds_api_settings():
+  from app.models import AppSettings
+  try:
+    ffetch_results = AppSettings.query.filter_by(setting_name='finder_fetch_results').first()
+    fuse_offline = AppSettings.query.filter_by(setting_name='finder_use_offline').first()
+    fsave_offline = AppSettings.query.filter_by(setting_name='finder_save_offline').first()
+    bookmaker_region = AppSettings.query.filter_by(setting_name='bookmaker_region').first()
+    
+    def to_bool(value):
+      if isinstance(value, bool):
+        return value
+      if isinstance(value, str):
+        return value.strip().lower() == 'true'
+      return False
+    
+    fetch_results = to_bool(ffetch_results.value if ffetch_results else None)
+    use_offline = to_bool(fuse_offline.value if fuse_offline else None)
+    save_offline = to_bool(fsave_offline.value if fsave_offline else None)
+    bookmaker_region = bookmaker_region.value
+    return fetch_results, use_offline, save_offline, bookmaker_region
+  except Exception as e:
+    print('Error fetching Api settings:', e)
+    # fetch_results -> False, use_offline -> True, save_offline -> False
+    return False, True, False, 'uk'
 
 def parse_datetime(date_str):
   """

@@ -2,20 +2,44 @@
 from app import create_app
 from datetime import timedelta, datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
-from app.services.odds_service import OddsService
 from app.services.surebet_finder import SurebetFinder
 from app.services.middles_finder import MiddlesFinder
 from app.services.values_finder import ValueBetsFinder
-from app.utils.helpers import save_sport_to_db
+from app.utils.helpers import save_sport_to_db, get_odds_api_settings
 from app.utils.redis_helper import save_odds_data
 from app.utils.logger import setup_logging
 
 app = create_app()
 celery = app.celery
 logger = setup_logging()
-odds_api = OddsService()
 
-def get_sports():
+def init_odds_api():
+  from app.services.odds_service import OddsService
+  """Initialize OddsService with dynamic DB settings."""
+  try:
+    fetch_results, use_offline, save_offline, bookmaker_region = get_odds_api_settings()
+    odds_service = OddsService(
+      fetch_results=fetch_results,
+      use_offline=use_offline,
+      save_offline=save_offline,
+      region=bookmaker_region
+    )
+    return odds_service
+
+  except Exception as e:
+    logger.error(f"Error initializing OddsService: {e}")
+    # Sensible defaults if DB unavailable
+    service = OddsService(fetch_results=False, use_offline=True, save_offline=False, region='uk')
+    return service
+
+@celery.task(name='app.tasks.find_arbitrage')
+def find_arbitrage():
+  odds_api = init_odds_api()
+  if not odds_api.fetch_results:
+    logger.info("Finder fetch disabled in settings. Task skipped.")
+    return "Skipped"
+  
+  logger.info(f"Starting odds fetch (region={odds_api.region})...")
   sports = odds_api.get_sports()
   for sport in sports:
     if isinstance(sport, dict) and 'key' in sport:
@@ -23,17 +47,11 @@ def get_sports():
         save_sport_to_db(sport) # save to database return sports
       except Exception as e:
         print(f"Error saving sport {sport.get('key')}: {e}")
-  return sports
-
-@celery.task(name='app.tasks.find_arbitrage')
-def find_arbitrage():
-  sports = get_sports()
-  bookmaker_regions = 'uk'
-  all_odds = {}
   
+  all_odds = {}
   for sport in sports:
     try:
-      all_odds[sport['key']] = odds_api.get_odds(sport['key'], regions=bookmaker_regions)
+      all_odds[sport['key']] = odds_api.get_odds(sport['key'], regions=odds_api.region)
       if odds_api.api_limit_reached:
         logger.warning("API limit reached. Stopping analysis.")
         break
@@ -46,18 +64,14 @@ def find_arbitrage():
   
   logger.info(f"Analyzing {len(sports)} sports...")
   
-  jobs = [
-    (SurebetFinder()),
-    (MiddlesFinder()),
-    (ValueBetsFinder()),
-  ]
+  finders = [SurebetFinder(),MiddlesFinder(), ValueBetsFinder()]
   
-  def run_with_context(finder):
-    with app.app_context():
+  def run_with_context(finder): 
+    with app.app_context(): 
       finder.find_arbitrage(sports=sports, markets=odds_api.markets)
   
   with ThreadPoolExecutor(max_workers=3) as executor:
-    futures = [executor.submit(run_with_context, finder) for finder in jobs]
+    futures = [executor.submit(run_with_context, finder) for finder in finders]
     [f.result() for f in futures] 
   
   logger.info("All finders completed successfully.")

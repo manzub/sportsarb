@@ -6,16 +6,18 @@ BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 OFFLINE_FILE = os.path.join(BASE_DIR, '../static', 'arbitrage_results.json')
 
 class OddsService:
-  def __init__(self):
+  def __init__(self, fetch_results = False, use_offline = False, save_offline = False, region = 'uk'):
     load_dotenv()
     self.api_key = os.getenv('ODDS_API_KEY')
     self.base_url = 'https://api.the-odds-api.com/v4'
     self.markets = 'h2h,spreads,totals'
     self.remaining_requests = None
     self.used_requests = None
+    self.region = region
     self.api_limit_reached = False
-    self.save_offline = False
-    self.use_offline = True
+    self.fetch_results = fetch_results
+    self.save_offline = save_offline
+    self.use_offline = use_offline
     self.file_path = OFFLINE_FILE
 
   def get_sports(self):
