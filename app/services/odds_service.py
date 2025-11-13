@@ -39,7 +39,7 @@ class OddsService:
     
     now = datetime.now(timezone.utc)
     from_date = now
-    to_date = now + timedelta(days=7)
+    to_date = now + timedelta(days=1)
 
     commence_time_from = from_date.strftime('%Y-%m-%dT%H:%M:%SZ')
     commence_time_to = to_date.strftime('%Y-%m-%dT%H:%M:%SZ')

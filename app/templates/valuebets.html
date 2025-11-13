@@ -117,6 +117,9 @@
               <div class="flex flex-col items-start">
                 <!-- Action buttons -->
                 <div class="flex items-center gap-2 mt-2">
+                  <label for="calculator_modal" data-page="surebets" data-item="${item.valuebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                    <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
+                  </label>
                   <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
                     <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
                   </button>
@@ -155,6 +158,32 @@
 
       tbodyContainer.append(tbody);
     })
+
+    // attach event for valuebet calculator popout
+    $(".calc-btn").on("click", function () {
+      const page = $(this).data("page");
+      const value_item = $(this).data("item");
+
+      const contentDiv = document.getElementById('calculator-arb-item');
+      contentDiv.setAttribute('data-page', page);
+      contentDiv.setAttribute('data-item', value_item);
+
+      const url = `/valuebet/calculator?page=${encodeURIComponent(page)}&value_item=${encodeURIComponent(value_item)}`;
+
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error("Item not found or expired");
+          return response.text();
+        })
+        .then(html => {
+          contentDiv.innerHTML = html;
+        })
+        .catch(err => {
+          console.warn(err.message);
+          alert("This valuebet opportunity is no longer available. Refreshing list...");
+          window.location.reload();
+        });
+    });
   }
 
   function removeElementsByClass(className) {

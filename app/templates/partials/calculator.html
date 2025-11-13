@@ -148,6 +148,36 @@
             Bet 2: <span class="price" data-usd="${stake2.toFixed(2)}">$${stake2.toFixed(2)}</span>
           </div>
         `);
+      } else if (calcType === 'valuebet') {
+
+        // Extract the backend attributes
+        const odds = parseFloat(opp.getAttribute('data-odds'));
+        const evPercent = parseFloat(opp.getAttribute('data-ev'));   // EV already a computed %
+        const confidence = parseFloat(opp.getAttribute('data-confidence')); // confidence 0–1
+
+        if (isNaN(odds) || odds <= 1) {
+          $("#result").text("Invalid odds data for valuebet.");
+          return;
+        }
+
+        // Stake field already taken above
+        if (isNaN(stake) || stake <= 0) {
+          $("#result").text("Enter a valid stake amount.");
+          return;
+        }
+
+        // Expected profit = stake * EV%
+        const expectedProfit = stake * (evPercent / 100);
+        const expectedReturn = stake + expectedProfit;
+
+        $("#result").html(`
+          <div><strong>EV:</strong> ${evPercent.toFixed(2)}%</div>
+          <div><strong>Confidence:</strong> ${(confidence * 100).toFixed(0)}%</div>
+          <hr/>
+          <div>Stake: £${stake.toFixed(2)}</div>
+          <div>Expected Profit: <span class="text-green-600">£${expectedProfit.toFixed(2)}</span></div>
+          <div>Total Expected Return: £${expectedReturn.toFixed(2)}</div>
+        `);
       }
 
       // ✅ Convert to selected currency immediately

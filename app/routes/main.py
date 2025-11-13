@@ -207,9 +207,57 @@ def middle_calculator():
     return html_template.format(opportunity=opportunities_html)
   return "Invalid Request", 400
 
-@bp.route('/values/calculator')
+@bp.route('/valuebet/calculator')
 def valuebet_calculator():
-  return "Invalid Request", 400
+  html_template = """{opportunity}"""
+  opportunities_html = ""
+
+  value_id = unquote(request.args.get('value_item'))
+  if not value_id:
+    return "Invalid Request", 400
+
+  # Pull Redis key
+  latest_keys = redis.keys("valuebets:*")
+  if not latest_keys:
+    return "No Valuebets available", 404
+  
+  latest = max(latest_keys)
+  data = redis.get(latest)
+  if not data:
+    return "No data found", 404
+  
+  results = [x for x in json.loads(data) if x['unique_id'] == value_id]
+  if not results:
+    return "Valuebet item not found or expired", 404
+  
+  vb = results[0]
+
+  # Variables
+  odds = vb['odds']
+  ev_percent = vb['expected_value']  # stored as %
+  confidence = vb.get('confidence', None)
+
+  opportunities_html += f"""
+  <div id="opportunity"
+    data-type="valuebet"
+    data-odds="{odds}"
+    data-ev="{ev_percent}"
+    data-confidence="{confidence}">
+        
+    <h1 class="font-bold text-lg">{vb['event']}</h1>
+    <h2 class="text-emerald-800 font-extrabold">{vb['sport_title']}</h2>
+
+    <p><strong>Market:</strong> {vb['market'].upper()}</p>
+    <p><strong>Outcome:</strong> {vb['team_or_outcome']}</p>
+    <p><strong>Bookmaker:</strong> {vb['bookmaker']}</p>
+    <p><strong>Odds:</strong> {odds:.2f}</p>
+    <p><strong>EV:</strong> {ev_percent:.2f}%</p>
+    <p><strong>Confidence:</strong> {confidence:.2f}</p>
+    <p class="m-0">Time: {format_date(vb['commence_time'])}</p>
+  </div>
+  """
+
+  return html_template.format(opportunity=opportunities_html)
   
 
 @bp.route('/account')
