@@ -148,7 +148,7 @@ def notify_users():
 celery.conf.beat_schedule = {
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here
-    'schedule': timedelta(minutes=1),  # 5 minutes
+    'schedule': timedelta(minutes=5),  # 5 minutes
   },
   'notify_users': {
     'task': 'app.tasks.notify_users',

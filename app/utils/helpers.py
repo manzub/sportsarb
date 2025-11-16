@@ -87,14 +87,6 @@ def convert_amount(amount_usd, target_currency):
   rate = exchange_rates.get(target_currency, 1)
   return round(amount_usd * rate, 2)
 
-def db_get_bookmaker_regions():
-  from app.models import AppSettings
-  app_settings = AppSettings.query.filter_by(setting_name='bookmaker_regions').first()
-  if app_settings:
-    bookmaker_regions = app_settings.value or 'uk'
-    return bookmaker_regions
-  return 'uk'
-
 def get_exchange_rates():
   from app.models import AppSettings
   import json
