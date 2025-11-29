@@ -70,6 +70,7 @@ def google_auth():
       # Create new user (no password needed)
       user = User(email=email, password=None)
       user.is_verified = True
+      user.auth_provider = 'google'
       db.session.add(user)
       
       alerts_conf = Alerts(user.id)
@@ -92,13 +93,17 @@ def login():
   if request.method == 'POST':
     if form.validate_on_submit():
       user = User.query.filter_by(email=form.email.data.lower()).first()
-      if user and user.check_password(form.password.data):
-        login_user(user=user, remember=form.remember_me.data)
-        session['user_email'] = user.email
-        next = request.args.get('next')
-        if not next or not next[0] == '/':
-          next = url_for('main.index')
-        return redirect(next)
+      if user:
+        if user.auth_provider == 'google':
+          flash('Invalid login method, Please login using google', 'warning')
+          return redirect(url_for('auth.login'))
+        elif user.auth_provider == 'local' and user.check_password(form.password.data):
+          login_user(user=user, remember=form.remember_me.data)
+          session['user_email'] = user.email
+          next = request.args.get('next')
+          if not next or not next[0] == '/':
+            next = url_for('main.index')
+          return redirect(next) 
       elif form.create_account.data:
         email_exists = User.query.filter_by(email=form.email.data.lower()).first()
         if not email_exists:

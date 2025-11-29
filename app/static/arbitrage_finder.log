@@ -10570,3 +10570,154 @@
 2025-11-29 15:05:33,612 - INFO - 127.0.0.1 - - [29/Nov/2025 15:05:33] "GET / HTTP/1.1" 200 -
 2025-11-29 15:05:33,732 - INFO - 127.0.0.1 - - [29/Nov/2025 15:05:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2025-11-29 15:05:35,276 - INFO - 127.0.0.1 - - [29/Nov/2025 15:05:35] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:07:11,256 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/plans.py', reloading
+2025-11-29 15:07:11,661 - INFO -  * Restarting with stat
+2025-11-29 15:07:13,517 - WARNING -  * Debugger is active!
+2025-11-29 15:07:13,554 - INFO -  * Debugger PIN: 135-200-680
+2025-11-29 15:11:10,942 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:10] "GET / HTTP/1.1" 200 -
+2025-11-29 15:11:11,154 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:11:11,835 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:11] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:11:11,968 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:11:13,503 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:13] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:11:59,583 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:59] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:11:59,743 - INFO - 127.0.0.1 - - [29/Nov/2025 15:11:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:12:01,272 - INFO - 127.0.0.1 - - [29/Nov/2025 15:12:01] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:14:50,796 - INFO - 127.0.0.1 - - [29/Nov/2025 15:14:50] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:14:50,965 - INFO - 127.0.0.1 - - [29/Nov/2025 15:14:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:14:52,487 - INFO - 127.0.0.1 - - [29/Nov/2025 15:14:52] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:15:20,620 - INFO - 127.0.0.1 - - [29/Nov/2025 15:15:20] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:15:20,752 - INFO - 127.0.0.1 - - [29/Nov/2025 15:15:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:15:22,293 - INFO - 127.0.0.1 - - [29/Nov/2025 15:15:22] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:16:15,404 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:15] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:16:15,531 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:16:17,063 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:17] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:16:31,678 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:31] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:16:31,828 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:16:33,380 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:33] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:16:35,269 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:35] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:16:35,390 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:16:36,914 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:36] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:16:44,955 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:44] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:16:45,094 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:45] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:16:46,613 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:46] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:16:54,455 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:54] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:16:54,594 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:54] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:16:56,122 - INFO - 127.0.0.1 - - [29/Nov/2025 15:16:56] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:17:01,103 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:01] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:17:01,229 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:17:02,750 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:02] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:17:49,693 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:49] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:17:49,841 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:17:51,663 - INFO - 127.0.0.1 - - [29/Nov/2025 15:17:51] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:18:11,164 - INFO - 127.0.0.1 - - [29/Nov/2025 15:18:11] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:18:11,303 - INFO - 127.0.0.1 - - [29/Nov/2025 15:18:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:18:13,155 - INFO - 127.0.0.1 - - [29/Nov/2025 15:18:13] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:19:19,674 - INFO - 127.0.0.1 - - [29/Nov/2025 15:19:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:19:19,692 - INFO - 127.0.0.1 - - [29/Nov/2025 15:19:19] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:22:02,004 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:02] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:22:02,281 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:22:03,852 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:22:06,278 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:06] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:22:06,430 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:22:07,957 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:22:14,531 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:14] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:22:14,665 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:22:16,208 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:16] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:22:28,575 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:28] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:22:28,700 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:22:30,240 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:30] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:22:32,089 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:22:32,096 - INFO - 127.0.0.1 - - [29/Nov/2025 15:22:32] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:23:23,353 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:23] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:23:23,375 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:23:23,800 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:23:25,382 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:25] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:23:56,412 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:56] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:23:56,430 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:56] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:23:56,721 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:56] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:23:58,322 - INFO - 127.0.0.1 - - [29/Nov/2025 15:23:58] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:25:05,983 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:05] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:25:06,011 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:06] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:25:06,282 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:25:07,883 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:25:24,151 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:24] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:25:24,429 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:25:25,981 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:25] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:25:57,563 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:57] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-11-29 15:25:57,563 - INFO - 127.0.0.1 - - [29/Nov/2025 15:25:57] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:27:32,985 - INFO - 127.0.0.1 - - [29/Nov/2025 15:27:32] "[32mGET /auth/google/login HTTP/1.1[0m" 302 -
+2025-11-29 15:27:38,430 - INFO - 127.0.0.1 - - [29/Nov/2025 15:27:38] "[32mGET /auth/google?state=lZfnR79SZcK3FJTvCeKOwqLVVol31r&code=4/0Ab32j91iGJ0iUJA9aMsEukljsauVEE57-hLjrhLrOtYJvknQRviPMbChtabcTwuvx7ubtA&scope=email+profile+openid+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&authuser=0&prompt=none HTTP/1.1[0m" 302 -
+2025-11-29 15:27:38,453 - INFO - 127.0.0.1 - - [29/Nov/2025 15:27:38] "GET / HTTP/1.1" 200 -
+2025-11-29 15:27:38,783 - INFO - 127.0.0.1 - - [29/Nov/2025 15:27:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:27:40,328 - INFO - 127.0.0.1 - - [29/Nov/2025 15:27:40] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:28:37,232 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "[35m[1mGET /account HTTP/1.1[0m" 500 -
+2025-11-29 15:28:37,252 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "GET /account?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-11-29 15:28:37,252 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "GET /account?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-11-29 15:28:37,280 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "GET /account?__debugger__=yes&cmd=resource&f=console.png&s=8w3uMHO6XEwKjhzhWZTW HTTP/1.1" 200 -
+2025-11-29 15:28:37,281 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "GET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-11-29 15:28:37,290 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:37] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:28:38,827 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:38] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:28:50,895 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[35m[1mGET /account HTTP/1.1[0m" 500 -
+2025-11-29 15:28:50,916 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[36mGET /account?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-11-29 15:28:50,916 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[36mGET /account?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-11-29 15:28:50,936 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:28:50,937 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png&s=8w3uMHO6XEwKjhzhWZTW HTTP/1.1[0m" 304 -
+2025-11-29 15:28:50,944 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:50] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:28:52,479 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:52] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:28:53,551 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[35m[1mGET /account HTTP/1.1[0m" 500 -
+2025-11-29 15:28:53,568 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[36mGET /account?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-11-29 15:28:53,569 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[36mGET /account?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-11-29 15:28:53,584 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png&s=8w3uMHO6XEwKjhzhWZTW HTTP/1.1[0m" 304 -
+2025-11-29 15:28:53,586 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:28:53,593 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:53] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:28:55,121 - INFO - 127.0.0.1 - - [29/Nov/2025 15:28:55] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:11,225 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[35m[1mGET /account HTTP/1.1[0m" 500 -
+2025-11-29 15:29:11,246 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[36mGET /account?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-11-29 15:29:11,247 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[36mGET /account?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:11,264 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png&s=8w3uMHO6XEwKjhzhWZTW HTTP/1.1[0m" 304 -
+2025-11-29 15:29:11,266 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:29:11,273 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:11] "[36mGET /account?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-11-29 15:29:12,783 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:12] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:18,786 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:18] "GET /account HTTP/1.1" 200 -
+2025-11-29 15:29:18,925 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:29:20,452 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:20] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:27,450 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:27] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-11-29 15:29:27,469 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:27] "GET / HTTP/1.1" 200 -
+2025-11-29 15:29:27,599 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:27] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:29:28,746 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:28] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:29:28,868 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:29:29,125 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:29] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:30,418 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:30] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:29:30,488 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:30] "[32mGET /auth/google/login HTTP/1.1[0m" 302 -
+2025-11-29 15:29:32,972 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:32] "[32mGET /auth/google?state=7687dZjUse1Swday8B7QE7g47oUfPi&code=4/0Ab32j91dOK79mvUqurEKFWTL9PPNguHM4-5QM8ssbflgYOCSeAgB3WFCKz8WeksI-nGkxA&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&prompt=none HTTP/1.1[0m" 302 -
+2025-11-29 15:29:32,988 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:32] "GET / HTTP/1.1" 200 -
+2025-11-29 15:29:33,299 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:29:34,844 - INFO - 127.0.0.1 - - [29/Nov/2025 15:29:34] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:30:16,261 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/auth.py', reloading
+2025-11-29 15:30:16,614 - INFO -  * Restarting with stat
+2025-11-29 15:30:18,454 - WARNING -  * Debugger is active!
+2025-11-29 15:30:18,485 - INFO -  * Debugger PIN: 135-200-680
+2025-11-29 15:30:31,503 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:31] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-11-29 15:30:31,552 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:31] "GET / HTTP/1.1" 200 -
+2025-11-29 15:30:32,105 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:32] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:30:33,595 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:33] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:30:33,642 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:33] "GET /auth/login HTTP/1.1" 200 -
+2025-11-29 15:30:33,783 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:30:34,817 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:34] "[32mGET /auth/google/login HTTP/1.1[0m" 302 -
+2025-11-29 15:30:35,302 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:35] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:30:36,974 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:36] "[32mGET /auth/google?state=OuUtZWuSVzxQmoClIEJNKz8E3Yz3qO&code=4/0Ab32j93VCM-5hu7ewmU2NA-zJdiOFl78PlfhBV47o_Tp5YBmDggiZTaPpp4hH8ZIQsqOuw&scope=email+profile+https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+openid&authuser=0&prompt=none HTTP/1.1[0m" 302 -
+2025-11-29 15:30:37,013 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:37] "GET / HTTP/1.1" 200 -
+2025-11-29 15:30:37,333 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-11-29 15:30:39,197 - INFO - 127.0.0.1 - - [29/Nov/2025 15:30:39] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-11-29 15:31:25,645 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/auth.py', reloading
+2025-11-29 15:31:26,008 - INFO -  * Restarting with stat
+2025-11-29 15:31:27,742 - WARNING -  * Debugger is active!
+2025-11-29 15:31:27,772 - INFO -  * Debugger PIN: 135-200-680
+2025-11-29 15:32:59,240 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/auth.py', reloading
+2025-11-29 15:32:59,599 - INFO -  * Restarting with stat
+2025-11-29 15:33:01,327 - WARNING -  * Debugger is active!
+2025-11-29 15:33:01,354 - INFO -  * Debugger PIN: 135-200-680
+2025-11-29 15:35:24,644 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/auth.py', reloading
+2025-11-29 15:35:25,019 - INFO -  * Restarting with stat
+2025-11-29 15:35:26,772 - WARNING -  * Debugger is active!
+2025-11-29 15:35:26,828 - INFO -  * Debugger PIN: 135-200-680
