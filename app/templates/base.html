@@ -257,7 +257,7 @@
             :name="toast.category=='warning' ? 'alert-circle' : toast.category=='success' ? 'checkmark-circle' : 'information-circle'"
             class="text-xl flex-shrink-0"></ion-icon>
           <span
-            x-text="toast.message=='pending' ? 'You have a pending subscription. Click here to pay' : toast.message"></span>
+            x-text="toast.message=='pending' ? 'You have a pending subscription. Go to accounts to pay' : toast.message"></span>
         </div>
         <button @click="toasts = toasts.filter(t => t.id !== toast.id)" class="text-gray-200 hover:text-white">
           <ion-icon name="close-circle" class="text-lg"></ion-icon>

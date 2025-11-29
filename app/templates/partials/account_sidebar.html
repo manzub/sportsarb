@@ -1,30 +1,44 @@
-<aside class="flex flex-col h-screen px-4 py-8 overflow-y-auto">
-  <div class="flex flex-col justify-between">
-    <nav>
-      {% if current_user and current_user.is_admin %}
-      <a class="flex items-center px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md" href="/admin">
-        <ion-icon class="w-5 h-5" name="pie-chart-outline"></ion-icon>
-        <span class="mx-4 font-medium">Admin</span>
-      </a>
-      {% endif %}
+<!-- SIDEBAR -->
+<aside
+  class="w-full lg:w-1/4 p-8 bg-gray-900 border-t lg:border-t-0 lg:border-l border-gray-800 flex flex-col lg:h-auto">
 
-      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'main.account' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md"
-        href="{{url_for('main.account')}}">
-        <ion-icon class="w-5 h-5" name="person"></ion-icon>
-        <span class="mx-4 font-medium">Account</span>
-      </a>
+  <h2 class="text-2xl font-semibold text-bet365yellow mb-8">Account Options</h2>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700"
-        href="{{url_for('auth.request_password_reset')}}">
-        <ion-icon class="w-5 h-5" name="refresh-circle"></ion-icon>
-        <span class="mx-4 font-medium">Reset Password</span>
-      </a>
+  <nav class="space-y-3">
 
-      <a class="flex items-center px-4 py-2 mt-2 text-gray-600 hover:bg-gray-100 transition-colors duration-300 transform rounded-md hover:text-gray-700"
-        href="{{url_for('auth.logout')}}">
-        <ion-icon class="w-5 h-5" name="log-out"></ion-icon>
-        <span class="mx-4 font-medium">Logout</span>
-      </a>
-    </nav>
-  </div>
+    {% if current_user and current_user.is_admin %}
+    <a href="/admin" class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 text-gray-300">
+      <ion-icon name="pie-chart-outline" class="text-xl"></ion-icon>
+      <span class="font-medium">Admin</span>
+    </a>
+    {% endif %}
+
+    <a href="{{ url_for('main.account') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg
+          {% if request.endpoint == 'main.account' %}
+            bg-bet365green text-gray-900
+          {% else %}
+            hover:bg-gray-800 text-gray-300
+          {% endif %}
+        ">
+      <ion-icon name="person" class="text-xl"></ion-icon>
+      <span class="font-medium">Account</span>
+    </a>
+
+    <a href="{{ url_for('auth.request_password_reset') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg
+          {% if request.endpoint == 'auth.reset_password' %}
+            bg-bet365green text-gray-900
+          {% else %}
+            hover:bg-gray-800 text-gray-300
+          {% endif %}
+        ">
+      <ion-icon name="refresh-circle" class="text-xl"></ion-icon>
+      <span class="font-medium">Reset Password</span>
+    </a>
+
+    <a href="{{ url_for('auth.logout') }}"
+      class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800 text-gray-300">
+      <ion-icon name="log-out" class="text-xl"></ion-icon>
+      <span class="font-medium">Logout</span>
+    </a>
+  </nav>
 </aside>

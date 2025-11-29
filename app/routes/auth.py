@@ -80,11 +80,11 @@ def google_auth():
     session['user_email'] = user.email
     login_user(user, remember=True)
     
-    flash("Login successfull", "yellow")
+    flash("Login successfull", "warning")
     return redirect(url_for('main.index'))
 
   except ValueError:
-    flash("Invalid Google token", "red")
+    flash("Invalid Google token", "warning")
     return redirect(url_for('auth.login'))
 
 @bp.route('/login', methods=['GET', 'POST'])
@@ -120,14 +120,14 @@ def login():
             send_otp_mail(new_user)
             
             session['user_email'] = new_user.email
-            flash("We sent you a verification code. Please check your email.", "yellow")
+            flash("We sent you a verification code. Please check your email.", "warning")
             return redirect(url_for('auth.confirmation', user_id=new_user.id))
           else:
-            flash('Invalid email address', 'red')
+            flash('Invalid email address', 'warning')
         else:
           return redirect(url_for('auth.login'))
       else:
-        flash('Password is incorrect', 'red')
+        flash('Password is incorrect', 'warning')
           
   return render_template('login.html', form=form, google_client_id=GOOGLE_CLIENT_ID)
 
@@ -137,11 +137,11 @@ def confirmation(user_id):
   if request.method == 'POST':
     code = request.form.get('otp_code')
     if user.verify_otp(code):
-      flash("Email verified successfully! Welcome.", "emerald")
+      flash("Email verified successfully! Welcome.", "success")
       login_user(user, remember=True)
       return redirect(url_for('main.index'))
     else:
-      flash("Invalid or expired OTP code.", "red")
+      flash("Invalid or expired OTP code.", "warning")
   return render_template('confirmation.html', user=user)
 
 @bp.route('/resend-otp/<int:user_id>')
@@ -149,7 +149,7 @@ def resend_otp(user_id):
   user = User.query.get_or_404(user_id)
   user.set_otp()
   send_otp_mail(user)
-  flash("A new verification code has been sent to your email.", "yellow")
+  flash("A new verification code has been sent to your email.", "warning")
   return redirect(url_for('auth.confirmation', user_id=user.id))
 
 @bp.route('/request-password-reset', methods=['GET'])
@@ -158,7 +158,7 @@ def request_password_reset():
   user = User.query.filter_by(email=current_user.email).first()
 
   if not user:
-    flash('No account found with that email', 'red')
+    flash('No account found with that email', 'warning')
     return redirect(url_for('main.account'))
 
   otp = generate_otp()

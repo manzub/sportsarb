@@ -1,72 +1,89 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="py-12 px-4">
-  <div class="max-w-lg w-full p-4">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">My Account</h1>
+<section class="w-full min-h-screen bg-gray-950 text-gray-200 flex flex-col lg:flex-row">
 
-    {% if subscription %}
-    <div class="bg-gray-50 mb-6">
-      <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">Current Plan</p>
-      <h2 class="text-lg font-semibold text-gray-800">{{ plan.plan_name }}</h2>
+  <!-- MAIN CONTENT -->
+  <div class="w-full lg:w-3/4 p-8">
 
-      <div class="mt-4 text-sm text-gray-600">
-        <p><strong>Status:</strong>
-          <span class="px-2 py-1 rounded text-white 
-              {% if subscription.active %}bg-green-600{% else %}bg-gray-500{% endif %}">
+    <h1 class="text-3xl font-bold text-bet365yellow mb-10">My Account</h1>
+
+    {% if pending_plan_id %}
+    <div class="px-4 py-3 mb-4 leading-normal text-green-700 bg-green-100 rounded-lg" role="alert">
+      <p class="font-bold">You have a pending plan!</p>
+      <p>Click the below link to complete your subscription and unlock unlimited earnings!</p>
+      <a class="font-bold" href="/plans/checkout/{{pending_plan_id}}">Click Here</a>
+    </div>
+    {% endif %}
+    <!-- SUBSCRIPTION CARD -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-10 shadow-lg">
+
+      {% if subscription %}
+      <p class="text-sm text-gray-400 uppercase tracking-wide mb-1">Current Plan</p>
+      <h2 class="text-xl font-semibold text-gray-100">{{ plan.plan_name }}</h2>
+
+      <div class="mt-6 space-y-2 text-gray-300">
+        <p>
+          <strong>Status:</strong>
+          <span class="px-2 py-1 rounded text-gray-900
+            {% if subscription.active %}
+               bg-bet365green
+            {% else %}
+               bg-gray-600
+            {% endif %}
+          ">
             {{ 'Active' if subscription.active else 'Inactive' }}
           </span>
         </p>
-        <p class="mt-2"><strong>Start Date:</strong> {{ subscription.start_date.strftime('%b %d, %Y') if
-          subscription.start_date else '—' }}</p>
+
+        <p><strong>Start Date:</strong> {{ subscription.start_date.strftime('%b %d, %Y') if subscription.start_date else
+          '—' }}</p>
+
         <p><strong>End Date:</strong> {{ subscription.end_date.strftime('%b %d, %Y') if subscription.end_date else '—'
           }}</p>
       </div>
-    </div>
 
-    <div class="flex justify-between items-center">
-      <a href="#"
-        class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-md transition">
-        Change Plan
-      </a>
-    </div>
+      <div class="mt-6">
+        <a href="/#pricing"
+          class="inline-block bg-bet365green hover:bg-bet365green/80 text-gray-900 text-sm font-semibold py-2 px-4 rounded-lg transition">
+          Change Plan
+        </a>
+      </div>
 
-    {% else %}
-    <div class="">
-      <p class="text-gray-600 mb-6">You don’t have an active plan yet.</p>
-      <a href="#"
-        class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md">
+      {% else %}
+      <p class="text-gray-400 mb-4">You don’t have an active plan yet.</p>
+      <a href="/#pricing"
+        class="inline-block bg-bet365green hover:bg-bet365green/80 text-gray-900 font-semibold py-2 px-4 rounded-lg">
         View Plans
       </a>
+      {% endif %}
     </div>
-    {% endif %}
 
-    <hr class="my-8 border-gray-300">
+    <!-- NOTIFICATION SETTINGS -->
+    <div class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg">
 
-    <div class="bg-white rounded-lg shadow p-6">
-      <h2 class="text-xl font-semibold text-gray-800 mb-4">Notification Settings</h2>
+      <h2 class="text-2xl font-semibold text-gray-100 mb-6">Notification Settings</h2>
 
-      <!-- EMAIL NOTIFICATION -->
-      <div class="mb-6">
+      <!-- EMAIL -->
+      <div class="mb-8">
         <div class="flex items-center justify-between">
-          <label for="emailNotify" class="text-gray-700 font-medium">Email Notifications</label>
+          <label for="emailNotify" class="font-medium text-gray-200">Email Notifications</label>
           <input type="checkbox" id="emailNotify" {% if alerts.email_notify %}checked{% endif %}
-            class="h-5 w-5 text-blue-600 border-gray-300 rounded cursor-pointer">
+            class="h-5 w-5 cursor-pointer accent-bet365green">
         </div>
-        <p class="text-sm text-gray-500 mt-1">
-          Receive email alerts when new arbitrage opportunities are detected.
+        <p class="text-sm text-gray-400 mt-1">
+          Receive email alerts when new arbitrage opportunities appear.
         </p>
       </div>
 
-      <!-- PUSH NOTIFICATION -->
+      <!-- PUSH -->
       <div>
         <div class="flex items-center justify-between">
-          <label for="pushNotify" class="text-gray-700 font-medium">Browser Push Notifications</label>
+          <label for="pushNotify" class="font-medium text-gray-200">Browser Push Notifications</label>
           <input type="checkbox" id="pushNotify" {% if alerts.webpush_info %}checked{% endif %}
-            class="h-5 w-5 text-blue-600 border-gray-300 rounded cursor-pointer">
-          </button>
+            class="h-5 w-5 cursor-pointer accent-bet365green">
         </div>
-        <p id="pushStatus" class="text-sm text-gray-500 mt-1">
+        <p id="pushStatus" class="text-sm text-gray-400 mt-1">
           {% if alerts.webpush_info %}
           ✅ Push notifications enabled
           {% else %}
@@ -74,31 +91,39 @@
           {% endif %}
         </p>
       </div>
+
     </div>
+
   </div>
-</div>
+
+  {% block sidebar %}
+  {% include 'partials/account_sidebar.html' %}
+  {% endblock sidebar %}
+
+</section>
 
 <script>
   const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-  // --- EMAIL NOTIFICATION TOGGLE ---
-  document.getElementById("emailNotify").addEventListener("change", async (e) => {
 
+  // EMAIL NOTIFY
+  document.getElementById("emailNotify").addEventListener("change", async (e) => {
     const enabled = e.target.checked;
     await fetch("/account/notifications/email", {
       method: "POST",
-      headers: { "Content-Type": "application/json", 'X-CSRFToken': csrfToken },
+      headers: { "Content-Type": "application/json", "X-CSRFToken": csrfToken },
       body: JSON.stringify({ enabled })
     });
   });
 
-  // --- PUSH NOTIFICATIONS SETUP ---
+  // PUSH
   const vapidPublicKey = "{{ VAPID_PUBLIC_KEY }}";
 
   document.getElementById("pushNotify").addEventListener("change", async (e) => {
+    const pushStatus = document.getElementById("pushStatus");
     const pushEnabled = e.target.checked;
 
     if (!('serviceWorker' in navigator)) {
-      alert("Your browser doesn’t support push notifications.");
+      alert("Browser doesn't support push notifications.");
       e.target.checked = false;
       return;
     }
@@ -108,7 +133,6 @@
     const subscription = await registration.pushManager.getSubscription();
 
     if (pushEnabled) {
-      // SUBSCRIBE
       try {
         const newSub = await registration.pushManager.subscribe({
           userVisibleOnly: true,
@@ -117,10 +141,7 @@
 
         const res = await fetch("/api/webpush/subscribe", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": csrfToken,
-          },
+          headers: { "Content-Type": "application/json", "X-CSRFToken": csrfToken },
           body: JSON.stringify(newSub),
         });
 
@@ -130,33 +151,26 @@
           pushStatus.innerText = "❌ Failed to enable push";
           e.target.checked = false;
         }
+
       } catch (err) {
-        console.error("Error subscribing:", err);
         pushStatus.innerText = "❌ Subscription failed";
         e.target.checked = false;
       }
+
     } else {
-      // UNSUBSCRIBE
       try {
-        if (subscription) {
-          await subscription.unsubscribe();
-        }
+        if (subscription) await subscription.unsubscribe();
 
         const res = await fetch("/api/webpush/unsubscribe", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": csrfToken,
-          },
+          headers: { "Content-Type": "application/json", "X-CSRFToken": csrfToken },
         });
 
-        if (res.ok) {
-          pushStatus.innerText = "🚫 Push notifications disabled";
-        } else {
-          pushStatus.innerText = "⚠️ Failed to disable push";
-        }
+        pushStatus.innerText = res.ok
+          ? "🚫 Push notifications disabled"
+          : "⚠️ Failed to disable push";
+
       } catch (err) {
-        console.error("Error unsubscribing:", err);
         pushStatus.innerText = "⚠️ Error disabling push";
       }
     }
@@ -165,12 +179,7 @@
   function urlBase64ToUint8Array(base64String) {
     const padding = "=".repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
-    const rawData = window.atob(base64);
-    return Uint8Array.from([...rawData].map((c) => c.charCodeAt(0)));
+    return Uint8Array.from(window.atob(base64), c => c.charCodeAt(0));
   }
 </script>
 {% endblock content %}
-
-{% block sidebar %}
-{% include 'partials/account_sidebar.html' %}
-{% endblock sidebar %}

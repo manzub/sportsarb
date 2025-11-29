@@ -1,20 +1,41 @@
-<aside class="flex flex-col h-screen px-4 py-8 overflow-y-auto">
-  <div class="flex flex-col justify-between">
-    <nav>
-      <a class="flex items-center px-4 py-2 {% if request.endpoint == 'auth.login' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} rounded-md" href="{{url_for('main.account')}}">
-        <ion-icon class="w-5 h-5" name="person"></ion-icon>
-        <span class="mx-4 font-medium">Sign In</span>
-      </a>
+<!-- SIDEBAR -->
+<aside class="w-full lg:w-1/4 bg-gray-900 border-t lg:border-t-0 lg:border-l border-gray-800 
+           flex flex-col items-center justify-start py-12 px-5 order-2">
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.confirmation' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700">
-        <ion-icon name="shield-checkmark" class="w-5 h-5"></ion-icon>
-        <span class="mx-4 font-medium">Confirmation</span>
-      </a>
+  <h2 class="text-2xl font-semibold text-bet365yellow mb-8">
+    Account Options
+  </h2>
 
-      <a class="flex items-center px-4 py-2 mt-2 {% if request.endpoint == 'auth.reset_password' %}bg-primary text-primary-content{% else %}text-gray-600 hover:bg-gray-100{% endif %} transition-colors duration-300 transform rounded-md hover:bg-gray-100 hover:text-gray-700" href="{{url_for('auth.request_password_reset')}}">
-        <ion-icon class="w-5 h-5" name="refresh-circle"></ion-icon>
-        <span class="mx-4 font-medium">Reset</span>
-      </a>
-    </nav>
-  </div>
+  <nav class="w-full space-y-3 text-gray-300">
+    <a href="{{ url_for('auth.login') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg
+        {% if request.endpoint == 'auth.login' %}
+           bg-bet365green text-gray-900
+        {% else %}
+           hover:bg-gray-800
+        {% endif %}">
+      <ion-icon name="person" class="text-xl"></ion-icon>
+      <span class="font-medium">Sign In</span>
+    </a>
+
+    <a class="flex items-center gap-3 px-4 py-3 rounded-lg
+        {% if request.endpoint == 'auth.confirmation' %}
+           bg-bet365green text-gray-900
+        {% else %}
+           hover:bg-gray-800
+        {% endif %}">
+      <ion-icon name="shield-checkmark" class="text-xl"></ion-icon>
+      <span class="font-medium">Confirmation</span>
+    </a>
+
+    <a href="{{ url_for('auth.request_password_reset') }}" class="flex items-center gap-3 px-4 py-3 rounded-lg
+        {% if request.endpoint == 'auth.reset_password' %}
+           bg-bet365green text-gray-900
+        {% else %}
+           hover:bg-gray-800
+        {% endif %}">
+      <ion-icon name="refresh-circle" class="text-xl"></ion-icon>
+      <span class="font-medium">Reset Password</span>
+    </a>
+  </nav>
+
 </aside>
