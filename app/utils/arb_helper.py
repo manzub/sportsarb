@@ -22,9 +22,13 @@ def get_latest_data(key_prefix):
   return []
 
 # Profit/Bookmaker/Event/Odds
-def sort_surebet_data(data):
+def sort_surebet_data(data, cutoff = None):
   results = []
   for arb in json.loads(data):
+    # if cutoff, skip items
+    if cutoff and float(arb['profit_margin']) != cutoff:
+      continue
+    
     # Format date/time
     event_time = arb.get('commence_time')
     if event_time:

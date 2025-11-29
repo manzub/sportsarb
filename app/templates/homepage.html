@@ -1,270 +1,170 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card bg-base-100 shadow-sm border-1 border-gray-300">
-  <div class="card-body p-0">
-    <div id="jumbotron" class="m-4 bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm">
-      <!-- Heading -->
-      <h1 class="text-xl font-semibold text-blue-800 mb-3">Profit from bets for any match outcome</h1>
+<!-- MAIN CONTENT -->
+<main class="flex-1 p-6">
+  <!-- HERO SECTION -->
+  <section class="w-full bg-bet365green text-white py-16 px-6 shadow-xl">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-bet365yellow">
+        Make $500–$1000 Weekly from Automated Sports Edges
+      </h1>
+      <p class="mt-4 text-lg text-gray-100 max-w-3xl mx-auto">
+        Stop gambling. Start exploiting mispriced odds across bookmakers.
+        Surebets, Value Bets, Middles — delivered live.
+      </p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="#pricing" class="bg-bet365yellow text-black font-bold px-6 py-3 rounded-lg hover:opacity-90">Get
+          Started</a>
+        <a href="{{url_for('main.surebets')}}"
+          class="bg-white/20 border border-white/40 px-6 py-3 rounded-lg hover:bg-white/30">View
+          Live Surebets</a>
+      </div>
+    </div>
+  </section>
 
-      <!-- Description -->
-      <p class="text-gray-700 mb-4 leading-relaxed">A bookmaker's surebet can occur when different bookmakers have
-        different odds for the same game.</p>
+  <!-- WHY THIS WORKS -->
+  <section class="max-w-6xl mx-auto mt-16 px-6">
+    <h2 class="text-3xl font-bold text-bet365yellow mb-8 text-center">Why This Works</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-bet365panel p-6 rounded-xl shadow border border-black">
+        <ion-icon name="trending-up" class="text-bet365yellow text-4xl"></ion-icon>
+        <h3 class="text-xl font-bold mt-4 mb-2">Mathematical Edges</h3>
+        <p class="text-gray-300">Odds discrepancies happen constantly. You profit from market inefficiencies, not
+          luck.</p>
+      </div>
+      <div class="bg-bet365panel p-6 rounded-xl shadow border border-black">
+        <ion-icon name="flash" class="text-bet365yellow text-4xl"></ion-icon>
+        <h3 class="text-xl font-bold mt-4 mb-2">Live Alerts</h3>
+        <p class="text-gray-300">Instant signals when profitable edges appear. No delays, no guesswork.</p>
+      </div>
+      <div class="bg-bet365panel p-6 rounded-xl shadow border border-black">
+        <ion-icon name="shield-checkmark" class="text-bet365yellow text-4xl"></ion-icon>
+        <h3 class="text-xl font-bold mt-4 mb-2">Consistent Results</h3>
+        <p class="text-gray-300">Users consistently see $500–$1000 weekly once bankroll & staking are optimized.</p>
+      </div>
+    </div>
+  </section>
 
-      <hr class="border-gray-300 mb-5" />
+  <!-- ======================== PRICING SECTION (WITH FORM) ======================== -->
+  <section id="pricing" class="mt-20 bg-bet365panel py-20 border-t border-black">
+    <h2 class="text-3xl text-center font-bold text-bet365yellow mb-10">Pricing Plans</h2>
 
-      <!-- Main content container -->
-      <div id="jumbotron-counters-actions-rating-container" class="flex flex-col md:flex-row justify-between gap-6">
-        <!-- Left: Counters + Action -->
-        <div class="flex-1">
-          <p class="mb-1">
-            We found
-            <strong class="text-gray-900">{{total_surebet_items}}</strong> profitable surebet for your filter
-            settings.
-          </p>
-          <p>To see surebets with a profit of more than 1% and negative surebets, please choose a plan.</p>
+    <div class="max-w-6xl mx-auto px-6">
+      <form method="post">
+        {{ form.hidden_tag() }}
 
-          <div class="mt-4">
-            <a href="{{url_for('plans.overview')}}"
-              class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-lg shadow transition">
-              Plans and Registration
-            </a>
+        <div class="flex flex-col md:flex-row md:justify-center md:gap-8 space-y-8 md:space-y-0">
+          {% if plans %}
+          {% for plan in plans %}
+          <div
+            class="flex-1 max-w-sm mx-auto bg-bet365dark {% if plan.plan_name == 'Pro' %}bg-bet365green scale-105{% endif %} p-6 rounded-xl border {% if plan.plan_name == 'Pro' %}border-gray-900{% else %}border-gray-800{% endif %} shadow">
+
+            <!-- Plan Header -->
+            <h3
+              class="text-xl font-bold mb-2 {% if plan.plan_name == 'Pro' %}text-bet365yellow{% else %}text-white{% endif %}">
+              {{ plan.plan_name }}</h3>
+            {% if plan.description %}
+            <p class="{% if plan.plan_name == 'Pro' %}text-gray-100{% else %}text-gray-300{% endif %}">{{
+              plan.description }}</p>
+            {% endif %}
+
+            <!-- Price -->
+            <p
+              class="text-4xl font-bold mt-4 {% if plan.plan_name == 'Pro' %}text-white{% else %}text-bet365yellow{% endif %}">
+              ${{ plan.price }}/{{ plan.duration | days_to_months }}
+            </p>
+
+            <!-- Benefits -->
+            {% if plan.benefits %}
+            <ul
+              class="mt-6 space-y-2 text-sm {% if plan.plan_name == 'Pro' %}text-white{% else %}text-gray-300{% endif %}">
+              {% for key, value in plan.benefits.items() %}
+              <li class="flex items-center">
+                <ion-icon class="w-5 h-5 {% if value %}text-bet365yellow{% else %}text-gray-500{% endif %}"
+                  name="{{ 'checkmark-circle' if value else 'close-circle' }}"></ion-icon>
+                <span class="ml-2">{{ key | capitalize }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            <!-- Hidden field for form -->
+            {{ form.plan_id(value=plan.id, class="hidden") }}
+
+            <!-- Submit button -->
+            {{ form.submit(class="w-full mt-6 bg-bet365yellow text-black font-semibold py-2 rounded-lg
+            hover:opacity-90", value="Choose Plan") }}
           </div>
+          {% endfor %}
+          {% else %}
+          <p class="text-center text-gray-300">No pricing plans available at the moment.</p>
+          {% endif %}
         </div>
+      </form>
+    </div>
+  </section>
 
-        <!-- Right: Rating section -->
-        <div id="jumbotron-rating-container" class="flex flex-col items-center justify-center md:items-end">
-          <!-- Trustpilot Widget Embed -->
-          <div class="trustpilot-widget">
-          </div>
+
+  <!-- ======================== FAQ ======================== -->
+  <section class="max-w-4xl mx-auto mt-20 px-6">
+    <h2 class="text-3xl text-center font-bold text-bet365yellow mb-10">FAQ</h2>
+
+    <div class="space-y-4">
+      <!-- FAQ Item -->
+      <div class="faq-item bg-bet365panel border border-gray-800 rounded-lg p-4 cursor-pointer">
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold">Is this gambling?</h3>
+          <ion-icon name="chevron-down" class="transition duration-300 faq-icon"></ion-icon>
         </div>
-      </div>
-    </div>
-
-    <div class="p-4">
-      <div role="alert" class="alert alert-error alert-soft">
-        <p class="text-red-600">Before you place any bets, we strongly recommend that you check the events, odds, and
-          bookmaker's rules. <br><br>We are constantly working to improve the quality of our service, but errors and
-          discrepancies can occur, unfortunately.</p>
-      </div>
-    </div>
-    <!-- content here -->
-    <div class="mx-4 mt-4 flex items-center justify-between">
-      <div class="">
-        <p class="text-2xl font-bold">Found {{total_surebet_items}} surebets</p>
-        <p>Examples with profit of less than 1% ↓</p>
+        <p class="mt-3 text-gray-300 hidden">
+          No — all strategies rely purely on mathematical advantage, not luck.
+        </p>
       </div>
 
-      <div class="actions">
-        <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
-          ← Prev
-        </button>
-        <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
-          Next →
-        </button>
+      <div class="faq-item bg-bet365panel border border-gray-800 rounded-lg p-4 cursor-pointer">
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold">How much can I realistically make?</h3>
+          <ion-icon name="chevron-down" class="transition duration-300 faq-icon"></ion-icon>
+        </div>
+        <p class="mt-3 text-gray-300 hidden">
+          Most users make $500–$1000 over a period depending on your bankroll and your strategy.
+        </p>
       </div>
-    </div>
-    <div class="m-3 overflow-x-auto">
-      <table id="surebets-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
-        <thead class="bg-gray-100 text-gray-800">
-          <tr>
-            <th class="px-4 py-3 font-semibold">
-              <a href="?order=profit_asc" title="Sort by Profit descending"
-                class="flex items-center gap-1 hover:text-blue-600">
-                Profit
-              </a>
-            </th>
-            <th class="px-4 py-3 font-semibold">Bookmaker</th>
-            <th class="px-4 py-3 font-semibold">Time</th>
-            <th class="px-4 py-3 font-semibold">Event</th>
-            <th class="px-4 py-3 font-semibold">Market</th>
-            <th class="px-4 py-3 font-semibold text-right">Odds</th>
-            <th></th>
-          </tr>
-        </thead>
 
-        <!-- body here -->
-      </table>
-    </div>
-  </div>
-</div>
+      <div class="faq-item bg-bet365panel border border-gray-800 rounded-lg p-4 cursor-pointer">
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold">Do I need betting experience?</h3>
+          <ion-icon name="chevron-down" class="transition duration-300 faq-icon"></ion-icon>
+        </div>
+        <p class="mt-3 text-gray-300 hidden">
+          Not at all. The platform shows exactly where the edges are.
+        </p>
+      </div>
 
+      <div class="faq-item bg-bet365panel border border-gray-800 rounded-lg p-4 cursor-pointer">
+        <div class="flex justify-between items-center">
+          <h3 class="text-lg font-semibold">Is this legal?</h3>
+          <ion-icon name="chevron-down" class="transition duration-300 faq-icon"></ion-icon>
+        </div>
+        <p class="mt-3 text-gray-300 hidden">
+          Yes. You are simply placing bets at different bookmakers legally available to you.
+        </p>
+      </div>
+      <a class="text-bet365yellow flex items-center gap-2 font-bold p-2" href="{{url_for('main.frequently_asked')}}">View More <ion-icon name="arrow-forward-outline"></ion-icon></a>
+    </div>
+  </section>
+
+</main>
 <script>
-  const API_URL = "/api/surebets";
-
-  let currentPage = 1;
-  const perPage = 51;
-  let _market = '';
-  let _sort = 'profit';
-  let _time = '';
-  let _outcome_type = '';
-
-  function fetchSurebets(page = 1, sort = _sort, market = _market, commence_time = _time, outcome_type = _outcome_type) {
-    _market = market;
-    _sort = sort
-    _time = commence_time
-    _outcome_type = outcome_type
-    $.ajax({
-      url: API_URL,
-      data: { page: page, limit: perPage, sort: _sort, market: _market, commence_time: _time, outcome_type: _outcome_type },
-      method: "GET",
-      success: function (response) {
-        if (response.data.length == 0) {
-          $("#surebets-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data/No results found.
-                </td>
-              </tr>
-            `);
-        } else {
-          renderSurebets(response.data);
-          updatePagination(response.page, response.total_pages);
-        }
-      },
-      error: function () {
-        $("#surebets-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data.
-                </td>
-              </tr>
-            `);
-      },
+  // Vanilla JS toggle for FAQ
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.querySelector('p');
+      const icon = item.querySelector('.faq-icon');
+      answer.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
     });
-  }
-
-  function renderSurebets(items) {
-    const tbodyContainer = $("#surebets-body");
-    //tbodyContainer.empty();
-    removeElementsByClass('surebet_record')
-
-    // Group by surebet_id
-    const grouped = {};
-    items.forEach((item) => {
-      if (!grouped[item.surebet_id]) grouped[item.surebet_id] = [];
-      grouped[item.surebet_id].push(item);
-    });
-
-    Object.keys(grouped).forEach((id) => {
-      const group = grouped[id];
-      const tbody = $("<tbody>")
-        .addClass("surebet_record border-t border-gray-200")
-        .attr("data-id", id);
-
-      group.forEach((item, idx) => {
-        tbody.append(`
-              <tr class="hover:bg-gray-50 transition">
-                <!-- Profit & Actions -->
-                ${idx == 0 ? `<td rowspan="3" class="px-4 py-2 align-top">
-                  <div class="flex flex-col items-start">
-                    <span class="font-semibold text-green-600 cursor-help" title="ROI 809%">+${item.profit}%</span>
-                    <span class="text-xs text-gray-500 mt-1 cursor-help" title="Surebet age: 31 minutes">31m</span>
-
-                    <!-- Action buttons -->
-                    <div class="flex items-center gap-2 mt-2">
-                      <label for="calculator_modal" data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
-                        <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
-                      </label>
-                      <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
-                        <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
-                      </button>
-                    </div>
-                  </div>
-                </td>` : ''}
-
-                <!-- Row 1: bookmaker -->
-                <td class="px-4 py-2">
-                  <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
-                  <div class="text-xs text-gray-500">${item.sport_name}</div>
-                </td>
-
-                ${idx == 0 ? `<td rowspan="${group.length}" class="px-4 py-2 align-top">
-                  <a href="#" class="text-blue-600 hover:underline">${item.date}</a>
-                  <div class="text-xs text-gray-500">${item.time}</div>
-                </td>` : ''}
-
-                <td class="px-4 py-2">
-                  <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
-                  <div class="text-xs text-gray-500">${item.event_name}</div>
-                  <div class="text-xs text-gray-500">${item.tournament}</div>
-                </td>
-
-                <td class="px-4 py-2 text-gray-600" style="text-transform:uppercase">${item.market_type}</td>
-
-                <td class="px-4 py-2 text-right">
-                  <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
-                </td>
-
-                ${idx == 0 ? `<td rowspan="3" class="px-0 py-2 align-middle text-center">
-                  <button class="p-1 text-gray-600 hover:text-blue-600" title="Open all odds">
-                    <ion-icon class="text-2xl" name="chevron-forward"></ion-icon>
-                  </button>
-                </td>` : ''}
-              </tr>
-            `);
-      });
-
-      tbody.append(`
-            <tr class="bg-gray-50">
-              <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
-                <div class="w-full flex justify-end pr-6">+ 0 more best odds</div>
-              </td>
-            </tr>
-          `);
-
-      tbodyContainer.append(tbody);
-    });
-
-    // attach event for calculator popout
-    $(".calc-btn").on("click", function () {
-      const page = $(this).data("page");
-      const arb_item = $(this).data("item");
-
-      const contentDiv = document.getElementById('calculator-arb-item')
-      contentDiv.setAttribute('data-page', page)
-      contentDiv.setAttribute('data-item', arb_item)
-
-      const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error("Item not found or expired");
-          return response.text();
-        })
-        .then(html => {
-          contentDiv.innerHTML = html;
-        })
-        .catch(err => {
-          console.warn(err.message);
-          alert("This opportunity is no longer available. Refreshing list...");
-          window.location.reload();
-        });
-    });
-  }
-
-  function removeElementsByClass(className) {
-    let elements = document.getElementsByClassName(className);
-    while (elements.length > 0) {
-      elements[0].parentNode.removeChild(elements[0]);
-    }
-  }
-
-  function updatePagination(page, totalPages) {
-    $("#page-info").text(`Page ${page} of ${totalPages}`);
-    $("#prev-page").prop("disabled", page <= 1);
-    $("#next-page").prop("disabled", page >= totalPages);
-    currentPage = page;
-  }
-
-  $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchSurebets(currentPage - 1, _market);
   });
-
-  $("#next-page").on("click", function () {
-    fetchSurebets(currentPage + 1, _market);
-  });
-
-  // initial load
-  fetchSurebets(currentPage);
 </script>
 {% endblock content %}

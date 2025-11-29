@@ -1,10 +1,11 @@
 from flask_admin.contrib.sqla import ModelView
 from flask_admin import AdminIndexView, expose
-from flask_login import current_user
-from flask import redirect, url_for, request
+from flask_login import current_user, login_required
+from flask import redirect, url_for, request, flash
 from datetime import datetime, timezone
-from app.extensions import redis
-from app.models import Sports, User
+from app.extensions import redis, db
+from app.models import Sports, User, AppSettings
+from app.utils.helpers import to_bool, get_config_by_name
 import platform, psutil
 
 
@@ -45,6 +46,9 @@ class SecureAdminIndexView(AdminIndexView):
       redis_status = f"Connected ({redis_info.get('connected_clients', 0)} clients)"
     except Exception:
       redis_status = "Unavailable"
+      
+    # --- use oddsapi state ---
+    use_online_setting = get_config_by_name('finder_use_offline')
 
     return self.render(
       'admin/dashboard.html',
@@ -52,8 +56,28 @@ class SecureAdminIndexView(AdminIndexView):
       total_sports=total_sports,
       sport_stats=sport_stats,
       sys_info=sys_info,
-      redis_status=redis_status
+      redis_status=redis_status,
+      use_online_setting=not to_bool(use_online_setting if use_online_setting else None)
     )
+
+  @expose('/toggle-oddsapi')
+  @login_required
+  def toggle_oddsapi(self):
+    # Restrict access
+    if not current_user.is_authenticated or not getattr(current_user, "is_admin", False):
+      return redirect(url_for('auth.login', next=request.url))
+    
+    # db toggle use_offline/save_offline
+    finder_use_offline = AppSettings.query.filter_by(setting_name='finder_use_offline').first()
+    finder_save_offline = AppSettings.query.filter_by(setting_name='finder_save_offline').first()
+    if finder_use_offline and finder_save_offline:
+      current_true_state = to_bool(finder_use_offline.value if finder_use_offline else None)
+      finder_use_offline.value = not current_true_state
+      finder_save_offline.value = current_true_state
+      db.session.commit()
+      
+    flash('Toggled Use OddsAPI', 'success')
+    return redirect(url_for('.index'))
 
   """Protects the main /admin dashboard route"""
   def is_accessible(self):

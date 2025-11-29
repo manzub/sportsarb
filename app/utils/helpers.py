@@ -4,6 +4,13 @@ from flask_login import current_user
 from flask import flash, redirect, url_for, has_app_context, current_app
 from app.extensions import db
 
+def to_bool(value):
+  if isinstance(value, bool):
+    return value
+  if isinstance(value, str):
+    return value.strip().lower() == 'true'
+  return False
+
 def has_active_subscription(user):
   if not user.current_plan:
     return False
@@ -99,6 +106,15 @@ def get_exchange_rates():
     print("Error fetching exchange rates:", e)
     return {} 
   
+def get_config_by_name(name:str = None):
+  from app.models import AppSettings
+  
+  if name:
+    setting = AppSettings.query.filter_by(setting_name=f'{name}').first()
+    if setting:
+      return setting.value
+  return None
+  
 def get_odds_api_settings():
   from app.models import AppSettings
   try:
@@ -106,13 +122,6 @@ def get_odds_api_settings():
     fuse_offline = AppSettings.query.filter_by(setting_name='finder_use_offline').first()
     fsave_offline = AppSettings.query.filter_by(setting_name='finder_save_offline').first()
     bookmaker_region = AppSettings.query.filter_by(setting_name='bookmaker_region').first()
-    
-    def to_bool(value):
-      if isinstance(value, bool):
-        return value
-      if isinstance(value, str):
-        return value.strip().lower() == 'true'
-      return False
     
     fetch_results = to_bool(ffetch_results.value if ffetch_results else None)
     use_offline = to_bool(fuse_offline.value if fuse_offline else None)

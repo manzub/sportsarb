@@ -49,6 +49,11 @@ def create_app():
   app.register_blueprint(plans.bp, url_prefix='/plans')
   
   @app.context_processor
+  def get_app_name():
+    app_name = AppSettings.query.filter_by(setting_name='app_name').first()
+    return dict(app_name=app_name.value if app_name else 'NoName')
+  
+  @app.context_processor
   def check_active_plan():
     pending_plan_id = None
     if current_user and current_user.is_authenticated:
@@ -79,6 +84,7 @@ def create_app():
     admin.add_view(AdminView(User, db.session, name='Users'))
     admin.add_view(AdminView(AppSettings, db.session, category='Settings', name='App Settings'))
     admin.add_view(SportView(Sports, db.session, category='Settings', name='Sports'))
+    admin.add_link(MenuLink(name="Webpage", url="/"))
     admin.add_link(MenuLink(name="Logout", category="Account", url="/auth/logout"))
   
   @app.route('/<path:filename>')

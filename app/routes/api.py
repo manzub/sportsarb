@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.extensions import redis
 from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, count_bookmakers_by_surebet_id
-from app.utils.helpers import parse_datetime
+from app.utils.helpers import parse_datetime, get_config_by_name
 from app.services.odds_service import OddsService
 from app.extensions import db
 import json
@@ -70,7 +70,11 @@ def get_surebets():
   if keys:
     latest = max(keys)
     raw_data = redis.get(latest)
-    data = sort_surebet_data(raw_data)
+    # if free user show only cutoff, get config
+    profit_margin_cutoff = float(get_config_by_name('free_plan_cutoff'))
+    if current_user.is_authenticated and current_user.current_plan:
+      profit_margin_cutoff = None
+    data = sort_surebet_data(raw_data, cutoff=profit_margin_cutoff)
   
   # Get filters
   sort = request.args.get("sort")

@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="w-full bg-gray-900 text-white py-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- TEXT -->
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Your Edge in Sports Betting. Automated.
+      </h1>
+
+      <p class="mt-4 text-lg text-gray-300">
+        Detect Surebets, Middles, and Value Bets with a system that does the math for you.
+        <span class="font-semibold text-green-400">1–5% daily profit opportunities.</span>
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <a href="/plans/overview"
+          class="bg-green-500 hover:bg-green-600 text-gray-900 font-bold px-6 py-3 rounded-xl shadow-md transition">
+          Start Earning →
+        </a>
+        <a href="/surebets"
+          class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition border border-white/10">
+          Live Surebets
+        </a>
+      </div>
+    </div>
+
+    <!-- PROFIT CARD -->
+    <div class="hidden md:flex justify-center">
+      <div class="bg-white rounded-2xl shadow-xl p-6 w-[85%] border border-gray-100">
+        <h3 class="text-gray-900 text-xl font-semibold mb-4">Today’s Best Finds</h3>
+
+        <div class="space-y-3">
+          <div class="flex justify-between bg-green-50 p-3 rounded-lg">
+            <span class="font-medium text-gray-700">H2H Surebet</span>
+            <span class="text-green-600 font-semibold">+3.42%</span>
+          </div>
+          <div class="flex justify-between bg-green-50 p-3 rounded-lg">
+            <span class="font-medium text-gray-700">Totals Arbitrage</span>
+            <span class="text-green-600 font-semibold">+2.15%</span>
+          </div>
+          <div class="flex justify-between bg-yellow-50 p-3 rounded-lg">
+            <span class="font-medium text-gray-700">Value Bet</span>
+            <span class="text-yellow-600 font-semibold">+12.40% EV</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES STRIP -->
+<section class="w-full bg-white py-10 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-6">
+    <div>
+      <p class="text-3xl font-bold text-green-600">24/7</p>
+      <p class="text-sm text-gray-600">Live Monitoring</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold text-indigo-600">50+</p>
+      <p class="text-sm text-gray-600">Bookmakers</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold text-blue-600">{{ total_surebet_items }}</p>
+      <p class="text-sm text-gray-600">Surebets Found Today</p>
+    </div>
+    <div>
+      <p class="text-3xl font-bold text-purple-600">0% Guesswork</p>
+      <p class="text-sm text-gray-600">Pure Math</p>
+    </div>
+  </div>
+</section>
+
+<!-- INFO BANNER -->
+<section class="max-w-5xl mx-auto my-10 px-6">
+  <div class="bg-blue-50 border border-blue-200 px-6 py-6 rounded-xl shadow-sm">
+    <h2 class="text-xl font-semibold text-blue-900 mb-3">
+      Profit from any match outcome — automatically.
+    </h2>
+
+    <p class="text-gray-700 mb-4">
+      Bookmakers disagree on odds. We find those disagreements and turn them into guaranteed profit.
+    </p>
+
+    <a href="{{ url_for('plans.overview') }}"
+      class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-lg shadow transition">
+      View Plans →
+    </a>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="max-w-5xl mx-auto px-6">
+  <div role="alert" class="alert alert-error alert-soft bg-red-50 border border-red-200 p-4 rounded-xl">
+    <p class="text-red-700 text-sm leading-relaxed">
+      Always verify odds and event details before placing any bets. Minor discrepancies can occur.
+    </p>
+  </div>
+</section>
+
+<!-- TABLE SECTION -->
+<section class="max-w-6xl mx-auto px-4 mt-10">
+
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <p class="text-2xl font-bold">Found {{ total_surebet_items }} surebets</p>
+      <p class="text-gray-600 text-sm">Showing examples under 1% profit</p>
+    </div>
+
+    <div class="flex gap-2">
+      <button id="prev-page" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded disabled:opacity-50">← Prev</button>
+      <button id="next-page" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded disabled:opacity-50">Next →</button>
+    </div>
+  </div>
+
+  <!-- Your existing table + JS stays untouched -->
+  <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+    <table id="surebets-body" class="w-full text-sm text-gray-700">
+      <!-- table injected dynamically -->
+    </table>
+  </div>
+
+</section>
+<script>
+  const API_URL = "/api/surebets";
+
+  let currentPage = 1;
+  const perPage = 51;
+  let _market = '';
+  let _sort = 'profit';
+  let _time = '';
+  let _outcome_type = '';
+
+  function fetchSurebets(page = 1, sort = _sort, market = _market, commence_time = _time, outcome_type = _outcome_type) {
+    _market = market;
+    _sort = sort
+    _time = commence_time
+    _outcome_type = outcome_type
+    $.ajax({
+      url: API_URL,
+      data: { page: page, limit: perPage, sort: _sort, market: _market, commence_time: _time, outcome_type: _outcome_type },
+      method: "GET",
+      success: function (response) {
+        if (response.data.length == 0) {
+          $("#surebets-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data/No results found.
+                </td>
+              </tr>
+            `);
+        } else {
+          renderSurebets(response.data);
+          updatePagination(response.page, response.total_pages);
+        }
+      },
+      error: function () {
+        $("#surebets-body").html(`
+              <tr>
+                <td colspan="7" class="text-center py-4 text-gray-500">
+                  Failed to load data.
+                </td>
+              </tr>
+            `);
+      },
+    });
+  }
+
+  function renderSurebets(items) {
+    const tbodyContainer = $("#surebets-body");
+    //tbodyContainer.empty();
+    removeElementsByClass('surebet_record')
+
+    // Group by surebet_id
+    const grouped = {};
+    items.forEach((item) => {
+      if (!grouped[item.surebet_id]) grouped[item.surebet_id] = [];
+      grouped[item.surebet_id].push(item);
+    });
+
+    Object.keys(grouped).forEach((id) => {
+      const group = grouped[id];
+      const tbody = $("<tbody>")
+        .addClass("surebet_record border-t border-gray-200")
+        .attr("data-id", id);
+
+      group.forEach((item, idx) => {
+        tbody.append(`
+              <tr class="hover:bg-gray-50 transition">
+                <!-- Profit & Actions -->
+                ${idx == 0 ? `<td rowspan="3" class="px-4 py-2 align-top">
+                  <div class="flex flex-col items-start">
+                    <span class="font-semibold text-green-600 cursor-help" title="ROI 809%">+${item.profit}%</span>
+                    <span class="text-xs text-gray-500 mt-1 cursor-help" title="Surebet age: 31 minutes">31m</span>
+
+                    <!-- Action buttons -->
+                    <div class="flex items-center gap-2 mt-2">
+                      <label for="calculator_modal" data-page="surebets" data-item="${item.surebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                        <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
+                      </label>
+                      <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
+                        <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                      </button>
+                    </div>
+                  </div>
+                </td>` : ''}
+
+                <!-- Row 1: bookmaker -->
+                <td class="px-4 py-2">
+                  <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+                  <div class="text-xs text-gray-500">${item.sport_name}</div>
+                </td>
+
+                ${idx == 0 ? `<td rowspan="${group.length}" class="px-4 py-2 align-top">
+                  <a href="#" class="text-blue-600 hover:underline">${item.date}</a>
+                  <div class="text-xs text-gray-500">${item.time}</div>
+                </td>` : ''}
+
+                <td class="px-4 py-2">
+                  <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
+                  <div class="text-xs text-gray-500">${item.event_name}</div>
+                  <div class="text-xs text-gray-500">${item.tournament}</div>
+                </td>
+
+                <td class="px-4 py-2 text-gray-600" style="text-transform:uppercase">${item.market_type}</td>
+
+                <td class="px-4 py-2 text-right">
+                  <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+                </td>
+
+                ${idx == 0 ? `<td rowspan="3" class="px-0 py-2 align-middle text-center">
+                  <button class="p-1 text-gray-600 hover:text-blue-600" title="Open all odds">
+                    <ion-icon class="text-2xl" name="chevron-forward"></ion-icon>
+                  </button>
+                </td>` : ''}
+              </tr>
+            `);
+      });
+
+      tbody.append(`
+            <tr class="bg-gray-50">
+              <td colspan="7" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
+                <div class="w-full flex justify-end pr-6">+ 0 more best odds</div>
+              </td>
+            </tr>
+          `);
+
+      tbodyContainer.append(tbody);
+    });
+
+    // attach event for calculator popout
+    $(".calc-btn").on("click", function () {
+      const page = $(this).data("page");
+      const arb_item = $(this).data("item");
+
+      const contentDiv = document.getElementById('calculator-arb-item')
+      contentDiv.setAttribute('data-page', page)
+      contentDiv.setAttribute('data-item', arb_item)
+
+      const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error("Item not found or expired");
+          return response.text();
+        })
+        .then(html => {
+          contentDiv.innerHTML = html;
+        })
+        .catch(err => {
+          console.warn(err.message);
+          alert("This opportunity is no longer available. Refreshing list...");
+          window.location.reload();
+        });
+    });
+  }
+
+  function removeElementsByClass(className) {
+    let elements = document.getElementsByClassName(className);
+    while (elements.length > 0) {
+      elements[0].parentNode.removeChild(elements[0]);
+    }
+  }
+
+  function updatePagination(page, totalPages) {
+    $("#page-info").text(`Page ${page} of ${totalPages}`);
+    $("#prev-page").prop("disabled", page <= 1);
+    $("#next-page").prop("disabled", page >= totalPages);
+    currentPage = page;
+  }
+
+  $("#prev-page").on("click", function () {
+    if (currentPage > 1) fetchSurebets(currentPage - 1, _market);
+  });
+
+  $("#next-page").on("click", function () {
+    fetchSurebets(currentPage + 1, _market);
+  });
+
+  // initial load
+  fetchSurebets(currentPage);
+</script>
+{% endblock %}

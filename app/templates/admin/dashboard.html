@@ -23,6 +23,16 @@
         <h6>{{ redis_status }}</h6>
       </div>
     </div>
+    <div class="col-md-3">
+      <div class="card border-left-info shadow-sm p-3">
+        <h5>Toggle OddsAPI</h5>
+        <a href="{{ url_for('.toggle_oddsapi') }}"
+          class="bg-primary hover:bg-blue-700 text-primary-content font-semibold px-4 py-2 rounded">
+          ▶ Run Analysis
+        </a>
+        <p>Status: {{'Running' if use_online_setting else 'Stopped'}}</p>
+      </div>
+    </div>
   </div>
 
   <h4 class="mt-4 mb-3">⚽ Sports Breakdown</h4>

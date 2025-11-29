@@ -12,7 +12,7 @@ logger = setup_logging()
 # find best_odds
 class SurebetFinder:
   def __init__(self):
-    self.cutoff = 1.1
+    self.cutoff = 0.9
     self.team_name_cache = {}
     self.markets = None
     

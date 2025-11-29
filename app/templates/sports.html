@@ -1,42 +1,48 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="py-10 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h1 class="text-2xl font-bold text-gray-800 mb-6">Sports Data Overview</h1>
+<section class="w-full max-w-7xl mx-auto px-4 py-10">
 
-    {% if sports %}
-    <div class="overflow-x-auto">
-      <table class="min-w-full bg-white border border-gray-200 shadow-sm rounded-lg">
-        <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-          <tr>
-            <th class="py-3 px-4 text-left">Sport</th>
-            <th class="py-3 px-4 text-left">League</th>
-            <th class="py-3 px-4 text-left">Favorite</th>
-          </tr>
-        </thead>
-        <tbody class="text-gray-700">
-          {% for item in sports %}
-          <tr class="border-t border-gray-200 hover:bg-gray-50 transition">
-            <td class="py-3 px-4 font-medium">{{ item.sport }}</td>
-            <td class="py-3 px-4">{{ item.league }}</td>
-            <td class="py-3 px-4 text-center">
-              <input type="checkbox" class="favorite-checkbox" data-league="{{ item.league }}"
-                data-sport="{{ item.sport }}" {% if item.is_favorite %}checked{% endif %}>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-    {% else %}
-    <p class="text-gray-600 mt-6">No sports data available yet.</p>
-    {% endif %}
+  <h1 class="text-4xl font-bold mb-8 text-bet365yellow text-center">
+    Sports Data Overview
+  </h1>
+
+  {% if sports %}
+  <div class="w-full overflow-x-auto border border-gray-700 rounded-lg">
+
+    <table class="w-full text-left text-gray-300">
+      <thead class="bg-gray-900 text-gray-200 uppercase text-sm border-b border-gray-700">
+        <tr>
+          <th class="py-3 px-4">Sport</th>
+          <th class="py-3 px-4">League</th>
+          <th class="py-3 px-4 text-center">Favorite</th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-800">
+        {% for item in sports %}
+        <tr class="hover:bg-bet365green transition cursor-pointer select-none">
+          <td class="py-3 px-4 font-medium">{{ item.sport }}</td>
+          <td class="py-3 px-4">{{ item.league }}</td>
+          <td class="py-3 px-4 text-center">
+            <input type="checkbox" {{disabled if current_user.is_authenticated else ''}} class="toggle toggle-success favorite-checkbox" data-sport="{{ item.sport }}"
+              data-league="{{ item.league }}" {% if item.is_favorite %}checked{% endif %}>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
   </div>
-</div>
+
+  {% else %}
+  <p class="text-gray-400 text-center mt-8">No sports data available yet.</p>
+  {% endif %}
+</section>
 
 <script>
   const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
   document.querySelectorAll('.favorite-checkbox').forEach(chk => {
     chk.addEventListener('change', async (e) => {
       const league = e.target.dataset.league;
@@ -45,9 +51,13 @@
       try {
         const res = await fetch('/api/sports/toggle-favorite', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken },
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrfToken
+          },
           body: JSON.stringify({ league, favorite: isFavorite })
         });
+
         const data = await res.json();
         if (!data.success) {
           e.target.checked = !isFavorite;

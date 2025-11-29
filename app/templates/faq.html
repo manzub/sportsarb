@@ -1,134 +1,98 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="max-w-3xl mx-auto py-12 px-4">
-  <h1 class="text-3xl font-bold mb-8 text-center text-gray-800">Frequently Asked Questions</h1>
+<section class="w-full max-w-7xl mx-auto py-12 px-4">
+  <h1 class="text-4xl font-bold mb-8 text-center text-bet365yellow">Frequently Asked Questions</h1>
 
-  <div class="space-y-4">
+  <div class="divide-y divide-gray-700">
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>What is a Surebet?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
         A <strong>Surebet</strong> (or arbitrage bet) is a set of bets placed across different bookmakers that
-        guarantees a profit regardless of the event outcome.
-        Our app scans odds from multiple sources and identifies these opportunities automatically.
+        guarantees a profit regardless of the event outcome. Our app scans odds from multiple sources and identifies these opportunities automatically.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>What is a Value Bet?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        A <strong>Value Bet</strong> occurs when a bookmaker's odds underestimate the true probability of an event
-        happening.
-        Over time, betting only on value outcomes yields positive expected value (EV).
-        Our system compares bookmaker odds with sharp or market-efficient lines to detect these.
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        A <strong>Value Bet</strong> occurs when a bookmaker's odds underestimate the true probability of an event happening. Over time, betting only on value outcomes yields positive expected value (EV). Our system compares bookmaker odds with sharp or market-efficient lines to detect these.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>What is a Middle Opportunity?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        A <strong>Middle</strong> is when you bet on opposite lines (e.g., -3.5 and +2.0) at different bookmakers and
-        have a range of outcomes where both bets win.
-        This allows you to “hit the middle” for higher profit while minimizing risk.
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        A <strong>Middle</strong> is when you bet on opposite lines (e.g., -3.5 and +2.0) at different bookmakers and have a range of outcomes where both bets win. This allows you to “hit the middle” for higher profit while minimizing risk.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>How are odds collected?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        The app pulls real-time odds from multiple APIs (e.g., TheOddsAPI) across regions and markets such as H2H,
-        spreads, and totals.
-        Data is cleaned, normalized, and compared to find pricing inefficiencies.
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        The app pulls real-time odds from multiple APIs (e.g., TheOddsAPI) across regions and markets such as H2H, spreads, and totals. Data is cleaned, normalized, and compared to find pricing inefficiencies.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>How is profit calculated?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        Profit is based on the total stake and odds distribution. For surebets, stakes are balanced across outcomes to
-        lock in guaranteed returns.
-        For valuebets, expected profit is determined by comparing implied probability with true probability.
-        For middles, profit depends on whether both, one, or neither bets land.
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        Profit is based on total stake and odds distribution. For surebets, stakes are balanced across outcomes to lock in guaranteed returns. For valuebets, expected profit is determined by comparing implied probability with true probability. For middles, profit depends on whether both, one, or neither bets land.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>Is my betting data stored securely?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        Yes. We use encrypted connections (HTTPS) and never store sensitive account credentials.
-        Betting profiles and preferences are stored securely in our database with restricted access.
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        Yes. We use encrypted connections (HTTPS) and never store sensitive account credentials. Betting profiles and preferences are stored securely in our database with restricted access.
       </div>
     </div>
 
-    <!-- Question -->
-    <div x-data="{ open: false }" class="border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+    <!-- FAQ Item -->
+    <div x-data="{ open: false }" class="w-full">
       <button @click="open = !open"
-        class="w-full flex justify-between items-center px-6 py-4 text-left text-gray-800 font-medium hover:bg-gray-50 transition">
+        class="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium hover:bg-bet365green transition">
         <span>How often are odds updated?</span>
-        <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
+        <ion-icon :name="open ? 'chevron-up-outline' : 'chevron-down-outline'" class="text-xl"></ion-icon>
       </button>
-      <div x-show="open" x-collapse class="px-6 pb-4 text-gray-600 text-sm">
-        Odds are refreshed every 10 minutes to ensure accuracy.
-        You can customize the refresh frequency in your app settings or via your subscription plan (coming soon).
+      <div x-show="open" x-collapse class="px-4 pb-3 text-gray-300 text-sm">
+        Odds are refreshed every 10 minutes to ensure accuracy. You can customize the refresh frequency in your app settings or via your subscription plan (coming soon).
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Alpine.js for collapsible animation -->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
-
 {% endblock %}
