@@ -18,6 +18,10 @@ class SelectPlan(FlaskForm):
   plan_id = StringField('Plan Id')
   submit = SubmitField('Choose')
   
+class ResetPassword(FlaskForm):
+  email = StringField('Email', validators=[DataRequired(), Email()])
+  submit = SubmitField('Submit')
+
 class CurrencyForm(FlaskForm):
   currency = SelectField(
     'Preferred Currency',

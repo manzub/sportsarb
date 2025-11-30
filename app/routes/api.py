@@ -3,7 +3,6 @@ from flask_login import login_required, current_user
 from app.extensions import redis
 from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, count_bookmakers_by_surebet_id
 from app.utils.helpers import parse_datetime, get_config_by_name
-from app.services.odds_service import OddsService
 from app.extensions import db
 import json
 import os
@@ -43,12 +42,23 @@ def webpush_unsubscribe():
 
 @bp.route('/sports', methods=['GET'])
 def sports():
-  results = []
-  odds_service = OddsService()
-  sports_data = odds_service.load_offline_data()['sports']
-  for item in sports_data:
-    if isinstance(item, dict) and 'description' in item:
-      results.append(item['description'])
+  from app.models import Sports
+  
+  results = {}
+  sports = Sports.query.all()
+  for row in sports:
+    key = row.sport
+    if key not in results:
+      results[key] = []
+    
+    results[key].append({
+      "id": row.id,
+      "league": row.league,
+      "surebets": row.surebets,
+      "middles": row.middles,
+      "values": row.values,
+      "last_count": row.last_count
+    })
     
   return jsonify({"sports":results, "total_sports": len(results)})
 

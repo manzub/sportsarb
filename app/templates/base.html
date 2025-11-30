@@ -103,20 +103,8 @@
     <!-- Header -->
     <div class="p-4 text-lg font-bold border-b border-gray-700">Sports</div>
 
-    <!-- TODO:  Sports List -->
-    <ul class="flex-1 overflow-y-auto divide-y divide-gray-700 px-0">
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Football</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Basketball</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Tennis</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Cricket</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Esports</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Hockey</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">UFC</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Snooker</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Rugby</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Volleyball</li>
-      <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Baseball</li>
-    </ul>
+    <!-- Sports List -->
+    <ul id="sports-list" class="flex-1 overflow-y-auto divide-y divide-gray-700 px-0"></ul>
 
     <!-- Bottom Menu -->
     <div class="p-4 border-t border-gray-700">
@@ -142,19 +130,8 @@
     <!-- TODO: DESKTOP SIDEBAR -->
     <aside class="hidden lg:block w-64 bg-bet365panel border-r border-black overflow-y-auto">
       <div class="p-4 text-lg font-bold border-b border-gray-700 text-bet365yellow">Sports</div>
-      <ul class="divide-y divide-gray-700">
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Football</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Basketball</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Tennis</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Cricket</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Esports</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Hockey</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">UFC</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Snooker</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Rugby</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Volleyball</li>
-        <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">Baseball</li>
-      </ul>
+      <ul id="sports-list" class="flex-1 overflow-y-auto divide-y divide-gray-700 px-0"></ul>
+
       <div class="p-4 text-lg font-bold border-b border-gray-700 mt-4">Menu</div>
       <ul class="divide-y divide-gray-700">
         <li class="px-4 py-3 hover:bg-bet365green cursor-pointer">
@@ -325,6 +302,36 @@
       overlay.classList.add('hidden');
     });
   </script>
+
+  <!-- sports sidebar -->
+  <script>
+    async function loadSports() {
+      try {
+        const res = await fetch('/api/sports');
+        const data = await res.json();
+
+        const sports = data.sports || {};
+        const lists = document.querySelectorAll('#sports-list');
+
+        lists.forEach(list => {
+          list.innerHTML = '';
+
+          Object.keys(sports).forEach(name => {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.className = 'px-4 py-3 hover:bg-bet365green';
+            list.appendChild(li);
+          });
+        });
+
+      } catch (err) {
+        console.error('Error loading sports:', err);
+      }
+    }
+
+    loadSports();
+  </script>
+
 </body>
 
 </html>

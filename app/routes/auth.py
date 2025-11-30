@@ -8,7 +8,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from google.oauth2 import id_token
 from google.auth.transport import requests as grequests
 from google_auth_oauthlib.flow import Flow
-from app.forms import LoginForm
+from app.forms import LoginForm, ResetPassword
 from app.models import User, Alerts
 from app.utils.email_helpers import validate_email_address, send_otp_mail, send_email
 from werkzeug.security import generate_password_hash
@@ -152,31 +152,34 @@ def resend_otp(user_id):
   flash("A new verification code has been sent to your email.", "warning")
   return redirect(url_for('auth.confirmation', user_id=user.id))
 
-@bp.route('/request-password-reset', methods=['GET'])
-@login_required
-def request_password_reset():
-  user = User.query.filter_by(email=current_user.email).first()
-
-  if not user:
-    flash('No account found with that email', 'warning')
-    return redirect(url_for('main.account'))
-
-  otp = generate_otp()
-  user.reset_otp = otp
-  user.reset_otp_expiry = datetime.now(timezone.utc) + timedelta(minutes=10)
-  db.session.commit()
-
-  send_email(
-    to=current_user.email,
-    subject='Password Reset Code',
-    body=f'Your OTP for password reset is: {otp}'
-  )
-  
-  flash('An OTP has been sent to your email address.', 'success')
-  return redirect(url_for('auth.reset_password'))
-
-@bp.route('/reset-password', methods=['GET', 'POST'])
+@bp.route('/reset_password', methods=['GET','POST'])
 def reset_password():
+  form = ResetPassword()
+  if form.validate_on_submit():
+    email = form.email.data
+    user = User.query.filter_by(email=email).first()
+
+    if not user:
+      flash('If the email exists, an OTP has been sent.', 'warning')
+      return redirect(url_for('auth.reset_password'))
+
+    otp = generate_otp()
+    user.reset_otp = otp
+    user.reset_otp_expiry = datetime.now(timezone.utc) + timedelta(minutes=10)
+    db.session.commit()
+
+    send_email(
+      to=user.email,
+      subject='Password Reset Code',
+      body=f'Your OTP for password reset is: {otp}'
+    )
+    
+    flash('An OTP has been sent to your email address.', 'success')
+    return redirect(url_for('auth.new_password'))
+  return render_template('reset_password.html', form=form)
+
+@bp.route('/new-password', methods=['GET', 'POST'])
+def new_password():
   if request.method == 'POST':
     email = request.form.get('email')
     otp = request.form.get('otp_code')
