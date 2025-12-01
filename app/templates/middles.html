@@ -1,106 +1,109 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card bg-base-100">
-  <div class="card-body p-0">
-    <div id="jumbotron" class="m-4 bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm">
-      <!-- Heading -->
-      <h1 class="text-xl font-semibold text-blue-800 mb-3">
-        Win more if the outcome lands within a range
-      </h1>
+<div class="w-full max-w-7xl mx-auto py-12 px-4">
 
-      <!-- Description -->
-      <p class="text-gray-700 mb-4 leading-relaxed">
-        A bookmaker's middle allows you to bet on overlapping lines from different
-        bookmakers and win both bets if the result falls within a specific range.
-      </p>
+  <!-- Jumbo card -->
+  <div class="w-full bg-gray-900 text-gray-100 rounded-xl border border-gray-700 p-6 mb-6 shadow-lg">
 
-      <hr class="border-gray-300 mb-5" />
+    <h1 class="text-xl font-bold text-emerald-400 mb-3">
+      Win more when the score lands in the middle zone
+    </h1>
 
-      <!-- Main content container -->
-      <div id="jumbotron-counters-actions-rating-container" class="flex flex-col md:flex-row justify-between gap-6">
-        <!-- Left: Counters + Action -->
-        <div class="flex-1">
-          <p class="mb-1">
-            We found
-            <strong class="text-gray-900">{{total_middle_items}}</strong> middles for your filter
-            settings.
-          </p>
+    <p class="text-gray-300 mb-4 leading-relaxed">
+      Middles exploit overlapping bookmaker lines. If the result falls within the target range,
+      both bets win. Outside the range, your downside stays limited.
+    </p>
 
-          <p class="mb-1">
-            Of these,
-            <strong class="text-gray-900">{{total_items_with_positive_ev}}</strong> middles offer a positive
-            expected value.
-          </p>
+    <div class="border-t border-gray-700 pt-4 mt-4 flex flex-col md:flex-row justify-between gap-6">
 
-          <p>
-            To see middles with a positive expected value and lossless
-            surebets-middles, please choose a plan.
-          </p>
+      <!-- Left Section -->
+      <div class="flex-1">
+        <p class="mb-1">
+          Total middles found:
+          <strong class="text-white">{{ total_middle_items }}</strong>
+        </p>
 
-          <div class="mt-4">
-            <a href="{{url_for('plans.overview')}}"
-              class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-5 rounded-lg shadow transition">
-              Plans and Registration
-            </a>
-          </div>
-        </div>
+        <p class="mb-1">
+          Positive EV middles:
+          <strong class="text-white">{{ total_items_with_positive_ev }}</strong>
+        </p>
 
-        <!-- Right: Rating section -->
-        <div id="jumbotron-rating-container" class="flex flex-col items-center justify-center md:items-end">
-          <!-- Trustpilot Widget Embed -->
-          <div class="trustpilot-widget">
-          </div>
-        </div>
-      </div>
-    </div>
+        <p class="text-gray-400">
+          Upgrade to view full positive EV analysis and lossless middles.
+        </p>
 
-    <!-- warning here -->
-    <div class="p-4">
-      <div role="alert" class="alert alert-error alert-soft">
-        <p class="text-red-600">Before you place any bets, we strongly recommend that you check the events, odds, and
-          bookmaker's rules. <br><br>We are constantly working to improve the quality of our service, but errors and
-          discrepancies can occur, unfortunately.</p>
-      </div>
-    </div>
-
-    <!-- content here -->
-    <div class="mx-4 mt-4 flex items-center justify-between">
-      <div class="">
-        <p class="text-2xl font-bold">Found {{total_middle_items}} middles</p>
-        <p>Examples with low expected value ↓</p>
+        <a href="/#pricing"
+          class="inline-block mt-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-5 rounded-lg shadow-md transition">
+          View Plans
+        </a>
       </div>
 
-      <div class="actions">
-        <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
-          ← Prev
-        </button>
-        <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
-          Next →
-        </button>
+      <!-- Right Section -->
+      <div class="flex items-center justify-center md:justify-end">
+        <div class="trustpilot-widget"></div>
       </div>
-    </div>
-    <div class="m-3 overflow-x-auto">
-      <table id="middles-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
-        <thead class="bg-gray-100 text-gray-800">
-          <tr>
-            <th class="px-4 py-3 font-semibold">Actions</th>
-            <th class="px-4 py-3 font-semibold">Bookmaker</th>
-            <th class="px-4 py-3 font-semibold">Time</th>
-            <th class="px-4 py-3 font-semibold">Event</th>
-            <th class="px-4 py-3 font-semibold">Market</th>
-            <th class="px-4 py-3 font-semibold"><div class="tooltip tooltip-bottom" data-tip="calculated confidence of this value hitting based on market average">Confidence</div></th>
-            <th class="px-4 py-3 font-semibold text-right">Odds</th>
-            <th></th>
-          </tr>
-        </thead>
 
-        <!-- body here -->
-      </table>
     </div>
-    <!-- datatable end -->
+
   </div>
+
+
+
+  <!-- Warning -->
+  <div role="alert" class="mb-9 bg-red-900/40 border border-red-700 p-4 rounded-xl text-red-300 shadow">
+    <p class="text-sm leading-relaxed">
+      Always verify odds before placing your bets. Small data delays can cause mismatches.
+    </p>
+  </div>
+
+
+  <!-- Header + pagination -->
+  <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+    <div>
+      <p class="text-xl font-bold text-white">Found {{ total_middle_items }} middles</p>
+      <p class="text-gray-200 text-sm">Examples with lower confidence ↓</p>
+    </div>
+
+    <div class="flex gap-2 mt-3 md:mt-0">
+      <button id="prev-page"
+        class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded text-gray-700 disabled:opacity-50">
+        ← Prev
+      </button>
+      <button id="next-page"
+        class="px-3 py-1.5 bg-gray-100 hover:bg-gray-200 rounded text-gray-700 disabled:opacity-50">
+        Next →
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Table -->
+  <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-sm">
+    <table id="middles-body" class="w-full text-sm text-gray-800">
+      <thead class="bg-gray-100 text-gray-800">
+        <tr>
+          <th class="px-4 py-3 font-semibold">Actions</th>
+          <th class="px-4 py-3 font-semibold">Bookmaker</th>
+          <th class="px-4 py-3 font-semibold">Time</th>
+          <th class="px-4 py-3 font-semibold">Event</th>
+          <th class="px-4 py-3 font-semibold">Market</th>
+          <th class="px-4 py-3 font-semibold">
+            <div class="tooltip" data-tip="Confidence score based on market averages">Confidence</div>
+          </th>
+          <th class="px-4 py-3 font-semibold text-right">Odds</th>
+          <th></th>
+        </tr>
+      </thead>
+      <!-- Body here -->
+    </table>
+  </div>
+
 </div>
+
+{% block sidebar %}
+  {% include 'partials/sidebar.html' %}
+{% endblock sidebar %}
 
 <script>
   const API_URL = "/api/middles";
@@ -165,64 +168,98 @@
 
       group.forEach((item, idx) => {
         tbody.append(`
-          <tr class="hover:bg-gray-50 transition">
-            <!-- Profit & Actions -->
-            ${idx == 0 ? `<td rowspan="${group.length}" class="px-4 py-2 align-top">
-              <div class="flex flex-col items-start">
-                <!-- Action buttons -->
-                <div class="flex items-center gap-2 mt-2">
-                  <label for="calculator_modal" data-page="middles" data-item="${item.middle_id}" 
-                    class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Middle calculator">
-                    <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
-                  </label>
-                  <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
-                    <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </td>` : ''}
+          <tr class="hover:bg-gray-700 transition border-b border-gray-700">
+            
+            <!-- ACTIONS + CALCULATOR -->
+            ${
+              idx == 0
+                ? `<td rowspan="${group.length}" class="px-4 py-3 align-top text-gray-300">
+                    <div class="flex flex-col items-start gap-2">
+                      
+                      <label for="calculator_modal"
+                        data-page="middles" data-item="${item.middle_id}"
+                        class="calc-btn p-2 rounded-lg bg-gray-800 border border-gray-700 text-emerald-400 hover:bg-gray-700 transition"
+                        title="Middle Calculator">
+                        <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
+                      </label>
 
-            <!-- Row: bookmaker -->
-            <td class="px-4 py-2">
-              <a href="${item.bookmaker_link}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
-              <div class="text-xs text-gray-500">${item.sport_name || 'N?A'}</div>
+                      <button disabled
+                        class="p-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-500 cursor-not-allowed"
+                        title="More options">
+                        <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                      </button>
+
+                    </div>
+                  </td>`
+                : ""
+            }
+
+            <!-- BOOKMAKER -->
+            <td class="px-4 py-3">
+              <a href="${item.bookmaker_link}" target="_blank"
+                class="text-emerald-400 font-semibold hover:underline">
+                ${item.bookmaker}
+              </a>
+              <div class="text-xs text-gray-500">${item.sport_name || "N/A"}</div>
             </td>
 
-            ${idx == 0 ? `<td rowspan="${group.length}" class="px-4 py-2 align-top">
-              <a href="#" class="text-blue-600 hover:underline">${item.date}</a>
-              <div class="text-xs text-gray-500">${item.time}</div>
-            </td>` : ''}
+            <!-- DATE -->
+            ${
+              idx == 0
+                ? `<td rowspan="${group.length}" class="px-4 py-3 align-top">
+                    <div class="text-gray-300">${item.date}</div>
+                    <div class="text-xs text-gray-500">${item.time}</div>
+                  </td>`
+                : ""
+            }
 
-            <td class="px-4 py-2">
-              <a href="#" class="text-blue-600 hover:underline">${item.event}</a>
-              <div class="text-xs text-gray-500">${item.event_name || ''}</div>
-              <div class="text-xs text-gray-500">${item.tournament || ''}</div>
+            <!-- EVENT -->
+            <td class="px-4 py-3">
+              <div class="text-gray-200 font-semibold">${item.event}</div>
+              <div class="text-xs text-gray-500">${item.event_name || ""}</div>
+              <div class="text-xs text-gray-500">${item.tournament || ""}</div>
             </td>
 
-            <td class="px-4 py-2 text-gray-600">${item.market_type}</td>
-            <td class="px-4 py-2 text-gray-600">${item.confidence}%</td>
+            <!-- MARKET -->
+            <td class="px-4 py-3 text-gray-300">${item.market_type}</td>
 
-            <td class="px-4 py-2 text-right">
-              <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+            <!-- CONFIDENCE -->
+            <td class="px-4 py-3 text-emerald-400 font-medium">${item.confidence}%</td>
+
+            <!-- ODDS -->
+            <td class="px-4 py-3 text-right">
+              <a href="#" class="text-emerald-300 font-semibold hover:underline">
+                ${item.odds}
+              </a>
             </td>
 
-            ${idx == 0 ? `<td rowspan="${group.length}" class="px-0 py-2 align-middle text-center">
-              <button class="p-1 text-gray-600 hover:text-blue-600" title="Open all odds">
-                <ion-icon class="text-2xl" name="chevron-forward"></ion-icon>
-              </button>
-            </td>` : ''}
+            <!-- EXPAND ARROW -->
+            ${
+              idx == 0
+                ? `<td rowspan="${group.length}" class="px-4 py-3 text-center align-middle">
+                    <button class="p-2 rounded-lg bg-gray-800 border border-gray-700 hover:bg-gray-700 text-gray-300" title="Open all odds">
+                      <ion-icon class="text-xl" name="chevron-forward"></ion-icon>
+                    </button>
+                  </td>`
+                : ""
+            }
+
           </tr>
         `);
+
       });
 
       // "View more middles" row
       tbody.append(`
-        <tr class="bg-gray-50">
-          <td colspan="8" class="px-4 py-2 text-blue-600 text-sm hover:underline cursor-pointer">
-            <div class="w-full flex justify-end pr-6">+ 0 more middles for this event</div>
-          </td>
-        </tr>F
-      `);
+      <tr class="bg-gray-800">
+        <td colspan="8"
+            class="px-4 py-3 text-emerald-400 text-sm hover:text-emerald-300 cursor-pointer border-t border-gray-700">
+          <div class="w-full flex justify-end pr-2">
+            + 0 more middles for this event
+          </div>
+        </td>
+      </tr>
+    `);
 
       tbodyContainer.append(tbody);
     })

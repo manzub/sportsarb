@@ -1,32 +1,53 @@
 <input type="checkbox" id="calculator_modal" class="modal-toggle" />
+
 <div class="modal" role="dialog">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">Stake/Profit Calculator</h3>
-    <div id="calc-info" class="text-sm text-gray-600 mb-4 text-center"></div>
+  <div class="modal-box bg-gray-900 border border-gray-800 text-gray-200 rounded-xl shadow-xl p-6">
 
-    <form id="calc-form" class="space-y-3">
-      <fieldset class="fieldset">
-        <legend class="fieldset-legend">Stake ($)</legend>
-        <input type="number" id="stake" class="input w-full" value="100" step="0.01" placeholder="Enter amount" />
-        <p class="label">Enter how much you want to stake</p>
-      </fieldset>
+    <h3 class="text-xl font-bold text-bet365yellow mb-4 text-center">
+      Stake / Profit Calculator
+    </h3>
 
+    <div id="calc-info" class="text-sm text-gray-400 mb-4 text-center"></div>
+
+    <form id="calc-form" class="space-y-5">
+
+      <!-- Stake -->
+      <div>
+        <label class="block mb-2 font-semibold text-gray-300">Stake (£)</label>
+        <div class="relative">
+          <ion-icon name="cash-outline"
+            class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xl"></ion-icon>
+
+          <input type="number" id="stake" class="w-full bg-gray-800 border border-gray-700 rounded-lg pl-12 pr-4 py-3 text-gray-100
+            focus:outline-none focus:ring-2 focus:ring-bet365green" value="100" step="0.01"
+            placeholder="Enter stake amount" />
+        </div>
+
+        <p class="text-xs text-gray-500 mt-1">Enter how much you want to stake</p>
+      </div>
+
+      <!-- Dynamic Items -->
       <div data-item="" data-page="" id="calculator-arb-item"></div>
 
-      <div class="pt-3">
-        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
-          Calculate Profit
-        </button>
-      </div>
+      <!-- Submit -->
+      <button type="submit" class="w-full py-3 rounded-lg bg-bet365green text-gray-900 font-semibold text-lg
+        hover:bg-bet365green/80 transition">
+        Calculate Profit
+      </button>
     </form>
 
-    <div id="result" class="mt-4 text-center text-gray-800 font-semibold"></div>
+    <!-- Results -->
+    <div id="result" class="mt-5 text-center text-gray-200 font-semibold"></div>
 
-    <div class="modal-action">
-      <label for="calculator_modal" class="calc-close-btn btn">Close!</label>
+    <div class="modal-action mt-6">
+      <label for="calculator_modal" class="calc-close-btn px-4 py-2 bg-gray-800 text-gray-300 rounded-lg border border-gray-700
+        hover:bg-gray-700 transition cursor-pointer">
+        Close
+      </label>
     </div>
   </div>
 </div>
+
 
 <script>
   $(document).ready(function () {
@@ -167,16 +188,17 @@
         }
 
         // Expected profit = stake * EV%
-        const expectedProfit = stake * (evPercent / 100);
-        const expectedReturn = stake + expectedProfit;
+        const profitIfWin = stake * (odds - 1);
+        const returnIfWin = stake + profitIfWin;
+
 
         $("#result").html(`
           <div><strong>EV:</strong> ${evPercent.toFixed(2)}%</div>
           <div><strong>Confidence:</strong> ${(confidence * 100).toFixed(0)}%</div>
           <hr/>
           <div>Stake: £${stake.toFixed(2)}</div>
-          <div>Expected Profit: <span class="text-green-600">£${expectedProfit.toFixed(2)}</span></div>
-          <div>Total Expected Return: £${expectedReturn.toFixed(2)}</div>
+          <div>Expected Profit: <span class="text-green-600">£${profitIfWin.toFixed(2)}</span></div>
+          <div>Total Expected Return: £${returnIfWin.toFixed(2)}</div>
         `);
       }
 

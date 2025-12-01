@@ -1,26 +1,27 @@
-<aside
-  class="sticky top-4 p-4 rounded-xl bg-base-100 shadow-lg border border-base-300">
+<aside class="sticky top-4 p-4 bg-gray-900 shadow-lg border border-gray-700 text-gray-200">
 
   <!-- Banner -->
   <div class="mb-4">
     <img src="/static/images/sidebar-banner-2.jpg"
-         class="w-full h-32 object-cover rounded-xl shadow-md">
+      class="w-full h-32 object-cover rounded-xl shadow-md border border-gray-700">
   </div>
 
-  <h3 class="text-lg font-bold tracking-tight mb-4">Filters</h3>
+  <h3 class="text-lg font-bold tracking-tight mb-4 text-gray-100">Filters</h3>
 
   <div class="space-y-6">
 
     {% if request.endpoint != 'main.valuebets' %}
     <!-- Sort -->
-    <div class="p-3 rounded-lg bg-base-200 border border-base-300">
-      <label class="font-semibold text-sm block mb-2">Sort</label>
+    <div class="p-3 rounded-lg bg-gray-800 border border-gray-700">
+      <label class="font-semibold text-sm block mb-2 text-gray-300">Sort</label>
       <div class="flex">
         <button type="button"
-          class="rounded-l-md bg-base-300 border border-base-300 px-3 py-1 text-sm">▼</button>
+          class="rounded-l-md bg-gray-700 border border-gray-600 px-3 py-1 text-sm text-gray-300 hover:bg-gray-600">
+          ▼
+        </button>
 
         <select id="sort" name="selector[order]"
-          class="rounded-r-md bg-base-100 border border-base-300 px-2 py-1 text-sm w-full">
+          class="rounded-r-md bg-gray-900 border border-gray-700 px-2 py-1 text-sm w-full text-gray-200">
           <option value="time">Commence Time</option>
           <option value="profit" selected>Profit</option>
         </select>
@@ -29,9 +30,9 @@
     {% endif %}
 
     <!-- Markets -->
-    <div class="p-3 rounded-lg bg-base-200 border border-base-300">
-      <label class="font-semibold text-sm block mb-2">Markets</label>
-      <select id="market" class="select select-sm w-full select-bordered">
+    <div class="p-3 rounded-lg bg-gray-800 border border-gray-700">
+      <label class="font-semibold text-sm block mb-2 text-gray-300">Markets</label>
+      <select id="market" class="select select-sm w-full bg-gray-900 border-gray-700 text-gray-200">
         <option disabled selected>Select</option>
         <option value="h2h">Head to Head (H2H)</option>
         <option value="spreads">Spreads</option>
@@ -41,25 +42,25 @@
 
     {% if request.endpoint == 'main.index' %}
     <!-- Outcomes -->
-    <div class="p-3 rounded-lg bg-base-200 border border-base-300">
-      <label class="font-semibold text-sm block mb-2">Outcomes</label>
+    <div class="p-3 rounded-lg bg-gray-800 border border-gray-700">
+      <label class="font-semibold text-sm block mb-2 text-gray-300">Outcomes</label>
 
-      <label class="flex items-center gap-2 text-sm cursor-pointer">
-        <input type="checkbox" name="outcome_type" value="2way" class="checkbox checkbox-primary">
+      <label class="flex items-center gap-2 text-sm cursor-pointer text-gray-300">
+        <input type="checkbox" name="outcome_type" value="2way" class="checkbox checkbox-success">
         2-Way Outcome
       </label>
 
-      <label class="flex items-center gap-2 mt-2 text-sm cursor-pointer">
-        <input type="checkbox" name="outcome_type" value="3way" class="checkbox checkbox-primary">
+      <label class="flex items-center gap-2 mt-2 text-sm cursor-pointer text-gray-300">
+        <input type="checkbox" name="outcome_type" value="3way" class="checkbox checkbox-success">
         3-Way Outcome
       </label>
     </div>
     {% endif %}
 
     <!-- Commence Time -->
-    <div class="p-3 rounded-lg bg-base-200 border border-base-300">
-      <label class="font-semibold text-sm block mb-2">Commence Time</label>
-      <select id="commence_time" class="select select-sm w-full select-bordered">
+    <div class="p-3 rounded-lg bg-gray-800 border border-gray-700">
+      <label class="font-semibold text-sm block mb-2 text-gray-300">Commence Time</label>
+      <select id="commence_time" class="select select-sm w-full bg-gray-900 border-gray-700 text-gray-200">
         <option disabled selected>Select</option>
         <option value="4h">Next 4 hours</option>
         <option value="8h">Next 8 hours</option>
@@ -71,31 +72,29 @@
 
     <!-- Links -->
     <div class="space-y-1 text-sm">
-      <a href="{{url_for('main.bookmakers')}}" class="text-primary hover:underline">
-        Bookmakers (394)
-      </a>
-      <a href="{{url_for('main.sports')}}" class="text-primary hover:underline">
+      <a href="{{url_for('main.bookmakers')}}" class="text-green-400 hover:underline">Bookmakers (394)</a>
+
+      <a href="{{url_for('main.sports')}}" class="text-green-400 hover:underline">
         Sports (<span id="sports-count"></span>)
       </a>
-      <a href="{{url_for('main.sports')}}" class="text-primary hover:underline">
-        Tournaments (All)
-      </a>
+
+      <a href="{{url_for('main.sports')}}" class="text-green-400 hover:underline">Tournaments (All)</a>
     </div>
 
     <!-- Buttons -->
     <div class="space-y-2">
-      <button onclick="applyFilters()"
-        class="btn btn-primary w-full">
+      <button onclick="applyFilters()" class="btn btn-success w-full text-gray-900 font-semibold">
         Apply Filters
       </button>
 
-      <a href="" class="btn w-full bg-base-300 hover:bg-base-200">
+      <a href="" class="btn w-full bg-gray-700 hover:bg-gray-600 text-gray-200">
         Reset
       </a>
     </div>
 
   </div>
 </aside>
+
 
 <script>
   async function applyFilters(page = 1) {
@@ -105,8 +104,8 @@
 
     const filters = document.querySelectorAll("input[name='outcome_type']");
     const selectedFilters = Array.from(filters)
-                                .filter(x => x.checked)
-                                .map(x => x.value);
+      .filter(x => x.checked)
+      .map(x => x.value);
 
     const path = window.location.pathname;
 

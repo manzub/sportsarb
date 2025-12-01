@@ -1,55 +1,66 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card bg-base-100">
+<div class="card bg-gray-900 text-gray-200 border border-gray-800 rounded-xl shadow-lg">
   <div class="card-body p-0">
-    <!-- content here -->
-    <div class="mx-4 mt-4 flex items-center justify-between">
-      <div class="">
-        <p class="text-2xl font-bold">Found {{total_value_items}} valuebets</p>
-      </div>
 
-      <div class="actions">
-        <button id="prev-page" class="btn hover:bg-gray-300 px-2 py-1 rounded disabled:opacity-70">
+    <!-- HEADER -->
+    <div class="mx-4 mt-4 flex items-center justify-between">
+      <p class="text-2xl font-bold">Found {{ total_value_items }} valuebets</p>
+
+      <div class="actions flex items-center gap-2">
+        <button id="prev-page"
+          class="px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700 disabled:opacity-50">
           ← Prev
         </button>
-        <button id="next-page" class="btn hover:bg-gray-300 px-4 py-2 rounded disabled:opacity-50">
+
+        <button id="next-page"
+          class="px-3 py-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700 disabled:opacity-50">
           Next →
         </button>
       </div>
     </div>
 
-    <!-- warning here -->
+    <!-- WARNING -->
     <div class="p-4">
-      <div role="alert" class="alert alert-error alert-soft">
-        <p class="text-red-600">Before you place any bets, we strongly recommend that you check the events, odds, and
-          bookmaker's rules. <br><br>We are constantly working to improve the quality of our service, but errors and
-          discrepancies can occur, unfortunately.</p>
+      <div class="alert bg-red-900 border border-red-700 text-red-200 p-3 rounded-lg">
+        <p>
+          Before you place any bets, check the events, odds, and bookmaker rules.
+          <br><br>
+          We work hard to keep everything accurate, but errors can happen.
+        </p>
       </div>
     </div>
 
+    <!-- TABLE -->
     <div class="m-3 overflow-x-auto">
-      <table id="values-body" style="font-size: 12px;" class="w-full text-sm text-left text-gray-700 border-collapse">
-        <thead class="bg-gray-100 text-gray-800">
+      <table id="values-body" class="w-full text-sm text-left border-collapse text-gray-300">
+
+        <thead class="bg-gray-800 text-gray-100 border-b border-gray-700">
           <tr>
-            <th></th>
-            <th class="px-4 py-3 font-semibold">Bookmaker</th>
-            <th class="px-4 py-3 font-semibold">Time</th>
-            <th class="px-4 py-3 font-semibold">Event</th>
-            <th class="px-4 py-3 font-semibold">Market</th>
-            <th class="px-4 py-3 font-semibold">Odds</th>
-            <th class="px-4 py-3 font-semibold">Confidence</th>
-            <th class="px-4 py-3 font-semibold">Expected Value</th>
-            <th></th>
+            <th class="px-3 py-3"></th>
+            <th class="px-3 py-3 font-semibold">Bookmaker</th>
+            <th class="px-3 py-3 font-semibold">Time</th>
+            <th class="px-3 py-3 font-semibold">Event</th>
+            <th class="px-3 py-3 font-semibold">Market</th>
+            <th class="px-3 py-3 font-semibold">Odds</th>
+            <th class="px-3 py-3 font-semibold">Confidence</th>
+            <th class="px-3 py-3 font-semibold">Expected Value</th>
+            <th class="px-3 py-3"></th>
           </tr>
         </thead>
 
-        <!-- body here -->
+        <!-- JS will populate body rows -->
       </table>
     </div>
-    <!-- datatable end -->
+
   </div>
 </div>
+
+{% block sidebar %}
+  {% include 'partials/sidebar.html' %}
+{% endblock sidebar %}
+
 <script>
   const API_URL = "/api/values";
 
@@ -111,47 +122,75 @@
 
       group.forEach((item, idx) => {
         tbody.append(`
-          <tr class="hover:bg-gray-50 transition">
+          <tr class="hover:bg-gray-800 transition border-b border-gray-800">
+
             <!-- Actions -->
-            <td class="px-4 py-2 align-top">
+            <td class="px-3 py-2 align-top">
               <div class="flex flex-col items-start">
-                <!-- Action buttons -->
-                <div class="flex items-center gap-2 mt-2">
-                  <label for="calculator_modal" data-page="surebets" data-item="${item.valuebet_id}" class="calc-btn p-1.5 text-gray-600 hover:text-blue-600" title="Surebet calculator">
+                <div class="flex items-center gap-2 mt-1">
+
+                  <!-- Calculator -->
+                  <label for="calculator_modal"
+                        data-page="valuebets"
+                        data-item="${item.valuebet_id}"
+                        class="calc-btn p-1.5 text-gray-400 hover:text-emerald-400 transition"
+                        title="Valuebet calculator">
                     <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
                   </label>
-                  <button disabled class="p-1.5 text-gray-600 hover:text-gray-900" title="More options">
+
+                  <!-- More options (disabled) -->
+                  <button disabled
+                          class="p-1.5 text-gray-500 hover:text-gray-300 transition"
+                          title="More options">
                     <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
                   </button>
                 </div>
               </div>
             </td>
 
-            <!-- Row: bookmaker -->
-            <td class="px-4 py-2">
-              <a href="${Object.values(item.bookmaker_link)[0]}" target="_blank" class="text-blue-600 hover:underline">${item.bookmaker}</a>
+            <!-- Bookmaker -->
+            <td class="px-3 py-2">
+              <a href="${Object.values(item.bookmaker_link)[0]}"
+                target="_blank"
+                class="text-emerald-400 hover:underline">
+                ${item.bookmaker}
+              </a>
               <div class="text-xs text-gray-500">${item.sport || 'N/A'}</div>
             </td>
 
-            <td class="px-4 py-2">
-              <a href="#" class="text-blue-600 hover:underline">${item.date}</a>
+            <!-- Time -->
+            <td class="px-3 py-2">
+              <div class="text-emerald-300">${item.date}</div>
               <div class="text-xs text-gray-500">${item.time}</div>
             </td>
 
-            <td class="px-4 py-2">
-              <a href="#" class="text-blue-600 hover:underline">${item.bet_recommendation}</a>
-              <a href="#" class="text-xs text-gray-500">${item.event}</a>
+            <!-- Event -->
+            <td class="px-3 py-2">
+              <a href="#" class="text-emerald-400 font-medium hover:underline">${item.bet_recommendation}</a>
+              <div class="text-xs text-gray-400">${item.event}</div>
               <div class="text-xs text-gray-500">${item.sport || ''}</div>
             </td>
 
-            <td class="px-4 py-2 text-gray-600">${item.market}</td>
-
-            <td class="px-4 py-2 text-right">
-              <a href="#" class="text-blue-600 font-medium hover:underline">${item.odds}</a>
+            <!-- Market -->
+            <td class="px-3 py-2 text-gray-400">
+              ${item.market}
             </td>
 
-            <td class="px-4 py-2 text-right">${item.confidence}</td>
-            <td class="px-4 py-2 text-right">${item.expected_value}</td>
+            <!-- Odds -->
+            <td class="px-3 py-2 text-right">
+              <span class="text-emerald-400 font-semibold">${item.odds}</span>
+            </td>
+
+            <!-- Confidence -->
+            <td class="px-3 py-2 text-right text-gray-300">
+              ${item.confidence}
+            </td>
+
+            <!-- Expected Value -->
+            <td class="px-3 py-2 text-right font-semibold ${item.expected_value > 0 ? 'text-emerald-400' : 'text-red-400'}">
+              ${item.expected_value}
+            </td>
+
           </tr>
         `);
       });

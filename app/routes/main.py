@@ -69,15 +69,6 @@ def index():
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('homepage.html', has_active_subscription=active_subscription, plans=plans_with_benefits, form=form)
 
-@bp.route('/surebets')
-def surebets():
-  surebets = get_latest_data('surebets')
-  total_surebet_items = len(surebets)
-  
-  active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
-  return render_template('surebets.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
-
-
 @bp.route('/faq')
 def frequently_asked():
   return render_template('faq.html')
@@ -101,6 +92,15 @@ def sports():
 def bookmakers():
   return render_template('bookmakers.html')
 
+@bp.route('/surebets')
+def surebets():
+  surebets = get_latest_data('surebets')
+  total_surebet_items = len(surebets)
+  
+  active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
+  return render_template('surebets.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
+
+# TODO: middles and values on if has active plan
 @bp.route('/middles')
 def middles():
   middles = get_latest_data('middles')
@@ -154,12 +154,23 @@ def bet_calculator():
     total_implied_prob = sum(1/odd for odd in list(arb['best_odds'].values()))
     
     opportunities_html += f"""
-    <div data-type="surebet" id="opportunity" data-profit-margin="{arb['profit_margin']}" data-total-implied-prob="{total_implied_prob}">
-      <h1 class="font-bold m-0" style="font-size: 18px;">{arb['event']}</h1>
-      <h2 class="text-emerald-800 font-extrabold m-0">{arb['sport_title']}</h2>
-      <p>Profit Margin: <span class="font-extrabold">{arb['profit_margin']:.2f}%</span></p>
-      <p class="m-0">Time: {format_date(arb['commence_time'])}</p>
-      <p>Market: {arb.get('market', 'N/A').upper()}</p>
+    <div id="opportunity"
+        data-type="surebet"
+        data-profit-margin="{arb['profit_margin']}"
+        data-total-implied-prob="{total_implied_prob}"
+        class="w-full">
+
+      <h1 class="text-2xl font-bold text-gray-900">{arb['event']}</h1>
+      <h2 class="text-emerald-700 text-lg font-semibold">{arb['sport_title']}</h2>
+
+      <div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <p><span class="font-semibold">Profit Margin:</span> {arb['profit_margin']:.2f}%</p>
+        <p><span class="font-semibold">Time:</span> {format_date(arb['commence_time'])}</p>
+        <p><span class="font-semibold">Market:</span> {arb.get('market', 'N/A').upper()}</p>
+        {"<p><span class='font-semibold'>Points:</span> " + str(arb.get('points')) + "</p>" if arb.get('market') in ['spreads','totals'] else ""}
+      </div>
+
+      <div class="odds grid grid-cols-1 gap-4 mt-5">
     """
     
     if arb.get('market') == 'spreads':
@@ -181,11 +192,11 @@ def bet_calculator():
           label = outcome
           
         opportunities_html += f"""
-          <div class="bg-blue-100 p-2">
-            <h3>{label}</h3>
-            <p>Odds: {odd:.2f}</p>
-            <p>Bookmaker: {bookmaker}</p>
-            <p>Bet Amount: $<span class="bet-amount" data-implied-prob="{implied_prob}">0.00</span></p>
+          <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+            <h3 class="font-semibold text-gray-800">{label}</h3>
+            <p class="text-sm text-gray-700">Odds: <span class="font-medium">{odd:.2f}</span></p>
+            <p class="text-sm text-gray-700">Bookmaker: {bookmaker}</p>
+            <p class="text-sm mt-1">Bet Amount: $<span class="bet-amount font-bold" data-implied-prob="{implied_prob}">0.00</span></p>
           </div>
         """
     
@@ -219,35 +230,55 @@ def middle_calculator():
 
     opportunities_html += f"""
     <div id="opportunity"
-          data-type="middle"
-          data-bookmaker1="{b1}"
-          data-bookmaker2="{b2}"
-          data-home-line="{home_line}"
-          data-away-line="{away_line}">
-          
-      <h1 class="font-bold text-lg">{middle.get('event')}</h1>
-      <h2 class="text-emerald-800 font-extrabold">{middle.get('sport_title')}</h2>
-      <p>Market: <strong>{middle.get('market', 'N/A').upper()}</strong></p>
-      <p>Bookmakers: <span class="font-semibold text-blue-700">{b1}</span> & vs. <span class="font-semibold text-blue-700">{b2}</span></p>
-      <p>Middle Range: <span class="font-semibold">{home_line} / {away_line}</span></p>
-      
-      <div class="grid grid-cols-2 gap-3 mt-3">
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
-          <h3 class="text-blue-800 font-semibold">{b1}</h3>
-          <p>Line: {home_line}</p>
-          <label class="text-sm text-gray-600 block">Odds:</label>
-          <input type="number" step="0.01" class="input input-sm w-full odd-input" id="odd1" value="{middle['odds']['home_price']}" />
+        data-type="middle"
+        data-bookmaker1="{b1}"
+        data-bookmaker2="{b2}"
+        data-home-line="{home_line}"
+        data-away-line="{away_line}"
+        class="bg-gray-800 border border-gray-700 rounded-xl p-5 mb-6 shadow-md">
+
+      <h1 class="font-bold text-xl text-white">{middle.get('event')}</h1>
+      <h2 class="text-emerald-400 font-semibold mt-1">{middle.get('sport_title')}</h2>
+
+      <div class="mt-3 text-gray-300 space-y-1">
+        <p>Market: <strong class="text-white">{middle.get('market', 'N/A').upper()}</strong></p>
+        <p>Bookmakers:
+          <span class="font-semibold text-emerald-400">{b1}</span> vs.
+          <span class="font-semibold text-emerald-400">{b2}</span>
+        </p>
+        <p>Middle Range:
+          <span class="font-semibold text-white">{home_line} / {away_line}</span>
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-5">
+        <div class="bg-gray-900 border border-gray-700 rounded-lg p-4">
+          <h3 class="text-emerald-300 font-semibold">{b1}</h3>
+          <p class="text-gray-400">Line: {home_line}</p>
+
+          <label class="text-sm text-gray-500 block mt-2">Odds:</label>
+          <input type="number"
+                step="0.01"
+                class="w-full bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2 mt-1 odd-input focus:ring-emerald-500 focus:border-emerald-500"
+                id="odd1"
+                value="{middle['odds']['home_price']}" />
         </div>
 
-        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
-          <h3 class="text-blue-800 font-semibold">{b2}</h3>
-          <p>Line: {away_line}</p>
-          <label class="text-sm text-gray-600 block">Odds:</label>
-          <input type="number" step="0.01" class="input input-sm w-full odd-input" id="odd2" value="{middle['odds']['away_price']}" />
+        <div class="bg-gray-900 border border-gray-700 rounded-lg p-4">
+          <h3 class="text-emerald-300 font-semibold">{b2}</h3>
+          <p class="text-gray-400">Line: {away_line}</p>
+
+          <label class="text-sm text-gray-500 block mt-2">Odds:</label>
+          <input type="number"
+                step="0.01"
+                class="w-full bg-gray-800 border border-gray-600 text-white rounded-md px-3 py-2 mt-1 odd-input focus:ring-emerald-500 focus:border-emerald-500"
+                id="odd2"
+                value="{middle['odds']['away_price']}" />
         </div>
       </div>
     </div>
     """
+
     return html_template.format(opportunity=opportunities_html)
   return "Invalid Request", 400
 
