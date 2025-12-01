@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.extensions import redis
-from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, count_bookmakers_by_surebet_id
+from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, count_bookmakers_by_surebet_id, apply_filters
 from app.utils.helpers import parse_datetime, get_config_by_name
 from app.extensions import db
 import json
@@ -9,6 +9,13 @@ import os
 from datetime import datetime, timedelta, timezone
 
 bp = Blueprint('api', __name__)
+
+def paginate(data, page, limit):
+  start = (page - 1) * limit
+  end = start + limit
+  total_pages = (len(data) + limit - 1) // limit
+  return data[start:end], total_pages
+
 
 @bp.route('/webpush/subscribe', methods=['POST'])
 @login_required
@@ -85,116 +92,43 @@ def get_surebets():
     print(profit_margin_cutoff)
     if current_user.is_authenticated and current_user.current_plan:
       profit_margin_cutoff = None
-    data = sort_surebet_data(raw_data)
-  
-  # Get filters
-  sort = request.args.get("sort")
-  market = request.args.get("market", 'h2h')
-  page = int(request.args.get("page", 1))
-  limit = int(request.args.get("limit", 10))
-  commence_time_filter = request.args.get("commence_time")
-  outcome_types = request.args.get("outcome_type", "")  # e.g., "2way,3way"
-  outcome_types = [x.strip() for x in outcome_types.split(",") if x.strip()]
-  
-  if commence_time_filter:
-    now = datetime.now(timezone.utc)
+    data = sort_surebet_data(raw_data, cutoff=profit_margin_cutoff)
     
-    time_map = {
-      "4h": timedelta(hours=4),
-      "8h": timedelta(hours=8),
-      "12h": timedelta(hours=12),
-      "2d": timedelta(days=2),
-      "1w": timedelta(weeks=1)
-    }
-    
-    if commence_time_filter in time_map:
-      max_time = now + time_map[commence_time_filter]
-      if commence_time_filter == '1w':
-        data = [d for d in data if d.get('commence_time') and parse_datetime(d["commence_time"]) > max_time]
-      else:
-        data = [d for d in data if d.get('commence_time') and parse_datetime(d["commence_time"]) <= max_time]
-  
-  if market:
-    data = [d for d in data if d.get('market_type', 'h2h') == market]
-  
-  if sort == "profit":
-    data.sort(key=lambda x: x.get("profit", 0), reverse=True)
-  elif sort == "time":
-    data.sort(key=lambda x: x.get("commence_time", ""), reverse=False)
-    
-    
-  # Outcome filter
-  if outcome_types:
-    filtered = []
-    for surebet_id in {d['surebet_id'] for d in data}:
-      count = count_bookmakers_by_surebet_id(data, surebet_id)
-      if ("2way" in outcome_types and count == 2) or ("3way" in outcome_types and count == 3):
-        filtered.extend([d for d in data if d['surebet_id'] == surebet_id])
-    data = filtered
-  
-  start = (page - 1) * limit
-  end = start + limit
-  total_pages = (len(data) + limit - 1) // limit
+  data = apply_filters(data, request.args)
 
-  return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages })
+  page = int(request.args.get("page", 1))
+  limit = int(request.args.get("limit", 51))
+  data_page, total_pages = paginate(data, page, limit)
+
+  return jsonify({
+    "data": data_page,
+    "page": page,
+    "total_pages": total_pages
+  })
 
 @bp.route('/middles')
-def middles():
+def get_middles():
   data = []
   keys = redis.keys('middles:*')
   if keys:
     latest = max(keys)
     raw_data = redis.get(latest)
     data = sort_middle_data(raw_data)
+    
+  data = apply_filters(data, request.args)
   
-  # Filters
-  sort = request.args.get("sort")
-  market = request.args.get("market")
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
-  commence_time_filter = request.args.get("commence_time")
-  
-  if commence_time_filter:
-    now = datetime.now(timezone.utc)
-    
-    time_map = {
-      "4h": timedelta(hours=4),
-      "8h": timedelta(hours=8),
-      "12h": timedelta(hours=12),
-      "2d": timedelta(days=2),
-      "1w": timedelta(weeks=1)
-    }
-    
-    if commence_time_filter in time_map:
-      max_time = now + time_map[commence_time_filter]
-      if commence_time_filter == '1w':
-        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) > max_time]
-      else:
-        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) <= max_time]
-  
-  
-  # Filter by market type
-  if market:
-    data = [d for d in data if d.get('market', 'spreads') == market]
+  data_page, total_pages = paginate(data, page, limit)
 
-  # Sorting logic
-  if sort == "profit":
-    data.sort(key=lambda x: x.get("profit", 0), reverse=True)
-  elif sort == "time":
-    data.sort(key=lambda x: x.get("start_time", ""), reverse=False)
-
-  # Pagination
-  start = (page - 1) * limit
-  end = start + limit
-  total_pages = (len(data) + limit - 1) // limit
-  
-  # Count positive expected value items
-  total_positive_expected = len([d for d in data if d.get("expected_value", 0) > 0])
-
-  return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages, "total_positive_expected": total_positive_expected })
+  return jsonify({
+    "data": data_page,
+    "page": page,
+    "total_pages": total_pages
+  })
 
 @bp.route('/values')
-def values():
+def get_values():
   data = []
   keys = redis.keys('valuebets:*')
   if keys:
@@ -202,47 +136,17 @@ def values():
     raw_data = redis.get(latest)
     data = sort_valuebets_data(raw_data)
     
-  # Filters
-  sort = request.args.get("sort")
-  market = request.args.get("market")
+  data = apply_filters(data, request.args)
+  
   page = int(request.args.get("page", 1))
   limit = int(request.args.get("limit", 10))
-  commence_time_filter = request.args.get("commence_time")
-  
-  if commence_time_filter:
-    now = datetime.now(timezone.utc)
-    
-    time_map = {
-      "4h": timedelta(hours=4),
-      "8h": timedelta(hours=8),
-      "12h": timedelta(hours=12),
-      "2d": timedelta(days=2),
-      "1w": timedelta(weeks=1)
-    }
-    
-    if commence_time_filter in time_map:
-      max_time = now + time_map[commence_time_filter]
-      if commence_time_filter == '1w':
-        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) > max_time]
-      else:
-        data = [d for d in data if d.get('start_time') and parse_datetime(d["start_time"]) <= max_time]
-  
-  # Filter by market type
-  if market:
-    data = [d for d in data if d.get('market', 'spreads') == market]
+  data_page, total_pages = paginate(data, page, limit)
 
-  # Sorting logic
-  if sort == "profit":
-    data.sort(key=lambda x: x.get("profit", 0), reverse=True)
-  elif sort == "time":
-    data.sort(key=lambda x: x.get("start_time", ""), reverse=False)
-
-  # Pagination
-  start = (page - 1) * limit
-  end = start + limit
-  total_pages = (len(data) + limit - 1) // limit
-  
-  return jsonify({ "data": data[start:end], "page": page, "total_pages": total_pages })
+  return jsonify({
+    "data": data_page,
+    "page": page,
+    "total_pages": total_pages
+  })
 
 @bp.route('/webpush/test', methods=['GET'])
 @login_required

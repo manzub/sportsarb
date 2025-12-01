@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="w-full max-w-7xl mx-auto py-12 px-4">
-
+<section id="page-meta" data-mode="surebets" class="w-full max-w-7xl mx-auto py-12 px-4">
   <!-- FEATURES STRIP -->
   <section class="w-full bg-gray-900 py-10 border-b border-gray-800">
     <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-6 text-gray-200">
@@ -84,182 +83,139 @@
 </section>
 
 {% block sidebar %}
-  {% include 'partials/sidebar.html' %}
+{% include 'partials/sidebar.html' %}
 {% endblock sidebar %}
 
 <script>
-  const API_URL = "/api/surebets";
-
   let currentPage = 1;
-  const perPage = 51;
-  let _market = '';
-  let _sort = 'profit';
-  let _time = '';
-  let _outcome_type = '';
+  
+  function renderSurebets(items, tbodyContainer) {
 
-  function fetchSurebets(page = 1, sort = _sort, market = _market, commence_time = _time, outcome_type = _outcome_type) {
-    _market = market;
-    _sort = sort
-    _time = commence_time
-    _outcome_type = outcome_type
-    $.ajax({
-      url: API_URL,
-      data: { page: page, limit: perPage, sort: _sort, market: _market, commence_time: _time, outcome_type: _outcome_type },
-      method: "GET",
-      success: function (response) {
-        if (response.data.length == 0) {
-          $("#surebets-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data/No results found.
-                </td>
-              </tr>
-            `);
-        } else {
-          renderSurebets(response.data);
-          updatePagination(response.page, response.total_pages);
-        }
-      },
-      error: function () {
-        $("#surebets-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data.
-                </td>
-              </tr>
-            `);
-      },
-    });
-  }
-
-  function renderSurebets(items) {
-    const tbodyContainer = $("#surebets-body");
-    //tbodyContainer.empty();
-    removeElementsByClass('surebet_record')
-
-    // Group by surebet_id
-    const grouped = {};
-    items.forEach((item) => {
-      if (!grouped[item.surebet_id]) grouped[item.surebet_id] = [];
-      grouped[item.surebet_id].push(item);
+    const groupMap = {};
+    items.forEach(item => {
+      if (!groupMap[item.surebet_id]) groupMap[item.surebet_id] = [];
+      groupMap[item.surebet_id].push(item);
     });
 
-    Object.keys(grouped).forEach((id) => {
-      const group = grouped[id];
+    Object.keys(groupMap).forEach(id => {
+      const group = groupMap[id];
+
       const tbody = $("<tbody>")
-        .addClass("surebet_record border-t border-gray-200")
+        .addClass("surebets_record border-t border-gray-200")   // unified class
         .attr("data-id", id);
 
       group.forEach((item, idx) => {
         tbody.append(`
-          <tr class="hover:bg-[#1b2a1f] transition border-b border-gray-800">
+        <tr class="hover:bg-[#1b2a1f] transition border-b border-gray-800">
 
-            ${idx == 0 ? `
-            <td rowspan="3" class="px-4 py-3 align-top bg-[#111] border-r border-gray-800">
-              <div class="flex flex-col items-start gap-1">
-                <span class="font-semibold text-green-500 text-sm cursor-help">+${item.profit}%</span>
-                <span class="text-[10px] text-gray-500">${item.age || "31m"}</span>
-
-                <div class="flex items-center gap-3 mt-1">
-                  <label for="calculator_modal"
-                        data-page="surebets"
-                        data-item="${item.surebet_id}"
-                        class="calc-btn p-1.5 rounded-md text-gray-400 hover:text-green-400 transition"
-                        title="Surebet Calculator">
-                    <ion-icon class="w-5 h-5" name="calculator-outline"></ion-icon>
-                  </label>
-
-                  <button disabled class="p-1.5 text-gray-500 hover:text-gray-300 transition">
-                    <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
-                  </button>
-                </div>
-              </div>
-            </td>` : ''}
-
-            <td class="px-4 py-3 bg-[#111] border-r border-gray-800">
-              <a href="${item.bookmaker_link}" target="_blank"
-                class="text-blue-400 hover:underline font-medium">
-                ${item.bookmaker}
-              </a>
-              <div class="text-[11px] text-gray-500">${item.sport_name}</div>
-            </td>
-
-            ${idx == 0 ? `
-            <td rowspan="${group.length}"
-                class="px-4 py-3 bg-[#111] border-r border-gray-800 align-top">
-              <div class="flex flex-col">
-                <span class="text-blue-400 hover:underline cursor-pointer">${item.date}</span>
-                <span class="text-[11px] text-gray-500">${item.time}</span>
-              </div>
-            </td>` : ''}
-
-            <td class="px-4 py-3 bg-[#111] border-r border-gray-800">
-              <span class="text-blue-400 font-medium hover:underline cursor-pointer">
-                ${item.event}
+          ${idx === 0 ? `
+          <td rowspan="${group.length}"
+              class="px-4 py-3 align-top bg-[#111] border-r border-gray-800">
+            <div class="flex flex-col items-start gap-1">
+              <span class="font-semibold text-green-500 text-sm cursor-help">
+                +${item.profit}%
               </span>
-              <div class="text-[11px] text-gray-500">${item.event_name}</div>
-              <div class="text-[11px] text-gray-500">${item.tournament}</div>
-            </td>
+              <span class="text-[10px] text-gray-500">${item.age || "n/a"}</span>
 
-            <td class="px-4 py-3 bg-[#111] border-r border-gray-800 text-gray-400 uppercase text-xs">
-              ${item.market_type}
-            </td>
+              <div class="flex items-center gap-3 mt-1">
+                <label for="calculator_modal"
+                       data-page="surebets"
+                       data-item="${item.surebet_id}"
+                       class="calc-btn p-1.5 rounded-md text-gray-400 hover:text-green-400 transition"
+                       title="Surebet Calculator">
+                  <ion-icon class="w-5 h-5" name="calculator-outline"></ion-icon>
+                </label>
 
-            <td class="px-4 py-3 bg-[#111] border-r border-gray-800 text-right">
-              <span class="text-blue-300 font-semibold hover:underline cursor-pointer">
-                ${item.odds}
-              </span>
-            </td>
+                <button disabled class="p-1.5 text-gray-500 hover:text-gray-300 transition">
+                  <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </td>
+          ` : ""}
 
-            ${idx == 0 ? `
-            <td rowspan="3"
-                class="px-2 py-3 bg-[#111] text-center align-middle border-r border-gray-800">
-              <button class="p-1 text-gray-400 hover:text-blue-400 transition" title="Open all odds">
-                <ion-icon class="text-xl" name="chevron-forward-outline"></ion-icon>
-              </button>
-            </td>` : ''}
+          <td class="px-4 py-3 bg-[#111] border-r border-gray-800">
+            <a href="${item.bookmaker_link}" target="_blank"
+               class="text-blue-400 hover:underline font-medium">
+              ${item.bookmaker}
+            </a>
+            <div class="text-[11px] text-gray-500">${item.sport_name}</div>
+          </td>
 
-          </tr>
-        `);
+          ${idx === 0 ? `
+          <td rowspan="${group.length}"
+              class="px-4 py-3 bg-[#111] border-r border-gray-800 align-top">
+            <div class="flex flex-col">
+              <span class="text-blue-400 hover:underline cursor-pointer">${item.date}</span>
+              <span class="text-[11px] text-gray-500">${item.time}</span>
+            </div>
+          </td>
+          ` : ""}
+
+          <td class="px-4 py-3 bg-[#111] border-r border-gray-800">
+            <span class="text-blue-400 font-medium hover:underline cursor-pointer">
+              ${item.event}
+            </span>
+            <div class="text-[11px] text-gray-500">${item.event_name}</div>
+            <div class="text-[11px] text-gray-500">${item.tournament}</div>
+          </td>
+
+          <td class="px-4 py-3 bg-[#111] border-r border-gray-800 text-gray-400 uppercase text-xs">
+            ${item.market_type}
+          </td>
+
+          <td class="px-4 py-3 bg-[#111] border-r border-gray-800 text-right">
+            <span class="text-blue-300 font-semibold hover:underline cursor-pointer">
+              ${item.odds}
+            </span>
+          </td>
+
+          ${idx === 0 ? `
+          <td rowspan="${group.length}"
+              class="px-2 py-3 bg-[#111] text-center align-middle border-r border-gray-800">
+            <button class="p-1 text-gray-400 hover:text-blue-400 transition" title="Open all odds">
+              <ion-icon class="text-xl" name="chevron-forward-outline"></ion-icon>
+            </button>
+          </td>
+          ` : ""}
+
+        </tr>
+      `);
       });
 
       tbody.append(`
-        <tr class="bg-[#141414] border-b border-gray-800">
-          <td colspan="7"
-              class="px-4 py-2 text-blue-400 text-sm hover:text-blue-300 hover:underline cursor-pointer">
-            <div class="w-full flex justify-end pr-6">+ 0 more best odds</div>
-          </td>
-        </tr>
-      `);
+      <tr class="bg-[#141414] border-b border-gray-800">
+        <td colspan="7"
+            class="px-4 py-2 text-blue-400 text-sm hover:text-blue-300 hover:underline cursor-pointer">
+          <div class="w-full flex justify-end pr-6">+ 0 more best odds</div>
+        </td>
+      </tr>
+    `);
 
       tbodyContainer.append(tbody);
     });
 
-    // attach event for calculator popout
-    $(".calc-btn").on("click", function () {
-      const page = $(this).data("page");
-      const arb_item = $(this).data("item");
+    // Calculator modal hookup
+    $(".calc-btn").off("click").on("click", function () {
+      const page = this.dataset.page;
+      const arb_item = this.dataset.item;
 
-      const contentDiv = document.getElementById('calculator-arb-item')
-      contentDiv.setAttribute('data-page', page)
-      contentDiv.setAttribute('data-item', arb_item)
+      const contentDiv = document.getElementById('calculator-arb-item');
+      contentDiv.setAttribute('data-page', page);
+      contentDiv.setAttribute('data-item', arb_item);
 
-      const url = `/surebet/calculator?page=${encodeURIComponent(page)}&arb_item=${encodeURIComponent(arb_item)}`
+      const url = `/surebet/calculator?page=${page}&arb_item=${arb_item}`;
+
       fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error("Item not found or expired");
-          return response.text();
-        })
-        .then(html => {
-          contentDiv.innerHTML = html;
-        })
-        .catch(err => {
-          console.warn(err.message);
-          alert("This opportunity is no longer available. Refreshing list...");
+        .then(res => res.ok ? res.text() : Promise.reject("Expired"))
+        .then(html => { contentDiv.innerHTML = html; })
+        .catch(() => {
+          alert("This opportunity expired. Refreshing...");
           window.location.reload();
         });
     });
   }
+
 
   function removeElementsByClass(className) {
     let elements = document.getElementsByClassName(className);
@@ -275,15 +231,10 @@
     currentPage = page;
   }
 
-  $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchSurebets(currentPage - 1, _market);
-  });
-
-  $("#next-page").on("click", function () {
-    fetchSurebets(currentPage + 1, _market);
-  });
+  $("#prev-page").on("click", () => fetchData(currentPage - 1));
+  $("#next-page").on("click", () => fetchData(currentPage + 1));
 
   // initial load
-  fetchSurebets(currentPage);
+  fetchData(currentPage);
 </script>
 {% endblock %}

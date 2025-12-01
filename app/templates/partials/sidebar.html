@@ -60,7 +60,7 @@
     <!-- Commence Time -->
     <div class="p-3 rounded-lg bg-gray-800 border border-gray-700">
       <label class="font-semibold text-sm block mb-2 text-gray-300">Commence Time</label>
-      <select id="commence_time" class="select select-sm w-full bg-gray-900 border-gray-700 text-gray-200">
+      <select id="commence_time_form" class="select select-sm w-full bg-gray-900 border-gray-700 text-gray-200">
         <option disabled selected>Select</option>
         <option value="4h">Next 4 hours</option>
         <option value="8h">Next 8 hours</option>
@@ -87,7 +87,7 @@
         Apply Filters
       </button>
 
-      <a href="" class="btn w-full bg-gray-700 hover:bg-gray-600 text-gray-200">
+      <a onclick="window.location.reload()" class="btn w-full bg-gray-700 hover:bg-gray-600 text-gray-200">
         Reset
       </a>
     </div>
@@ -97,25 +97,18 @@
 
 
 <script>
-  async function applyFilters(page = 1) {
-    const sort = document.getElementById('sort')?.value;
-    const market = document.getElementById('market').value;
-    const commence_time = document.getElementById('commence_time').value;
+  function applyFilters(page = 1) {
+    const filters = {
+      sort: document.getElementById('sort')?.value,
+      market: document.getElementById('market').value,
+      commence_time: document.getElementById('commence_time_form').value,
+      outcome_type: Array.from(
+        document.querySelectorAll("input[name='outcome_type']:checked")
+      ).map(x => x.value)
+        .join(",")
+    };
 
-    const filters = document.querySelectorAll("input[name='outcome_type']");
-    const selectedFilters = Array.from(filters)
-      .filter(x => x.checked)
-      .map(x => x.value);
-
-    const path = window.location.pathname;
-
-    if (path === "/") {
-      fetchSurebets(1, sort, market, commence_time, selectedFilters.join(','));
-    } else if (path === "/middles") {
-      fetchMiddles(1, sort, market, commence_time);
-    } else if (path === "/valuebets") {
-      fetchValues(1, market, commence_time);
-    }
+    fetchData(page, filters);
   }
 
   document.addEventListener("DOMContentLoaded", () => {

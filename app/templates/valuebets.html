@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card bg-gray-900 text-gray-200 border border-gray-800 rounded-xl shadow-lg">
+<div id="page-meta" data-mode="valuebets"
+  class="card bg-gray-900 text-gray-200 border border-gray-800 rounded-xl shadow-lg">
   <div class="card-body p-0">
 
     <!-- HEADER -->
@@ -34,7 +35,7 @@
 
     <!-- TABLE -->
     <div class="m-3 overflow-x-auto">
-      <table id="values-body" class="w-full text-sm text-left border-collapse text-gray-300">
+      <table id="valuebets-body" class="w-full text-sm text-left border-collapse text-gray-300">
 
         <thead class="bg-gray-800 text-gray-100 border-b border-gray-700">
           <tr>
@@ -58,172 +59,139 @@
 </div>
 
 {% block sidebar %}
-  {% include 'partials/sidebar.html' %}
+{% include 'partials/sidebar.html' %}
 {% endblock sidebar %}
 
 <script>
-  const API_URL = "/api/values";
-
   let currentPage = 1;
-  const perPage = 20;
-  let _market = '';
-  let _time = ''
 
-  function fetchValues(page = 1, market = '', commence_time = _time) {
-    _market = market;
-    _time = commence_time
-    $.ajax({
-      url: API_URL,
-      data: { page: page, limit: perPage, market: _market, commence_time: _time },
-      method: "GET",
-      success: function (response) {
-        if (response.data.length == 0) {
-          $("#values-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data.
-                </td>
-              </tr>
-            `);
-        } else {
-          renderValues(response.data);
-          updatePagination(response.page, response.total_pages);
-        }
-      },
-      error: function () {
-        $("#values-body").html(`
-              <tr>
-                <td colspan="7" class="text-center py-4 text-gray-500">
-                  Failed to load data.
-                </td>
-              </tr>
-            `);
-      },
-    });
-  }
+  function renderValuebets(items, tbodyContainer) {
 
-  function renderValues(items) {
-    const tbodyContainer = $("#values-body");
-    //tbodyContainer.empty();
-    removeElementsByClass('value_record')
-
-    // Group by surebet_id
+    // Group by valuebet_id
     const grouped = {};
-    items.forEach((item) => {
-      if (!grouped[item.middle_id]) grouped[item.middle_id] = [];
-      grouped[item.middle_id].push(item);
+    items.forEach(item => {
+      if (!grouped[item.valuebet_id]) grouped[item.valuebet_id] = [];
+      grouped[item.valuebet_id].push(item);
     });
 
-    Object.keys(grouped).forEach((id) => {
+    Object.keys(grouped).forEach(id => {
       const group = grouped[id];
       const tbody = $("<tbody>")
-        .addClass("value_record border-t border-gray-200")
+        .addClass("valuebets_record border-t border-gray-700")
         .attr("data-id", id);
 
       group.forEach((item, idx) => {
         tbody.append(`
-          <tr class="hover:bg-gray-800 transition border-b border-gray-800">
+        <tr class="hover:bg-gray-800 transition border-b border-gray-800">
 
-            <!-- Actions -->
-            <td class="px-3 py-2 align-top">
-              <div class="flex flex-col items-start">
-                <div class="flex items-center gap-2 mt-1">
+          <!-- ACTIONS -->
+          ${idx === 0
+            ? `
+              <td rowspan="${group.length}" class="px-3 py-2 align-top">
+                <div class="flex flex-col items-start gap-2 mt-1">
 
                   <!-- Calculator -->
                   <label for="calculator_modal"
                         data-page="valuebets"
                         data-item="${item.valuebet_id}"
-                        class="calc-btn p-1.5 text-gray-400 hover:text-emerald-400 transition"
+                        class="calc-btn p-2 rounded-lg bg-gray-800 border border-gray-700 text-emerald-400 hover:bg-gray-700 transition"
                         title="Valuebet calculator">
                     <ion-icon class="w-5 h-5" name="calculator"></ion-icon>
                   </label>
 
                   <!-- More options (disabled) -->
-                  <button disabled
-                          class="p-1.5 text-gray-500 hover:text-gray-300 transition"
+                  <button disabled 
+                          class="p-2 rounded-lg bg-gray-800 border border-gray-700 text-gray-500 cursor-not-allowed"
                           title="More options">
                     <ion-icon class="w-5 h-5" name="ellipsis-vertical"></ion-icon>
                   </button>
+
                 </div>
-              </div>
-            </td>
+              </td>
+              `
+            : ""
+          }
 
-            <!-- Bookmaker -->
-            <td class="px-3 py-2">
-              <a href="${Object.values(item.bookmaker_link)[0]}"
-                target="_blank"
-                class="text-emerald-400 hover:underline">
-                ${item.bookmaker}
-              </a>
-              <div class="text-xs text-gray-500">${item.sport || 'N/A'}</div>
-            </td>
+          <!-- BOOKMAKER -->
+          <td class="px-3 py-2">
+            <a href="${item.bookmaker_link}" target="_blank"
+               class="text-emerald-400 hover:underline">
+              ${item.bookmaker}
+            </a>
+            <div class="text-xs text-gray-500">${item.sport || "N/A"}</div>
+          </td>
 
-            <!-- Time -->
-            <td class="px-3 py-2">
-              <div class="text-emerald-300">${item.date}</div>
-              <div class="text-xs text-gray-500">${item.time}</div>
-            </td>
+          <!-- DATE / TIME -->
+          ${idx === 0
+            ? `
+              <td rowspan="${group.length}" class="px-3 py-2 align-top">
+                <div class="text-gray-300">${item.date}</div>
+                <div class="text-xs text-gray-500">${item.time}</div>
+              </td>
+              `
+            : ""
+          }
 
-            <!-- Event -->
-            <td class="px-3 py-2">
-              <a href="#" class="text-emerald-400 font-medium hover:underline">${item.bet_recommendation}</a>
-              <div class="text-xs text-gray-400">${item.event}</div>
-              <div class="text-xs text-gray-500">${item.sport || ''}</div>
-            </td>
+          <!-- EVENT -->
+          <td class="px-3 py-2">
+            <div class="text-emerald-300 font-semibold">${item.bet_recommendation}</div>
+            <div class="text-xs text-gray-400">${item.event}</div>
+            <div class="text-xs text-gray-500">${item.sport}</div>
+          </td>
 
-            <!-- Market -->
-            <td class="px-3 py-2 text-gray-400">
-              ${item.market}
-            </td>
+          <!-- MARKET -->
+          <td class="px-3 py-2 text-gray-400">${item.market}</td>
 
-            <!-- Odds -->
-            <td class="px-3 py-2 text-right">
-              <span class="text-emerald-400 font-semibold">${item.odds}</span>
-            </td>
+          <!-- ODDS -->
+          <td class="px-3 py-2 text-right">
+            <span class="text-emerald-400 font-semibold">${item.odds}</span>
+          </td>
 
-            <!-- Confidence -->
-            <td class="px-3 py-2 text-right text-gray-300">
-              ${item.confidence}
-            </td>
+          <!-- CONFIDENCE -->
+          <td class="px-3 py-2 text-right text-gray-300">${item.confidence}%</td>
 
-            <!-- Expected Value -->
-            <td class="px-3 py-2 text-right font-semibold ${item.expected_value > 0 ? 'text-emerald-400' : 'text-red-400'}">
-              ${item.expected_value}
-            </td>
-
-          </tr>
-        `);
+          <!-- EV -->
+          <td class="px-3 py-2 text-right font-semibold 
+              ${item.expected_value > 0 ? "text-emerald-400" : "text-red-400"}">
+            ${item.expected_value}
+          </td>
+        </tr>
+      `);
       });
 
+      // append grouped block
       tbodyContainer.append(tbody);
-    })
+    });
 
-    // attach event for valuebet calculator popout
+    // calculator action
     $(".calc-btn").on("click", function () {
       const page = $(this).data("page");
-      const value_item = $(this).data("item");
+      const valueItem = $(this).data("item");
 
-      const contentDiv = document.getElementById('calculator-arb-item');
-      contentDiv.setAttribute('data-page', page);
-      contentDiv.setAttribute('data-item', value_item);
+      const contentDiv = document.getElementById("calculator-arb-item");
+      contentDiv.setAttribute("data-page", page);
+      contentDiv.setAttribute("data-item", valueItem);
 
-      const url = `/valuebet/calculator?page=${encodeURIComponent(page)}&value_item=${encodeURIComponent(value_item)}`;
+      const url = `/valuebet/calculator?page=${encodeURIComponent(
+        page
+      )}&value_item=${encodeURIComponent(valueItem)}`;
 
       fetch(url)
-        .then(response => {
+        .then((response) => {
           if (!response.ok) throw new Error("Item not found or expired");
           return response.text();
         })
-        .then(html => {
+        .then((html) => {
           contentDiv.innerHTML = html;
         })
-        .catch(err => {
+        .catch((err) => {
           console.warn(err.message);
-          alert("This valuebet opportunity is no longer available. Refreshing list...");
+          alert("This valuebet is no longer available. Refreshing...");
           window.location.reload();
         });
     });
   }
+
 
   function removeElementsByClass(className) {
     let elements = document.getElementsByClassName(className);
@@ -239,15 +207,10 @@
     currentPage = page;
   }
 
-  $("#prev-page").on("click", function () {
-    if (currentPage > 1) fetchValues(currentPage - 1, _market);
-  });
-
-  $("#next-page").on("click", function () {
-    fetchValues(currentPage + 1, _market);
-  });
+  $("#prev-page").on("click", () => fetchData(currentPage - 1));
+  $("#next-page").on("click", () => fetchData(currentPage + 1));
 
   // initial load
-  fetchValues(currentPage);
+  fetchData(currentPage);
 </script>
 {% endblock content %}

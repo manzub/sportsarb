@@ -1,6 +1,6 @@
 import json
 from app.extensions import redis
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from collections import defaultdict, Counter
 
 def get_latest_data(key_prefix):
@@ -26,7 +26,7 @@ def sort_surebet_data(data, cutoff = None):
   results = []
   for arb in json.loads(data):
     # if cutoff, skip items
-    if cutoff and float(arb['profit_margin']) != cutoff:
+    if cutoff and float(arb['profit_margin']) > cutoff:
       continue
     
     # Format date/time
@@ -180,6 +180,55 @@ def sort_valuebets_data(data):
     })
   
   return results
+
+def apply_filters(data, args):
+  from app.utils.helpers import parse_datetime
+  sort = args.get("sort")
+  market = args.get("market", "")
+  outcome_types = args.get("outcome_type", "")
+  outcome_types = [x for x in outcome_types.split(",") if x]
+  commence_time_filter = args.get("commence_time")
+
+  # Time filtering
+  if commence_time_filter:
+    now = datetime.now(timezone.utc)
+    time_map = {
+      "4h": timedelta(hours=4),
+      "8h": timedelta(hours=8),
+      "12h": timedelta(hours=12),
+      "2d": timedelta(days=2),
+      "1w": timedelta(weeks=1)
+    }
+    if commence_time_filter in time_map:
+      limit_time = now + time_map[commence_time_filter]
+      data = [
+        d for d in data
+        if d.get("commence_time") 
+        and parse_datetime(d["commence_time"]) <= limit_time
+      ]
+
+  # Market
+  if market:
+    data = [d for d in data if d.get("market_type") == market]
+
+  # Sort
+  if sort == "profit":
+    data.sort(key=lambda x: x.get("profit", 0), reverse=True)
+  elif sort == "time":
+    data.sort(key=lambda x: x.get("commence_time", ""))
+
+  # Outcome filter
+  if outcome_types:
+    filtered = []
+    ids = {d["surebet_id"] for d in data}
+    for sid in ids:
+      count = count_bookmakers_by_surebet_id(data, sid)
+      if ("2way" in outcome_types and count == 2) or \
+        ("3way" in outcome_types and count == 3):
+        filtered.extend([d for d in data if d["surebet_id"] == sid])
+    data = filtered
+
+  return data
 
 def get_bookmaker_links(event, selected_bookmakers, market_key):
   links = {}

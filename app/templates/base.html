@@ -156,6 +156,63 @@
       </ul>
     </aside>
 
+    <script>
+      const ITEMS_PER_PAGE = 51;
+      async function fetchData(page = 1, filters = {}) {
+        const mode = document.getElementById("page-meta").dataset.mode;
+
+        const endpoints = {
+          surebets: "/api/surebets",
+          middles: "/api/middles",
+          valuebets: "/api/values",
+        };
+
+        const url = endpoints[mode];
+        if (!url) return console.error("Invalid page mode.");
+
+        $.ajax({
+          url: url,
+          method: "GET",
+          data: { page, limit: ITEMS_PER_PAGE, ...filters },
+          success: (response) => {
+            const target = `#${mode}-body`;
+
+            if (!response.data || response.data.length === 0) {
+              $(target).html(`
+                <tr><td colspan="10" class="text-center py-4 text-gray-500">
+                  No results found
+                </td></tr>
+              `);
+            } else {
+              renderTable(mode, response.data);
+              updatePagination(response.page, response.total_pages);
+            }
+          },
+          error: () => {
+            $(target).html(`
+              <tr><td colspan="10" class="text-center py-4 text-gray-500">
+                Failed to load data
+              </td></tr>
+            `);
+          },
+        });
+      }
+
+      function renderTable(mode, items) {
+        const tbodyContainer = $(`#${mode}-body`);  
+        removeElementsByClass(`${mode}_record`);
+
+        if (mode === "surebets") {
+          renderSurebets(items, tbodyContainer);
+        }
+        else if (mode === "middles") {
+          renderMiddles(items, tbodyContainer);
+        }
+        else if (mode === "valuebets") {
+          renderValuebets(items, tbodyContainer);
+        }
+      }
+    </script>
     {% block content %}
     <!-- content here -->
     {% endblock content %}

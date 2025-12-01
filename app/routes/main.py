@@ -192,10 +192,10 @@ def bet_calculator():
           label = outcome
           
         opportunities_html += f"""
-          <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-            <h3 class="font-semibold text-gray-800">{label}</h3>
-            <p class="text-sm text-gray-700">Odds: <span class="font-medium">{odd:.2f}</span></p>
-            <p class="text-sm text-gray-700">Bookmaker: {bookmaker}</p>
+          <div class="border border-gray-200 rounded-lg p-4 bg-gray-800">
+            <h3 class="font-semibold text-gray-100">{label}</h3>
+            <p class="text-sm text-gray-200">Odds: <span class="font-medium">{odd:.2f}</span></p>
+            <p class="text-sm text-gray-200">Bookmaker: {bookmaker}</p>
             <p class="text-sm mt-1">Bet Amount: $<span class="bet-amount font-bold" data-implied-prob="{implied_prob}">0.00</span></p>
           </div>
         """
