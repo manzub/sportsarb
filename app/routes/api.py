@@ -89,7 +89,6 @@ def get_surebets():
     raw_data = redis.get(latest)
     # if free user show only cutoff, get config
     profit_margin_cutoff = float(get_config_by_name('free_plan_cutoff'))
-    print(profit_margin_cutoff)
     if current_user.is_authenticated and current_user.current_plan:
       profit_margin_cutoff = None
     data = sort_surebet_data(raw_data, cutoff=profit_margin_cutoff)
