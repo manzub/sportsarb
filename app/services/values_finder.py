@@ -1,4 +1,5 @@
-import uuid
+import hashlib
+import json
 from collections import defaultdict
 from statistics import mean, pstdev
 from app.utils.redis_helper import save_json, get_cached_odds
@@ -8,13 +9,26 @@ from app.utils.logger import setup_logging
 
 logger = setup_logging()
 
+def generate_valuebet_id(event, sport_group, market_type, bookmaker, outcome_key, odds, ref_odds):
+  base_string = json.dumps({
+    'event': f"{event.get('home_team')} vs {event.get('away_team')}",
+    'sport_group': sport_group,
+    'market': market_type,
+    'bookmaker': bookmaker,
+    'outcome': outcome_key,
+    'odds': round(float(odds), 3),
+    'reference_odds': round(float(ref_odds), 3) if ref_odds else None
+  }, sort_keys=True)
+
+  return hashlib.md5(base_string.encode()).hexdigest()
+
 
 class ValueBetsFinder:
 	def __init__(self):
 			self.markets = ['h2h', 'spreads', 'totals']
 			self.seen_valuebets = set()
 			self.sharp_books = ['betfair', 'pinnacle', 'sbobet', 'matchbook', 'betcris']
-
+   
 	# -------------------------------------------------------
 	#                    PUBLIC ENTRYPOINT
 	# -------------------------------------------------------
@@ -40,7 +54,7 @@ class ValueBetsFinder:
 							logger.error(f"ValueBet - Error processing sport {sport['key']}: {str(e)}")
 
 			all_valuebets.sort(key=lambda x: x['expected_value'], reverse=True)
-			save_json('valuebets', all_valuebets)
+			save_json('arb:valuebets', all_valuebets)
 
 	# -------------------------------------------------------
 	#               EVENT → MARKET → VALUEBET LOOP
@@ -265,9 +279,7 @@ class ValueBetsFinder:
 	# -------------------------------------------------------
 	#                      OUTPUT
 	# -------------------------------------------------------
-	def _create_valuebet_record(self, event, sport_group, bookmaker, market_type,
-															outcome_key, odds, ref_odds, ev, confidence):
-
+	def _create_valuebet_record(self, event, sport_group, bookmaker, market_type, outcome_key, odds, ref_odds, ev, confidence):
 			key = f"{event.get('home_team')}_{event.get('away_team')}_{bookmaker}_{outcome_key}_{market_type}"
 			if key in self.seen_valuebets:
 					return None
@@ -287,5 +299,5 @@ class ValueBetsFinder:
 					'bookmaker_link': get_bookmaker_links(event, [bookmaker], market_type),
 					'commence_time': event.get('commence_time'),
 					'sport_title': event.get('sport_title'),
-					'unique_id': str(uuid.uuid4())
+					'unique_id': generate_valuebet_id(event, sport_group, market_type, bookmaker, outcome_key, odds, ref_odds)
 			}

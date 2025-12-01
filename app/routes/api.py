@@ -71,21 +71,34 @@ def sports():
 @bp.route('/summary', methods=['GET'])
 def summary():
   key = request.args.get('key')
-  if key:
-    redis_key = sorted(redis.keys(f"{key}:*"))[-1] if redis.keys(f"{key}:*") else None
-    if redis_key:
-      data = json.loads(redis.get(redis_key))
-      if data:
-        return jsonify({ f"total_{key}": len(data) })
-  return jsonify({})
+  if not key:
+    return jsonify({}), 400
+
+  redis_key = f"arb:{key}"
+  raw = redis.get(redis_key)
+  if not raw:
+    return jsonify({f"total_{key}": 0})
+
+  try:
+    data = json.loads(raw)
+    if isinstance(data, dict):
+      count = len(data)
+    elif isinstance(data, list): 
+      count = len(data)
+    else:
+      count = 0
+
+    return jsonify({f"total_{key}": count})
+
+  except Exception as e:
+      print("Error parsing Redis data:", e)
+      return jsonify({f"total_{key}": 0})
 
 @bp.route('/surebets')
 def get_surebets():
   data = []
-  keys = redis.keys('surebets:*')
-  if keys:
-    latest = max(keys)
-    raw_data = redis.get(latest)
+  raw_data = redis.get("arb:surebets")
+  if raw_data:
     # if free user show only cutoff, get config
     profit_margin_cutoff = float(get_config_by_name('free_plan_cutoff'))
     if current_user.is_authenticated and current_user.current_plan:
@@ -109,10 +122,8 @@ def get_surebets():
 def get_middles():
   data = []
   if current_user.is_authenticated and has_active_subscription(current_user):
-    keys = redis.keys('middles:*')
-    if keys:
-      latest = max(keys)
-      raw_data = redis.get(latest)
+    raw_data = redis.get("arb:middles")
+    if raw_data:
       data = sort_middle_data(raw_data)
       
     data = apply_filters(data, request.args)
@@ -132,10 +143,8 @@ def get_middles():
 def get_values():
   data = []
   if current_user.is_authenticated and has_active_subscription(current_user):
-    keys = redis.keys('valuebets:*')
-    if keys:
-      latest = max(keys)
-      raw_data = redis.get(latest)
+    raw_data = redis.get("arb:valuebets")
+    if raw_data:
       data = sort_valuebets_data(raw_data)
       
     data = apply_filters(data, request.args)

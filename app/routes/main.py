@@ -152,15 +152,10 @@ def bet_calculator():
   
   arb_filter = unquote(request.args.get('arb_item'))
   if arb_filter:
-    # get redis arb items
-    latest_keys = redis.keys("surebets:*")
-    if not latest_keys:
-      return "No Surebets available", 404
-    
-    latest = max(latest_keys)
-    data = redis.get(latest)
+    data = redis.get("arb:surebets")
+
     if not data:
-      return "No data found", 404
+        return "No Surebets available", 404
     
     results = [x for x in json.loads(data) if x['unique_id'] == arb_filter]
     if not results:
@@ -227,14 +222,10 @@ def middle_calculator():
 
   middle_filter = unquote(request.args.get('middle_item'))
   if middle_filter:
-    latest_keys = redis.keys("middles:*")
-    if not latest_keys:
-      return "No middles available", 404
-    
-    latest = max(latest_keys)
-    data = redis.get(latest)
+    data = redis.get("arb:middles")
+
     if not data:
-      return "No data found", 404
+      return "No Middles available", 404
     
     results = [x for x in json.loads(data) if x['unique_id'] == middle_filter]
 
@@ -308,14 +299,10 @@ def valuebet_calculator():
     return "Invalid Request", 400
 
   # Pull Redis key
-  latest_keys = redis.keys("valuebets:*")
-  if not latest_keys:
-    return "No Valuebets available", 404
-  
-  latest = max(latest_keys)
-  data = redis.get(latest)
+  data = redis.get("arb:valuebets")
+
   if not data:
-    return "No data found", 404
+    return "No Valuebets available", 404
   
   results = [x for x in json.loads(data) if x['unique_id'] == value_id]
   if not results:

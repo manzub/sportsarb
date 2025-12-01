@@ -3,30 +3,40 @@ from app.extensions import redis
 from datetime import datetime, timezone, timedelta
 from collections import defaultdict, Counter
 
-def get_latest_data(key_prefix):
-  keys = redis.keys(f"{key_prefix}:*")
-  if not keys:
-    return []
-  latest_key = max(keys)
-  raw_data = redis.get(latest_key)
-  if not raw_data:
+def get_latest_data(key):
+  raw = redis.get(f"arb:{key}")
+  if not raw:
     return []
   try:
-    data = json.loads(raw_data)
+    data = json.loads(raw)
     if isinstance(data, list):
       return data
-    elif isinstance(data, dict) and "items" in data:
-      return data["items"]
+    elif isinstance(data, dict):
+      return list(data.values())
   except Exception as e:
-    print(f"Error decoding data for {key_prefix}: {e}")
+    print(f"Error decoding data for {key}: {e}")
   return []
 
 # Profit/Bookmaker/Event/Odds
-def sort_surebet_data(data, cutoff = None):
+def sort_surebet_data(raw_data, cutoff = None):
+  
+  try:
+    parsed = json.loads(raw_data)
+  except Exception as e:
+    print("Error decoding surebets:", e)
+    return []
+  
+  if isinstance(parsed, dict):
+    items = list(parsed.values())
+  elif isinstance(parsed, list):
+    items = parsed
+  else:
+    return []
+  
   results = []
-  for arb in json.loads(data):
+  for arb in items:
     # if cutoff, skip items
-    if cutoff and float(arb['profit_margin']) > cutoff:
+    if cutoff is not None and float(arb['profit_margin']) > cutoff:
       continue
     
     # Format date/time
@@ -76,9 +86,22 @@ def sort_surebet_data(data, cutoff = None):
     results.extend(arb_item)
   return results
 
-def sort_middle_data(data):
+def sort_middle_data(raw_data):
+  try:
+    parsed = json.loads(raw_data)
+  except Exception as e:
+    print("Error decoding middles:", e)
+    return []
+  
+  if isinstance(parsed, dict):
+    items = list(parsed.values())
+  elif isinstance(parsed, list):
+    items = parsed
+  else:
+    return []
+  
   results = []
-  for middle in json.loads(data):
+  for middle in items:
     # Format date/time
     event_time = middle.get('commence_time')
     if event_time:
@@ -128,11 +151,23 @@ def sort_middle_data(data):
     results.extend(middle_item)
   return results
 
-def sort_valuebets_data(data):
-  """Transforms raw valuebets JSON into frontend-friendly display list."""
-  results = []
+def sort_valuebets_data(raw_data):
   
-  for vb in json.loads(data):
+  try:
+    parsed = json.loads(raw_data)
+  except Exception as e:
+    print("Error decoding middles:", e)
+    return []
+  
+  if isinstance(parsed, dict):
+    items = list(parsed.values())
+  elif isinstance(parsed, list):
+    items = parsed
+  else:
+    return []
+  
+  results = []
+  for vb in items:
     # --- Parse event time ---
     event_time = vb.get('commence_time')
     if event_time:

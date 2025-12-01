@@ -1,4 +1,5 @@
-import uuid
+import hashlib
+import json
 from collections import defaultdict
 from difflib import get_close_matches
 from app.utils.redis_helper import save_json, get_cached_odds
@@ -35,7 +36,7 @@ class SurebetFinder:
         except Exception as e:
           logger.error(f"Surebet - Error processing sport {sport['key']}: {str(e)}")
           continue
-      save_json('surebets', all_arbs) # save to redis here
+      save_json('arb:surebets', all_arbs) # save to redis here
     except Exception as e:
       logger.error(f"Fatal error in find_arbitrage: {str(e)}")
       
@@ -80,7 +81,7 @@ class SurebetFinder:
                   'commence_time': event.get('commence_time'),
                   'sport_name': sport_group,
                   'market': market,
-                  'unique_id': str(uuid.uuid4()),
+                  'unique_id': self.make_surebet_id(event, profit_margin, market, best_odds),
                   'sport_title': event.get('sport_title')
                 }
                 if points is not None:
@@ -271,3 +272,15 @@ class SurebetFinder:
       return best_odds, best_bookmakers, best_points
     else:
       return None, None, None
+    
+  def make_surebet_id(self, event, profit_margin, market, best_odds):
+    key_data = {
+      'home': event['home_team'],
+      'away': event['away_team'],
+      'profit_margin': round(profit_margin, 4),
+      'market': market,
+      'best_odds': {k: best_odds[k] for k in sorted(best_odds)}
+    }
+
+    raw = json.dumps(key_data, sort_keys=True)
+    return hashlib.md5(raw.encode()).hexdigest()

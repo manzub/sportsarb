@@ -1,4 +1,5 @@
-import uuid
+import hashlib
+import json
 from collections import defaultdict
 from app.utils.redis_helper import save_json, get_cached_odds
 from app.utils.helpers import update_sport_db_count
@@ -32,7 +33,7 @@ class MiddlesFinder:
           logger.error(f"Middles - Error processing sport {sport['key']}: {str(e)}")
           continue
 
-      save_json('middles', all_middles)
+      save_json('arb:middles', all_middles)
     except Exception as e:
       logger.error(f"Fatal error in find_arbitrage: {str(e)}")
 
@@ -200,5 +201,18 @@ class MiddlesFinder:
       'confidence': round(confidence, 2),
       'commence_time': event.get('commence_time'),
       'sport_title': event.get('sport_title'),
-      'unique_id': str(uuid.uuid4()),
+      'unique_id': self.generate_middle_id(event, market_type, line1, line2, price1, price2, sport_group),
     }
+    
+  def generate_middle_id(self, event, market_type, line1, line2, price1, price2, sport_group):
+    base_string = json.dumps({
+          'event': f"{event['home_team']} vs {event['away_team']}",
+          'market': market_type,
+          'sport_group': sport_group,
+          'home_line': line1,
+          'away_line': line2,
+          'home_price': price1,
+          'away_price': price2
+    }, sort_keys=True)
+
+    return hashlib.md5(base_string.encode()).hexdigest()

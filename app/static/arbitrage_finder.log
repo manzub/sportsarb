@@ -13015,3 +13015,519 @@
 2025-12-01 20:20:43,122 - INFO - 127.0.0.1 - - [01/Dec/2025 20:20:43] "GET /api/sports HTTP/1.1" 200 -
 2025-12-01 20:20:43,144 - INFO - 127.0.0.1 - - [01/Dec/2025 20:20:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2025-12-01 20:20:44,677 - INFO - 127.0.0.1 - - [01/Dec/2025 20:20:44] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:28:49,117 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-12-01 20:28:49,553 - INFO -  * Restarting with stat
+2025-12-01 20:28:51,457 - WARNING -  * Debugger is active!
+2025-12-01 20:28:51,506 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:29:39,209 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-12-01 20:29:39,612 - INFO -  * Restarting with stat
+2025-12-01 20:29:41,409 - WARNING -  * Debugger is active!
+2025-12-01 20:29:41,437 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:29:53,580 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-12-01 20:29:53,947 - INFO -  * Restarting with stat
+2025-12-01 20:29:55,537 - WARNING -  * Debugger is active!
+2025-12-01 20:29:55,563 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:30:04,694 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/surebet_finder.py', reloading
+2025-12-01 20:30:05,090 - INFO -  * Restarting with stat
+2025-12-01 20:30:06,967 - WARNING -  * Debugger is active!
+2025-12-01 20:30:07,006 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:31:35,059 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-12-01 20:31:35,495 - INFO -  * Restarting with stat
+2025-12-01 20:31:37,298 - WARNING -  * Debugger is active!
+2025-12-01 20:31:37,326 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:31:46,463 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/middles_finder.py', reloading
+2025-12-01 20:31:46,888 - INFO -  * Restarting with stat
+2025-12-01 20:31:48,678 - WARNING -  * Debugger is active!
+2025-12-01 20:31:48,708 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:34:16,644 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/services/values_finder.py', reloading
+2025-12-01 20:34:17,095 - INFO -  * Restarting with stat
+2025-12-01 20:45:30,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.244:5001
+2025-12-01 20:45:30,551 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-01 20:45:30,553 - INFO -  * Restarting with stat
+2025-12-01 20:45:32,007 - WARNING -  * Debugger is active!
+2025-12-01 20:45:32,051 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:46:29,932 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:46:30,302 - INFO -  * Restarting with stat
+2025-12-01 20:46:32,062 - WARNING -  * Debugger is active!
+2025-12-01 20:46:32,091 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:47:51,136 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:47:51,522 - INFO -  * Restarting with stat
+2025-12-01 20:47:53,278 - WARNING -  * Debugger is active!
+2025-12-01 20:47:53,315 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:49:01,238 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:49:01,624 - INFO -  * Restarting with stat
+2025-12-01 20:49:03,378 - WARNING -  * Debugger is active!
+2025-12-01 20:49:03,410 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:50:25,697 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:50:26,081 - INFO -  * Restarting with stat
+2025-12-01 20:50:27,804 - WARNING -  * Debugger is active!
+2025-12-01 20:50:27,834 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:51:35,907 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:51:36,278 - INFO -  * Restarting with stat
+2025-12-01 20:51:37,990 - WARNING -  * Debugger is active!
+2025-12-01 20:51:38,021 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:51:58,325 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:51:58,701 - INFO -  * Restarting with stat
+2025-12-01 20:52:00,554 - WARNING -  * Debugger is active!
+2025-12-01 20:52:00,585 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:52:31,029 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:52:31,413 - INFO -  * Restarting with stat
+2025-12-01 20:52:33,281 - WARNING -  * Debugger is active!
+2025-12-01 20:52:33,311 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:53:33,360 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-12-01 20:53:33,795 - INFO -  * Restarting with stat
+2025-12-01 20:53:35,695 - WARNING -  * Debugger is active!
+2025-12-01 20:53:35,726 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:54:09,230 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-12-01 20:54:09,617 - INFO -  * Restarting with stat
+2025-12-01 20:54:11,392 - WARNING -  * Debugger is active!
+2025-12-01 20:54:11,421 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:54:25,650 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-12-01 20:54:26,038 - INFO -  * Restarting with stat
+2025-12-01 20:54:27,736 - WARNING -  * Debugger is active!
+2025-12-01 20:54:27,768 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:54:30,828 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/main.py', reloading
+2025-12-01 20:54:31,267 - INFO -  * Restarting with stat
+2025-12-01 20:54:32,724 - WARNING -  * Debugger is active!
+2025-12-01 20:54:32,758 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:54:40,805 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:40] "GET /valuebets HTTP/1.1" 200 -
+2025-12-01 20:54:40,844 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:40] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:40,844 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:40] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:41,047 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:41] "[35m[1mGET /api/values?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:54:41,071 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:41] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:41,075 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:54:41,078 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:41] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:42,189 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "GET /valuebets HTTP/1.1" 200 -
+2025-12-01 20:54:42,213 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:42,219 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:42,385 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:54:42,392 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "[35m[1mGET /api/values?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:54:42,426 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:42,454 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:42,612 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:42] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:54:43,188 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:54:43,217 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:43,220 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:54:43,329 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:43,338 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:54:43,340 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:54:43,342 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:43] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:54:44,883 - INFO - 127.0.0.1 - - [01/Dec/2025 20:54:44] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:55:48,944 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:55:49,400 - INFO -  * Restarting with stat
+2025-12-01 20:55:51,122 - WARNING -  * Debugger is active!
+2025-12-01 20:55:51,154 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:55:51,280 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:55:51,362 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:55:51,363 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:55:51,484 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:55:51,526 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:55:51,527 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:55:51,531 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:51] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:55:53,243 - INFO - 127.0.0.1 - - [01/Dec/2025 20:55:53] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:57:09,167 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 20:57:09,549 - INFO -  * Restarting with stat
+2025-12-01 20:57:11,170 - WARNING -  * Debugger is active!
+2025-12-01 20:57:11,198 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:57:41,591 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:57:41,995 - INFO -  * Restarting with stat
+2025-12-01 20:57:43,755 - WARNING -  * Debugger is active!
+2025-12-01 20:57:43,799 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:57:43,940 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:43] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:57:43,977 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:43] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:57:43,978 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:43] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:57:44,144 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:44] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:57:44,166 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:44] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:57:44,166 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:57:44,171 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:44] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:57:45,743 - INFO - 127.0.0.1 - - [01/Dec/2025 20:57:45] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:58:16,177 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:58:16,548 - INFO -  * Restarting with stat
+2025-12-01 20:58:18,272 - WARNING -  * Debugger is active!
+2025-12-01 20:58:18,306 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:58:19,820 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:58:19,859 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:58:19,861 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:58:19,962 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:58:19,975 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:58:19,991 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:58:19,991 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:19] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:58:21,742 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:21] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:58:42,595 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:58:42,945 - INFO -  * Restarting with stat
+2025-12-01 20:58:44,636 - WARNING -  * Debugger is active!
+2025-12-01 20:58:44,669 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:58:46,356 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:58:46,386 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:58:46,386 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:58:46,460 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:58:46,492 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:58:46,496 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:58:46,501 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:46] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:58:48,055 - INFO - 127.0.0.1 - - [01/Dec/2025 20:58:48] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:58:57,841 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:58:58,267 - INFO -  * Restarting with stat
+2025-12-01 20:58:59,949 - WARNING -  * Debugger is active!
+2025-12-01 20:58:59,975 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:59:01,492 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 20:59:01,544 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:59:01,545 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 20:59:01,617 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 20:59:01,655 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:59:01,657 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 20:59:01,664 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:01] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 20:59:03,527 - INFO - 127.0.0.1 - - [01/Dec/2025 20:59:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 20:59:12,134 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:59:12,517 - INFO -  * Restarting with stat
+2025-12-01 20:59:14,360 - WARNING -  * Debugger is active!
+2025-12-01 20:59:14,395 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 20:59:54,002 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 20:59:54,400 - INFO -  * Restarting with stat
+2025-12-01 20:59:56,174 - WARNING -  * Debugger is active!
+2025-12-01 20:59:56,206 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:00:54,029 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:00:54,490 - INFO -  * Restarting with stat
+2025-12-01 21:00:56,325 - WARNING -  * Debugger is active!
+2025-12-01 21:00:56,354 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:01:41,108 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:01:41,479 - INFO -  * Restarting with stat
+2025-12-01 21:01:43,201 - WARNING -  * Debugger is active!
+2025-12-01 21:01:43,231 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:01:46,283 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:01:46,740 - INFO -  * Restarting with stat
+2025-12-01 21:01:48,212 - WARNING -  * Debugger is active!
+2025-12-01 21:01:48,250 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:02:07,960 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:07] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:02:07,994 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:07] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:02:07,994 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:07] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:02:08,177 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:08] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:02:08,219 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:08] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:02:08,243 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:08] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:02:08,246 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:02:09,764 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:02:09,783 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:02:09,787 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:02:09,788 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:02:09,860 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:02:09,890 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:02:09,909 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:02:09,909 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:09] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:02:11,444 - INFO - 127.0.0.1 - - [01/Dec/2025 21:02:11] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:03:42,031 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:03:42,506 - INFO -  * Restarting with stat
+2025-12-01 21:03:44,390 - WARNING -  * Debugger is active!
+2025-12-01 21:03:44,421 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:03:45,429 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:03:45,475 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:03:45,476 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:03:45,554 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "[35m[1mGET /api/surebets?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 21:03:45,603 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:03:45,607 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:03:45,611 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:45] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:03:47,129 - INFO - 127.0.0.1 - - [01/Dec/2025 21:03:47] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:05:48,241 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 21:05:48,678 - INFO -  * Restarting with stat
+2025-12-01 21:05:50,439 - WARNING -  * Debugger is active!
+2025-12-01 21:05:50,469 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:05:52,516 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 21:05:52,902 - INFO -  * Restarting with stat
+2025-12-01 21:05:54,332 - WARNING -  * Debugger is active!
+2025-12-01 21:05:54,364 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:05:56,993 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:56] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:05:57,029 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:05:57,029 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:05:57,093 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:05:57,147 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:05:57,149 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:05:57,154 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:57] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:05:58,685 - INFO - 127.0.0.1 - - [01/Dec/2025 21:05:58] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:07:21,572 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/routes/api.py', reloading
+2025-12-01 21:07:21,990 - INFO -  * Restarting with stat
+2025-12-01 21:07:23,777 - WARNING -  * Debugger is active!
+2025-12-01 21:07:23,812 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:07:56,271 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:07:56,701 - INFO -  * Restarting with stat
+2025-12-01 21:07:58,397 - WARNING -  * Debugger is active!
+2025-12-01 21:07:58,424 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:08:17,727 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:08:18,104 - INFO -  * Restarting with stat
+2025-12-01 21:08:19,966 - WARNING -  * Debugger is active!
+2025-12-01 21:08:20,002 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:08:29,135 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:08:29,531 - INFO -  * Restarting with stat
+2025-12-01 21:08:31,020 - WARNING -  * Debugger is active!
+2025-12-01 21:08:31,049 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:08:59,420 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:08:59,786 - INFO -  * Restarting with stat
+2025-12-01 21:09:01,663 - WARNING -  * Debugger is active!
+2025-12-01 21:09:01,750 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:09:03,145 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:09:03,187 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:03,187 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:03,363 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:09:03,449 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:03,454 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:09:03,460 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:03] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:04,983 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:04] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:09:36,248 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:09:36,641 - INFO -  * Restarting with stat
+2025-12-01 21:09:38,326 - WARNING -  * Debugger is active!
+2025-12-01 21:09:38,354 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:09:44,447 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:09:44,826 - INFO -  * Restarting with stat
+2025-12-01 21:09:46,544 - WARNING -  * Debugger is active!
+2025-12-01 21:09:46,570 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:09:46,685 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:09:46,717 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:46,717 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:46,787 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:09:46,827 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:46,833 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:46,850 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:09:48,373 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:48] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:09:50,368 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "GET /valuebets HTTP/1.1" 200 -
+2025-12-01 21:09:50,406 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:50,407 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:09:50,544 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "[35m[1mGET /api/values?page=1&limit=51 HTTP/1.1[0m" 500 -
+2025-12-01 21:09:50,563 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:50,567 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:09:50,570 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:50] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:09:52,096 - INFO - 127.0.0.1 - - [01/Dec/2025 21:09:52] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:10:30,198 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:10:30,593 - INFO -  * Restarting with stat
+2025-12-01 21:10:32,183 - WARNING -  * Debugger is active!
+2025-12-01 21:10:32,211 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:10:55,558 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/arb_helper.py', reloading
+2025-12-01 21:10:56,006 - INFO -  * Restarting with stat
+2025-12-01 21:10:57,705 - WARNING -  * Debugger is active!
+2025-12-01 21:10:57,732 - INFO -  * Debugger PIN: 135-200-680
+2025-12-01 21:10:58,905 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:58] "GET /valuebets HTTP/1.1" 200 -
+2025-12-01 21:10:58,965 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:58] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:10:58,965 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:58] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:10:59,076 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:59] "GET /api/values?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:10:59,115 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:10:59,138 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:59] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:10:59,149 - INFO - 127.0.0.1 - - [01/Dec/2025 21:10:59] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:00,694 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:00] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:14,102 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "GET /middles HTTP/1.1" 200 -
+2025-12-01 21:11:14,132 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "[36mGET /static/img/banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:11:14,136 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:11:14,212 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "GET /api/middles?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:11:14,292 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:14,302 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:14,306 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:11:15,828 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:15] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:16,775 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:11:16,804 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:11:16,806 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:11:16,874 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:11:16,913 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:16,929 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:16,929 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:11:18,496 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:18] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:47,550 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:47] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:11:47,705 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:47] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:11:47,708 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,100 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:11:49,128 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,129 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,129 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,129 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,131 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,133 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,133 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,139 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,141 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,142 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,143 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,145 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,197 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:11:49,234 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:49] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:50,703 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:50] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:57,568 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:57] "[32mGET /admin/toggle-oddsapi HTTP/1.1[0m" 302 -
+2025-12-01 21:11:58,112 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:11:58,156 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,160 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,162 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,164 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,168 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,172 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,172 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,175 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,176 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,177 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,178 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,179 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:11:58,187 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:58] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:11:59,691 - INFO - 127.0.0.1 - - [01/Dec/2025 21:11:59] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,895 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:12:07,920 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,921 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,928 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,930 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,931 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,934 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,936 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,939 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,943 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,943 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,945 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,945 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:12:07,974 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:12:09,370 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:09] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-12-01 21:12:09,415 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:09] "GET / HTTP/1.1" 200 -
+2025-12-01 21:12:09,553 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:09] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:12:09,554 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:09] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:09,565 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:12:11,099 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:11] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:11,148 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:11] "GET /auth/login HTTP/1.1" 200 -
+2025-12-01 21:12:11,262 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:11] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:12:11,272 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:12:12,794 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:12] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:12:25,026 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:25] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-12-01 21:12:25,039 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:25] "GET /auth/confirmation/4 HTTP/1.1" 200 -
+2025-12-01 21:12:25,160 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:25] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:12:25,208 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:12:26,726 - INFO - 127.0.0.1 - - [01/Dec/2025 21:12:26] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:16,121 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:16] "GET /auth/login HTTP/1.1" 200 -
+2025-12-01 21:13:16,264 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:16] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:13:16,278 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:17,827 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:17] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:19,730 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:19] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-12-01 21:13:19,739 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:19] "GET / HTTP/1.1" 200 -
+2025-12-01 21:13:19,921 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:19] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:13:19,939 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:21,470 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:21] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:24,090 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:24] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-12-01 21:13:24,130 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:24] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:13:24,293 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:24] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:13:24,318 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:25,848 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:25] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:26,076 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:26] "GET /plans/checkout/8 HTTP/1.1" 200 -
+2025-12-01 21:13:26,120 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:26] "[33mGET /plans/checkout/style.css HTTP/1.1[0m" 404 -
+2025-12-01 21:13:26,135 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:26] "[36mGET /static/checkout.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:26,503 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:26,547 - INFO - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-12-01 21:13:27,310 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-12-01 21:13:27,328 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:27] "POST /plans/create-checkout-session HTTP/1.1" 200 -
+2025-12-01 21:13:27,727 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:27] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:55,374 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:55] "GET /plans/return?session_id=cs_test_a1tArGIV0azKaQKOo7fe57KnQBeTcFMfnWesGfu6w3RTbB1UOE9A0WsuVR HTTP/1.1" 200 -
+2025-12-01 21:13:55,482 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:55] "[36mGET /static/return.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:55,626 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:55] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:13:55,632 - INFO - message='Request to Stripe api' method=get url=https://api.stripe.com/v1/checkout/sessions/cs_test_a1tArGIV0azKaQKOo7fe57KnQBeTcFMfnWesGfu6w3RTbB1UOE9A0WsuVR
+2025-12-01 21:13:55,647 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:55,940 - INFO - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions/cs_test_a1tArGIV0azKaQKOo7fe57KnQBeTcFMfnWesGfu6w3RTbB1UOE9A0WsuVR response_code=200
+2025-12-01 21:13:55,964 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:55] "GET /plans/session-status?session_id=cs_test_a1tArGIV0azKaQKOo7fe57KnQBeTcFMfnWesGfu6w3RTbB1UOE9A0WsuVR HTTP/1.1" 200 -
+2025-12-01 21:13:56,922 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:56] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:13:57,042 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:57] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:13:57,054 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:13:57,181 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:57] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:13:58,582 - INFO - 127.0.0.1 - - [01/Dec/2025 21:13:58] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:14:01,885 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:01] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:14:02,002 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:02] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:14:02,017 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:14:03,540 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:03] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:14:39,897 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:39] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:14:40,109 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:40] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:14:40,116 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:40] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:14:41,651 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:41] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,597 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:14:44,638 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,641 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,647 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,649 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,651 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,651 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,657 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,657 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,660 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,662 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,662 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,663 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:14:44,690 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:14:46,220 - INFO - 127.0.0.1 - - [01/Dec/2025 21:14:46] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:04,261 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:04] "GET / HTTP/1.1" 200 -
+2025-12-01 21:15:04,411 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:04] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:04,419 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:05,485 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "GET /valuebets HTTP/1.1" 200 -
+2025-12-01 21:15:05,514 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:05,515 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:05,589 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "GET /api/values?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:15:05,611 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:05,620 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:05,717 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:05,979 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:05] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:07,242 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:15:07,244 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:07,264 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:07,267 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:07,335 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:15:07,373 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:07,389 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:07,397 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:08,936 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:08] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:12,686 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "GET /middles HTTP/1.1" 200 -
+2025-12-01 21:15:12,710 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "[36mGET /static/img/banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:12,714 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:12,775 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "GET /api/middles?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:15:12,842 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:12,852 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:12,860 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:12] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:14,365 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:14] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:21,940 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:21] "GET /surebets HTTP/1.1" 200 -
+2025-12-01 21:15:21,974 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:21] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:21,978 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:21] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-01 21:15:22,074 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:22] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:22,079 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:22] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-01 21:15:22,089 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:22] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:22,089 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:23,655 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:23] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:33,224 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:33] "GET /account HTTP/1.1" 200 -
+2025-12-01 21:15:33,364 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:33] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:15:33,368 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:34,889 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:34] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:34,996 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:34] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:15:35,032 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,037 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,038 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,039 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,041 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,043 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,043 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,046 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,047 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,048 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,049 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,049 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:15:35,069 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:15:36,570 - INFO - 127.0.0.1 - - [01/Dec/2025 21:15:36] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,281 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[32mGET /admin/toggle-oddsapi HTTP/1.1[0m" 302 -
+2025-12-01 21:16:26,826 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "GET /admin/ HTTP/1.1" 200 -
+2025-12-01 21:16:26,869 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,873 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,877 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,880 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,880 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,883 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,887 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,889 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,890 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,892 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,893 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,893 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-01 21:16:26,923 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:16:28,425 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:28] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:16:29,451 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:29] "GET / HTTP/1.1" 200 -
+2025-12-01 21:16:29,591 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:29] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:16:29,592 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-01 21:16:31,132 - INFO - 127.0.0.1 - - [01/Dec/2025 21:16:31] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-01 21:22:00,289 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:00] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-01 21:22:00,303 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:00] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-12-01 21:22:00,306 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:00] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-12-01 21:22:00,380 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:00] "GET / HTTP/1.1" 200 -
+2025-12-01 21:22:10,540 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:10] "GET / HTTP/1.1" 200 -
+2025-12-01 21:22:11,006 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:11] "GET /api/sports HTTP/1.1" 200 -
+2025-12-01 21:22:11,242 - INFO - 127.0.0.1 - - [01/Dec/2025 21:22:11] "GET /favicon.ico HTTP/1.1" 200 -

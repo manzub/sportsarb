@@ -4,12 +4,16 @@ from redis import Redis
 
 redis = Redis(host="localhost", port=6379, db=0, decode_responses=True)
 
-def save_json(prefix, data, expire_hours=1):
-  timestamp = datetime.now(timezone.utc).strftime("%Y%m%d%H%M")
-  key = f"{prefix}:{timestamp}"
-  redis.set(key, json.dumps(data), ex=timedelta(hours=expire_hours))
-  print(f"[+] Saved {key} to Redis")
-  return key
+def save_json(redis_key: str, new_items: list, expire_hours:int = 1):
+  existing_raw = redis.get(redis_key)
+  existing = json.loads(existing_raw) if existing_raw else {}
+
+  for item in new_items:
+    uid = item["unique_id"]
+    existing[uid] = item
+
+  redis.set(redis_key, json.dumps(existing), ex=timedelta(hours=expire_hours))
+  print(f"[+] Updated {redis_key} ({len(new_items)} new items, total={len(existing)})")
 
 def save_odds_data(data, expire_hours=1):
   redis.set("odds:data", json.dumps(data), ex=timedelta(hours=expire_hours))
