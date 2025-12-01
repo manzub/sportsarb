@@ -4,6 +4,43 @@
 <div id="page-meta" data-mode="valuebets"
   class="card bg-gray-900 text-gray-200 border border-gray-800 rounded-xl shadow-lg">
 
+  {% if not current_user.is_authenticated %}
+  <!-- Not Logged In -->
+  <div class="w-full bg-gray-900 border border-gray-700 text-gray-200 p-6 rounded-xl shadow-lg max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-emerald-400 mb-2">Login Required</h2>
+    <p class="text-gray-300 mb-4">
+      You need to log in to view Valuebets. Create an account or sign in to continue.
+    </p>
+
+    <div class="flex gap-3 mt-4">
+      <a href="{{ url_for('auth.login') }}"
+        class="btn bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg">
+        Login
+      </a>
+
+      <a href="/#pricing"
+        class="btn bg-gray-800 hover:bg-gray-700 border border-gray-600 text-gray-200 font-semibold px-5 py-2.5 rounded-lg">
+        View Plans
+      </a>
+    </div>
+  </div>
+
+  {% elif not has_access_values %}
+  <!-- Logged In But No Access -->
+  <div class="w-full bg-gray-900 border border-gray-700 text-gray-200 p-6 rounded-xl shadow-lg max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-emerald-400 mb-2">Upgrade Required</h2>
+    <p class="text-gray-300 mb-4">
+      Your current plan does not include Valuebets. Upgrade to unlock all valuebet opportunities and
+      EV-positive values.
+    </p>
+
+    <a href="/#pricing" class="btn bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg">
+      Upgrade Plan
+    </a>
+  </div>
+
+  {% else %}
+  <!-- HAS ACCESS – Show the full original content -->
   <div class="mb-4 p-4">
     <img src="/static/img/banner-1.jpg" class="w-full h-64 object-cover rounded-xl shadow-md border border-gray-700">
   </div>
@@ -62,6 +99,7 @@
     </div>
 
   </div>
+  {% endif %}
 </div>
 
 {% block sidebar %}

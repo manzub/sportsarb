@@ -2,10 +2,48 @@
 
 {% block content %}
 <div id="page-meta" data-mode="middles" class="w-full max-w-7xl mx-auto pt-5 pb-12 px-4">
+  {% if not current_user.is_authenticated %}
+  <!-- Not Logged In -->
+  <div class="w-full bg-gray-900 border border-gray-700 text-gray-200 p-6 rounded-xl shadow-lg max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-emerald-400 mb-2">Login Required</h2>
+    <p class="text-gray-300 mb-4">
+      You need to log in to view Middlebets. Create an account or sign in to continue.
+    </p>
+
+    <div class="flex gap-3 mt-4">
+      <a href="{{ url_for('auth.login') }}"
+        class="btn bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg">
+        Login
+      </a>
+
+      <a href="/#pricing"
+        class="btn bg-gray-800 hover:bg-gray-700 border border-gray-600 text-gray-200 font-semibold px-5 py-2.5 rounded-lg">
+        View Plans
+      </a>
+    </div>
+  </div>
+
+  {% elif not has_access_middles %}
+  <!-- Logged In But No Access -->
+  <div class="w-full bg-gray-900 border border-gray-700 text-gray-200 p-6 rounded-xl shadow-lg max-w-2xl mx-auto mt-10">
+    <h2 class="text-xl font-bold text-emerald-400 mb-2">Upgrade Required</h2>
+    <p class="text-gray-300 mb-4">
+      Your current plan does not include Middlebets. Upgrade to unlock all middle-range line opportunities and
+      EV-positive middles.
+    </p>
+
+    <a href="/#pricing" class="btn bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-5 py-2.5 rounded-lg">
+      Upgrade Plan
+    </a>
+  </div>
+
+  {% else %}
+  <!-- HAS ACCESS – Show the full original content -->
 
   <div class="mb-4 p-4">
     <img src="/static/img/banner-2.jpg" class="w-full h-64 object-cover rounded-xl shadow-md border border-gray-700">
   </div>
+
   <!-- Jumbo card -->
   <div class="w-full bg-gray-900 text-gray-100 rounded-xl border border-gray-700 p-6 mb-6 shadow-lg">
 
@@ -51,15 +89,12 @@
 
   </div>
 
-
-
   <!-- Warning -->
   <div role="alert" class="mb-9 bg-red-900/40 border border-red-700 p-4 rounded-xl text-red-300 shadow">
     <p class="text-sm leading-relaxed">
       Always verify odds before placing your bets. Small data delays can cause mismatches.
     </p>
   </div>
-
 
   <!-- Header + pagination -->
   <div class="flex flex-col md:flex-row justify-between items-center mb-4">
@@ -80,7 +115,6 @@
     </div>
   </div>
 
-
   <!-- Table -->
   <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-sm">
     <table id="middles-body" class="w-full text-sm text-gray-800">
@@ -98,9 +132,11 @@
           <th></th>
         </tr>
       </thead>
-      <!-- Body here -->
+      <!-- Body injected by JS -->
     </table>
   </div>
+
+  {% endif %}
 
 </div>
 

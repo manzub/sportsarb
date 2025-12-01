@@ -22,6 +22,16 @@ def has_active_subscription(user):
   now = datetime.now(timezone.utc)
   return sub.active and start_date <= now and (end_date is None or end_date >= now)
 
+def get_plan_info(plan_id):
+  from app.models import Subscriptions
+  if plan_id:
+    current_plan = Subscriptions.query.filter_by(id=plan_id).first()
+    plan_name = current_plan.plan_name.lower()
+    plan_info = get_config_by_name(f"{plan_name}_plan_benefit")
+    return plan_info
+  return {}
+    
+
 def check_valid_sports_leagues(user):
   from app.models import Sports
   

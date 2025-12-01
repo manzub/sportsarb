@@ -7,7 +7,7 @@ from app.extensions import db, redis
 from flask_login import current_user, login_required
 from app.forms import SelectPlan
 from app.models import UserSubscriptions, Subscriptions, Alerts, AppSettings
-from app.utils.helpers import has_active_subscription, verified_required
+from app.utils.helpers import has_active_subscription, verified_required, get_config_by_name, get_plan_info
 from app.utils.arb_helper import get_latest_data
 
 bp = Blueprint('main', __name__)
@@ -35,6 +35,7 @@ def index():
       if current_user.is_authenticated:
         # check valid plan_id, create new plan or replace current, set to pending
         if form.plan_id.data:
+          print(form.plan_id.data)
           valid_plan = Subscriptions.query.filter_by(id=form.plan_id.data).first()
           if not valid_plan:
             flash("Invalid plan selected", 'yellow')
@@ -58,10 +59,9 @@ def index():
   plans_with_benefits = []
   if plans and len(plans) > 0:
     for x in plans:
-      settings_key = f"{x.plan_name.lower()}_plan_benefit"
-      benefits = AppSettings.query.filter_by(setting_name=settings_key).first()
       data = x.to_dict()
-      data['benefits'] = json.loads(benefits.value) if benefits and benefits.value else []
+      benefits = get_config_by_name(f"{x.plan_name.lower()}_plan_benefit")
+      data['benefits'] = json.loads(benefits) if benefits else []
       plans_with_benefits.append(data)
   else:
     return redirect(url_for('main.index'))
@@ -103,20 +103,36 @@ def surebets():
 # TODO: middles and values on if has active plan
 @bp.route('/middles')
 def middles():
-  middles = get_latest_data('middles')
-  total_middle_items = len(middles)
-  total_items_with_positive_ev = sum( 1 for item in middles if (item.get('expected_value') or 0) > 0)
-    
+  total_middle_items, total_items_with_positive_ev = 0, 0
+  has_access_middles = False
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
-  return render_template('middles.html', has_active_subscription=active_subscription, total_middle_items=total_middle_items, total_items_with_positive_ev=total_items_with_positive_ev)
+  if active_subscription:
+    # check if current plan allows access to middles
+    plan_info = json.loads(get_plan_info(current_user.current_plan.plan_id))
+    has_access_middles = plan_info.get('middlebets', False)
+    
+  if has_access_middles:
+    middles = get_latest_data('middles')
+    total_middle_items = len(middles)
+    total_items_with_positive_ev = sum( 1 for item in middles if (item.get('expected_value') or 0) > 0)
+    
+  return render_template('middles.html', has_active_subscription=active_subscription, total_middle_items=total_middle_items, total_items_with_positive_ev=total_items_with_positive_ev, has_access_middles=has_access_middles)
 
 @bp.route('/valuebets')
 def valuebets():
-  values = get_latest_data('valuebets')
-  total_value_items = len(values)
-  
+  total_value_items = 0
+  has_access_values = False
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
-  return render_template('valuebets.html', has_active_subscription=active_subscription, total_value_items=total_value_items)
+  if active_subscription:
+    # check if current plan allows access to middles
+    plan_info = json.loads(get_plan_info(current_user.current_plan.plan_id))
+    has_access_values = plan_info.get('valuebets', False)
+    
+  if has_access_values:
+    values = get_latest_data('valuebets')
+    total_value_items = len(values)
+  
+  return render_template('valuebets.html', has_active_subscription=active_subscription, total_value_items=total_value_items, has_access_values=has_access_values)
 
 @bp.route('/change_currency', methods=['POST'])
 def change_currency():

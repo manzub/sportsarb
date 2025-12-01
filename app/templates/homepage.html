@@ -51,43 +51,43 @@
     <h2 class="text-3xl text-center font-bold text-bet365yellow mb-10">Pricing Plans</h2>
 
     <div class="max-w-6xl mx-auto px-6">
-      <form method="post">
-        {{ form.hidden_tag() }}
+      <div class="flex flex-col md:flex-row md:justify-center md:gap-8 space-y-8 md:space-y-0">
+        {% if plans %}
+        {% for plan in plans %}
+        <div
+          class="flex-1 max-w-sm mx-auto bg-bet365dark {% if plan.plan_name == 'Pro' %}bg-bet365green scale-105{% endif %} p-6 rounded-xl border {% if plan.plan_name == 'Pro' %}border-gray-900{% else %}border-gray-800{% endif %} shadow">
 
-        <div class="flex flex-col md:flex-row md:justify-center md:gap-8 space-y-8 md:space-y-0">
-          {% if plans %}
-          {% for plan in plans %}
-          <div
-            class="flex-1 max-w-sm mx-auto bg-bet365dark {% if plan.plan_name == 'Pro' %}bg-bet365green scale-105{% endif %} p-6 rounded-xl border {% if plan.plan_name == 'Pro' %}border-gray-900{% else %}border-gray-800{% endif %} shadow">
+          <!-- Plan Header -->
+          <h3
+            class="text-xl font-bold mb-2 {% if plan.plan_name == 'Pro' %}text-bet365yellow{% else %}text-white{% endif %}">
+            {{ plan.plan_name }}</h3>
+          {% if plan.description %}
+          <p class="{% if plan.plan_name == 'Pro' %}text-gray-100{% else %}text-gray-300{% endif %}">{{
+            plan.description }}</p>
+          {% endif %}
 
-            <!-- Plan Header -->
-            <h3
-              class="text-xl font-bold mb-2 {% if plan.plan_name == 'Pro' %}text-bet365yellow{% else %}text-white{% endif %}">
-              {{ plan.plan_name }}</h3>
-            {% if plan.description %}
-            <p class="{% if plan.plan_name == 'Pro' %}text-gray-100{% else %}text-gray-300{% endif %}">{{
-              plan.description }}</p>
-            {% endif %}
+          <!-- Price -->
+          <p
+            class="text-4xl font-bold mt-4 {% if plan.plan_name == 'Pro' %}text-white{% else %}text-bet365yellow{% endif %}">
+            ${{ plan.price }}/{{ plan.duration | days_to_months }}
+          </p>
 
-            <!-- Price -->
-            <p
-              class="text-4xl font-bold mt-4 {% if plan.plan_name == 'Pro' %}text-white{% else %}text-bet365yellow{% endif %}">
-              ${{ plan.price }}/{{ plan.duration | days_to_months }}
-            </p>
+          <!-- Benefits -->
+          {% if plan.benefits %}
+          <ul
+            class="mt-6 space-y-2 text-sm {% if plan.plan_name == 'Pro' %}text-white{% else %}text-gray-300{% endif %}">
+            {% for key, value in plan.benefits.items() %}
+            <li class="flex items-center">
+              <ion-icon class="w-5 h-5 {% if value %}text-bet365yellow{% else %}text-gray-500{% endif %}"
+                name="{{ 'checkmark-circle' if value else 'close-circle' }}"></ion-icon>
+              <span class="ml-2">{{ key | capitalize }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
 
-            <!-- Benefits -->
-            {% if plan.benefits %}
-            <ul
-              class="mt-6 space-y-2 text-sm {% if plan.plan_name == 'Pro' %}text-white{% else %}text-gray-300{% endif %}">
-              {% for key, value in plan.benefits.items() %}
-              <li class="flex items-center">
-                <ion-icon class="w-5 h-5 {% if value %}text-bet365yellow{% else %}text-gray-500{% endif %}"
-                  name="{{ 'checkmark-circle' if value else 'close-circle' }}"></ion-icon>
-                <span class="ml-2">{{ key | capitalize }}</span>
-              </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
+          <form method="post">
+            {{ form.hidden_tag() }}
 
             <!-- Hidden field for form -->
             {{ form.plan_id(value=plan.id, class="hidden") }}
@@ -95,13 +95,14 @@
             <!-- Submit button -->
             {{ form.submit(class="w-full mt-6 bg-bet365yellow text-black font-semibold py-2 rounded-lg
             hover:opacity-90", value="Choose Plan") }}
-          </div>
-          {% endfor %}
-          {% else %}
-          <p class="text-center text-gray-300">No pricing plans available at the moment.</p>
-          {% endif %}
+          </form>
         </div>
-      </form>
+        {% endfor %}
+        {% else %}
+        <p class="text-center text-gray-300">No pricing plans available at the moment.</p>
+        {% endif %}
+      </div>
+
     </div>
   </section>
 
@@ -151,7 +152,8 @@
           Yes. You are simply placing bets at different bookmakers legally available to you.
         </p>
       </div>
-      <a class="text-bet365yellow flex items-center gap-2 font-bold p-2" href="{{url_for('main.frequently_asked')}}">View More <ion-icon name="arrow-forward-outline"></ion-icon></a>
+      <a class="text-bet365yellow flex items-center gap-2 font-bold p-2"
+        href="{{url_for('main.frequently_asked')}}">View More <ion-icon name="arrow-forward-outline"></ion-icon></a>
     </div>
   </section>
 

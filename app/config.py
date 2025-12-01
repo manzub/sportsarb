@@ -4,7 +4,7 @@ class AppConfigs(object):
   SQLALCHEMY_TRACK_MODIFICATIONS = False
   pool_size = 32
   max_overflow = 64
-  SITE_URL = "http://127.0.0.1:5000"
+  SITE_URL = "http://localhost:5001"
   broker_url = "redis://redis:6379/0"
   result_backend = "redis://redis:6379/0"
   MAIL_SERVER = 'smtp.gmail.com'

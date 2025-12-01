@@ -89,6 +89,9 @@ def google_auth():
 
 @bp.route('/login', methods=['GET', 'POST'])
 def login():
+  if current_user.is_authenticated:
+    return redirect(url_for('main.account'))
+      
   form = LoginForm()
   if request.method == 'POST':
     if form.validate_on_submit():
@@ -206,6 +209,7 @@ def new_password():
   return render_template('reset_password.html')
 
 @bp.route('/logout')
+@login_required
 def logout():
   logout_user()
   return redirect(url_for('main.index'))

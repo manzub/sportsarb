@@ -1,12 +1,11 @@
 from flask import Blueprint, request, jsonify
 from flask_login import login_required, current_user
 from app.extensions import redis
-from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, count_bookmakers_by_surebet_id, apply_filters
-from app.utils.helpers import parse_datetime, get_config_by_name
+from app.utils.arb_helper import sort_surebet_data, sort_middle_data, sort_valuebets_data, apply_filters
+from app.utils.helpers import get_config_by_name, has_active_subscription
 from app.extensions import db
 import json
 import os
-from datetime import datetime, timedelta, timezone
 
 bp = Blueprint('api', __name__)
 
@@ -106,19 +105,21 @@ def get_surebets():
   })
 
 @bp.route('/middles')
+@login_required
 def get_middles():
   data = []
-  keys = redis.keys('middles:*')
-  if keys:
-    latest = max(keys)
-    raw_data = redis.get(latest)
-    data = sort_middle_data(raw_data)
+  if current_user.is_authenticated and has_active_subscription(current_user):
+    keys = redis.keys('middles:*')
+    if keys:
+      latest = max(keys)
+      raw_data = redis.get(latest)
+      data = sort_middle_data(raw_data)
+      
+    data = apply_filters(data, request.args)
     
-  data = apply_filters(data, request.args)
-  
-  page = int(request.args.get("page", 1))
-  limit = int(request.args.get("limit", 10))
-  data_page, total_pages = paginate(data, page, limit)
+    page = int(request.args.get("page", 1))
+    limit = int(request.args.get("limit", 10))
+    data_page, total_pages = paginate(data, page, limit)
 
   return jsonify({
     "data": data_page,
@@ -127,19 +128,21 @@ def get_middles():
   })
 
 @bp.route('/values')
+@login_required
 def get_values():
   data = []
-  keys = redis.keys('valuebets:*')
-  if keys:
-    latest = max(keys)
-    raw_data = redis.get(latest)
-    data = sort_valuebets_data(raw_data)
+  if current_user.is_authenticated and has_active_subscription(current_user):
+    keys = redis.keys('valuebets:*')
+    if keys:
+      latest = max(keys)
+      raw_data = redis.get(latest)
+      data = sort_valuebets_data(raw_data)
+      
+    data = apply_filters(data, request.args)
     
-  data = apply_filters(data, request.args)
-  
-  page = int(request.args.get("page", 1))
-  limit = int(request.args.get("limit", 10))
-  data_page, total_pages = paginate(data, page, limit)
+    page = int(request.args.get("page", 1))
+    limit = int(request.args.get("limit", 10))
+    data_page, total_pages = paginate(data, page, limit)
 
   return jsonify({
     "data": data_page,
