@@ -1,111 +1,317 @@
-US Bookmakers
-The API lists odds from the following US bookmakers:
+{% extends 'base.html' %}
 
-Region key	Bookmaker key	Bookmaker	Note
-us	betonlineag	BetOnline.ag (opens new window)	
-us	betmgm	BetMGM (opens new window)	
-us	betrivers	BetRivers (opens new window)	
-us	betus	BetUS (opens new window)	
-us	bovada	Bovada (opens new window)	
-us	williamhill_us	Caesars (opens new window)	Only available on paid subscriptions
-us	draftkings	DraftKings (opens new window)	
-us	fanatics	Fanatics (opens new window)	Only available on paid subscriptions
-us	fanduel	FanDuel (opens new window)	
-us	lowvig	LowVig.ag (opens new window)	
-us	mybookieag	MyBookie.ag (opens new window)	
-us2	ballybet	Bally Bet (opens new window)	
-us2	betanysports	BetAnything (opens new window)	Formerly BetAnySports
-us2	betparx	betPARX (opens new window)	
-us2	espnbet	ESPN BET (opens new window)	
-us2	fliff	Fliff (opens new window)	
-us2	hardrockbet	Hard Rock Bet (opens new window)	
-us2	rebet	ReBet (opens new window)	Only available on paid subscriptions
+{% block content %}
+<section class="min-h-screen w-full bg-gray-950 text-gray-200 px-6 py-10">
+  <div class="max-w-6xl mx-auto space-y-12">
 
-#US Daily Fantasy Sports (DFS) Sites
-The API covers player props from the following US DFS sites. Odds on DFS sites can vary based on user selections, therefore odds are indicative only.
+    <!-- Page Title -->
+    <h1 class="text-3xl font-bold text-gray-100">Bookmakers Coverage</h1>
+    <p class="text-gray-400 max-w-3xl">
+      Below is a complete list of bookmakers the API retrieves odds from.
+      Everything is grouped by region for clarity.
+    </p>
 
-Region key	Bookmaker key	Bookmaker	Note
-us_dfs	pick6	DraftKings Pick6 (opens new window)	Selections with non-default multipliers (not x1) are included in _alternate markets
-us_dfs	prizepicks	PrizePicks (opens new window)	Demons and goblins are included under _alternate markets, for example "player_points_alternate".
-Goblins have been assigned the default odds, demons have been assigned even odds (+100).
-us_dfs	underdog	Underdog Fantasy (opens new window)	Selections with non-default multipliers (not x1) are included in _alternate markets
-#US Exchanges
-Region key	Bookmaker key	Bookmaker	Note
-us_ex	betopenly	BetOpenly (opens new window)	Use the "includeBetLimits" parameter to find open bets
-us_ex	novig	Novig (opens new window)	
-us_ex	prophetx	ProphetX (opens new window)	
+    <!-- UK Bookmakers -->
+    <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold mb-4 text-gray-100">UK Bookmakers</h2>
 
-#UK Bookmakers
-The API lists odds from the following UK bookmakers:
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-gray-300">
+          <thead class="bg-gray-900/60 text-gray-400 border-b border-gray-800">
+            <tr>
+              <th class="py-3 px-3">Region</th>
+              <th class="py-3 px-3">Key</th>
+              <th class="py-3 px-3">Bookmaker</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800">
 
-Region key	Bookmaker key	Bookmaker
-uk	sport888	888sport (opens new window)
-uk	betfair_ex_uk	Betfair Exchange (opens new window)
-uk	betfair_sb_uk	Betfair Sportsbook (opens new window)
-uk	betvictor	Bet Victor (opens new window)
-uk	betway	Betway (opens new window)
-uk	boylesports	BoyleSports (opens new window)
-uk	casumo	Casumo (opens new window)
-uk	coral	Coral (opens new window)
-uk	grosvenor	Grosvenor (opens new window)
-uk	ladbrokes_uk	Ladbrokes (opens new window)
-uk	leovegas	LeoVegas (opens new window)
-uk	livescorebet	LiveScore Bet (opens new window)
-uk	matchbook	Matchbook (opens new window)
-uk	paddypower	Paddy Power (opens new window)
-uk	skybet	Sky Bet (opens new window)
-uk	smarkets	Smarkets (opens new window)
-uk	unibet_uk	Unibet (opens new window)
-uk	virginbet	Virgin Bet (opens new window)
-uk	williamhill	William Hill (UK) (opens new window)
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">sport888</td>
+              <td class="py-3 px-3">888sport</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betfair_ex_uk</td>
+              <td class="py-3 px-3">Betfair Exchange</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betfair_sb_uk</td>
+              <td class="py-3 px-3">Betfair Sportsbook</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betvictor</td>
+              <td class="py-3 px-3">Bet Victor</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betway</td>
+              <td class="py-3 px-3">Betway</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">boylesports</td>
+              <td class="py-3 px-3">BoyleSports</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">casumo</td>
+              <td class="py-3 px-3">Casumo</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">coral</td>
+              <td class="py-3 px-3">Coral</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">grosvenor</td>
+              <td class="py-3 px-3">Grosvenor</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">ladbrokes_uk</td>
+              <td class="py-3 px-3">Ladbrokes</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">leovegas</td>
+              <td class="py-3 px-3">LeoVegas</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">livescorebet</td>
+              <td class="py-3 px-3">LiveScore Bet</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">matchbook</td>
+              <td class="py-3 px-3">Matchbook</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">paddypower</td>
+              <td class="py-3 px-3">Paddy Power</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">skybet</td>
+              <td class="py-3 px-3">Sky Bet</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">smarkets</td>
+              <td class="py-3 px-3">Smarkets</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">unibet_uk</td>
+              <td class="py-3 px-3">Unibet</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">virginbet</td>
+              <td class="py-3 px-3">Virgin Bet</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">uk</td>
+              <td class="py-3 px-3 font-mono text-blue-400">williamhill</td>
+              <td class="py-3 px-3">William Hill (UK)</td>
+            </tr>
 
-#EU Bookmakers
-The API lists odds from the following EU bookmakers:
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-Region key	Bookmaker key	Bookmaker	Note
-eu	onexbet	1xBet (opens new window)	
-eu	sport888	888sport (opens new window)	
-eu	betclic_fr	Betclic (FR) (opens new window)	
-eu	betanysports	BetAnySports (opens new window)	
-eu	betfair_ex_eu	Betfair Exchange (opens new window)	
-eu	betonlineag	BetOnline.ag (opens new window)	
-eu	betsson	Betsson (opens new window)	
-eu	betvictor	Bet Victor (opens new window)	
-eu	coolbet	Coolbet (opens new window)	
-eu	everygame	Everygame (opens new window)	
-eu	gtbets	GTbets (opens new window)	
-eu	leovegas_se	LeoVegas (SE) (opens new window)	
-eu	marathonbet	Marathon Bet (opens new window)	
-eu	matchbook	Matchbook (opens new window)	
-eu	mybookieag	MyBookie.ag (opens new window)	
-eu	nordicbet	NordicBet (opens new window)	
-eu	parionssport_fr	Parions Sport (FR) (opens new window)	
-eu	pinnacle	Pinnacle (opens new window)	Odds are from public website which may incur a delay
-eu	suprabets	Suprabets (opens new window)	
-eu	tipico_de	Tipico (DE) (opens new window)	
-eu	unibet_fr	Unibet (FR) (opens new window)	
-eu	unibet_it	Unibet (IT) (opens new window)	
-eu	unibet_nl	Unibet (NL) (opens new window)	
-eu	unibet_se	Unibet (SE) (opens new window)	
-eu	williamhill	William Hill (opens new window)	
-eu	winamax_de	Winamax (DE) (opens new window)	
-eu	winamax_fr	Winamax (FR) (opens new window)	
 
-#AU Bookmakers
-The API lists odds from the following AU bookmakers:
+    <!-- EU Bookmakers -->
+    <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6 shadow-lg">
+      <h2 class="text-xl font-semibold mb-4 text-gray-100">EU Bookmakers</h2>
 
-Region key	Bookmaker key	Bookmaker	Note
-au	betfair_ex_au	Betfair Exchange (opens new window)	
-au	betr_au	Betr (opens new window)	
-au	betright	Bet Right (opens new window)	
-au	bet365_au	Bet365 AU (opens new window)	Only available on paid subscriptions. Coverage currently limited to h2h, spreads and totals for AFL and NRL
-au	boombet	BoomBet (opens new window)	
-au	dabble_au	Dabble AU (opens new window)	Only available on paid subscriptions
-au	ladbrokes_au	Ladbrokes (opens new window)	
-au	neds	Neds (opens new window)	
-au	playup	PlayUp (opens new window)	
-au	pointsbetau	PointsBet (AU) (opens new window)	
-au	sportsbet	SportsBet (opens new window)	
-au	tab	TAB (opens new window)	
-au	tabtouch	TABtouch (opens new window)	
-au	unibet	Unibet (opens new window)	
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-gray-300">
+          <thead class="bg-gray-900/60 text-gray-400 border-b border-gray-800">
+            <tr>
+              <th class="py-3 px-3">Region</th>
+              <th class="py-3 px-3">Key</th>
+              <th class="py-3 px-3">Bookmaker</th>
+              <th class="py-3 px-3">Note</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800">
+
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">onexbet</td>
+              <td class="py-3 px-3">1xBet</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">sport888</td>
+              <td class="py-3 px-3">888sport</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betclic_fr</td>
+              <td class="py-3 px-3">Betclic (FR)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betanysports</td>
+              <td class="py-3 px-3">BetAnySports</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betfair_ex_eu</td>
+              <td class="py-3 px-3">Betfair Exchange</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betonlineag</td>
+              <td class="py-3 px-3">BetOnline.ag</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betsson</td>
+              <td class="py-3 px-3">Betsson</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">betvictor</td>
+              <td class="py-3 px-3">Bet Victor</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">coolbet</td>
+              <td class="py-3 px-3">Coolbet</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">everygame</td>
+              <td class="py-3 px-3">Everygame</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">gtbets</td>
+              <td class="py-3 px-3">GTbets</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">leovegas_se</td>
+              <td class="py-3 px-3">LeoVegas (SE)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">marathonbet</td>
+              <td class="py-3 px-3">Marathon Bet</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">matchbook</td>
+              <td class="py-3 px-3">Matchbook</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">mybookieag</td>
+              <td class="py-3 px-3">MyBookie.ag</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">nordicbet</td>
+              <td class="py-3 px-3">NordicBet</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">parionssport_fr</td>
+              <td class="py-3 px-3">Parions Sport (FR)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">pinnacle</td>
+              <td class="py-3 px-3">Pinnacle</td>
+              <td>Odds may have delay</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">suprabets</td>
+              <td class="py-3 px-3">Suprabets</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">tipico_de</td>
+              <td class="py-3 px-3">Tipico (DE)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">unibet_fr</td>
+              <td class="py-3 px-3">Unibet (FR)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">unibet_it</td>
+              <td class="py-3 px-3">Unibet (IT)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">unibet_nl</td>
+              <td class="py-3 px-3">Unibet (NL)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">unibet_se</td>
+              <td class="py-3 px-3">Unibet (SE)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">williamhill</td>
+              <td class="py-3 px-3">William Hill</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">winamax_de</td>
+              <td class="py-3 px-3">Winamax (DE)</td>
+              <td></td>
+            </tr>
+            <tr class="hover:bg-gray-800/40">
+              <td class="py-3 px-3">eu</td>
+              <td class="py-3 px-3 font-mono text-blue-400">winamax_fr</td>
+              <td class="py-3 px-3">Winamax (FR)</td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock content %}

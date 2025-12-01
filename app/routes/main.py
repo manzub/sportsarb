@@ -32,29 +32,54 @@ def index():
   form = SelectPlan()
   if request.method == 'POST':
     if form.validate_on_submit():
-      if current_user.is_authenticated:
-        # check valid plan_id, create new plan or replace current, set to pending
-        if form.plan_id.data:
-          print(form.plan_id.data)
-          valid_plan = Subscriptions.query.filter_by(id=form.plan_id.data).first()
-          if not valid_plan:
-            flash("Invalid plan selected", 'yellow')
-          
-          # replace existing plan
-          plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
-          if plan:
-            db.session.delete(plan)
-            db.session.commit()
-          # create new plan
-          end_date = datetime.now(timezone.utc) + timedelta(days=30)
-          new_plan = UserSubscriptions(user_id=current_user.id, active=False, plan_id=form.plan_id.data, start_date=datetime.utcnow(), end_date=end_date)
-          db.session.add(new_plan)
-          db.session.commit()
-          flash(f"New Plan {valid_plan.plan_name} Started", 'success')
-          return redirect(url_for('main.account'))
-      else:
+      if not current_user.is_authenticated:
         flash("Must be signed in to start a new plan", 'warning')
         return redirect(url_for('auth.logout'))
+
+      if not form.plan_id.data:
+        flash("No plan selected", "yellow")
+        return redirect(url_for('main.account'))
+
+      valid_plan = Subscriptions.query.filter_by(id=form.plan_id.data).first()
+      if not valid_plan:
+        flash("Invalid plan selected", 'yellow')
+        return redirect(url_for('main.account'))
+
+      # Check if a plan exists for this user
+      existing_plan = UserSubscriptions.query.filter_by(user_id=current_user.id).first()
+      plan_info = Subscriptions.query.filter_by(id=existing_plan.plan_id).first()
+
+      if existing_plan:
+        if existing_plan.end_date > datetime.utcnow():
+          # Plan is still active → cannot create new plan
+          flash(
+              f"You already have an active plan ({plan_info.plan_name}) until {existing_plan.end_date.date()}. "
+              "You cannot start a new plan until it expires.",
+              "info"
+          )
+          return redirect(url_for('main.account'))
+        else:
+          # Current plan expired → delete it
+          db.session.delete(existing_plan)
+          db.session.commit()
+
+      # Create new pending plan
+      start_date = datetime.utcnow()
+      end_date = start_date + timedelta(days=30)
+      new_plan = UserSubscriptions(
+        user_id=current_user.id,
+        active=False,  # pending until payment
+        status='pending',
+        plan_id=form.plan_id.data,
+        start_date=start_date,
+        end_date=end_date
+      )
+      db.session.add(new_plan)
+      db.session.commit()
+
+      flash(f"Plan {valid_plan.plan_name} is pending. Complete payment to activate.", "success")
+      return redirect(url_for('payments.checkout'))
+
   plans = Subscriptions.query.all()
   plans_with_benefits = []
   if plans and len(plans) > 0:
@@ -100,7 +125,6 @@ def surebets():
   active_subscription = False if not current_user.is_authenticated else has_active_subscription(current_user)
   return render_template('surebets.html', has_active_subscription=active_subscription, total_surebet_items=total_surebet_items)
 
-# TODO: middles and values on if has active plan
 @bp.route('/middles')
 def middles():
   total_middle_items, total_items_with_positive_ev = 0, 0
@@ -155,9 +179,17 @@ def bet_calculator():
     data = redis.get("arb:surebets")
 
     if not data:
-        return "No Surebets available", 404
+      return "No Surebets available", 404
     
-    results = [x for x in json.loads(data) if x['unique_id'] == arb_filter]
+    parsed = json.loads(data)
+    if isinstance(parsed, dict):
+      items = list(parsed.values())
+    elif isinstance(parsed, list):
+      items = parsed
+    else:
+      items = []
+    
+    results = [x for x in items if x['unique_id'] == arb_filter]
     if not results:
       return "Arb item not found or expired", 404
     
@@ -227,7 +259,15 @@ def middle_calculator():
     if not data:
       return "No Middles available", 404
     
-    results = [x for x in json.loads(data) if x['unique_id'] == middle_filter]
+    parsed = json.loads(data)
+    if isinstance(parsed, dict):
+      items = list(parsed.values())
+    elif isinstance(parsed, list):
+      items = parsed
+    else:
+      items = []
+    
+    results = [x for x in items if x['unique_id'] == middle_filter]
 
     if not results:
       return "Middle item not found or expired", 404
@@ -304,7 +344,15 @@ def valuebet_calculator():
   if not data:
     return "No Valuebets available", 404
   
-  results = [x for x in json.loads(data) if x['unique_id'] == value_id]
+  parsed = json.loads(data)
+  if isinstance(parsed, dict):
+    items = list(parsed.values())
+  elif isinstance(parsed, list):
+    items = parsed
+  else:
+    items = []
+  
+  results = [x for x in items if x['unique_id'] == value_id]
   if not results:
     return "Valuebet item not found or expired", 404
   

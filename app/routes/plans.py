@@ -1,9 +1,8 @@
 import json
 from datetime import datetime, timedelta, timezone
-from flask import Blueprint, request, flash, redirect, url_for, render_template, jsonify, session, current_app
+from flask import Blueprint, request, render_template, jsonify, session, current_app
 from flask_login import current_user, login_required
-from app.forms import SelectPlan
-from app.models import Subscriptions, UserSubscriptions, AppSettings, Transactions
+from app.models import Subscriptions, UserSubscriptions, Transactions
 from app.extensions import db, stripe
 
 bp = Blueprint('plans', __name__)
@@ -40,7 +39,7 @@ def create_checkout_session():
       line_items=[{'price': plan.stripe_price_id, 'quantity': 1}],
       metadata={"plan_id": plan_id, "user_id": current_user.id},
       mode='subscription',
-      return_url=current_app.config['SITE_URL'] + "/plans/return?session_id={CHECKOUT_SESSION_ID}",
+      return_url=request.url_root.rstrip("/") + "/plans/return?session_id={CHECKOUT_SESSION_ID}",
       automatic_tax={'enabled': True}
     )
 
