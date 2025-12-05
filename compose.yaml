@@ -4,14 +4,11 @@ services:
     container_name: sportsarb
     command: flask run --host=0.0.0.0 --port=8000
     volumes:
-      - .app/:/app
+      - .:/usr/src/app
     ports:
       - "8000:8000"
-    environment:
-      - FLASK_APP=main
-      - FLASK_ENV=development
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/sportsarb
-      - REDIS_URL=redis://redis:6379/0
+    env_file:
+      - .docker.env
     depends_on:
       - db
       - redis
@@ -20,7 +17,7 @@ services:
 
   db:
     image: postgres:15
-    container_name: sports-arb-db
+    container_name: sportsarb-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -32,7 +29,7 @@ services:
 
   redis:
     image: redis:7
-    container_name: sports-arb-redis
+    container_name: sportsarb-redis
     ports:
       - "6379:6379"
     networks:
@@ -40,20 +37,29 @@ services:
 
   worker:
     build: .
-    command: celery -A app.tasks.celery worker --loglevel=info
+    command: celery -A app.tasks:celery worker --loglevel=info
+    env_file:
+      - .docker.env
     depends_on:
       - redis
+      - db
     networks:
       - appnet
     volumes:
-      - .:/app
+      - .:/usr/src/app
   beat:
     build: .
-    command: celery -A app.tasks.celery beat --loglevel=info
+    command: celery -A app.tasks:celery beat --loglevel=info
+    env_file:
+      - .docker.env
     depends_on:
       - redis
+      - db
+    networks:
+      - appnet
     volumes:
-      - .:/app
+      - .:/usr/src/app
+    restart: unless-stopped
 
 volumes:
   pgdata:

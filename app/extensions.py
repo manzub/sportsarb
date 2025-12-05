@@ -1,7 +1,6 @@
 import os
-from redis import Redis
+from redis import Redis, from_url
 from dotenv import load_dotenv
-from celery import Celery
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -9,9 +8,15 @@ from flask_mail import Mail
 import stripe
 
 load_dotenv()
+run_mode = os.getenv("RUN_MODE", "docker")
+is_local = run_mode == "local"
 
+if is_local:
+  redis = Redis(host="localhost", port=6379, db=0, decode_responses=True)
+else:
+  redis = from_url(os.getenv("REDIS_URL"))
+    
 db = SQLAlchemy()
-redis = Redis(host="localhost", db=0, port=6379, decode_responses=True)
 migrate = Migrate()
 mail = Mail()
 login_manager = LoginManager()

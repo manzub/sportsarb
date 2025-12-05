@@ -1,9 +1,16 @@
 import json
+import os
 from datetime import datetime, timedelta, timezone
-from redis import Redis
+from redis import Redis, from_url
 
-redis = Redis(host="localhost", port=6379, db=0, decode_responses=True)
+RUN_MODE = os.getenv("RUN_MODE", "local")
 
+if RUN_MODE == "docker":
+  REDIS_URL = "redis://redis:6379/0"
+else:
+  REDIS_URL = "redis://localhost:6379/0"
+  
+redis = from_url(REDIS_URL)
 def save_json(redis_key: str, new_items: list, expire_hours:int = 1):
   existing_raw = redis.get(redis_key)
   existing = json.loads(existing_raw) if existing_raw else {}

@@ -1,5 +1,7 @@
 # tasks to save to redis here and run in celery
+import os
 from app import create_app
+from celery import Celery
 from datetime import timedelta, datetime, timezone
 from concurrent.futures import ThreadPoolExecutor
 from app.services.surebet_finder import SurebetFinder
@@ -9,8 +11,12 @@ from app.utils.helpers import save_sport_to_db, get_odds_api_settings
 from app.utils.redis_helper import save_odds_data
 from app.utils.logger import setup_logging
 
+RUN_MODE = os.getenv("RUN_MODE", "local")
+broker = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+celery = Celery("sportsarb", broker=broker, backend=broker)
 app = create_app()
-celery = app.celery
+celery.conf.update(app.config)
+
 logger = setup_logging()
 
 def init_odds_api():
@@ -144,7 +150,9 @@ def notify_users():
       except Exception as e:
         print(f"WebPush failed for {user.email}: {e}")
   return "Done"
-  
+
+celery.conf.beat_scheduler = "redbeat.RedBeatScheduler"
+celery.conf.redbeat_redis_url = broker  
 celery.conf.beat_schedule = {
   'fetch-odds-every-5-minutes': {
     'task': 'app.tasks.find_arbitrage', # task here

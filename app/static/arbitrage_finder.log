@@ -13915,3 +13915,1039 @@
 2025-12-01 23:47:02,675 - INFO - 127.0.0.1 - - [01/Dec/2025 23:47:02] "GET /api/sports HTTP/1.1" 200 -
 2025-12-01 23:47:02,693 - INFO - 127.0.0.1 - - [01/Dec/2025 23:47:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2025-12-01 23:47:04,236 - INFO - 127.0.0.1 - - [01/Dec/2025 23:47:04] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-02 00:11:31,598 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:31] "GET / HTTP/1.1" 200 -
+2025-12-02 00:11:31,750 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:31] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-02 00:11:38,680 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:38] "GET / HTTP/1.1" 200 -
+2025-12-02 00:11:39,130 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:39] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:11:39,163 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:39] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-02 00:11:40,491 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:40] "GET / HTTP/1.1" 200 -
+2025-12-02 00:11:41,156 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:41] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:11:41,510 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:41] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-02 00:11:54,525 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:54] "GET /surebets HTTP/1.1" 200 -
+2025-12-02 00:11:54,747 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:54] "GET /static/img/banner-1.jpg HTTP/1.1" 200 -
+2025-12-02 00:11:54,752 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:54] "GET /static/img/sidebar-banner-2.jpg HTTP/1.1" 200 -
+2025-12-02 00:11:55,680 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:55] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-02 00:11:55,756 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:55] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:11:55,847 - INFO - 127.0.0.1 - - [02/Dec/2025 00:11:55] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:00,623 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:00] "GET / HTTP/1.1" 200 -
+2025-12-02 00:12:01,934 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:01] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:24,670 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:24] "GET /surebets HTTP/1.1" 200 -
+2025-12-02 00:12:25,799 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:25] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:25,814 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:25] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:25,858 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:25] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-02 00:12:25,998 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:25] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:26,096 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:26] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:35,429 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:35] "GET /valuebets HTTP/1.1" 200 -
+2025-12-02 00:12:36,634 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:36] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:36,677 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:36] "[32mGET /api/values?page=1&limit=51 HTTP/1.1[0m" 302 -
+2025-12-02 00:12:36,804 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:36] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:36,836 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:36] "GET /auth/login?next=/api/values?page%3D1%26limit%3D51 HTTP/1.1" 200 -
+2025-12-02 00:12:36,891 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:36] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:47,161 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:47] "GET /middles HTTP/1.1" 200 -
+2025-12-02 00:12:48,319 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:48] "[32mGET /api/middles?page=1&limit=51 HTTP/1.1[0m" 302 -
+2025-12-02 00:12:48,320 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:48] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:48,429 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:48] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:48,432 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:48] "GET /auth/login?next=/api/middles?page%3D1%26limit%3D51 HTTP/1.1" 200 -
+2025-12-02 00:12:48,515 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:48] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:52,290 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:52] "GET /surebets HTTP/1.1" 200 -
+2025-12-02 00:12:54,216 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:54] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:54,222 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:54] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:12:54,227 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:54] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-02 00:12:54,361 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:54] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:12:54,482 - INFO - 127.0.0.1 - - [02/Dec/2025 00:12:54] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:14:27,721 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:27] "GET / HTTP/1.1" 200 -
+2025-12-02 00:14:29,749 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:29] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:14:34,211 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:34] "GET /bookmakers HTTP/1.1" 200 -
+2025-12-02 00:14:37,455 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:37] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:14:44,834 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:44] "GET /account HTTP/1.1" 200 -
+2025-12-02 00:14:45,037 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:45] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:14:45,043 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:45] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,362 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "GET /admin/ HTTP/1.1" 200 -
+2025-12-02 00:14:46,392 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,395 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,398 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,398 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,402 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,403 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,403 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,406 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,407 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,414 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,415 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,415 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,449 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:14:46,602 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:46] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:47,783 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:47] "[32mGET /admin/toggle-oddsapi HTTP/1.1[0m" 302 -
+2025-12-02 00:14:47,961 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:47] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,359 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "GET /admin/ HTTP/1.1" 200 -
+2025-12-02 00:14:48,422 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,424 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,428 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,430 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,430 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,433 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,433 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,435 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,435 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,438 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,439 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,440 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-02 00:14:48,448 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:14:50,382 - INFO - 127.0.0.1 - - [02/Dec/2025 00:14:50] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-02 00:15:06,716 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:06] "GET /surebets HTTP/1.1" 200 -
+2025-12-02 00:15:08,019 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:08] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:15:08,021 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:08] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:15:08,021 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:08] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-02 00:15:08,080 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:08] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:15:08,203 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:08] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:15:49,934 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:49] "GET / HTTP/1.1" 200 -
+2025-12-02 00:15:51,400 - INFO - 127.0.0.1 - - [02/Dec/2025 00:15:51] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:16:03,169 - INFO - 127.0.0.1 - - [02/Dec/2025 00:16:03] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-12-02 00:16:03,251 - INFO - 127.0.0.1 - - [02/Dec/2025 00:16:03] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-12-02 00:16:03,341 - INFO - 127.0.0.1 - - [02/Dec/2025 00:16:03] "GET /auth/login?next=/auth/logout HTTP/1.1" 200 -
+2025-12-02 00:16:04,664 - INFO - 127.0.0.1 - - [02/Dec/2025 00:16:04] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:17:21,457 - INFO - 127.0.0.1 - - [02/Dec/2025 00:17:21] "GET /bookmakers HTTP/1.1" 200 -
+2025-12-02 00:17:21,693 - INFO - 127.0.0.1 - - [02/Dec/2025 00:17:21] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:17:21,702 - INFO - 127.0.0.1 - - [02/Dec/2025 00:17:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:18:03,645 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:03] "GET /surebets HTTP/1.1" 200 -
+2025-12-02 00:18:03,819 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:03] "GET /static/img/banner-1.jpg HTTP/1.1" 200 -
+2025-12-02 00:18:03,824 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:03] "GET /static/img/sidebar-banner-2.jpg HTTP/1.1" 200 -
+2025-12-02 00:18:03,848 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:03] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-02 00:18:03,893 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:03] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:18:04,045 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:04] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:18:04,058 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:18:30,949 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:30] "GET /middles HTTP/1.1" 200 -
+2025-12-02 00:18:31,048 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:18:31,125 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "[32mGET /api/middles?page=1&limit=51 HTTP/1.1[0m" 302 -
+2025-12-02 00:18:31,178 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:18:31,185 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:18:31,209 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "GET /auth/login?next=/api/middles?page%3D1%26limit%3D51 HTTP/1.1" 200 -
+2025-12-02 00:18:31,296 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:31] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:18:49,613 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "GET /valuebets HTTP/1.1" 200 -
+2025-12-02 00:18:49,707 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-02 00:18:49,791 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "[32mGET /api/values?page=1&limit=51 HTTP/1.1[0m" 302 -
+2025-12-02 00:18:49,800 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:18:49,821 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:18:49,860 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "GET /auth/login?next=/api/values?page%3D1%26limit%3D51 HTTP/1.1" 200 -
+2025-12-02 00:18:49,870 - INFO - 127.0.0.1 - - [02/Dec/2025 00:18:49] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:21:51,010 - INFO - 127.0.0.1 - - [02/Dec/2025 00:21:51] "GET / HTTP/1.1" 200 -
+2025-12-02 00:21:51,309 - INFO - 127.0.0.1 - - [02/Dec/2025 00:21:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 00:21:51,311 - INFO - 127.0.0.1 - - [02/Dec/2025 00:21:51] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 00:21:52,852 - INFO - 127.0.0.1 - - [02/Dec/2025 00:21:52] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-02 22:17:48,683 - INFO - 127.0.0.1 - - [02/Dec/2025 22:17:48] "GET / HTTP/1.1" 200 -
+2025-12-02 22:17:49,060 - INFO - 127.0.0.1 - - [02/Dec/2025 22:17:49] "GET /api/sports HTTP/1.1" 200 -
+2025-12-02 22:17:49,069 - INFO - 127.0.0.1 - - [02/Dec/2025 22:17:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-02 22:19:12,561 - INFO - 127.0.0.1 - - [02/Dec/2025 22:19:12] "GET / HTTP/1.1" 200 -
+2025-12-02 22:19:12,950 - INFO - 127.0.0.1 - - [02/Dec/2025 22:19:12] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-03 17:27:17,276 - INFO - 127.0.0.1 - - [03/Dec/2025 17:27:17] "GET / HTTP/1.1" 200 -
+2025-12-03 17:27:17,413 - INFO - 127.0.0.1 - - [03/Dec/2025 17:27:17] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-12-04 21:41:38,590 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-12-04 21:41:39,097 - INFO -  * Restarting with stat
+2025-12-04 21:41:41,128 - WARNING -  * Debugger is active!
+2025-12-04 21:41:41,163 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:47:13,053 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/extensions.py', reloading
+2025-12-04 21:47:13,511 - INFO -  * Restarting with stat
+2025-12-04 21:47:15,616 - WARNING -  * Debugger is active!
+2025-12-04 21:47:15,653 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:47:52,216 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-12-04 21:47:52,613 - INFO -  * Restarting with stat
+2025-12-04 21:47:54,296 - WARNING -  * Debugger is active!
+2025-12-04 21:47:54,335 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:47:57,379 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-12-04 21:47:57,756 - INFO -  * Restarting with stat
+2025-12-04 21:47:59,224 - WARNING -  * Debugger is active!
+2025-12-04 21:47:59,256 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:48:06,368 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-12-04 21:48:06,739 - INFO -  * Restarting with stat
+2025-12-04 21:48:08,149 - WARNING -  * Debugger is active!
+2025-12-04 21:48:08,176 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:48:11,250 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/utils/redis_helper.py', reloading
+2025-12-04 21:48:11,684 - INFO -  * Restarting with stat
+2025-12-04 21:48:13,188 - WARNING -  * Debugger is active!
+2025-12-04 21:48:13,220 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 21:51:14,615 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/extensions.py', reloading
+2025-12-04 21:51:15,073 - INFO -  * Restarting with stat
+2025-12-04 21:57:36,494 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.244:5001
+2025-12-04 21:57:36,495 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 21:57:36,496 - INFO -  * Restarting with stat
+2025-12-04 21:57:37,864 - WARNING -  * Debugger is active!
+2025-12-04 21:57:37,899 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 22:14:46,580 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.3:8000
+2025-12-04 22:14:46,580 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:23:59,222 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.4:8000
+2025-12-04 22:23:59,223 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:28:27,018 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.4:8000
+2025-12-04 22:28:27,019 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:45:17,422 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.4:8000
+2025-12-04 22:45:17,423 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:54:23,688 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.244:5001
+2025-12-04 22:54:23,688 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:54:23,689 - INFO -  * Restarting with stat
+2025-12-04 22:54:25,151 - WARNING -  * Debugger is active!
+2025-12-04 22:54:25,188 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 22:54:55,105 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:55] "GET /account HTTP/1.1" 200 -
+2025-12-04 22:54:55,415 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:55] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:54:55,433 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,845 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "GET /admin/ HTTP/1.1" 200 -
+2025-12-04 22:54:56,875 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,879 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,880 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,884 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,885 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,887 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,888 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,893 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,894 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,896 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,898 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,899 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,934 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:54:56,953 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:56] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,011 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[32mGET /admin/toggle-oddsapi HTTP/1.1[0m" 302 -
+2025-12-04 22:54:58,443 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,547 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "GET /admin/ HTTP/1.1" 200 -
+2025-12-04 22:54:58,571 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,583 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,584 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,585 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,588 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,592 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,595 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,597 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,597 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,599 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,601 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,601 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:54:58,612 - INFO - 127.0.0.1 - - [04/Dec/2025 22:54:58] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:00,121 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:00] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,249 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "GET /admin/ HTTP/1.1" 200 -
+2025-12-04 22:55:03,279 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,289 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,291 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,296 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,299 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,302 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,304 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,305 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,306 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,308 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,311 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,312 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-04 22:55:03,323 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:05,261 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:05] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:10,344 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:10] "GET / HTTP/1.1" 200 -
+2025-12-04 22:55:10,532 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:10] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:10,541 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:12,124 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:12,779 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "GET /surebets HTTP/1.1" 200 -
+2025-12-04 22:55:12,825 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:12,830 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:12,899 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-04 22:55:12,980 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:12,999 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:12] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:13,001 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:14,527 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:14] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:19,538 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "GET /middles HTTP/1.1" 200 -
+2025-12-04 22:55:19,562 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "[36mGET /static/img/banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:19,568 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:19,623 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "GET /api/middles?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-04 22:55:19,659 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:19,715 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:19,718 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:21,240 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:21] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:22,657 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "GET /valuebets HTTP/1.1" 200 -
+2025-12-04 22:55:22,687 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:22,692 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-04 22:55:22,803 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "GET /api/values?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-04 22:55:22,835 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:22,861 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "GET /api/sports HTTP/1.1" 200 -
+2025-12-04 22:55:22,863 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 22:55:24,466 - INFO - 127.0.0.1 - - [04/Dec/2025 22:55:24] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-04 22:55:47,823 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.4:8000
+2025-12-04 22:55:47,824 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 22:59:41,936 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.4:8000
+2025-12-04 22:59:41,936 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 23:04:47,139 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.4:8000
+2025-12-04 23:04:47,140 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 23:07:51,636 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-12-04 23:07:52,133 - INFO -  * Restarting with stat
+2025-12-04 23:07:54,370 - WARNING -  * Debugger is active!
+2025-12-04 23:07:54,418 - INFO -  * Debugger PIN: 135-200-680
+2025-12-04 23:10:11,428 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.20.0.3:8000
+2025-12-04 23:10:11,428 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 23:13:32,498 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.3:8000
+2025-12-04 23:13:32,499 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-04 23:14:03,112 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/utils/helpers.py", line 96, in decorated_function
+    if current_user.is_authenticated and not getattr(current_user, "is_verified", False):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 526, in _get_current_object
+    return get_name(local())
+                    ^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+                                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.12/site-packages/flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/models.py", line 13, in load_user
+    return User.query.get(int(user_id))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 695, in load_on_pk_identity
+    session.execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-04 23:14:03,134 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:03] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-04 23:14:03,894 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:03] "GET /favicon.ico HTTP/1.1" 200 -
+2025-12-04 23:14:18,591 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/utils/helpers.py", line 96, in decorated_function
+    if current_user.is_authenticated and not getattr(current_user, "is_verified", False):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 526, in _get_current_object
+    return get_name(local())
+                    ^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+                                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.12/site-packages/flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/models.py", line 13, in load_user
+    return User.query.get(int(user_id))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 695, in load_on_pk_identity
+    session.execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-04 23:14:18,597 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:18] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-04 23:14:18,723 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-04 23:14:24,209 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/utils/helpers.py", line 96, in decorated_function
+    if current_user.is_authenticated and not getattr(current_user, "is_verified", False):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 526, in _get_current_object
+    return get_name(local())
+                    ^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+                                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.12/site-packages/flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/models.py", line 13, in load_user
+    return User.query.get(int(user_id))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 695, in load_on_pk_identity
+    session.execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-04 23:14:24,212 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:24] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-04 23:14:24,251 - INFO - 192.168.65.1 - - [04/Dec/2025 23:14:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 16:02:19,093 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.4:8000
+2025-12-05 16:02:19,095 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 16:02:30,488 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: could not translate host name "db" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/utils/helpers.py", line 96, in decorated_function
+    if current_user.is_authenticated and not getattr(current_user, "is_verified", False):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/werkzeug/local.py", line 526, in _get_current_object
+    return get_name(local())
+                    ^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 25, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+                                      ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/flask_login/utils.py", line 370, in _get_user
+    current_app.login_manager._load_user()
+  File "/usr/local/lib/python3.12/site-packages/flask_login/login_manager.py", line 364, in _load_user
+    user = self._user_callback(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/src/app/app/models.py", line 13, in load_user
+    return User.query.get(int(user_id))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 695, in load_on_pk_identity
+    session.execute(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3277, in connect
+    return self._connection_cls(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3301, in raw_connection
+    return self.pool.connect()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 447, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 711, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 175, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 673, in __init__
+    self.__connect()
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 899, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 895, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 661, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 629, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-05 16:02:30,513 - INFO - 192.168.65.1 - - [05/Dec/2025 16:02:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-05 16:02:30,675 - INFO - 192.168.65.1 - - [05/Dec/2025 16:02:30] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 16:03:58,398 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.16.11.241:5001
+2025-12-05 16:03:58,398 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 16:03:58,400 - INFO -  * Restarting with stat
+2025-12-05 16:03:59,757 - WARNING -  * Debugger is active!
+2025-12-05 16:03:59,792 - INFO -  * Debugger PIN: 135-200-680
+2025-12-05 20:21:26,598 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "GET /valuebets HTTP/1.1" 200 -
+2025-12-05 20:21:26,666 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:26,666 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:26,864 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "GET /api/values?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-05 20:21:26,914 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:26,932 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 20:21:26,936 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:26] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:28,612 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:28] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 20:21:28,890 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:28] "GET /surebets HTTP/1.1" 200 -
+2025-12-05 20:21:28,918 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:28] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:28,924 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:28] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:29,011 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:29] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-05 20:21:29,053 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:29] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:29,062 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 20:21:29,072 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:29] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:30,590 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 20:21:30,826 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "GET /surebets HTTP/1.1" 200 -
+2025-12-05 20:21:30,854 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:30,855 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-05 20:21:30,918 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-05 20:21:30,965 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:30,973 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 20:21:30,983 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:30] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 20:21:32,512 - INFO - 127.0.0.1 - - [05/Dec/2025 20:21:32] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 20:22:10,561 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-12-05 20:22:10,970 - INFO -  * Restarting with stat
+2025-12-05 20:22:12,800 - WARNING -  * Debugger is active!
+2025-12-05 20:22:12,834 - INFO -  * Debugger PIN: 135-200-680
+2025-12-05 20:23:55,448 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-12-05 20:23:55,819 - INFO -  * Restarting with stat
+2025-12-05 20:23:57,441 - WARNING -  * Debugger is active!
+2025-12-05 20:23:57,486 - INFO -  * Debugger PIN: 135-200-680
+2025-12-05 20:23:58,522 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/app/tasks.py', reloading
+2025-12-05 20:23:58,888 - INFO -  * Restarting with stat
+2025-12-05 20:24:00,345 - WARNING -  * Debugger is active!
+2025-12-05 20:24:00,381 - INFO -  * Debugger PIN: 135-200-680

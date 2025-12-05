@@ -26,9 +26,10 @@ def create_app():
   app = Flask(__name__)
   app.config.from_object('app.config.AppConfigs')
   
+  broker = os.getenv("REDIS_URL", "redis://localhost:6379/0")
   app.config.update(
-    broker_url='redis://localhost:6379/0',
-    result_backend='redis://localhost:6379/0'
+    broker_url=broker,
+    result_backend=broker
   )
 
   db.init_app(app)
