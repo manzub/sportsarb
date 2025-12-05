@@ -14951,3 +14951,326 @@ sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate
 2025-12-05 20:23:58,888 - INFO -  * Restarting with stat
 2025-12-05 20:24:00,345 - WARNING -  * Debugger is active!
 2025-12-05 20:24:00,381 - INFO -  * Debugger PIN: 135-200-680
+2025-12-05 20:30:27,403 - INFO -  * Detected change in '/Users/wizzdom/Sites/FLASK/sports-arb-finder/sportsarb/main.py', reloading
+2025-12-05 20:30:27,834 - INFO -  * Restarting with stat
+2025-12-05 20:31:00,529 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.5:8000
+2025-12-05 20:31:00,530 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 20:31:00,530 - INFO -  * Restarting with stat
+2025-12-05 20:31:01,873 - WARNING -  * Debugger is active!
+2025-12-05 20:31:01,874 - INFO -  * Debugger PIN: 101-222-222
+2025-12-05 20:31:27,947 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-05 20:31:28,025 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:28] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-12-05 20:31:28,061 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:28] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-12-05 20:31:28,134 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:28] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-12-05 20:31:28,135 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:28] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=kppq84vXGmnRztIVuIMe HTTP/1.1" 200 -
+2025-12-05 20:31:28,229 - INFO - 192.168.65.1 - - [05/Dec/2025 20:31:28] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-05 20:33:19,626 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.6:8000
+2025-12-05 20:33:19,626 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 20:33:19,627 - INFO -  * Restarting with stat
+2025-12-05 20:33:20,658 - WARNING -  * Debugger is active!
+2025-12-05 20:33:20,658 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 20:34:20,525 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-12-05 20:34:20,566 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-12-05 20:34:20,569 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-12-05 20:34:20,674 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=lDSxjag5xmhzYpoIVLct HTTP/1.1" 200 -
+2025-12-05 20:34:20,674 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-05 20:34:20,692 - INFO - 192.168.65.1 - - [05/Dec/2025 20:34:20] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-12-05 20:51:33,013 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 20:51:33,393 - INFO -  * Restarting with stat
+2025-12-05 20:51:34,617 - WARNING -  * Debugger is active!
+2025-12-05 20:51:34,618 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 20:53:47,464 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 20:53:47,819 - INFO -  * Restarting with stat
+2025-12-05 20:53:48,891 - WARNING -  * Debugger is active!
+2025-12-05 20:53:48,892 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:01:03,235 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:01:03,693 - INFO -  * Restarting with stat
+2025-12-05 21:01:04,653 - WARNING -  * Debugger is active!
+2025-12-05 21:01:04,654 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:01:39,510 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:01:39,971 - INFO -  * Restarting with stat
+2025-12-05 21:01:41,163 - WARNING -  * Debugger is active!
+2025-12-05 21:01:41,163 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:02:25,037 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:02:25,505 - INFO -  * Restarting with stat
+2025-12-05 21:02:26,399 - WARNING -  * Debugger is active!
+2025-12-05 21:02:26,400 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:02:40,783 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:02:41,251 - INFO -  * Restarting with stat
+2025-12-05 21:02:42,198 - WARNING -  * Debugger is active!
+2025-12-05 21:02:42,199 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:02:43,230 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:02:43,496 - INFO -  * Restarting with stat
+2025-12-05 21:02:44,274 - WARNING -  * Debugger is active!
+2025-12-05 21:02:44,275 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:05:11,291 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:05:11,832 - INFO -  * Restarting with stat
+2025-12-05 21:05:12,753 - WARNING -  * Debugger is active!
+2025-12-05 21:05:12,754 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:05:33,114 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:05:33,564 - INFO -  * Restarting with stat
+2025-12-05 21:05:34,518 - WARNING -  * Debugger is active!
+2025-12-05 21:05:34,519 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:05:49,824 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:05:50,375 - INFO -  * Restarting with stat
+2025-12-05 21:05:51,479 - WARNING -  * Debugger is active!
+2025-12-05 21:05:51,480 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:06:20,059 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:06:20,770 - INFO -  * Restarting with stat
+2025-12-05 21:06:21,673 - WARNING -  * Debugger is active!
+2025-12-05 21:06:21,673 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:06:35,948 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:06:36,225 - INFO -  * Restarting with stat
+2025-12-05 21:06:37,104 - WARNING -  * Debugger is active!
+2025-12-05 21:06:37,105 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:06:56,569 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:06:57,037 - INFO -  * Restarting with stat
+2025-12-05 21:06:57,949 - WARNING -  * Debugger is active!
+2025-12-05 21:06:57,950 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:07:23,454 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:07:23,942 - INFO -  * Restarting with stat
+2025-12-05 21:07:24,884 - WARNING -  * Debugger is active!
+2025-12-05 21:07:24,884 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:07:43,268 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:07:43,668 - INFO -  * Restarting with stat
+2025-12-05 21:07:44,570 - WARNING -  * Debugger is active!
+2025-12-05 21:07:44,571 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:07:53,729 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:07:53,998 - INFO -  * Restarting with stat
+2025-12-05 21:07:54,789 - WARNING -  * Debugger is active!
+2025-12-05 21:07:54,789 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:08:26,454 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:08:27,077 - INFO -  * Restarting with stat
+2025-12-05 21:08:28,030 - WARNING -  * Debugger is active!
+2025-12-05 21:08:28,031 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:08:39,241 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:08:39,611 - INFO -  * Restarting with stat
+2025-12-05 21:08:40,640 - WARNING -  * Debugger is active!
+2025-12-05 21:08:40,640 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:08:46,744 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:08:47,047 - INFO -  * Restarting with stat
+2025-12-05 21:08:47,970 - WARNING -  * Debugger is active!
+2025-12-05 21:08:47,970 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:08:54,087 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:08:54,434 - INFO -  * Restarting with stat
+2025-12-05 21:08:55,402 - WARNING -  * Debugger is active!
+2025-12-05 21:08:55,403 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:09:00,692 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:09:01,101 - INFO -  * Restarting with stat
+2025-12-05 21:09:02,035 - WARNING -  * Debugger is active!
+2025-12-05 21:09:02,035 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:09:45,953 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:09:46,364 - INFO -  * Restarting with stat
+2025-12-05 21:09:47,323 - WARNING -  * Debugger is active!
+2025-12-05 21:09:47,326 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:09:56,505 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:09:56,863 - INFO -  * Restarting with stat
+2025-12-05 21:09:57,818 - WARNING -  * Debugger is active!
+2025-12-05 21:09:57,819 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:10:01,885 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:10:02,241 - INFO -  * Restarting with stat
+2025-12-05 21:10:03,190 - WARNING -  * Debugger is active!
+2025-12-05 21:10:03,190 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:10:11,435 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:10:11,809 - INFO -  * Restarting with stat
+2025-12-05 21:10:12,857 - WARNING -  * Debugger is active!
+2025-12-05 21:10:12,857 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:11:35,547 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:11:35,988 - INFO -  * Restarting with stat
+2025-12-05 21:11:37,148 - WARNING -  * Debugger is active!
+2025-12-05 21:11:37,149 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:11:56,510 - INFO -  * Detected change in '/usr/src/app/app/init_db.py', reloading
+2025-12-05 21:11:57,158 - INFO -  * Restarting with stat
+2025-12-05 21:11:58,108 - WARNING -  * Debugger is active!
+2025-12-05 21:11:58,109 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:29:35,046 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:29:35,449 - INFO -  * Restarting with stat
+2025-12-05 21:29:37,105 - WARNING -  * Debugger is active!
+2025-12-05 21:29:37,106 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:30:14,889 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:30:15,362 - INFO -  * Restarting with stat
+2025-12-05 21:30:16,367 - WARNING -  * Debugger is active!
+2025-12-05 21:30:16,368 - INFO -  * Debugger PIN: 602-321-351
+2025-12-05 21:31:49,121 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.5:8000
+2025-12-05 21:31:49,125 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:31:49,126 - INFO -  * Restarting with stat
+2025-12-05 21:31:50,134 - WARNING -  * Debugger is active!
+2025-12-05 21:31:50,134 - INFO -  * Debugger PIN: 100-953-196
+2025-12-05 21:33:52,668 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:33:53,067 - INFO -  * Restarting with stat
+2025-12-05 21:33:54,077 - WARNING -  * Debugger is active!
+2025-12-05 21:33:54,078 - INFO -  * Debugger PIN: 100-953-196
+2025-12-05 21:34:28,705 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.6:8000
+2025-12-05 21:34:28,705 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:34:28,706 - INFO -  * Restarting with stat
+2025-12-05 21:34:29,665 - WARNING -  * Debugger is active!
+2025-12-05 21:34:29,665 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:41:06,089 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c6619e55ffd0_updated_user_favorite_leagues_dialects_.py', reloading
+2025-12-05 21:41:06,442 - INFO -  * Restarting with stat
+2025-12-05 21:41:07,511 - WARNING -  * Debugger is active!
+2025-12-05 21:41:07,512 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:41:24,826 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c6619e55ffd0_updated_user_favorite_leagues_dialects_.py', reloading
+2025-12-05 21:41:25,121 - INFO -  * Restarting with stat
+2025-12-05 21:41:26,003 - WARNING -  * Debugger is active!
+2025-12-05 21:41:26,003 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:42:55,872 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c6619e55ffd0_updated_user_favorite_leagues_dialects_.py', reloading
+2025-12-05 21:42:56,447 - INFO -  * Restarting with stat
+2025-12-05 21:42:57,488 - WARNING -  * Debugger is active!
+2025-12-05 21:42:57,489 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:43:15,792 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c6619e55ffd0_updated_user_favorite_leagues_dialects_.py', reloading
+2025-12-05 21:43:16,242 - INFO -  * Restarting with stat
+2025-12-05 21:43:17,257 - WARNING -  * Debugger is active!
+2025-12-05 21:43:17,258 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:44:51,513 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:44:52,064 - INFO -  * Restarting with stat
+2025-12-05 21:44:53,275 - WARNING -  * Debugger is active!
+2025-12-05 21:44:53,276 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:45:33,101 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:33] "GET / HTTP/1.1" 200 -
+2025-12-05 21:45:33,472 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:33] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:45:33,501 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:45:36,850 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:36] "GET /surebets HTTP/1.1" 200 -
+2025-12-05 21:45:36,883 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:36] "GET /static/img/banner-1.jpg HTTP/1.1" 200 -
+2025-12-05 21:45:36,883 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:36] "GET /static/img/sidebar-banner-2.jpg HTTP/1.1" 200 -
+2025-12-05 21:45:36,968 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:36] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-05 21:45:37,005 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:37] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:45:37,010 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:37] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:45:37,027 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:45:39,636 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:39] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:45:39,759 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:39] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:45:39,769 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:45:46,849 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:46] "POST /auth/login HTTP/1.1" 200 -
+2025-12-05 21:45:46,952 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:46] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:45:46,985 - INFO - 192.168.65.1 - - [05/Dec/2025 21:45:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:46:09,675 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.244:5001
+2025-12-05 21:46:09,676 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:46:14,433 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:14] "GET /account HTTP/1.1" 200 -
+2025-12-05 21:46:14,719 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:14] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:46:14,726 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:46:16,238 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:16] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 21:46:16,352 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:16] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+2025-12-05 21:46:16,390 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:16] "GET / HTTP/1.1" 200 -
+2025-12-05 21:46:16,567 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:16] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:46:16,587 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:46:17,848 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:17] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:46:17,981 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:17] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:46:17,987 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:46:18,113 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:18] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 21:46:19,560 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:19] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 21:46:41,089 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:41] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-12-05 21:46:41,106 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:41] "GET / HTTP/1.1" 200 -
+2025-12-05 21:46:41,261 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:41] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:46:41,284 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:46:42,837 - INFO - 127.0.0.1 - - [05/Dec/2025 21:46:42] "[36mGET /service-worker.js HTTP/1.1[0m" 304 -
+2025-12-05 21:47:11,405 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:47:11,921 - INFO -  * Restarting with stat
+2025-12-05 21:47:13,050 - WARNING -  * Debugger is active!
+2025-12-05 21:47:13,051 - INFO -  * Debugger PIN: 919-592-515
+2025-12-05 21:47:39,958 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.4:8000
+2025-12-05 21:47:39,959 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:47:39,960 - INFO -  * Restarting with stat
+2025-12-05 21:47:40,952 - WARNING -  * Debugger is active!
+2025-12-05 21:47:40,953 - INFO -  * Debugger PIN: 790-647-533
+2025-12-05 21:47:53,343 - INFO - 192.168.65.1 - - [05/Dec/2025 21:47:53] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:47:53,512 - INFO - 192.168.65.1 - - [05/Dec/2025 21:47:53] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:47:53,531 - INFO - 192.168.65.1 - - [05/Dec/2025 21:47:53] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:48:02,969 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:02] "POST /auth/login HTTP/1.1" 200 -
+2025-12-05 21:48:03,077 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:03] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:48:03,115 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:48:11,215 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:11] "GET /auth/reset_password HTTP/1.1" 200 -
+2025-12-05 21:48:11,343 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:11] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:48:11,362 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:48:39,248 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:39] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:48:39,369 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:39] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:48:39,389 - INFO - 192.168.65.1 - - [05/Dec/2025 21:48:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:53:33,181 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:53:33,527 - INFO -  * Restarting with stat
+2025-12-05 21:53:34,599 - WARNING -  * Debugger is active!
+2025-12-05 21:53:34,600 - INFO -  * Debugger PIN: 790-647-533
+2025-12-05 21:53:52,833 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.4:8000
+2025-12-05 21:53:52,837 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:53:52,838 - INFO -  * Restarting with stat
+2025-12-05 21:53:53,812 - WARNING -  * Debugger is active!
+2025-12-05 21:53:53,813 - INFO -  * Debugger PIN: 120-391-456
+2025-12-05 21:54:20,313 - INFO -  * Detected change in '/usr/src/app/migrations/versions/c722fcc98d19_seed_default_data.py', reloading
+2025-12-05 21:54:20,725 - INFO -  * Restarting with stat
+2025-12-05 21:54:21,731 - WARNING -  * Debugger is active!
+2025-12-05 21:54:21,732 - INFO -  * Debugger PIN: 120-391-456
+2025-12-05 21:54:48,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://172.19.0.5:8000
+2025-12-05 21:54:48,348 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-05 21:54:48,348 - INFO -  * Restarting with stat
+2025-12-05 21:54:49,316 - WARNING -  * Debugger is active!
+2025-12-05 21:54:49,316 - INFO -  * Debugger PIN: 566-624-108
+2025-12-05 21:54:56,488 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:56] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:54:56,765 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:56] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:54:56,795 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:56] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:54:57,519 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:57] "GET /auth/login HTTP/1.1" 200 -
+2025-12-05 21:54:57,678 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:57] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:54:57,679 - INFO - 192.168.65.1 - - [05/Dec/2025 21:54:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:55:06,089 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:06] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-12-05 21:55:06,109 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:06] "GET / HTTP/1.1" 200 -
+2025-12-05 21:55:06,240 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:06] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:55:06,314 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:55:09,885 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:09] "GET /surebets HTTP/1.1" 200 -
+2025-12-05 21:55:09,918 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:09] "[36mGET /static/img/banner-1.jpg HTTP/1.1[0m" 304 -
+2025-12-05 21:55:09,919 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:09] "[36mGET /static/img/sidebar-banner-2.jpg HTTP/1.1[0m" 304 -
+2025-12-05 21:55:09,994 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:09] "GET /api/surebets?page=1&limit=51 HTTP/1.1" 200 -
+2025-12-05 21:55:10,016 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:10] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:55:10,022 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:10] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:55:10,028 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:55:12,574 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:12] "GET /account HTTP/1.1" 200 -
+2025-12-05 21:55:12,678 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:12] "GET /api/sports HTTP/1.1" 200 -
+2025-12-05 21:55:12,696 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:55:13,511 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:13] "[32mGET /admin HTTP/1.1[0m" 308 -
+2025-12-05 21:55:14,068 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/ HTTP/1.1" 200 -
+2025-12-05 21:55:14,090 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,100 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1" 200 -
+2025-12-05 21:55:14,103 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1" 200 -
+2025-12-05 21:55:14,105 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,105 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,106 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,110 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1" 200 -
+2025-12-05 21:55:14,111 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,112 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,124 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1" 200 -
+2025-12-05 21:55:14,126 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1" 200 -
+2025-12-05 21:55:14,127 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "GET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1" 200 -
+2025-12-05 21:55:14,184 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-12-05 21:55:15,982 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:15] "[32mGET /admin/toggle-oddsapi HTTP/1.1[0m" 302 -
+2025-12-05 21:55:16,501 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "GET /admin/ HTTP/1.1" 200 -
+2025-12-05 21:55:16,547 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/bootstrap/bootstrap4/swatch/flatly/bootstrap.min.css?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,548 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/admin/css/bootstrap4/admin.css?v=1.1.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,549 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/bootstrap/bootstrap4/css/font-awesome.min.css?v=4.7.0 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,552 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/moment.min.js?v=2.9.4 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,554 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/bootstrap/bootstrap4/js/bootstrap.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,555 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/jquery.min.js?v=3.5.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,557 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/bootstrap/bootstrap4/js/popper.min.js HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,559 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/bootstrap4/dropdown.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,561 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/select2/select2.min.js?v=4.2.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,563 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/admin/js/helpers.js?v=1.0.0 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,564 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/bootstrap4/util.js?v=4.3.1 HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,564 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /admin/static/vendor/multi-level-dropdowns-bootstrap/bootstrap4-dropdown-ml-hack.js HTTP/1.1[0m" 304 -
+2025-12-05 21:55:16,579 - INFO - 192.168.65.1 - - [05/Dec/2025 21:55:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -

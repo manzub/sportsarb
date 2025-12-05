@@ -2,7 +2,7 @@ services:
   web:
     build: .
     container_name: sportsarb
-    command: flask run --host=0.0.0.0 --port=8000
+    command: flask run --host=0.0.0.0 --port=8000 --debug
     volumes:
       - .:/usr/src/app
     ports:
@@ -24,6 +24,8 @@ services:
       POSTGRES_DB: sportsarb
     ports:
       - "5432:5432"
+    networks:
+      - appnet
     volumes:
       - pgdata:/var/lib/postgresql/data
 
